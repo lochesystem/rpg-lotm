@@ -1,0 +1,1337 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cap. 3 — Atributos, Perícias e Sistema de Testes · Senhor dos Mistérios RPG</title>
+<link rel="stylesheet" href="../assets/css/common.css">
+<link rel="stylesheet" href="../assets/css/print.css">
+</head>
+<body>
+
+<h1>Capítulo 3 — Atributos, Perícias e Sistema de Testes</h1>
+
+<blockquote>
+  "Todo ser é definido por aquilo que pode suportar, compreender e manipular. Os números
+  na ficha não são abstrações frias — são a tradução mecânica de uma vida inteira de
+  experiências, talentos inatos e treinamento suado nas ruas enevoadas de Backlund, nos
+  laboratórios da Universidade de Hoy ou nos rituais sussurrados nos becos do Bairro do Porto."
+  <span class="cite">— Manual do Narrador, Pacto Sombrio</span>
+</blockquote>
+
+<p>
+  Este capítulo apresenta os três pilares mecânicos que definem o que um personagem
+  <em>pode fazer</em> e <em>quão bem</em> pode fazê-lo: <strong>Atributos</strong>,
+  <strong>Perícias</strong> e o <strong>Sistema de Testes</strong>. O sistema híbrido de
+  <strong>Pacto Sombrio</strong> combina a escala de pontos (1–5) inspirada em
+  <em>Vampire: The Masquerade</em> com rolagens de <span class="dice">d20</span> +
+  modificador contra uma Classe de Dificuldade (CD), herdada da tradição de
+  <em>Dungeons &amp; Dragons</em>. O resultado é um sistema intuitivo que premia tanto a
+  construção cuidadosa do personagem quanto a sorte dos dados.
+</p>
+
+<p>
+  Ao final do capítulo, você também encontrará as <strong>Estatísticas Derivadas</strong>
+  — valores calculados a partir dos Atributos que determinam Pontos de Vida,
+  Espiritualidade, Iniciativa e outros aspectos cruciais do personagem.
+</p>
+
+<div class="separator"></div>
+
+<!-- ================================================================ -->
+<h2 id="atributos">Atributos <span class="en">(Attributes)</span></h2>
+<!-- ================================================================ -->
+
+<p>
+  Atributos representam as capacidades inatas de um personagem — sua força bruta, agilidade
+  mental, presença social e resiliência interior. Cada personagem possui <strong>nove
+  atributos</strong>, organizados em três categorias: <strong>Físicos</strong>,
+  <strong>Sociais</strong> e <strong>Mentais</strong>. Cada atributo é medido em uma escala
+  de <strong>1 a 5</strong>, representada por pontos preenchidos no estilo clássico de fichas.
+</p>
+
+<h3 id="escala-atributos">Escala de Atributos</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Valor</th>
+      <th>Pontos</th>
+      <th>Nível</th>
+      <th>Modificador</th>
+      <th>Descrição</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td><span class="dots"><span class="dot-filled"></span><span class="dot-empty"></span><span class="dot-empty"></span><span class="dot-empty"></span><span class="dot-empty"></span></span></td>
+      <td>Fraco</td>
+      <td>−1</td>
+      <td>Abaixo da média humana; deficiência notável nesta área.</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td><span class="dots"><span class="dot-filled"></span><span class="dot-filled"></span><span class="dot-empty"></span><span class="dot-empty"></span><span class="dot-empty"></span></span></td>
+      <td>Mediano</td>
+      <td>+0</td>
+      <td>Média de um adulto comum e funcional.</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td><span class="dots"><span class="dot-filled"></span><span class="dot-filled"></span><span class="dot-filled"></span><span class="dot-empty"></span><span class="dot-empty"></span></span></td>
+      <td>Bom</td>
+      <td>+1</td>
+      <td>Acima da média; profissionalmente competente.</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td><span class="dots"><span class="dot-filled"></span><span class="dot-filled"></span><span class="dot-filled"></span><span class="dot-filled"></span><span class="dot-empty"></span></span></td>
+      <td>Excepcional</td>
+      <td>+2</td>
+      <td>Entre os melhores de uma cidade. Notável e admirável.</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td><span class="dots"><span class="dot-filled"></span><span class="dot-filled"></span><span class="dot-filled"></span><span class="dot-filled"></span><span class="dot-filled"></span></span></td>
+      <td>Lendário</td>
+      <td>+3</td>
+      <td>Limite absoluto do potencial humano. Extraordinário.</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="box box-rule">
+  <div class="box-title">Regra: Modificador de Atributo</div>
+  <p>
+    O <strong>Modificador</strong> de qualquer Atributo é calculado pela fórmula:<br>
+    <strong style="font-size:1.1em;">Modificador = Valor − 2</strong>
+  </p>
+  <p>
+    Assim, Atributo 1 concede −1; Atributo 2 concede +0; Atributo 3 concede +1; Atributo 4
+    concede +2; e Atributo 5 concede +3. Esse modificador é o número efetivamente somado (ou
+    subtraído) às rolagens de dado em testes. A mesma fórmula se aplica às Perícias.
+  </p>
+</div>
+
+<!-- ===== FÍSICOS ===== -->
+<h3 id="atributos-fisicos">Atributos Físicos <span class="en">(Physical)</span></h3>
+
+<p>
+  Os Atributos Físicos definem as capacidades corporais do personagem — potência muscular,
+  coordenação motora e resistência orgânica. Em um mundo onde confrontos com aberrações do
+  além-mundo são uma possibilidade real, mesmo o erudito mais reclusivo precisa conhecer
+  seus limites físicos.
+</p>
+
+<h4 id="forca">Força <span class="en">(Strength)</span></h4>
+<p>
+  Força mede a potência muscular bruta do personagem: sua capacidade de levantar, empurrar,
+  quebrar e causar dano em combate corpo a corpo. Um personagem com Força 1 é fisicamente
+  frágil — talvez um acadêmico debilitado ou alguém de constituição fraca — enquanto
+  Força 5 representa o ápice do vigor humano, como um estivador do Porto de Backlund capaz
+  de erguer barris com uma mão ou um lutador campeão dos torneios clandestinos do East Borough.
+</p>
+<ul>
+  <li><strong>Usos comuns:</strong> ataques corpo a corpo, arrombar portas e cadeados, escalar
+    superfícies brutas, agarrar e imobilizar oponentes, carregar peso, empurrar objetos pesados,
+    derrubar obstáculos, dobrar barras de ferro.</li>
+  <li><strong>Exemplo:</strong> Klein precisa forçar uma grade enferrujada que bloqueia a
+    passagem de um beco. O Narrador pede um teste puro de Força (CD 13). Com Força 2 (mod +0),
+    ele rola <span class="dice">d20</span> + 0 e precisa de 13 ou mais — uma tarefa árdua
+    para alguém sem força notável.</li>
+</ul>
+
+<h4 id="destreza">Destreza <span class="en">(Dexterity)</span></h4>
+<p>
+  Destreza abrange agilidade corporal, reflexos, equilíbrio e coordenação motora fina. Governa
+  desde a habilidade de mirar com uma arma de fogo até a graciosidade de um gatuno saltando
+  entre telhados na chuva. Personagens com alta Destreza são difíceis de acertar em combate,
+  rápidos para reagir ao perigo e hábeis com as mãos.
+</p>
+<ul>
+  <li><strong>Usos comuns:</strong> ataques à distância, esquiva, furtividade, prestidigitação,
+    equilíbrio em superfícies estreitas, reflexos rápidos, abrir fechaduras, desamarrar nós.</li>
+  <li><strong>Exemplo:</strong> Fors Wall tenta se equilibrar sobre um parapeito estreito
+    durante uma perseguição pelos telhados de Tingen. O Narrador pede Destreza + Atletismo
+    (CD 10). Com Destreza 3 (mod +1) e Atletismo 2 (mod +0), Fors rola
+    <span class="dice">d20</span> + 1. Um resultado razoável — ele é ágil o bastante para
+    ter boas chances.</li>
+</ul>
+
+<h4 id="vigor">Vigor <span class="en">(Stamina)</span></h4>
+<p>
+  Vigor representa resistência física, saúde, capacidade de suportar dor, tolerância a venenos,
+  doenças e fadiga prolongada. Um personagem com alto Vigor pode marchar por dias sem descanso,
+  resistir ao frio cortante das noites de inverno em Tingen e sobreviver a ferimentos que
+  derrubariam outros. Vigor também é a base para o cálculo de Pontos de Vida.
+</p>
+<ul>
+  <li><strong>Usos comuns:</strong> resistir a venenos e doenças, suportar tortura, manter-se
+    consciente após ferimentos graves, corridas de longa distância, resistir a condições
+    climáticas extremas, manter-se acordado por longos períodos.</li>
+  <li><strong>Exemplo:</strong> Após ser envenenado por um cultista do Deus Verdadeiro, Dunn
+    Smith deve fazer um teste de Vigor (CD 15) para resistir ao efeito paralisante. Com
+    Vigor 4 (mod +2), ele rola <span class="dice">d20</span> + 2, precisando de 13 ou mais
+    no dado.</li>
+</ul>
+
+<!-- ===== SOCIAIS ===== -->
+<h3 id="atributos-sociais">Atributos Sociais <span class="en">(Social)</span></h3>
+
+<p>
+  Os Atributos Sociais medem a habilidade do personagem em interagir, influenciar e
+  impressionar outros. Em uma era vitoriana onde aparências importam tanto quanto competência,
+  e onde uma palavra errada pode arruinar reputações ou iniciar intrigas mortais, os Atributos
+  Sociais são tão vitais quanto qualquer espada ou revólver.
+</p>
+
+<h4 id="carisma">Carisma <span class="en">(Charisma)</span></h4>
+<p>
+  Carisma reflete o magnetismo pessoal, a presença natural e a capacidade de inspirar confiança,
+  lealdade e admiração. Não se trata apenas de beleza — um líder de rosto comum pode ter
+  Carisma imenso se sua presença enche a sala e sua voz carrega peso. Carisma governa a
+  primeira impressão, a capacidade de liderar e a força da presença social.
+</p>
+<ul>
+  <li><strong>Usos comuns:</strong> inspirar aliados, fazer discursos memoráveis, causar
+    primeira impressão positiva, liderar grupos sob pressão, negociações diplomáticas,
+    ganhar confiança rapidamente.</li>
+  <li><strong>Exemplo:</strong> Audrey Hall tenta convencer um grupo de nobres a apoiar sua
+    causa durante um baile em Empress Borough. O Narrador pede Carisma + Persuasão (CD 13).
+    Com Carisma 4 (mod +2) e Persuasão 3 (mod +1), ela rola
+    <span class="dice">d20</span> + 3 — uma combinação poderosa que lhe dá excelentes
+    chances.</li>
+</ul>
+
+<h4 id="manipulacao">Manipulação <span class="en">(Manipulation)</span></h4>
+<p>
+  Manipulação é a arte de controlar os outros de forma sutil — mentir convincentemente,
+  redirecionar uma conversa, plantar ideias na mente alheia ou extrair informações sem que o
+  alvo perceba. Diferente de Carisma, que opera pela atração e inspiração, Manipulação opera
+  pela astúcia, pelo engano calculado e pelo controle da narrativa. É o atributo dos
+  espiões, diplomatas e trapaceiros.
+</p>
+<ul>
+  <li><strong>Usos comuns:</strong> mentir de forma convincente, desviar suspeitas, negociar
+    com vantagem oculta, manipular emoções alheias, obter confissões, plantar ideias falsas,
+    conduzir interrogatórios sutis.</li>
+  <li><strong>Exemplo:</strong> Klein, disfarçado como o detetive Sherlock Moriarty, tenta
+    convencer um informante de que é um oficial da polícia. Manipulação + Dissimulação (CD 13).
+    Com Manipulação 3 (mod +1) e Dissimulação 3 (mod +1), ele rola
+    <span class="dice">d20</span> + 2.</li>
+</ul>
+
+<h4 id="aparencia">Aparência <span class="en">(Appearance)</span></h4>
+<p>
+  Aparência mede a atratividade física, a elegância no vestir e o porte do personagem. Em uma
+  sociedade rigidamente estratificada onde a classe social pode ser deduzida pela qualidade
+  das roupas e pela postura, a Aparência abre portas que nenhuma quantia de dinheiro compraria.
+  Não se refere apenas a beleza inata, mas também a higiene, vestimenta adequada, postura
+  e a capacidade de projetar a imagem desejada.
+</p>
+<ul>
+  <li><strong>Usos comuns:</strong> causar boa impressão em ambientes formais, seduzir,
+    disfarçar-se como membro de outra classe social, distrair com charme, passar-se por nobre,
+    intimidar pela presença elegante.</li>
+  <li><strong>Exemplo:</strong> Um personagem tenta entrar em um clube exclusivo de Empress
+    Borough sem convite, confiando apenas em sua apresentação impecável. Aparência pura
+    (CD 15). Com Aparência 4 (mod +2), ele rola <span class="dice">d20</span> + 2 — difícil,
+    mas não impossível para alguém de porte verdadeiramente aristocrático.</li>
+</ul>
+
+<!-- ===== MENTAIS ===== -->
+<h3 id="atributos-mentais">Atributos Mentais <span class="en">(Mental)</span></h3>
+
+<p>
+  Os Atributos Mentais abrangem intelecto, percepção sensorial e força de vontade. Para
+  Beyonders que lidam com conhecimento proibido, rituais antigos e a constante ameaça da
+  loucura, esses atributos podem ser a diferença entre a ascensão e a queda na corrupção.
+  A mente é simultaneamente a maior arma e o ponto mais vulnerável de um Beyonder.
+</p>
+
+<h4 id="percepcao">Percepção <span class="en">(Perception)</span></h4>
+<p>
+  Percepção governa a acuidade sensorial do personagem — não apenas visão e audição, mas também
+  intuição, atenção ao entorno e a capacidade de notar detalhes que outros ignoram. Para
+  Beyonders, Percepção também se conecta à sensibilidade ao mundo espiritual, tornando-se
+  essencial para detectar presenças sobrenaturais, anomalias místicas e o invisível tecido
+  da realidade. É um dos dois atributos que compõem a Espiritualidade.
+</p>
+<ul>
+  <li><strong>Usos comuns:</strong> notar emboscadas, encontrar pistas visuais, perceber
+    mentiras pela linguagem corporal, detectar presenças espirituais, ler emoções faciais,
+    ouvir sons distantes, sentir perigos iminentes.</li>
+  <li><strong>Exemplo:</strong> Enquanto investiga uma cena de crime no distrito industrial,
+    o detetive precisa perceber uma marca oculta sob o carpete manchado de sangue. Percepção +
+    Investigação (CD 13). Com Percepção 3 (mod +1) e Investigação 2 (mod +0), ele rola
+    <span class="dice">d20</span> + 1.</li>
+</ul>
+
+<h4 id="inteligencia">Inteligência <span class="en">(Intelligence)</span></h4>
+<p>
+  Inteligência mede a capacidade de raciocínio lógico, memória, aprendizado rápido e análise
+  crítica. Um personagem com alta Inteligência pode decifrar códigos antigos em Hermético,
+  compreender textos em línguas mortas, deduzir conexões entre pistas aparentemente desconexas
+  e planejar estratégias complexas com vários passos adiante. É o atributo primário de
+  cientistas, eruditos e estrategistas.
+</p>
+<ul>
+  <li><strong>Usos comuns:</strong> decifrar códigos e cifras, recordar informações lidas,
+    analisar pistas e evidências, criar planos elaborados, entender textos técnicos ou arcanos,
+    realizar deduções lógicas, aprender idiomas.</li>
+  <li><strong>Exemplo:</strong> O personagem encontra um diário escrito em uma cifra hermética
+    dentro de uma catacumba sob a Catedral do Deus da Noite. Inteligência + Ocultismo (CD 15).
+    Com Inteligência 4 (mod +2) e Ocultismo 3 (mod +1), ele rola
+    <span class="dice">d20</span> + 3, precisando de 12 ou mais no dado.</li>
+</ul>
+
+<h4 id="determinacao">Determinação <span class="en">(Resolve)</span></h4>
+<p>
+  Determinação representa força de vontade, disciplina mental e resiliência psicológica. É o
+  escudo da mente contra o horror, a tentação e a loucura — especialmente vital em um mundo
+  onde entidades do além-mundo sussurram promessas de poder e onde olhar para o abismo significa
+  arriscar que ele olhe de volta. Determinação governa a concentração sob pressão, a resistência
+  a efeitos mentais e é a base do cálculo de Lucidez — a barra que mede a sanidade do Beyonder.
+</p>
+<ul>
+  <li><strong>Usos comuns:</strong> resistir ao medo sobrenatural, superar tentações, manter
+    concentração durante rituais, resistir a controle mental, manter a sanidade frente ao
+    horror cósmico, suportar dor psicológica, meditar sob pressão.</li>
+  <li><strong>Exemplo:</strong> Ao testemunhar a manifestação grotesca de um Beyonder
+    corrompido — sua carne se desdobrando em geometrias impossíveis — todos na sala devem fazer
+    um teste de Determinação (CD 13) para não entrar em pânico. Com Determinação 3 (mod +1),
+    o personagem rola <span class="dice">d20</span> + 1.</li>
+</ul>
+
+<div class="separator"></div>
+
+<!-- ================================================================ -->
+<h2 id="pericias">Perícias <span class="en">(Skills)</span></h2>
+<!-- ================================================================ -->
+
+<p>
+  Enquanto Atributos representam o potencial bruto e inato, as <strong>Perícias</strong>
+  refletem treinamento adquirido e experiência prática. Perícias variam de
+  <strong>0 a 5</strong>, onde 0 indica nenhum treinamento formal e 5 representa maestria
+  absoluta na área. O modificador segue a mesma fórmula dos Atributos
+  (<strong>Valor − 2</strong>), mas uma Perícia em 0 concede <strong>−2</strong> — um peso
+  significativo que reflete a completa inexperiência.
+</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Valor</th>
+      <th>Nível</th>
+      <th>Modificador</th>
+      <th>Descrição</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>0</td><td>Não treinado</td><td>−2</td><td>Sem nenhum treinamento ou experiência relevante.</td></tr>
+    <tr><td>1</td><td>Novato</td><td>−1</td><td>Noções básicas; estudante ou amador dedicado.</td></tr>
+    <tr><td>2</td><td>Praticante</td><td>+0</td><td>Competência funcional; profissional comum.</td></tr>
+    <tr><td>3</td><td>Proficiente</td><td>+1</td><td>Habilidade notável; especialista reconhecido na área.</td></tr>
+    <tr><td>4</td><td>Especialista</td><td>+2</td><td>Dentre os melhores em sua área de atuação.</td></tr>
+    <tr><td>5</td><td>Mestre</td><td>+3</td><td>Domínio absoluto; referência mundial no campo.</td></tr>
+  </tbody>
+</table>
+
+<div class="box box-rule">
+  <div class="box-title">Regra: Testes sem Perícia</div>
+  <p>
+    Se um personagem não possui pontos em uma perícia (valor 0, mod −2), ele ainda pode
+    tentar a maioria dos testes, mas sofre uma penalidade severa. Contudo, algumas perícias
+    especializadas — como <em>Ritualismo</em> <span class="en">(Ritualism)</span> e
+    <em>Adivinhação</em> <span class="en">(Divination)</span> — exigem pelo menos 1 ponto
+    para serem tentadas; sem treinamento mínimo, o personagem simplesmente não sabe por
+    onde começar.
+  </p>
+</div>
+
+<p>
+  Existem <strong>20 perícias</strong> organizadas em <strong>três grupos</strong>:
+  Combate, Social e Conhecimento. Cada perícia possui usos típicos e ao menos um Atributo
+  comumente associado, embora o Narrador possa solicitar combinações incomuns quando a
+  situação exigir (por exemplo, Força + Intimidação para ameaçar fisicamente alguém).
+</p>
+
+<!-- ===== COMBATE ===== -->
+<h3 id="pericias-combate">Perícias de Combate <span class="en">(Combat Skills)</span></h3>
+
+<p>
+  As perícias de Combate cobrem a capacidade do personagem de lutar, esquivar-se e
+  realizar proezas físicas em situações de perigo. São fundamentais para sobreviver em
+  confrontos diretos — sejam contra criminosos comuns nos becos do East Borough ou
+  contra aberrações do além-mundo.
+</p>
+
+<h4 id="luta">Luta <span class="en">(Melee)</span></h4>
+<p>
+  Habilidade em combate corpo a corpo, abrangendo tanto luta armada (espadas, facas, bastões,
+  machados, armas improvisadas) quanto combate desarmado (socos, chutes, agarramentos,
+  técnicas de imobilização). Inclui estilos formais de esgrima e técnicas brutais de luta
+  de rua aprendidas nos becos de Backlund.
+</p>
+<ul>
+  <li><strong>Usos:</strong> atacar com armas brancas, lutar desarmado, desarmar oponentes,
+    imobilizar alvos, bloquear golpes, combate em espaços confinados.</li>
+  <li><strong>Teste típico:</strong> Força + Luta (para golpes poderosos) ou Destreza + Luta
+    (para golpes ágeis e precisos) vs. Defesa do alvo.</li>
+  <li><strong>Exemplo:</strong> Encurralado por dois capangas em um armazém, o personagem
+    agarra uma barra de ferro e desfere um golpe no mais próximo. Força 3 (mod +1) + Luta 2
+    (mod +0) → <span class="dice">d20</span> + 1 vs. Defesa do capanga.</li>
+</ul>
+
+<h4 id="armas-de-fogo">Armas de Fogo <span class="en">(Firearms)</span></h4>
+<p>
+  Competência com pistolas, revólveres, rifles, espingardas e outras armas de fogo da era
+  vitoriana. Abrange pontaria, manutenção de armamento, conhecimento de balística, recarga
+  sob pressão e noções táticas de posicionamento para tiro.
+</p>
+<ul>
+  <li><strong>Usos:</strong> atirar com precisão em alvos parados ou em movimento, limpar e
+    manter armas, avaliar qualidade de armamentos, recarregar sob fogo, tiro em movimento.</li>
+  <li><strong>Teste típico:</strong> Destreza + Armas de Fogo vs. Defesa do alvo (com
+    modificadores de distância e cobertura).</li>
+  <li><strong>Exemplo:</strong> O personagem mira com seu revólver em um cultista que foge
+    pela rua escura. Distância média, alvo em movimento — o Narrador aplica CD 15. Destreza 3
+    (mod +1) + Armas de Fogo 3 (mod +1) → <span class="dice">d20</span> + 2.</li>
+</ul>
+
+<h4 id="esquiva">Esquiva <span class="en">(Dodge)</span></h4>
+<p>
+  A arte de evitar ataques — sejam golpes de espada, projéteis, escombros caindo ou mesmo
+  efeitos sobrenaturais que permitem reação física. Um personagem com alta Esquiva possui
+  instintos defensivos afiados e sabe instintivamente quando abaixar, rolar para o lado ou
+  saltar para escapar do perigo.
+</p>
+<ul>
+  <li><strong>Usos:</strong> desviar de ataques corpo a corpo, esquivar de projéteis (se
+    ciente deles), evitar armadilhas mecânicas, desviar de efeitos de área, reflexos defensivos.</li>
+  <li><strong>Teste típico:</strong> Destreza + Esquiva como reação defensiva (substitui a
+    Defesa passiva quando o personagem ativamente tenta esquivar).</li>
+  <li><strong>Exemplo:</strong> Uma estátua animada lança um fragmento de pedra contra o
+    personagem. Ele tenta se jogar para o lado — Destreza 4 (mod +2) + Esquiva 2 (mod +0) →
+    <span class="dice">d20</span> + 2 vs. a rolagem de ataque da criatura.</li>
+</ul>
+
+<h4 id="atletismo">Atletismo <span class="en">(Athletics)</span></h4>
+<p>
+  Capacidade atlética geral: correr, saltar, nadar, escalar e realizar feitos de proeza
+  física que combinam condicionamento com técnica. Atletismo é a perícia das perseguições
+  pelos telhados, das fugas por esgotos e das travessias perigosas pelos canais de Backlund.
+</p>
+<ul>
+  <li><strong>Usos:</strong> perseguições a pé, escalar muros e fachadas, nadar em
+    correntezas, saltar entre telhados, corridas de resistência, manter equilíbrio em
+    superfícies instáveis, arrombamentos com força bruta.</li>
+  <li><strong>Teste típico:</strong> Força + Atletismo (para escalada, saltos de distância) ou
+    Destreza + Atletismo (para equilíbrio, acrobacia, corrida ágil).</li>
+  <li><strong>Exemplo:</strong> Durante uma perseguição, o personagem precisa saltar de um
+    telhado para outro (vão de 3 metros). Força 2 (mod +0) + Atletismo 3 (mod +1) →
+    <span class="dice">d20</span> + 1 vs. CD 13.</li>
+</ul>
+
+<!-- ===== SOCIAL ===== -->
+<h3 id="pericias-sociais">Perícias Sociais <span class="en">(Social Skills)</span></h3>
+
+<p>
+  As perícias Sociais governam a capacidade do personagem de interagir com outros — convencer,
+  enganar, intimidar, compreender e navegar as complexas redes de poder da sociedade vitoriana.
+  Em um mundo onde informação é poder e alianças podem ser tão mortais quanto venenos, a
+  competência social é uma arma indispensável.
+</p>
+
+<h4 id="persuasao">Persuasão <span class="en">(Persuasion)</span></h4>
+<p>
+  A arte de convencer os outros através de argumentos lógicos, apelos emocionais ou retórica
+  eloquente. Diferente da Manipulação, a Persuasão opera de forma aberta e direta — ou pelo
+  menos apresenta a aparência de honestidade. É a perícia dos advogados, diplomatas, pregadores
+  e negociadores.
+</p>
+<ul>
+  <li><strong>Usos:</strong> negociar acordos comerciais, convencer aliados relutantes,
+    argumentar em debates públicos, pedir favores, acalmar multidões, suplicar por clemência.</li>
+  <li><strong>Teste típico:</strong> Carisma + Persuasão vs. CD baseada na disposição do alvo.</li>
+  <li><strong>Exemplo:</strong> O personagem tenta convencer um comerciante a baixar o preço
+    de um ingrediente raro. O comerciante é ganancioso — CD 15. Carisma 3 (mod +1) + Persuasão
+    2 (mod +0) → <span class="dice">d20</span> + 1. Difícil sem argumentos muito bons.</li>
+</ul>
+
+<h4 id="intimidacao">Intimidação <span class="en">(Intimidation)</span></h4>
+<p>
+  Capacidade de amedrontar, coagir e impor respeito através de ameaças — veladas ou explícitas.
+  Pode usar presença física imponente (associada a Força) ou frieza calculada e tom de voz
+  perigoso (associada a Manipulação). É o último recurso antes da violência — ou o
+  primeiro, dependendo do personagem.
+</p>
+<ul>
+  <li><strong>Usos:</strong> extrair informações por coerção, impor autoridade sobre
+    subordinados, assustar oponentes antes do combate, evitar confrontos pela ameaça,
+    interrogar prisioneiros, afastar curiosos.</li>
+  <li><strong>Teste típico:</strong> Força + Intimidação (pela presença física) ou
+    Manipulação + Intimidação (pela ameaça sutil) vs. Determinação do alvo.</li>
+  <li><strong>Exemplo:</strong> O personagem agarra um batedor pelas lapelas e o prensa
+    contra a parede de um beco. "Quem te mandou?" Força 4 (mod +2) + Intimidação 2
+    (mod +0) → <span class="dice">d20</span> + 2 vs. Determinação do batedor.</li>
+</ul>
+
+<h4 id="etiqueta">Etiqueta <span class="en">(Etiquette)</span></h4>
+<p>
+  Conhecimento das normas sociais, protocolos e códigos de conduta das diversas camadas da
+  sociedade — desde a corte real de Loen e os jantares formais da aristocracia até as
+  regras tácitas das guildas de trabalhadores. Inclui saber como se comportar, como se
+  dirigir a pessoas de diferentes classes e como evitar ofensas involuntárias.
+</p>
+<ul>
+  <li><strong>Usos:</strong> comportar-se adequadamente em eventos formais, conhecer
+    hierarquias sociais, evitar gafes culturais, navegar burocracias governamentais e
+    eclesiásticas, identificar a classe social de alguém pelo comportamento.</li>
+  <li><strong>Teste típico:</strong> Carisma + Etiqueta para causar boa impressão;
+    Inteligência + Etiqueta para recordar protocolos específicos.</li>
+  <li><strong>Exemplo:</strong> Convidado inesperadamente para um jantar com um Conde, o
+    personagem precisa saber qual talher usar e como se dirigir ao anfitrião. Carisma 2
+    (mod +0) + Etiqueta 1 (mod −1) → <span class="dice">d20</span> − 1 vs. CD 10. O
+    nervosismo pode atrapalhar.</li>
+</ul>
+
+<h4 id="dissimulacao">Dissimulação <span class="en">(Subterfuge)</span></h4>
+<p>
+  A arte do engano sofisticado: mentir com naturalidade, ocultar intenções verdadeiras,
+  criar identidades falsas e manter pretextos convincentes sob pressão. Essencial para
+  espiões, infiltradores e qualquer Beyonder que precise manter suas habilidades
+  sobrenaturais em segredo — o que, no mundo de <em>Lord of the Mysteries</em>, é
+  praticamente todos.
+</p>
+<ul>
+  <li><strong>Usos:</strong> mentir convincentemente, manter disfarces de longa duração,
+    ocultar emoções verdadeiras, criar álibis elaborados, blefar em negociações, fingir
+    identidades, dissimular reações.</li>
+  <li><strong>Teste típico:</strong> Manipulação + Dissimulação vs. Percepção + Empatia
+    do alvo (teste disputado).</li>
+  <li><strong>Exemplo:</strong> Interrogado por um oficial da Igreja sobre atividades
+    Beyonder não autorizadas, o personagem precisa mentir sobre seu paradeiro na noite
+    anterior. Manipulação 3 (mod +1) + Dissimulação 3 (mod +1) →
+    <span class="dice">d20</span> + 2 vs. a rolagem do oficial.</li>
+</ul>
+
+<h4 id="lideranca">Liderança <span class="en">(Leadership)</span></h4>
+<p>
+  Habilidade de comandar, organizar e inspirar grupos de pessoas — desde dar ordens claras
+  em meio ao caos do combate até coordenar uma equipe de investigação com personalidades
+  conflitantes. Liderança não é apenas autoridade, mas a capacidade de fazer outros
+  <em>quererem</em> seguir suas ordens.
+</p>
+<ul>
+  <li><strong>Usos:</strong> comandar subordinados em operações, organizar ações coordenadas,
+    inspirar coragem em tempos de crise, manter a moral e coesão do grupo, delegar tarefas
+    eficientemente, planejar operações em equipe.</li>
+  <li><strong>Teste típico:</strong> Carisma + Liderança, com CD baseada no moral, lealdade e
+    estado emocional dos liderados.</li>
+  <li><strong>Exemplo:</strong> Os aliados do personagem estão prestes a entrar em pânico
+    após testemunhar uma manifestação sobrenatural. Ele precisa mantê-los focados. Carisma 3
+    (mod +1) + Liderança 2 (mod +0) → <span class="dice">d20</span> + 1 vs. CD 13.</li>
+</ul>
+
+<h4 id="empatia">Empatia <span class="en">(Empathy)</span></h4>
+<p>
+  Capacidade de ler as emoções e intenções dos outros, perceber mentiras por microexpressões
+  e tom de voz, e compreender motivações ocultas mesmo quando não verbalizadas. É o
+  contraponto direto à Dissimulação — o escudo contra o engano — e a ferramenta
+  fundamental de terapeutas, interrogadores e psicólogos.
+</p>
+<ul>
+  <li><strong>Usos:</strong> detectar mentiras, ler emoções não-verbalizadas, compreender
+    motivações ocultas, consolar aliados traumatizados, avaliar a confiabilidade de alguém,
+    perceber medo disfarçado.</li>
+  <li><strong>Teste típico:</strong> Percepção + Empatia vs. Manipulação + Dissimulação do alvo.</li>
+  <li><strong>Exemplo:</strong> O personagem desconfia que um aliado está escondendo algo
+    importante. Percepção 3 (mod +1) + Empatia 3 (mod +1) → <span class="dice">d20</span> + 2
+    vs. a Dissimulação do aliado.</li>
+</ul>
+
+<h4 id="manha">Manha <span class="en">(Streetwise)</span></h4>
+<p>
+  Conhecimento do submundo urbano: onde encontrar informações que não estão em nenhum jornal,
+  contatos no mercado negro, gírias e códigos locais, rotas de fuga pelos becos e esgotos,
+  e a dinâmica das gangues e organizações criminosas que operam nas sombras de cada grande
+  cidade.
+</p>
+<ul>
+  <li><strong>Usos:</strong> encontrar contatos no submundo, navegar bairros perigosos sem
+    chamar atenção, obter informações nas ruas, identificar armadilhas urbanas, comprar itens
+    ilícitos, reconhecer gangues e suas marcas territoriais.</li>
+  <li><strong>Teste típico:</strong> Carisma + Manha (para abordar contatos) ou Manipulação +
+    Manha (para extrair informações).</li>
+  <li><strong>Exemplo:</strong> O personagem precisa encontrar um fabricante de identidades
+    falsas no East Borough. Manipulação 3 (mod +1) + Manha 2 (mod +0) →
+    <span class="dice">d20</span> + 1 vs. CD 10. Alguém que conhece as ruas não terá muita
+    dificuldade.</li>
+</ul>
+
+<!-- ===== CONHECIMENTO ===== -->
+<h3 id="pericias-conhecimento">Perícias de Conhecimento <span class="en">(Knowledge Skills)</span></h3>
+
+<p>
+  As perícias de Conhecimento representam o saber acumulado do personagem — tanto acadêmico
+  quanto prático, tanto mundano quanto sobrenatural. Para Beyonders, várias destas perícias
+  são literalmente questão de vida ou morte: saber conduzir um ritual corretamente pode
+  significar a diferença entre invocar proteção e atrair uma abominação.
+</p>
+
+<h4 id="investigacao">Investigação <span class="en">(Investigation)</span></h4>
+<p>
+  Capacidade de analisar cenas, conectar pistas, seguir rastros de evidências e conduzir
+  inquéritos metódicos. Combina observação minuciosa com raciocínio dedutivo e é a perícia
+  primária de detetives, inspetores e qualquer um que busque a verdade oculta por trás
+  dos acontecimentos.
+</p>
+<ul>
+  <li><strong>Usos:</strong> analisar cenas de crime, encontrar pistas ocultas, pesquisar
+    registros e arquivos, seguir trilhas de evidências, reconstituir eventos passados,
+    cruzar informações de múltiplas fontes.</li>
+  <li><strong>Teste típico:</strong> Inteligência + Investigação (para análise dedutiva);
+    Percepção + Investigação (para busca ativa em uma cena).</li>
+</ul>
+
+<h4 id="ocultismo">Ocultismo <span class="en">(Occultism)</span></h4>
+<p>
+  Conhecimento do sobrenatural, das tradições esotéricas, dos selos e símbolos místicos e
+  da história oculta do mundo. Abrange desde superstições populares e lendas urbanas até
+  o conhecimento acadêmico sobre as Sequências, os Pilares e a natureza dos Beyonders.
+</p>
+<ul>
+  <li><strong>Usos:</strong> identificar símbolos místicos, reconhecer rituais em andamento,
+    conhecer entidades sobrenaturais e suas fraquezas, decifrar textos arcanos em Hermético
+    Antigo, distinguir artefatos genuínos de falsificações.</li>
+  <li><strong>Teste típico:</strong> Inteligência + Ocultismo para recordar ou analisar
+    conhecimento esotérico.</li>
+</ul>
+
+<h4 id="percepcao-espiritual">Percepção Espiritual <span class="en">(Spiritual Perception)</span></h4>
+<p>
+  A capacidade treinada de perceber o mundo espiritual, detectar presenças invisíveis, sentir
+  resíduos de poder Beyonder e identificar anomalias no tecido da realidade. Difere da
+  Percepção comum (o Atributo) por focar exclusivamente no sobrenatural — não se trata de
+  olhos afiados, mas de um sexto sentido cultivado.
+</p>
+<ul>
+  <li><strong>Usos:</strong> detectar espíritos e fantasmas, sentir resíduos de poder místico
+    em locais e objetos, identificar áreas espiritualmente contaminadas, perceber entidades
+    ocultas no plano espiritual, sentir emoções residuais em locais de tragédia.</li>
+  <li><strong>Teste típico:</strong> Percepção + Percepção Espiritual para detectar anomalias
+    sobrenaturais no entorno.</li>
+</ul>
+
+<div class="box box-lore">
+  <div class="box-title">Nota do Cenário: Percepção Espiritual</div>
+  <p>
+    Percepção Espiritual é uma perícia especialmente importante para Beyonders. Muitas das
+    Caminhos concedem bônus a esta perícia conforme o personagem avança nas Sequências. Mesmo
+    personagens mundanos podem possuí-la — existem sensitivos naturais no mundo de
+    <em>Lord of the Mysteries</em> — mas seu potencial pleno só se revela com o poder
+    Beyonder. Possuí-la em valor 0 significa que o personagem é espiritualmente "cego" — ele
+    pode estar cercado por espíritos e não perceber nenhum.
+  </p>
+</div>
+
+<h4 id="medicina">Medicina <span class="en">(Medicine)</span></h4>
+<p>
+  Conhecimento médico e cirúrgico, incluindo primeiros socorros, diagnóstico de doenças,
+  tratamento de ferimentos e compreensão de anatomia humana. Na era vitoriana do cenário,
+  a medicina é uma mistura fascinante de ciência emergente e práticas tradicionais — éter
+  e sanguessugas coexistem com inovações genuínas.
+</p>
+<ul>
+  <li><strong>Usos:</strong> tratar ferimentos em campo, diagnosticar doenças e
+    envenenamentos, realizar cirurgias de emergência, identificar venenos e substâncias,
+    estabilizar moribundos, autopsiar cadáveres.</li>
+  <li><strong>Teste típico:</strong> Inteligência + Medicina (para diagnóstico);
+    Destreza + Medicina (para cirurgias e procedimentos manuais).</li>
+</ul>
+
+<h4 id="ciencias">Ciências <span class="en">(Sciences)</span></h4>
+<p>
+  Conhecimento em ciências naturais: química, física, biologia, matemática e engenharia.
+  Reflete treinamento acadêmico formal nas disciplinas científicas da Quinta Época —
+  uma era de descobertas onde vapor, eletricidade e conhecimento proibido avançam em
+  ritmo vertiginoso.
+</p>
+<ul>
+  <li><strong>Usos:</strong> analisar substâncias químicas, compreender maquinaria e
+    engenhocas, realizar experimentos controlados, aplicar conhecimento técnico a problemas
+    práticos, fabricar compostos, compreender projetos de engenharia.</li>
+  <li><strong>Teste típico:</strong> Inteligência + Ciências para análise teórica ou prática.</li>
+</ul>
+
+<h4 id="historia">História <span class="en">(History)</span></h4>
+<p>
+  Conhecimento de eventos históricos, culturas antigas, genealogias, cronologias e a
+  evolução das civilizações do mundo. Inclui tanto história mundana quanto os relatos
+  fragmentados sobre as Eras anteriores — a Quarta Época, a Terceira e além — e as
+  civilizações perdidas cujos vestígios ainda assombram o presente.
+</p>
+<ul>
+  <li><strong>Usos:</strong> identificar artefatos antigos e sua origem, contextualizar
+    eventos atuais com precedentes históricos, conhecer linhagens nobres e dinásticas,
+    reconhecer locais de importância histórica, recordar tratados e alianças antigas.</li>
+  <li><strong>Teste típico:</strong> Inteligência + História para recordar fatos ou analisar
+    contexto histórico.</li>
+</ul>
+
+<h4 id="adivinhacao">Adivinhação <span class="en">(Divination)</span></h4>
+<p>
+  A prática de obter informações ocultas através de métodos místicos — cartas, pêndulos,
+  leitura de estrelas, interpretação de sonhos, cartomancia, borra de chá ou consultas
+  espirituais diretas. É uma perícia restrita que <strong>requer pelo menos 1 ponto</strong>
+  para ser utilizada — sem treinamento, o personagem não possui a sensibilidade nem o
+  conhecimento simbólico necessário.
+</p>
+<ul>
+  <li><strong>Usos:</strong> realizar sessões de adivinhação, interpretar presságios e
+    símbolos proféticos, ler o destino através de artefatos, obter pistas sobrenaturais
+    sobre eventos passados ou futuros, sonhar profeticamente.</li>
+  <li><strong>Teste típico:</strong> Percepção + Adivinhação, com CD baseada na obscuridade
+    da informação buscada.</li>
+  <li><strong>Exemplo:</strong> Usando um pêndulo sobre um mapa de Backlund, o Vidente
+    tenta localizar o esconderijo de um cultista desaparecido. Percepção 4 (mod +2) +
+    Adivinhação 2 (mod +0) → <span class="dice">d20</span> + 2 vs. CD 15. A verdade se
+    esconde, mas o pêndulo hesita sobre o distrito certo…</li>
+</ul>
+
+<h4 id="ritualismo">Ritualismo <span class="en">(Ritualism)</span></h4>
+<p>
+  Conhecimento e prática na condução de rituais místicos — desde simples proteções
+  espirituais e círculos de contenção até cerimônias complexas de invocação e purificação.
+  Abrange a preparação de materiais, entonação de fórmulas em Hermético Antigo, traçado de
+  selos e a disciplina necessária para completar procedimentos sobrenaturais com segurança.
+  <strong>Requer pelo menos 1 ponto</strong> para ser tentada.
+</p>
+<ul>
+  <li><strong>Usos:</strong> conduzir rituais de proteção, preparar selos e barreiras
+    espirituais, invocar entidades de forma controlada, purificar locais contaminados por
+    poder Beyonder, criar amuletos de proteção básicos.</li>
+  <li><strong>Teste típico:</strong> Inteligência + Ritualismo (para preparação e
+    conhecimento); Determinação + Ritualismo (para manter concentração e controle durante
+    o ritual).</li>
+  <li><strong>Exemplo:</strong> O personagem prepara um ritual de proteção em seu
+    apartamento, traçando selos em tinta de prata nas janelas e portas. Inteligência 3
+    (mod +1) + Ritualismo 2 (mod +0) → <span class="dice">d20</span> + 1 vs. CD 10.
+    Um ritual básico, mas que exige precisão.</li>
+</ul>
+
+<h4 id="sobrevivencia">Sobrevivência <span class="en">(Survival)</span></h4>
+<p>
+  Habilidades práticas para sobreviver fora da civilização: orientação sem bússola,
+  rastreamento de criaturas e pessoas, caça, pesca, montagem de abrigos, conhecimento
+  da fauna e flora e previsão climática rudimentar. Também inclui sobrevivência urbana
+  em condições extremas — saber onde se abrigar durante um surto de peste ou uma caçada
+  Beyonder descontrolada.
+</p>
+<ul>
+  <li><strong>Usos:</strong> rastrear criaturas ou pessoas, encontrar água e alimento no
+    ermo, orientar-se sem mapa ou bússola, montar acampamentos seguros, prever mudanças
+    climáticas, identificar plantas e animais perigosos.</li>
+  <li><strong>Teste típico:</strong> Percepção + Sobrevivência (para rastreamento e
+    orientação); Inteligência + Sobrevivência (para planejamento e identificação).</li>
+  <li><strong>Exemplo:</strong> Perdido nas florestas ao norte de Tingen, o personagem
+    tenta se orientar pelas estrelas. Percepção 2 (mod +0) + Sobrevivência 3 (mod +1) →
+    <span class="dice">d20</span> + 1 vs. CD 10.</li>
+</ul>
+
+<div class="separator"></div>
+
+<!-- ================================================================ -->
+<h2 id="sistema-testes">Sistema de Testes <span class="en">(Test System)</span></h2>
+<!-- ================================================================ -->
+
+<p>
+  Quando o resultado de uma ação é incerto e as consequências são significativas, o Narrador
+  solicita um <strong>teste</strong>. O jogador rola um <span class="dice">d20</span>, soma
+  os modificadores relevantes (Atributo + Perícia) e compara o resultado com a
+  <strong>Classe de Dificuldade (CD)</strong> <span class="en">(Difficulty Class / DC)</span>
+  determinada pelo Narrador. Se o total igualar ou superar a CD, a ação é bem-sucedida.
+</p>
+
+<h3 id="teste-basico">Teste Básico</h3>
+
+<div class="box box-rule">
+  <div class="box-title">Fórmula do Teste</div>
+  <p style="text-align:center; font-size:1.2em;">
+    <span class="dice">d20</span> + <strong>Modificador do Atributo</strong> +
+    <strong>Modificador da Perícia</strong> ≥ <strong>CD</strong>
+  </p>
+  <p>
+    O Narrador escolhe qual Atributo e qual Perícia são mais adequados à situação. Em alguns
+    casos, apenas o Atributo é necessário (testes puros, sem perícia associada) ou uma
+    combinação incomum pode ser usada quando a situação narrativa justificar.
+  </p>
+</div>
+
+<div class="box box-example">
+  <div class="box-title">Exemplo: Teste Básico</div>
+  <p>
+    <strong>Situação:</strong> Klein tenta decifrar uma inscrição em Hermético Antigo
+    encontrada em uma catacumba sob a Catedral do Deus da Noite.
+  </p>
+  <p>
+    <strong>Teste:</strong> Inteligência + Ocultismo vs. CD 15 (Muito Difícil).<br>
+    Klein tem Inteligência 4 (mod +2) e Ocultismo 3 (mod +1).<br>
+    Ele rola <span class="dice">d20</span> e obtém <strong>14</strong>.
+    Total: 14 + 2 + 1 = <strong>17</strong>.<br>
+    17 ≥ 15 — <strong>Sucesso!</strong> Klein decifra a inscrição e descobre uma pista
+    crucial sobre a localização de um artefato selado.
+  </p>
+</div>
+
+<h3 id="tabela-cd">Tabela de Classe de Dificuldade</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>CD</th>
+      <th>Dificuldade</th>
+      <th>Descrição</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>5</td>
+      <td>Trivial</td>
+      <td>Tão fácil que só falha em circunstâncias verdadeiramente extraordinárias.</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>Fácil</td>
+      <td>Desafiante para leigos, rotineiro para quem possui treinamento.</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>Moderado</td>
+      <td>Requer competência; um profissional teria boas chances de sucesso.</td>
+    </tr>
+    <tr>
+      <td>13</td>
+      <td>Difícil</td>
+      <td>Exige habilidade real; falhas são comuns mesmo entre competentes.</td>
+    </tr>
+    <tr>
+      <td>15</td>
+      <td>Muito Difícil</td>
+      <td>Apenas especialistas têm chance razoável. Amadores quase certamente falham.</td>
+    </tr>
+    <tr>
+      <td>18</td>
+      <td>Quase Impossível</td>
+      <td>Exige maestria excepcional combinada com uma boa dose de sorte.</td>
+    </tr>
+    <tr>
+      <td>20+</td>
+      <td>Lendário</td>
+      <td>Feitos que entram para a história. Quase sobre-humano; exige poderes Beyonder ou circunstâncias excepcionais.</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="box box-lore">
+  <div class="box-title">Perspectiva: O que os Números Significam</div>
+  <p>
+    Um personagem com Atributo 3 (mod +1) e Perícia 3 (mod +1) rola
+    <span class="dice">d20</span> + 2. Isso significa que ele consegue tarefas Moderadas
+    (CD 10) cerca de 65% das vezes, tarefas Difíceis (CD 13) cerca de 50% das vezes e
+    tarefas Muito Difíceis (CD 15) cerca de 40% das vezes. Sem treinamento (Perícia 0,
+    mod −2), as chances caem dramaticamente. A construção do personagem importa.
+  </p>
+</div>
+
+<h3 id="criticos">Acertos e Falhas Críticas</h3>
+
+<p>
+  Os extremos do <span class="dice">d20</span> produzem resultados extraordinários, para
+  o bem ou para o mal. Quando os dados conspiram — ou abençoam — a história se transforma.
+</p>
+
+<h4>20 Natural — Sucesso Crítico <span class="en">(Critical Success)</span></h4>
+<p>
+  Quando o dado mostra <strong>20</strong> (antes de somar qualquer modificador), o personagem
+  obtém um <strong>Sucesso Crítico</strong>. O teste é automaticamente bem-sucedido,
+  independentemente da CD, e o Narrador concede um <strong>efeito bônus</strong>: dano extra
+  em combate, uma informação adicional crucial em investigação, uma impressão particularmente
+  forte em interações sociais, ou qualquer outra vantagem narrativa significativa a critério
+  do Narrador.
+</p>
+
+<div class="box box-example">
+  <div class="box-title">Exemplo: Sucesso Crítico</div>
+  <p>
+    Audrey tenta persuadir um comerciante desconfiado a revelar informações sobre um cliente
+    misterioso. CD 13 — o comerciante é cauteloso. Mas Audrey rola um <strong>20
+    natural</strong>. Não apenas o comerciante revela tudo o que sabe, como também se lembra
+    de um detalhe que havia esquecido: o cliente misterioso deixou cair um bilhete com um
+    endereço ao pagar. A investigação ganha uma pista extra e inesperada.
+  </p>
+</div>
+
+<h4>1 Natural — Falha Crítica <span class="en">(Critical Failure)</span></h4>
+<p>
+  Quando o dado mostra <strong>1</strong>, o personagem sofre uma <strong>Falha Crítica</strong>.
+  O teste falha automaticamente, independentemente dos modificadores, e uma
+  <strong>complicação</strong> adicional surge: a arma emperra em combate, a tentativa de
+  persuasão ofende gravemente o interlocutor, o ritual atrai atenção sobrenatural indesejada,
+  a fechadura trava definitivamente, ou algo igualmente problemático ocorre. O Narrador
+  determina a complicação de acordo com o contexto e a gravidade da situação.
+</p>
+
+<div class="box box-example">
+  <div class="box-title">Exemplo: Falha Crítica</div>
+  <p>
+    Fors tenta abrir furtivamente a fechadura de um escritório durante a noite (Destreza +
+    Dissimulação, CD 10). Ele rola <strong>1 natural</strong>. Não apenas a fechadura não
+    abre, como a gazua se quebra dentro do mecanismo, travando-o permanentemente. Pior: o
+    barulho metálico ecoa pelo corredor vazio e alerta o guarda noturno no andar de cima.
+    Passos começam a se aproximar.
+  </p>
+</div>
+
+<h3 id="testes-disputados">Testes Disputados <span class="en">(Contested Tests)</span></h3>
+
+<p>
+  Quando dois personagens (ou um personagem e um NPC) se opõem diretamente em uma ação —
+  um mente enquanto o outro tenta detectar a mentira; um se esconde enquanto o outro
+  procura; um tenta agarrar enquanto o outro tenta escapar — ambos fazem um teste e
+  comparam os resultados. O <strong>maior total vence</strong>. Em caso de empate, o
+  <strong>defensor</strong> (quem está reagindo, resistindo ou mantendo o status quo)
+  prevalece.
+</p>
+
+<div class="box box-example">
+  <div class="box-title">Exemplo: Teste Disputado</div>
+  <p>
+    <strong>Situação:</strong> Klein tenta mentir para um oficial da polícia sobre seu
+    paradeiro na noite anterior. O oficial é experiente e desconfiado.
+  </p>
+  <p>
+    <strong>Klein (atacante):</strong> Manipulação 3 (mod +1) + Dissimulação 3 (mod +1) →
+    rola <span class="dice">d20</span> e obtém 12. Total: 12 + 1 + 1 = <strong>14</strong>.<br>
+    <strong>Oficial (defensor):</strong> Percepção 3 (mod +1) + Empatia 2 (mod +0) → rola
+    <span class="dice">d20</span> e obtém 11. Total: 11 + 1 + 0 = <strong>12</strong>.<br>
+    14 vs. 12 — <strong>Klein vence.</strong> O oficial aceita a história, embora algo em seu
+    olhar sugira que anotou mentalmente a conversa para referência futura.
+  </p>
+</div>
+
+<h3 id="vantagem-desvantagem">Vantagem e Desvantagem <span class="en">(Advantage &amp; Disadvantage)</span></h3>
+
+<p>
+  Em certas situações, as circunstâncias favorecem ou prejudicam significativamente o
+  personagem. Nesses casos, o Narrador pode conceder <strong>Vantagem</strong> ou impor
+  <strong>Desvantagem</strong>.
+</p>
+
+<ul>
+  <li><strong>Vantagem <span class="en">(Advantage)</span>:</strong> o jogador rola
+    <span class="dice">2d20</span> e usa o <strong>maior</strong> resultado. Representa
+    condições favoráveis — terreno elevado, preparação prévia, assistência de aliados,
+    informações privilegiadas, equipamento superior, etc.</li>
+  <li><strong>Desvantagem <span class="en">(Disadvantage)</span>:</strong> o jogador rola
+    <span class="dice">2d20</span> e usa o <strong>menor</strong> resultado. Representa
+    condições adversas — escuridão, ferimentos, distração, terreno instável, estresse
+    emocional, etc.</li>
+</ul>
+
+<div class="box box-rule">
+  <div class="box-title">Regra: Anulação de Vantagem e Desvantagem</div>
+  <p>
+    Se um personagem teria tanto Vantagem quanto Desvantagem ao mesmo tempo — independentemente
+    de quantas fontes de cada existam — ambas se anulam completamente. Ele faz o teste
+    normalmente, com apenas <span class="dice">1d20</span>. Três fontes de Vantagem e uma
+    de Desvantagem? Rolagem normal. Simplicidade acima de contabilidade.
+  </p>
+</div>
+
+<div class="box box-example">
+  <div class="box-title">Exemplo: Vantagem</div>
+  <p>
+    Derrick Berg está tentando perceber uma armadilha em um templo subterrâneo da Rosa da
+    Redenção. O Narrador decide que, como Derrick estudou mapas antigos do local previamente,
+    ele tem <strong>Vantagem</strong> no teste de Percepção + Investigação (CD 13).
+  </p>
+  <p>
+    Ele rola <span class="dice">2d20</span> e obtém <strong>8</strong> e <strong>15</strong>.
+    Usa o 15. Com Percepção 3 (mod +1) e Investigação 2 (mod +0), o total é 15 + 1 + 0 =
+    <strong>16</strong>. Sucesso — Derrick nota o fio quase invisível esticado na soleira
+    antes de pisá-lo.
+  </p>
+</div>
+
+<h3 id="testes-grupo">Testes em Grupo <span class="en">(Group Tests)</span></h3>
+
+<p>
+  Quando todo o grupo precisa realizar a mesma ação simultaneamente — como atravessar
+  furtivamente uma área vigiada, escalar um penhasco ou resistir ao efeito de uma emanação
+  sobrenatural — o Narrador pode pedir um <strong>teste em grupo</strong>. Cada membro rola
+  individualmente. Se <strong>a maioria</strong> (metade ou mais) dos membros for
+  bem-sucedida, o grupo como um todo é bem-sucedido. Os mais habilidosos compensam os
+  menos preparados, cobrindo seus erros ou ajudando-os nos momentos críticos.
+</p>
+
+<div class="box box-example">
+  <div class="box-title">Exemplo: Teste em Grupo</div>
+  <p>
+    Um grupo de quatro investigadores precisa se esgueirar por um armazém vigiado por
+    capangas de uma organização criminosa. O Narrador pede Destreza + Esquiva (CD 13) para
+    cada membro, representando a capacidade de se mover sem ser detectado.
+  </p>
+  <p>
+    Personagem A: total 15 ✓ · Personagem B: total 9 ✗ ·
+    Personagem C: total 14 ✓ · Personagem D: total 13 ✓
+  </p>
+  <p>
+    Três de quatro passaram — <strong>o grupo é bem-sucedido.</strong> O personagem B
+    tropeça em uma caixa, mas o personagem A o puxa rapidamente para trás de uma pilha de
+    barris antes que o guarda vire a cabeça.
+  </p>
+</div>
+
+<div class="separator"></div>
+
+<!-- ================================================================ -->
+<h2 id="estatisticas-derivadas">Estatísticas Derivadas <span class="en">(Derived Stats)</span></h2>
+<!-- ================================================================ -->
+
+<p>
+  A partir dos Atributos, uma série de valores secundários são calculados. Esses valores
+  determinam a resiliência do personagem, sua rapidez de reação, sua resistência a
+  diferentes tipos de ameaça e seus recursos sobrenaturais. Todos esses valores são
+  anotados na ficha e atualizados conforme os Atributos mudam ou o personagem avança
+  nas Sequências Beyonder.
+</p>
+
+<!-- PV -->
+<h3 id="pontos-vida">Pontos de Vida (PV) <span class="en">(Hit Points / HP)</span></h3>
+
+<p>
+  Pontos de Vida representam a resistência física do personagem — sua capacidade de
+  absorver dano, aguentar golpes e continuar de pé. Quando os PV chegam a 0, o personagem
+  fica <em>Incapacitado</em>; em valores negativos, ele arrisca a morte permanente.
+</p>
+
+<div class="box box-rule">
+  <div class="box-title">Cálculo: Pontos de Vida</div>
+  <p style="text-align:center; font-size:1.15em;">
+    <strong>PV = 8 + Modificador de Vigor + Bônus de Sequência</strong>
+  </p>
+</div>
+
+<table>
+  <thead>
+    <tr>
+      <th>Sequência</th>
+      <th>Bônus de PV</th>
+      <th>Exemplo (Vigor 3, mod +1)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>9 (Beyonder Inicial)</td><td>+0</td><td>8 + 1 + 0 = <strong>9 PV</strong></td></tr>
+    <tr><td>8</td><td>+2</td><td>8 + 1 + 2 = <strong>11 PV</strong></td></tr>
+    <tr><td>7</td><td>+4</td><td>8 + 1 + 4 = <strong>13 PV</strong></td></tr>
+    <tr><td>6</td><td>+6</td><td>8 + 1 + 6 = <strong>15 PV</strong></td></tr>
+    <tr><td>5</td><td>+8</td><td>8 + 1 + 8 = <strong>17 PV</strong></td></tr>
+  </tbody>
+</table>
+
+<p>
+  Conforme o personagem avança nas Sequências Beyonder, seu corpo se torna mais resistente —
+  um reflexo da transformação sobrenatural que ocorre a cada nova poção consumida. Na criação
+  (Sequência 9), o bônus é 0. Um personagem com Vigor 4 (mod +2) na Sequência 9 começa
+  com 8 + 2 = <strong>10 PV</strong>; ao alcançar a Sequência 7, teria 8 + 2 + 4 =
+  <strong>14 PV</strong>.
+</p>
+
+<!-- Espiritualidade -->
+<h3 id="espiritualidade">Espiritualidade <span class="en">(Spirituality)</span></h3>
+
+<p>
+  Espiritualidade é o recurso que alimenta rituais e poderes Beyonder — uma reserva de
+  energia mística que representa a conexão do personagem com as forças ocultas do mundo.
+  É consumida ao ativar habilidades sobrenaturais e restaurada com descanso e meditação.
+</p>
+
+<div class="box box-rule">
+  <div class="box-title">Cálculo: Espiritualidade</div>
+  <p style="text-align:center; font-size:1.15em;">
+    <strong>Espiritualidade = Percepção + Determinação</strong>
+  </p>
+  <p>
+    Usa-se o <em>valor do atributo</em> (não o modificador). Um personagem com Percepção 3
+    e Determinação 4 teria <strong>7 pontos de Espiritualidade</strong>. Com Percepção 4 e
+    Determinação 3, o resultado seria o mesmo: <strong>7</strong>.
+  </p>
+</div>
+
+<p>
+  A Espiritualidade é gasta ao lançar rituais, ativar poderes de Sequência e realizar
+  certas ações sobrenaturais. Quando esgotada, o personagem não pode mais utilizar habilidades
+  místicas até descansar e meditar. Cada poder e ritual possui um custo específico em pontos
+  de Espiritualidade, detalhado junto à descrição do Caminho correspondente.
+</p>
+
+<div class="box box-example">
+  <div class="box-title">Exemplo: Uso de Espiritualidade</div>
+  <p>
+    Klein (Percepção 4, Determinação 3) possui <strong>7 pontos de Espiritualidade</strong>.
+    Ele usa seu poder de Vidente <em>"Clarividência"</em> (custo: 2 pontos), reduzindo sua
+    reserva para 5. Depois, conduz um ritual de adivinhação (custo: 3 pontos), ficando com
+    apenas 2. Se precisar usar outro poder, terá recursos muito limitados — e os riscos de
+    agir sem Espiritualidade são graves.
+  </p>
+</div>
+
+<!-- Iniciativa -->
+<h3 id="iniciativa">Iniciativa <span class="en">(Initiative)</span></h3>
+
+<p>
+  A Iniciativa determina a ordem de ação em combate e em qualquer situação onde o tempo é
+  crítico. No início de cada confronto, todos os participantes rolam Iniciativa para
+  estabelecer quem age primeiro.
+</p>
+
+<div class="box box-rule">
+  <div class="box-title">Cálculo: Iniciativa</div>
+  <p style="text-align:center; font-size:1.15em;">
+    <strong>Iniciativa = <span class="dice">d20</span> + Mod. Destreza + Mod. Percepção</strong>
+  </p>
+  <p>
+    Quem obtiver o maior resultado age primeiro. Em caso de empate, o personagem com maior
+    Destreza age primeiro; se o empate persistir, ambos agem simultaneamente.
+  </p>
+</div>
+
+<div class="box box-example">
+  <div class="box-title">Exemplo: Iniciativa</div>
+  <p>
+    Um combate eclode em um beco escuro do East Borough. Klein (Destreza 3, mod +1;
+    Percepção 4, mod +2) e um assassino (Destreza 4, mod +2; Percepção 2, mod +0) rolam
+    Iniciativa.
+  </p>
+  <p>
+    Klein: <span class="dice">d20</span> = 11 → 11 + 1 + 2 = <strong>14</strong>.<br>
+    Assassino: <span class="dice">d20</span> = 12 → 12 + 2 + 0 = <strong>14</strong>.<br>
+    Empate! O assassino tem Destreza mais alta (4 vs. 3), então ele age primeiro. A percepção
+    aguçada de Klein não compensa a velocidade pura de seu oponente neste caso.
+  </p>
+</div>
+
+<!-- Defesa -->
+<h3 id="defesa">Defesa <span class="en">(Defense)</span></h3>
+
+<p>
+  A Defesa representa o quão difícil é acertar o personagem em combate. É o valor que um
+  atacante precisa igualar ou superar em seu teste de ataque. Reflete agilidade natural,
+  instintos defensivos e proteção oferecida por armaduras e equipamento.
+</p>
+
+<div class="box box-rule">
+  <div class="box-title">Cálculo: Defesa</div>
+  <p style="text-align:center; font-size:1.15em;">
+    <strong>Defesa = 10 + Mod. Destreza + Bônus de Armadura</strong>
+  </p>
+  <p>
+    Um personagem sem armadura com Destreza 3 (mod +1) tem Defesa <strong>11</strong>. Com
+    um colete reforçado (+2), sua Defesa sobe para <strong>13</strong>. Armaduras pesadas
+    oferecem mais proteção, mas podem limitar a Destreza máxima aplicável.
+  </p>
+</div>
+
+<div class="box box-example">
+  <div class="box-title">Exemplo: Defesa em Combate</div>
+  <p>
+    Um atirador tenta acertar Klein (Defesa 11) com uma pistola à distância média. O
+    atirador tem Destreza 3 (mod +1) e Armas de Fogo 2 (mod +0). Ele rola
+    <span class="dice">d20</span> e obtém 9. Total: 9 + 1 + 0 = <strong>10</strong>.
+    10 &lt; 11 — o tiro erra por pouco, ricocheteando na parede de tijolos ao lado de Klein.
+  </p>
+</div>
+
+<!-- Salvaguardas -->
+<h3 id="salvaguardas">Salvaguardas <span class="en">(Saves)</span></h3>
+
+<p>
+  Salvaguardas são testes reativos feitos para resistir a efeitos que ameaçam o personagem —
+  venenos, ilusões, medo sobrenatural, possessão e outras forças. Existem três tipos, cada
+  um governado pela <strong>média dos modificadores</strong> de dois Atributos (arredondada
+  para baixo):
+</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Salvaguarda</th>
+      <th>Atributos</th>
+      <th>Modificador</th>
+      <th>Resiste a…</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Corpo</strong> <span class="en">(Body)</span></td>
+      <td>Força + Vigor</td>
+      <td>(Mod. Força + Mod. Vigor) ÷ 2 ↓</td>
+      <td>Venenos, doenças, dano físico massivo, fadiga extrema, efeitos de transformação corporal.</td>
+    </tr>
+    <tr>
+      <td><strong>Mente</strong> <span class="en">(Mind)</span></td>
+      <td>Inteligência + Determinação</td>
+      <td>(Mod. Inteligência + Mod. Determinação) ÷ 2 ↓</td>
+      <td>Controle mental, ilusões, confusão, leitura de pensamentos, manipulação mágica da mente.</td>
+    </tr>
+    <tr>
+      <td><strong>Espírito</strong> <span class="en">(Spirit)</span></td>
+      <td>Percepção + Carisma</td>
+      <td>(Mod. Percepção + Mod. Carisma) ÷ 2 ↓</td>
+      <td>Medo sobrenatural, possessão espiritual, corrupção da alma, ataques de entidades do além-mundo.</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="box box-example">
+  <div class="box-title">Exemplo: Salvaguarda de Espírito</div>
+  <p>
+    Uma entidade espiritual surgida de um selo quebrado tenta possuir Derrick Berg. O
+    Narrador pede uma Salvaguarda de Espírito (CD 15).
+  </p>
+  <p>
+    Derrick tem Percepção 3 (mod +1) e Carisma 2 (mod +0). Seu modificador de Salvaguarda
+    de Espírito é (1 + 0) ÷ 2 = <strong>0</strong> (arredondado para baixo).
+  </p>
+  <p>
+    Ele rola <span class="dice">d20</span> + 0 e precisa de 15 ou mais. Uma tarefa árdua —
+    Derrick vai precisar de sorte ou da ajuda dos companheiros para resistir à investida
+    da entidade.
+  </p>
+</div>
+
+<div class="box box-example">
+  <div class="box-title">Exemplo: Salvaguarda de Mente</div>
+  <p>
+    Um Beyonder do Caminho do Manipulador tenta implantar uma sugestão na mente de Klein. O
+    Narrador pede uma Salvaguarda de Mente (CD 13).
+  </p>
+  <p>
+    Klein tem Inteligência 4 (mod +2) e Determinação 3 (mod +1). Seu modificador de
+    Salvaguarda de Mente é (2 + 1) ÷ 2 = <strong>1</strong> (arredondado para baixo).
+  </p>
+  <p>
+    Ele rola <span class="dice">d20</span> + 1, precisando de 12 ou mais no dado. Sua mente
+    analítica e sua força de vontade lhe dão uma vantagem — Klein sente a intrusão como um
+    pensamento estranho e o rejeita.
+  </p>
+</div>
+
+<!-- Lucidez -->
+<h3 id="lucidez">Lucidez <span class="en">(Lucidity)</span></h3>
+
+<p>
+  Lucidez é a barra de sanidade do personagem — uma medida de quão firmemente ele se mantém
+  ancorado à realidade e à sua humanidade. Exposição a horrores cósmicos, uso excessivo de
+  poderes Beyonder, falha em digerir poções, contato com entidades do além-mundo e traumas
+  psicológicos profundos corroem a Lucidez. Quando ela chega a 0, o personagem sucumbe à
+  loucura e perde o controle — podendo se tornar um Beyonder Descontrolado, uma marionete
+  de forças sombrias, ou simplesmente um cascão vazio onde antes havia uma pessoa.
+</p>
+
+<div class="box box-rule">
+  <div class="box-title">Cálculo: Lucidez</div>
+  <p style="text-align:center; font-size:1.15em;">
+    <strong>Lucidez = 5 + Modificador de Determinação</strong> (máximo 10)
+  </p>
+  <p>
+    Um personagem com Determinação 2 (mod +0) começa com <strong>5 de Lucidez</strong>.
+    Com Determinação 3 (mod +1), teria <strong>6</strong>. Com Determinação 5 (mod +3),
+    teria <strong>8</strong>. O valor máximo absoluto é <strong>10</strong>, representando
+    uma firmeza mental inabalável.
+  </p>
+</div>
+
+<div class="box box-warning">
+  <div class="box-title">Atenção: A Lucidez é Preciosa</div>
+  <p>
+    A Lucidez não se recupera facilmente. Descanso comum não a restaura. O personagem
+    precisa de ações específicas e deliberadas — interpretação fiel do Método de Atuação,
+    momentos de conexão humana genuína, meditação profunda ou rituais de purificação — para
+    recuperar pontos perdidos. Cada ponto de Lucidez que se vai é um passo mais próximo do
+    abismo. As regras completas de perda e recuperação de Lucidez estão detalhadas no
+    capítulo dedicado a Sanidade e Corrupção.
+  </p>
+</div>
+
+<p>
+  A Lucidez é o equivalente temático da Humanidade de <em>Vampire: The Masquerade</em> —
+  o lembrete constante de que o poder Beyonder tem um custo, e que cada passo rumo ao
+  extraordinário é um passo para longe de quem você era. Proteja sua Lucidez como protegeria
+  sua vida. Em muitos sentidos, ela <em>é</em> sua vida.
+</p>
+
+<div class="separator"></div>
+
+<!-- ===== RESUMO RÁPIDO ===== -->
+<h2 id="resumo">Resumo Rápido de Referência</h2>
+
+<div class="stat-block">
+  <h4>Fórmulas de Referência</h4>
+  <div class="stat-line">
+    <span class="stat-label">Modificador:</span>
+    <span>Valor − 2</span>
+  </div>
+  <div class="stat-line">
+    <span class="stat-label">Teste:</span>
+    <span><span class="dice">d20</span> + Mod. Atributo + Mod. Perícia ≥ CD</span>
+  </div>
+  <div class="stat-line">
+    <span class="stat-label">PV:</span>
+    <span>8 + Mod. Vigor + Bônus de Sequência</span>
+  </div>
+  <div class="stat-line">
+    <span class="stat-label">Espiritualidade:</span>
+    <span>Percepção + Determinação (valores, não modificadores)</span>
+  </div>
+  <div class="stat-line">
+    <span class="stat-label">Iniciativa:</span>
+    <span><span class="dice">d20</span> + Mod. Destreza + Mod. Percepção</span>
+  </div>
+  <div class="stat-line">
+    <span class="stat-label">Defesa:</span>
+    <span>10 + Mod. Destreza + Bônus de Armadura</span>
+  </div>
+  <div class="stat-line">
+    <span class="stat-label">Salvaguardas:</span>
+    <span>Corpo (For+Vig), Mente (Int+Det), Espírito (Per+Car) — média dos mods ↓</span>
+  </div>
+  <div class="stat-line">
+    <span class="stat-label">Lucidez:</span>
+    <span>5 + Mod. Determinação (máx. 10)</span>
+  </div>
+</div>
+
+<div class="box box-lore">
+  <div class="box-title">Conselho do Narrador</div>
+  <p>
+    Os números são uma ferramenta, não uma prisão. Nem toda interação precisa de um teste de
+    dado. Se a ação é trivial e não há risco significativo, deixe o personagem simplesmente
+    fazer. Se a ação é genuinamente impossível dadas as circunstâncias, nenhuma rolagem a
+    tornará possível — e forçar um teste apenas frustra os jogadores. Reserve os dados para
+    os momentos em que o resultado é incerto e as consequências importam — é aí que a tensão
+    nasce e a história se torna memorável.
+  </p>
+</div>
+
+<!-- ===== NAVEGAÇÃO ===== -->
+<nav class="book-nav">
+  <a href="02-criacao.html">← Capítulo 2 — Criação de Personagem</a>
+  <a href="04-pathways.html">Capítulo 4 — Os 22 Caminhos →</a>
+</nav>
+
+</body>
+</html>

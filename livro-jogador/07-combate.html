@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Capítulo 7 — Combate | Senhor dos Mistérios RPG</title>
+<link rel="stylesheet" href="../assets/css/common.css">
+<link rel="stylesheet" href="../assets/css/print.css">
+</head>
+<body>
+
+<h1>Capítulo 7 — Combate <span class="en">(Combat System)</span></h1>
+
+<blockquote>
+  "Em Backlund, os revólveres falam primeiro e as perguntas vêm depois.
+  Mas se você é um <em>Beyonder</em>, até os revólveres ficam em silêncio."
+  <span class="cite">— Detetive particular anônimo, distrito de East Borough</span>
+</blockquote>
+
+<p>
+  O combate em <strong>Senhor dos Mistérios RPG</strong> combina a violência crua da
+  era vitoriana — revólveres, sabres e becos escuros — com poderes sobrenaturais que
+  podem transformar uma esquina em um campo de batalha dimensional. Este capítulo
+  apresenta todas as regras necessárias para resolver conflitos físicos e espirituais,
+  desde uma briga de taverna até um confronto contra uma entidade de Sequência elevada.
+</p>
+
+<!-- ================================================================= -->
+<!--  INICIATIVA                                                        -->
+<!-- ================================================================= -->
+<h2>Iniciativa <span class="en">(Initiative)</span></h2>
+
+<p>
+  Quando o combate se inicia, cada participante faz um teste de Iniciativa para
+  determinar a ordem de ação.
+</p>
+
+<div class="box box-rule">
+  <div class="box-title">Teste de Iniciativa</div>
+  <p>
+    <strong>Rolagem:</strong> <span class="dice">d20</span> + Mod. Destreza + Mod. Percepção
+  </p>
+  <ul>
+    <li>O resultado mais alto age primeiro; os demais seguem em ordem decrescente.</li>
+    <li><strong>Empate:</strong> desempata quem tiver maior Destreza. Se ainda empatados, os jogadores decidem entre si (ou o Narrador decide para NPCs).</li>
+    <li>A ordem de Iniciativa permanece fixa durante todo o combate, a menos que um efeito especificamente a altere.</li>
+  </ul>
+</div>
+
+<h3>Rodadas de Surpresa <span class="en">(Surprise Rounds)</span></h3>
+
+<p>
+  Quando um grupo embosca outro, os atacantes ganham uma <strong>rodada de surpresa</strong>
+  antes do combate normal:
+</p>
+
+<ul>
+  <li>Personagens <strong>surpreendidos</strong> não podem agir na primeira rodada (não recebem Ação Principal, Ação Bônus, Reação ou Movimento).</li>
+  <li>Para determinar surpresa: o atacante faz Furtividade vs. Percepção passiva dos alvos (10 + Mod. Percepção). Alvos que falham são surpreendidos.</li>
+  <li>Após a rodada de surpresa, o combate segue a ordem de Iniciativa normal.</li>
+</ul>
+
+<div class="separator"></div>
+
+<!-- ================================================================= -->
+<!--  A RODADA DE COMBATE                                               -->
+<!-- ================================================================= -->
+<h2>A Rodada de Combate <span class="en">(The Combat Round)</span></h2>
+
+<p>
+  Cada rodada representa aproximadamente <strong>6 segundos</strong> de tempo ficcional.
+  No seu turno, um personagem dispõe dos seguintes recursos:
+</p>
+
+<div class="stat-block">
+  <h4>Recursos por Turno</h4>
+
+  <div class="stat-line">
+    <span class="stat-label">Ação Principal:</span>
+    <span>Uma ação completa — Atacar, Usar Poder, Usar Item, Disparar, Desengajar, Ajudar, Esquivar, Esconder-se.</span>
+  </div>
+
+  <div class="stat-line">
+    <span class="stat-label">Ação Bônus:</span>
+    <span>Uma ação rápida — habilidades que especificam "ação bônus", ataque com mão secundária, certos poderes <em>Beyonder</em>.</span>
+  </div>
+
+  <div class="stat-line">
+    <span class="stat-label">Reação:</span>
+    <span>Uma resposta instantânea, usada <strong>fora do seu turno</strong> — Ataque de Oportunidade, certos poderes defensivos. Recuperada no início do seu próximo turno.</span>
+  </div>
+
+  <div class="stat-line">
+    <span class="stat-label">Movimento:</span>
+    <span>Mova-se até o seu <strong>deslocamento base</strong> (9 m para humanos). Pode ser fracionado (ex.: mover 3 m, atacar, mover 6 m). Terreno difícil custa o dobro.</span>
+  </div>
+</div>
+
+<h3>Ações Detalhadas</h3>
+
+<table>
+  <thead>
+    <tr><th>Ação</th><th>Descrição</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Atacar</strong></td>
+      <td>Fazer um ataque corpo a corpo ou à distância contra um alvo.</td>
+    </tr>
+    <tr>
+      <td><strong>Usar Poder</strong></td>
+      <td>Ativar um poder <em>Beyonder</em> que custe uma ação principal.</td>
+    </tr>
+    <tr>
+      <td><strong>Usar Item</strong></td>
+      <td>Beber uma poção, ativar um artefato, trocar de arma (se não embainhada).</td>
+    </tr>
+    <tr>
+      <td><strong>Disparar</strong> <span class="en">(Dash)</span></td>
+      <td>Ganhar movimento adicional igual ao seu deslocamento (total: dobro do normal).</td>
+    </tr>
+    <tr>
+      <td><strong>Desengajar</strong> <span class="en">(Disengage)</span></td>
+      <td>Seu movimento não provoca Ataques de Oportunidade neste turno.</td>
+    </tr>
+    <tr>
+      <td><strong>Ajudar</strong> <span class="en">(Help)</span></td>
+      <td>Conceder Vantagem a um aliado no próximo teste ou ataque contra um alvo específico.</td>
+    </tr>
+    <tr>
+      <td><strong>Esquivar</strong> <span class="en">(Dodge)</span></td>
+      <td>Até seu próximo turno, ataques contra você têm Desvantagem e você tem Vantagem em testes de Destreza.</td>
+    </tr>
+    <tr>
+      <td><strong>Esconder-se</strong> <span class="en">(Hide)</span></td>
+      <td>Teste de Furtividade contra a Percepção passiva dos inimigos. Se bem-sucedido, ataques contra você têm Desvantagem.</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="separator"></div>
+
+<!-- ================================================================= -->
+<!--  ATAQUES                                                           -->
+<!-- ================================================================= -->
+<h2>Ataques <span class="en">(Attacks)</span></h2>
+
+<p>
+  Todos os ataques seguem a mesma estrutura fundamental: role um <span class="dice">d20</span>,
+  some os modificadores relevantes e compare com a defesa do alvo.
+</p>
+
+<h3>Ataques Corpo a Corpo <span class="en">(Melee)</span></h3>
+
+<div class="box box-rule">
+  <div class="box-title">Ataque Corpo a Corpo</div>
+  <p><span class="dice">d20</span> + Mod. Força + Mod. Luta ≥ <strong>Defesa</strong> do alvo</p>
+  <p>Em caso de acerto, role o dano da arma + Mod. Força.</p>
+</div>
+
+<h3>Ataques à Distância <span class="en">(Ranged)</span></h3>
+
+<div class="box box-rule">
+  <div class="box-title">Ataque à Distância</div>
+  <p><span class="dice">d20</span> + Mod. Destreza + Mod. Armas de Fogo ≥ <strong>Defesa</strong> do alvo</p>
+  <p>Em caso de acerto, role o dano da arma. Sem bônus de atributo ao dano (exceto armas com propriedade <em>Finesse</em>).</p>
+  <p>Atacar à distância com um inimigo a até 1,5 m impõe <strong>Desvantagem</strong> na rolagem.</p>
+</div>
+
+<h3>Ataques com Poderes <em>Beyonder</em></h3>
+
+<div class="box box-rule">
+  <div class="box-title">Ataque Beyonder</div>
+  <p><span class="dice">d20</span> + Mod. Atributo relevante + Mod. Perícia relevante ≥ <strong>Salvaguarda</strong> do alvo</p>
+  <p>A Salvaguarda depende do tipo de poder:</p>
+  <ul>
+    <li><strong>Corpo:</strong> poderes que afetam a forma física (venenos, transmutações, controle corporal).</li>
+    <li><strong>Mente:</strong> poderes mentais e emocionais (telepatia, charme, medo, ilusões).</li>
+    <li><strong>Espírito:</strong> poderes que atacam a essência espiritual (maldições, necromancia, manipulação de alma).</li>
+  </ul>
+</div>
+
+<h3>Acertos Críticos e Falhas Críticas</h3>
+
+<ul>
+  <li><strong>Acerto Crítico (20 natural):</strong> duplique todos os dados de dano. Um revólver que causa <span class="dice">2d6</span> passa a causar <span class="dice">4d6</span>. Modificadores fixos não são duplicados.</li>
+  <li><strong>Falha Crítica (1 natural):</strong> o ataque erra automaticamente, independente de modificadores. O Narrador pode impor uma consequência narrativa (arma encravada, tropeço, etc.).</li>
+</ul>
+
+<div class="separator"></div>
+
+<!-- ================================================================= -->
+<!--  TIPOS DE DANO                                                     -->
+<!-- ================================================================= -->
+<h2>Tipos de Dano</h2>
+
+<p>
+  O dano no jogo é categorizado em três grupos, cada um com subtipos:
+</p>
+
+<h3>Físico</h3>
+<table>
+  <thead>
+    <tr><th>Subtipo</th><th>Exemplos</th></tr>
+  </thead>
+  <tbody>
+    <tr><td><strong>Corte</strong> <span class="en">(Slashing)</span></td><td>Sabres, espadas, garras, vidro estilhaçado</td></tr>
+    <tr><td><strong>Perfuração</strong> <span class="en">(Piercing)</span></td><td>Balas, flechas, adagas, presas</td></tr>
+    <tr><td><strong>Contusão</strong> <span class="en">(Bludgeoning)</span></td><td>Clavas, socos, quedas, pedras</td></tr>
+  </tbody>
+</table>
+
+<h3>Elemental</h3>
+<table>
+  <thead>
+    <tr><th>Subtipo</th><th>Exemplos</th></tr>
+  </thead>
+  <tbody>
+    <tr><td><strong>Fogo</strong> <span class="en">(Fire)</span></td><td>Chamas sobrenaturais, explosões, óleo ardente</td></tr>
+    <tr><td><strong>Relâmpago</strong> <span class="en">(Lightning)</span></td><td>Raios, eletricidade, tempestades canalizadas</td></tr>
+    <tr><td><strong>Gelo</strong> <span class="en">(Cold)</span></td><td>Congelamento, ventos gélidos, toque da morte</td></tr>
+    <tr><td><strong>Ácido</strong> <span class="en">(Acid)</span></td><td>Substâncias corrosivas, venenos alquímicos</td></tr>
+  </tbody>
+</table>
+
+<h3>Espiritual</h3>
+<table>
+  <thead>
+    <tr><th>Subtipo</th><th>Exemplos</th></tr>
+  </thead>
+  <tbody>
+    <tr><td><strong>Necrótico</strong> <span class="en">(Necrotic)</span></td><td>Energia de morte, putrefação, drenagem vital</td></tr>
+    <tr><td><strong>Radiante</strong> <span class="en">(Radiant)</span></td><td>Luz sagrada, purificação solar, chamas brancas</td></tr>
+    <tr><td><strong>Psíquico</strong> <span class="en">(Psychic)</span></td><td>Ataques mentais, gritos espirituais, sobrecarga cognitiva</td></tr>
+    <tr><td><strong>Sombra</strong> <span class="en">(Shadow)</span></td><td>Escuridão condensada, sussurros abissais, corrupção</td></tr>
+  </tbody>
+</table>
+
+<div class="box box-rule">
+  <div class="box-title">Resistências e Vulnerabilidades</div>
+  <ul>
+    <li><strong>Resistência:</strong> a criatura recebe <strong>metade do dano</strong> daquele tipo (arredondado para baixo).</li>
+    <li><strong>Vulnerabilidade:</strong> a criatura recebe o <strong>dobro do dano</strong> daquele tipo.</li>
+    <li><strong>Imunidade:</strong> a criatura não recebe dano daquele tipo.</li>
+  </ul>
+  <p>Resistências e vulnerabilidades são aplicadas <em>após</em> quaisquer outros modificadores de dano.</p>
+</div>
+
+<div class="separator"></div>
+
+<!-- ================================================================= -->
+<!--  TABELA DE ARMAS                                                   -->
+<!-- ================================================================= -->
+<h2>Armas <span class="en">(Weapons)</span></h2>
+
+<table>
+  <thead>
+    <tr><th>Arma</th><th>Dano</th><th>Tipo</th><th>Alcance</th><th>Propriedades</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Revólver</td>
+      <td><span class="dice">2d6</span></td>
+      <td>Perfuração</td>
+      <td>18 m</td>
+      <td>6 tiros, recarregar (1 ação)</td>
+    </tr>
+    <tr>
+      <td>Rifle</td>
+      <td><span class="dice">2d8</span></td>
+      <td>Perfuração</td>
+      <td>60 m</td>
+      <td>Tiro único, recarregar (1 ação), duas mãos</td>
+    </tr>
+    <tr>
+      <td>Espingarda <span class="en">(Shotgun)</span></td>
+      <td><span class="dice">3d6</span></td>
+      <td>Perfuração</td>
+      <td>9 m</td>
+      <td>Dispersão (alvos adjacentes recebem metade), 2 tiros, duas mãos</td>
+    </tr>
+    <tr>
+      <td>Espada / Sabre</td>
+      <td><span class="dice">1d8</span></td>
+      <td>Corte</td>
+      <td>Corpo a corpo</td>
+      <td>Versátil (<span class="dice">1d10</span> com duas mãos)</td>
+    </tr>
+    <tr>
+      <td>Adaga</td>
+      <td><span class="dice">1d4</span></td>
+      <td>Perfuração</td>
+      <td>Corpo a corpo</td>
+      <td><em>Finesse</em>, arremesso (6 m), leve</td>
+    </tr>
+    <tr>
+      <td>Bengala / Bastão</td>
+      <td><span class="dice">1d6</span></td>
+      <td>Contusão</td>
+      <td>Corpo a corpo</td>
+      <td>Versátil (<span class="dice">1d8</span> com duas mãos)</td>
+    </tr>
+    <tr>
+      <td>Punhos</td>
+      <td><span class="dice">1d4</span></td>
+      <td>Contusão</td>
+      <td>Corpo a corpo</td>
+      <td>Desarmado, leve</td>
+    </tr>
+    <tr>
+      <td>Besta <span class="en">(Crossbow)</span></td>
+      <td><span class="dice">1d10</span></td>
+      <td>Perfuração</td>
+      <td>30 m</td>
+      <td>Tiro único, recarregar (1 ação bônus), duas mãos</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="box box-rule">
+  <div class="box-title">Propriedades de Armas</div>
+  <ul>
+    <li><strong>Versátil:</strong> pode ser empunhada com uma ou duas mãos. O dado entre parênteses é o dano com duas mãos.</li>
+    <li><strong><em>Finesse</em>:</strong> o atacante pode usar Mod. Destreza em vez de Mod. Força para ataque e dano.</li>
+    <li><strong>Leve:</strong> pode ser usada como arma secundária para ataque com mão inábil (ação bônus, sem mod. de atributo ao dano).</li>
+    <li><strong>Arremesso:</strong> pode ser arremessada usando Mod. Destreza até o alcance indicado.</li>
+    <li><strong>Dispersão:</strong> afeta uma área; criaturas adjacentes ao alvo principal recebem metade do dano (sem teste de ataque).</li>
+    <li><strong>Recarregar:</strong> após esgotar os tiros, exige a ação indicada para recarregar.</li>
+    <li><strong>Duas mãos:</strong> requer ambas as mãos para operar.</li>
+  </ul>
+</div>
+
+<div class="separator"></div>
+
+<!-- ================================================================= -->
+<!--  DEFESA E ARMADURA                                                 -->
+<!-- ================================================================= -->
+<h2>Defesa e Armadura <span class="en">(Defense &amp; Armor)</span></h2>
+
+<p>
+  A <strong>Defesa</strong> representa o quão difícil é atingir um personagem. Ataques
+  que igualam ou superam a Defesa acertam; ataques abaixo dela erram ou são desviados.
+</p>
+
+<div class="box box-rule">
+  <div class="box-title">Cálculo de Defesa</div>
+  <p><strong>Defesa base</strong> = 10 + Mod. Destreza</p>
+</div>
+
+<h3>Bônus de Armadura</h3>
+
+<table>
+  <thead>
+    <tr><th>Tipo de Armadura</th><th>Bônus</th><th>Exemplo</th><th>Observação</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Armadura leve</td>
+      <td>+1</td>
+      <td>Jaqueta de couro, colete acolchoado</td>
+      <td>Sem restrição de Destreza</td>
+    </tr>
+    <tr>
+      <td>Armadura média</td>
+      <td>+2</td>
+      <td>Colete reforçado, cota oculta</td>
+      <td>Mod. Destreza limitado a +2 para Defesa</td>
+    </tr>
+    <tr>
+      <td>Armadura pesada</td>
+      <td>+3</td>
+      <td>Placas metálicas, armadura cerimonial</td>
+      <td>Extremamente rara na era vitoriana; Destreza não contribui para Defesa; Desvantagem em Furtividade</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>
+  Poderes <em>Beyonder</em> de certos Caminhos podem adicionar bônus temporários à Defesa
+  (ex.: o Controle Corporal do Palhaço, o Escudo de Gelo do Caminho da Lua, as Sombras
+  Defensivas do Caminho das Trevas). Esses bônus se somam à armadura, mas não se acumulam
+  entre si — use apenas o maior bônus sobrenatural ativo.
+</p>
+
+<h3>Salvaguardas <span class="en">(Saving Throws)</span></h3>
+
+<p>
+  Enquanto a Defesa protege contra ataques diretos, as <strong>Salvaguardas</strong>
+  protegem contra efeitos que não são ataques convencionais:
+</p>
+
+<table>
+  <thead>
+    <tr><th>Salvaguarda</th><th>Cálculo</th><th>Protege Contra</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Corpo</strong></td>
+      <td>10 + Mod. Vigor</td>
+      <td>Venenos, doenças, transmutações, efeitos físicos</td>
+    </tr>
+    <tr>
+      <td><strong>Mente</strong></td>
+      <td>10 + Mod. Determinação</td>
+      <td>Charme, medo, ilusões, telepatia, controle mental</td>
+    </tr>
+    <tr>
+      <td><strong>Espírito</strong></td>
+      <td>10 + Mod. Carisma</td>
+      <td>Maldições, possessão, drenagem de alma, poderes divinos</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="separator"></div>
+
+<!-- ================================================================= -->
+<!--  VIDA E CURA                                                       -->
+<!-- ================================================================= -->
+<h2>Vida e Cura <span class="en">(Health &amp; Healing)</span></h2>
+
+<h3>Pontos de Vida (PV)</h3>
+
+<p>
+  Quando os PV de um personagem chegam a <strong>0</strong>, ele cai
+  <strong>inconsciente</strong> e começa a fazer <strong>Testes de Morte</strong>
+  (<em>Death Saving Throws</em>).
+</p>
+
+<div class="box box-warning">
+  <div class="box-title">Testes de Morte</div>
+  <p>No início de cada turno enquanto estiver a 0 PV, o jogador rola <span class="dice">d20</span>:</p>
+  <ul>
+    <li><strong>10 ou mais:</strong> 1 sucesso.</li>
+    <li><strong>9 ou menos:</strong> 1 falha.</li>
+    <li><strong>20 natural:</strong> o personagem recupera 1 PV e acorda (conta como 2 sucessos).</li>
+    <li><strong>1 natural:</strong> conta como 2 falhas.</li>
+  </ul>
+  <p><strong>3 sucessos</strong> = estabilizado (inconsciente, mas não morrendo).</p>
+  <p><strong>3 falhas</strong> = <strong>morte</strong>.</p>
+  <p>Receber dano enquanto a 0 PV conta como 1 falha automática (dano crítico = 2 falhas).</p>
+</div>
+
+<h3>Recuperação</h3>
+
+<table>
+  <thead>
+    <tr><th>Método</th><th>Efeito</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Descanso longo</strong> (8 horas)</td>
+      <td>Recupera Mod. Vigor PV (mínimo 1). Recupera toda a Espiritualidade.</td>
+    </tr>
+    <tr>
+      <td><strong>Descanso curto</strong> (1 hora)</td>
+      <td>Recupera metade do Mod. Vigor PV (mínimo 1). Recupera Mod. Determinação de Espiritualidade.</td>
+    </tr>
+    <tr>
+      <td><strong>Perícia Medicina</strong> (CD 10)</td>
+      <td>Estabiliza um aliado a 0 PV (encerra Testes de Morte com sucesso).</td>
+    </tr>
+    <tr>
+      <td><strong>Perícia Medicina</strong> (CD 15)</td>
+      <td>Restaura <span class="dice">1d6</span> PV a um aliado. Requer kit médico. Uma vez por alvo por descanso longo.</td>
+    </tr>
+    <tr>
+      <td><strong>Poderes <em>Beyonder</em></strong></td>
+      <td>Variam por Caminho. Caminhos da Mãe, da Lua e do Sol possuem habilidades de cura direta.</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="separator"></div>
+
+<!-- ================================================================= -->
+<!--  CONDIÇÕES                                                         -->
+<!-- ================================================================= -->
+<h2>Condições <span class="en">(Conditions)</span></h2>
+
+<p>
+  Condições são estados negativos (ou às vezes neutros) que afetam personagens durante
+  e fora do combate. Cada condição tem regras específicas:
+</p>
+
+<table>
+  <thead>
+    <tr><th>Condição</th><th>Efeito</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Atordoado</strong> <span class="en">(Stunned)</span></td>
+      <td>Não pode agir, mover-se ou reagir. Ataques contra o alvo têm Vantagem. Falha automática em Salvaguardas de Corpo e Destreza.</td>
+    </tr>
+    <tr>
+      <td><strong>Cego</strong> <span class="en">(Blinded)</span></td>
+      <td>Não pode ver. Ataques do alvo têm Desvantagem; ataques contra o alvo têm Vantagem. Falha automática em testes que exigem visão.</td>
+    </tr>
+    <tr>
+      <td><strong>Enfeitiçado</strong> <span class="en">(Charmed)</span></td>
+      <td>Não pode atacar ou prejudicar quem o enfeitiçou. O encantador tem Vantagem em interações sociais com o alvo.</td>
+    </tr>
+    <tr>
+      <td><strong>Amedrontado</strong> <span class="en">(Frightened)</span></td>
+      <td>Desvantagem em testes e ataques enquanto a fonte do medo estiver visível. Não pode se aproximar voluntariamente da fonte.</td>
+    </tr>
+    <tr>
+      <td><strong>Envenenado</strong> <span class="en">(Poisoned)</span></td>
+      <td>Desvantagem em testes de ataque e testes de perícia. Pode causar dano contínuo conforme o veneno específico.</td>
+    </tr>
+    <tr>
+      <td><strong>Paralisado</strong> <span class="en">(Paralyzed)</span></td>
+      <td>Não pode se mover, agir ou falar. Ataques contra o alvo têm Vantagem. Ataques corpo a corpo que acertam são automaticamente críticos.</td>
+    </tr>
+    <tr>
+      <td><strong>Derrubado</strong> <span class="en">(Prone)</span></td>
+      <td>Ataques corpo a corpo contra o alvo têm Vantagem; ataques à distância têm Desvantagem. Levantar-se custa metade do movimento.</td>
+    </tr>
+    <tr>
+      <td><strong>Invisível</strong> <span class="en">(Invisible)</span></td>
+      <td>Não pode ser visto sem meios especiais. Ataques do alvo têm Vantagem; ataques contra o alvo têm Desvantagem.</td>
+    </tr>
+    <tr>
+      <td><strong>Possuído</strong> <span class="en">(Possessed)</span></td>
+      <td>Uma entidade controla o corpo do alvo. O Narrador controla as ações do personagem. Salvaguarda de Espírito ao final de cada turno para expulsar a entidade.</td>
+    </tr>
+    <tr>
+      <td><strong>Enlouquecido</strong> <span class="en">(Maddened)</span></td>
+      <td>O personagem age de forma irracional. No início de cada turno, role <span class="dice">d6</span>: 1–2 ataca o aliado mais próximo, 3–4 não faz nada (murmurando), 5–6 age normalmente. Salvaguarda de Mente (CD 12) ao final de cada turno para encerrar.</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="separator"></div>
+
+<!-- ================================================================= -->
+<!--  PODERES BEYONDER EM COMBATE                                       -->
+<!-- ================================================================= -->
+<h2>Poderes <em>Beyonder</em> em Combate</h2>
+
+<h3>Espiritualidade <span class="en">(Spirituality)</span></h3>
+
+<p>
+  Usar poderes <em>Beyonder</em> consome <strong>pontos de Espiritualidade</strong>. Cada
+  poder lista seu custo no Capítulo 5. A recuperação segue estas regras:
+</p>
+
+<ul>
+  <li><strong>1 ponto por hora</strong> de repouso (não exige sono — sentar e meditar é suficiente).</li>
+  <li><strong>Recuperação total</strong> após um descanso longo (8 horas).</li>
+  <li><strong>Meditação espiritual</strong> (10 min): recupera 1 ponto, limitada a 2 usos entre descansos longos.</li>
+</ul>
+
+<h3>Concentração <span class="en">(Concentration)</span></h3>
+
+<p>
+  Alguns poderes exigem <strong>Concentração</strong> — o <em>Beyonder</em> deve manter
+  o foco para sustentar o efeito. As regras de Concentração são:
+</p>
+
+<ul>
+  <li>Apenas <strong>um</strong> poder com Concentração pode estar ativo por vez. Ativar um segundo encerra o primeiro automaticamente.</li>
+  <li>Se o <em>Beyonder</em> receber dano enquanto mantém Concentração, deve fazer uma <strong>Salvaguarda de Mente</strong> (CD 10 ou metade do dano recebido, o que for maior). Falha = o poder é perdido.</li>
+  <li>Ficar inconsciente ou ser Atordoado/Paralisado encerra a Concentração automaticamente.</li>
+</ul>
+
+<h3>Interações Ambientais</h3>
+
+<p>
+  Poderes <em>Beyonder</em> interagem com o ambiente de formas que vão além dos números:
+</p>
+
+<ul>
+  <li><strong>Chamas</strong> podem incendiar objetos inflamáveis, criar barreiras de fogo e iluminar áreas escuras.</li>
+  <li><strong>Gelo</strong> pode congelar superfícies (terreno difícil), criar pontes sobre água ou selar portas.</li>
+  <li><strong>Telecinesia</strong> pode arremessar mobília, criar cobertura improvisada ou desarmar oponentes.</li>
+  <li><strong>Ilusões</strong> podem criar distrações, pistas falsas ou "paredes" que inimigos evitam.</li>
+  <li>O Narrador é encorajado a recompensar usos criativos de poderes com bônus situacionais.</li>
+</ul>
+
+<div class="separator"></div>
+
+<!-- ================================================================= -->
+<!--  EXEMPLO DE COMBATE                                                -->
+<!-- ================================================================= -->
+<h2>Exemplo de Combate</h2>
+
+<p>
+  O exemplo a seguir ilustra uma rodada completa com três personagens jogadores
+  contra dois cultistas e um <em>Beyonder</em> Seq 8.
+</p>
+
+<div class="box box-example">
+  <div class="box-title">Situação</div>
+  <p>
+    Os jogadores investigam um ritual clandestino num armazém do distrito de East Borough.
+    Ao abrirem a porta, encontram:
+  </p>
+  <ul>
+    <li><strong>Dois Cultistas</strong> (PV 12 cada, Defesa 11, Revólver <span class="dice">2d6</span>)</li>
+    <li><strong>Marcus Vane</strong>, Seq 8 — Provocador <span class="en">(Provocateur)</span> (PV 35, Defesa 14, Salv. Mente 15)</li>
+  </ul>
+  <p>Os jogadores são:</p>
+  <ul>
+    <li><strong>Ana</strong> — Seq 9 Vidente <span class="en">(Seer)</span>, Destreza +2, Percepção +3, Revólver</li>
+    <li><strong>Dmitri</strong> — Seq 9 Guerreiro <span class="en">(Warrior)</span>, Força +3, Luta +2, Sabre</li>
+    <li><strong>Celeste</strong> — Seq 9 Insone <span class="en">(Sleepless)</span>, Destreza +2, Percepção +2, Revólver</li>
+  </ul>
+</div>
+
+<div class="box box-example">
+  <div class="box-title">Fase 1 — Iniciativa</div>
+  <p>Todos rolam <span class="dice">d20</span> + Mod. Destreza + Mod. Percepção:</p>
+  <ul>
+    <li>Ana: 14 + 2 + 3 = <strong>19</strong></li>
+    <li>Marcus Vane: 11 + 2 + 1 = <strong>14</strong></li>
+    <li>Celeste: 8 + 2 + 2 = <strong>12</strong></li>
+    <li>Cultista A: 15 + 1 + 0 = <strong>16</strong></li>
+    <li>Cultista B: 6 + 1 + 0 = <strong>7</strong></li>
+    <li>Dmitri: 3 + 0 + 1 = <strong>4</strong></li>
+  </ul>
+  <p><strong>Ordem:</strong> Ana (19) → Cultista A (16) → Marcus (14) → Celeste (12) → Cultista B (7) → Dmitri (4)</p>
+</div>
+
+<div class="box box-example">
+  <div class="box-title">Fase 2 — Rodada 1</div>
+
+  <p><strong>Ana (turno 1):</strong> usa sua Ação Principal para ativar <em>Visão Espiritual</em>
+    (ação bônus, 1 Espiritualidade). Com a visão ativa, percebe que Marcus emana uma aura
+    <em>Beyonder</em> intensa — ele é o maior perigo. Usa a Ação Principal para disparar
+    o revólver contra Marcus.</p>
+  <p>Ataque: <span class="dice">d20</span> (rola 15) + 2 (Destreza) + 1 (Armas de Fogo) = <strong>18</strong> vs. Defesa 14 → <strong>Acerto!</strong></p>
+  <p>Dano: <span class="dice">2d6</span> → 4 + 5 = <strong>9 de dano de perfuração</strong>. Marcus cai para 26 PV.</p>
+
+  <p><strong>Cultista A (turno 2):</strong> dispara contra Dmitri, que está mais perto da porta.</p>
+  <p>Ataque: <span class="dice">d20</span> (rola 11) + 1 = <strong>12</strong> vs. Defesa 12 de Dmitri → <strong>Acerto!</strong></p>
+  <p>Dano: <span class="dice">2d6</span> → 3 + 2 = <strong>5 de dano</strong>. Dmitri cai para 23 PV.</p>
+
+  <p><strong>Marcus Vane (turno 3):</strong> usa seu poder <em>Beyonder</em> — <strong>Provocação Incendiária</strong>
+    (2 Espiritualidade, Ação Principal, 9 m). Mira em Dmitri e grita uma série de insultos
+    sobrenaturalmente carregados.</p>
+  <p>Dmitri deve fazer Salvaguarda de Mente: <span class="dice">d20</span> (rola 8) + 1 (Determinação) = <strong>9</strong>
+    vs. CD 14 → <strong>Falha!</strong></p>
+  <p>Dmitri recebe a condição <strong>Enfurecido</strong> (variação de Enfeitiçado): no próximo
+    turno, deve usar sua ação para atacar o aliado mais próximo. Além disso, recebe
+    <span class="dice">1d6</span> → <strong>4 de dano psíquico</strong>. Dmitri: 19 PV.</p>
+
+  <p><strong>Celeste (turno 4):</strong> reconhece que Dmitri foi afetado. Usa <em>Vigilância
+    Noturna</em> (ação bônus, passivo ativo como Insone — Vantagem em Percepção durante a noite).
+    Dispara contra Marcus.</p>
+  <p>Ataque: <span class="dice">d20</span> (rola 9) + 2 + 1 = <strong>12</strong> vs. Defesa 14 → <strong>Erro.</strong>
+    A bala se crava na parede atrás de Marcus.</p>
+
+  <p><strong>Cultista B (turno 5):</strong> dispara contra Ana.</p>
+  <p>Ataque: <span class="dice">d20</span> (rola 7) + 1 = <strong>8</strong> vs. Defesa 14 → <strong>Erro.</strong></p>
+
+  <p><strong>Dmitri (turno 6):</strong> está Enfurecido! O aliado mais próximo é Celeste.
+    Dmitri avança com o sabre e ataca.</p>
+  <p>Ataque: <span class="dice">d20</span> (rola 17) + 3 (Força) + 2 (Luta) = <strong>22</strong>
+    vs. Defesa 13 de Celeste → <strong>Acerto!</strong></p>
+  <p>Dano: <span class="dice">1d8</span> + 3 → 6 + 3 = <strong>9 de dano</strong>. Celeste: 16 PV.
+    O efeito de Provocação se encerra após o ataque.</p>
+</div>
+
+<div class="box box-example">
+  <div class="box-title">Fase 3 — Rodada 2 (Resumo)</div>
+  <p>
+    Ana usa <em>Leitura Fria</em> em Marcus e descobre que ele está mantendo Concentração
+    em um ritual secundário. Ela grita para o grupo: "Ele está concentrado — interrompam!"
+  </p>
+  <p>
+    Celeste usa a ação Ajudar em Dmitri (concedendo Vantagem no próximo ataque contra Marcus).
+    Dmitri, agora livre do efeito, avança e golpeia Marcus com Vantagem — rola
+    <span class="dice">d20</span> duas vezes (12 e 18), usa 18 + 3 + 2 = <strong>23</strong> vs.
+    Defesa 14 → Acerto! Dano: <span class="dice">1d8</span> + 3 = <strong>10</strong>. Marcus: 16 PV
+    e deve fazer Salvaguarda de Mente (CD 10) para manter Concentração — rola 7 + 2 = 9 → <strong>Falha!</strong>
+    O ritual é interrompido.
+  </p>
+  <p>
+    Os cultistas, percebendo que Marcus perdeu o ritual, tentam fugir. O combate
+    entra em sua fase de perseguição…
+  </p>
+</div>
+
+<div class="box box-lore">
+  <div class="box-title">Nota do Narrador</div>
+  <p>
+    Note como o combate mistura armas mundanas, poderes <em>Beyonder</em> e interações
+    táticas. A Provocação de Marcus forçou o grupo a lidar com um aliado controlado —
+    isso é típico de enfrentamentos contra <em>Beyonders</em>, onde o dano direto raramente
+    é a maior ameaça. O Narrador deve usar inimigos <em>Beyonder</em> para criar dilemas
+    táticos, não apenas sacos de PV.
+  </p>
+</div>
+
+<div class="separator"></div>
+
+<div class="box box-rule">
+  <div class="box-title">Resumo do Capítulo</div>
+  <ul>
+    <li><strong>Iniciativa:</strong> <span class="dice">d20</span> + Destreza + Percepção; maior vai primeiro.</li>
+    <li><strong>Turno:</strong> 1 Ação Principal + 1 Ação Bônus + 1 Reação + Movimento (9 m).</li>
+    <li><strong>Ataques:</strong> <span class="dice">d20</span> + mods ≥ Defesa (físico) ou Salvaguarda (poderes).</li>
+    <li><strong>Crítico:</strong> 20 natural = dados de dano duplicados.</li>
+    <li><strong>0 PV:</strong> Testes de Morte — 3 sucessos para estabilizar, 3 falhas para morrer.</li>
+    <li><strong>Poderes:</strong> custam Espiritualidade; Concentração exige Salvaguarda de Mente se atingido.</li>
+    <li><strong>Condições:</strong> 10 estados que alteram drasticamente a dinâmica do combate.</li>
+  </ul>
+</div>
+
+<nav class="book-nav">
+  <a href="06-atuacao.html">← Capítulo 6 — Método de Atuação</a>
+  <a href="08-sanidade.html">Capítulo 8 — Lucidez &amp; Sanidade →</a>
+</nav>
+
+</body>
+</html>
