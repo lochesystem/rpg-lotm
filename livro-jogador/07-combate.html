@@ -171,8 +171,8 @@
 
 <div class="box box-rule">
   <div class="box-title">Ataque Beyonder</div>
-  <p><span class="dice">d20</span> + Mod. Atributo relevante + Mod. Perícia relevante ≥ <strong>Salvaguarda</strong> do alvo</p>
-  <p>A Salvaguarda depende do tipo de poder:</p>
+  <p><span class="dice">d20</span> + Mod. Atributo relevante + Mod. Perícia relevante ≥ <strong>ND da Salvaguarda</strong> do alvo quando a regra usar salvaguarda passiva; caso contrário o alvo rola <span class="dice">d20</span> + modificador da salvaguarda ≥ <strong>CD</strong> fixa do poder.</p>
+  <p>A ND passiva = <strong>10 + modificador da salvaguarda</strong> (média arredondada para baixo dos dois atributos correspondentes — Cap. 3). A Salvaguarda depende do tipo de poder:</p>
   <ul>
     <li><strong>Corpo:</strong> poderes que afetam a forma física (venenos, transmutações, controle corporal).</li>
     <li><strong>Mente:</strong> poderes mentais e emocionais (telepatia, charme, medo, ilusões).</li>
@@ -391,26 +391,34 @@
 
 <table>
   <thead>
-    <tr><th>Salvaguarda</th><th>Cálculo</th><th>Protege Contra</th></tr>
+    <tr><th>Salvaguarda</th><th>Modificador <span class="en">(salvar)</span></th><th>ND passiva <span class="en">(opcional)</span></th><th>Protege Contra</th></tr>
   </thead>
   <tbody>
     <tr>
       <td><strong>Corpo</strong></td>
-      <td>10 + Mod. Vigor</td>
+      <td>⌊(Mod. Força + Mod. Vigor) ÷ 2⌋</td>
+      <td>10 + Mod. Corpo</td>
       <td>Venenos, doenças, transmutações, efeitos físicos</td>
     </tr>
     <tr>
       <td><strong>Mente</strong></td>
-      <td>10 + Mod. Determinação</td>
+      <td>⌊(Mod. Inteligência + Mod. Determinação) ÷ 2⌋</td>
+      <td>10 + Mod. Mente</td>
       <td>Charme, medo, ilusões, telepatia, controle mental</td>
     </tr>
     <tr>
       <td><strong>Espírito</strong></td>
-      <td>10 + Mod. Carisma</td>
+      <td>⌊(Mod. Percepção + Mod. Carisma) ÷ 2⌋</td>
+      <td>10 + mesmo Mod. <span class="en">(Esp.)</span></td>
       <td>Maldições, possessão, drenagem de alma, poderes divinos</td>
     </tr>
   </tbody>
 </table>
+<p>
+  <strong>Teste de salvaguarda:</strong> <span class="dice">d20</span> + modificador da salvaguarda ≥ CD do efeito.
+  Muitos poderes usam CD fixa (ex.: 10 + atributos do atacante); outros exigem que o atacante supere a
+  <strong>ND passiva</strong> do alvo — veja Capítulo 3 — Atributos &amp; Perícias.
+</p>
 
 <div class="separator"></div>
 
@@ -639,7 +647,8 @@
   <p><strong>Marcus Vane (turno 3):</strong> usa seu poder <em>Beyonder</em> — <strong>Provocação Incendiária</strong>
     (2 Espiritualidade, Ação Principal, 9 m). Mira em Dmitri e grita uma série de insultos
     sobrenaturalmente carregados.</p>
-  <p>Dmitri deve fazer Salvaguarda de Mente: <span class="dice">d20</span> (rola 8) + 1 (Determinação) = <strong>9</strong>
+  <p>Dmitri deve fazer Salvaguarda de Mente: <span class="dice">d20</span> (rola 8) + 1 (modificador de Mente —
+    média de Inteligência e Determinação) = <strong>9</strong>
     vs. CD 14 → <strong>Falha!</strong></p>
   <p>Dmitri recebe a condição <strong>Enfurecido</strong> (variação de Enfeitiçado): no próximo
     turno, deve usar sua ação para atacar o aliado mais próximo. Além disso, recebe
@@ -673,7 +682,7 @@
     Dmitri, agora livre do efeito, avança e golpeia Marcus com Vantagem — rola
     <span class="dice">d20</span> duas vezes (12 e 18), usa 18 + 3 + 2 = <strong>23</strong> vs.
     Defesa 14 → Acerto! Dano: <span class="dice">1d8</span> + 3 = <strong>10</strong>. Marcus: 16 PV
-    e deve fazer Salvaguarda de Mente (CD 10) para manter Concentração — rola 7 + 2 = 9 → <strong>Falha!</strong>
+    e deve fazer Salvaguarda de Mente (CD 10) para manter Concentração — rola 7 + 2 (mod. Mente) = 9 → <strong>Falha!</strong>
     O ritual é interrompido.
   </p>
   <p>
@@ -700,7 +709,7 @@
   <ul>
     <li><strong>Iniciativa:</strong> <span class="dice">d20</span> + Destreza + Percepção; maior vai primeiro.</li>
     <li><strong>Turno:</strong> 1 Ação Principal + 1 Ação Bônus + 1 Reação + Movimento (9 m).</li>
-    <li><strong>Ataques:</strong> <span class="dice">d20</span> + mods ≥ Defesa (físico) ou Salvaguarda (poderes).</li>
+    <li><strong>Ataques:</strong> <span class="dice">d20</span> + mods ≥ Defesa (físico); poderes podem exigir superar <strong>ND de Salvaguarda</strong> (10 + Mod. da salvaguarda) do alvo ou impor <strong>CD</strong> para o alvo rolar d20 + Mod.</li>
     <li><strong>Crítico:</strong> 20 natural = dados de dano duplicados.</li>
     <li><strong>0 PV:</strong> Testes de Morte — 3 sucessos para estabilizar, 3 falhas para morrer.</li>
     <li><strong>Poderes:</strong> custam Espiritualidade; Concentração exige Salvaguarda de Mente se atingido.</li>

@@ -164,7 +164,7 @@
     <tr><td><strong>Paralisado</strong> (<em>Paralyzed</em>)</td><td>Incapacitado, velocidade 0; falha em Força/Destreza; ataques têm Vantagem; corpo a corpo dentro de 1,5 m = crítico automático.</td></tr>
     <tr><td><strong>Petrificado</strong> (<em>Petrified</em>)</td><td>Transformado em substância inanimada; peso ×10; não envelhece; imune a veneno/doença; resistência a todo dano.</td></tr>
     <tr><td><strong>Surdo</strong> (<em>Deafened</em>)</td><td>Falha automática em testes que requerem audição; imune a efeitos sonoros.</td></tr>
-    <tr><td><strong>Exausto</strong> (<em>Exhausted</em>)</td><td>Nível 1: Desvantagem em testes. Nível 2: velocidade ÷2. Nível 3: HP máx ÷2. Nível 4: velocidade 0. Nível 5: morte.</td></tr>
+    <tr><td><strong>Exausto</strong> (<em>Exhausted</em>)</td><td>Nível 1: Desvantagem em testes. Nível 2: velocidade ÷2. Nível 3: PV máx ÷2. Nível 4: velocidade 0. Nível 5: morte.</td></tr>
     <tr><td><strong>Corrompido</strong> (<em>Corrupted</em>)</td><td>−2 Lucidez; poderes <em>Beyonder</em> custam +1 Espiritualidade; remove-se com descanso ou ritual.</td></tr>
     <tr><td><strong>Descontrolado</strong> (<em>Loss of Control</em>)</td><td>Narrador assume o personagem temporariamente; comportamento irracional/destrutivo até estabilizar.</td></tr>
   </tbody>
@@ -206,20 +206,23 @@
 
 <table>
   <thead>
-    <tr><th>Sequência</th><th>Bônus de HP</th><th>Bônus de Espiritualidade</th><th>CD de Digestão</th><th>Tempo Mín. de Digestão</th></tr>
+    <tr><th>Sequência</th><th>Bônus de PV</th><th>Reserva de Espiritualidade</th><th>CD de Digestão</th><th>Tempo Mín. de Digestão</th></tr>
   </thead>
   <tbody>
-    <tr><td>9 (inicial)</td><td>+0</td><td>+4</td><td>10</td><td>2 sessões / 1 mês ficcional</td></tr>
-    <tr><td>8</td><td>+2</td><td>+4</td><td>12</td><td>4 sessões / 3 meses ficcionais</td></tr>
-    <tr><td>7</td><td>+4</td><td>+6</td><td>14</td><td>6 sessões / 6 meses ficcionais</td></tr>
-    <tr><td>6</td><td>+6</td><td>+8</td><td>16</td><td>8 sessões / 1 ano ficcional</td></tr>
-    <tr><td>5</td><td>+10</td><td>+10</td><td>18</td><td>10 sessões / 2 anos ficcionais</td></tr>
+    <tr><td>9 (inicial)</td><td>+0</td><td>Percepção + Determinação (valores)</td><td>10</td><td>2 sessões / 1 mês ficcional</td></tr>
+    <tr><td>8</td><td>+2</td><td>idem (atributos podem subir)</td><td>12</td><td>4 sessões / 3 meses ficcionais</td></tr>
+    <tr><td>7</td><td>+4</td><td>idem</td><td>14</td><td>6 sessões / 6 meses ficcionais</td></tr>
+    <tr><td>6</td><td>+6</td><td>idem</td><td>16</td><td>8 sessões / 1 ano ficcional</td></tr>
+    <tr><td>5</td><td>+8</td><td>idem</td><td>18</td><td>10 sessões / 2 anos ficcionais</td></tr>
   </tbody>
 </table>
+<p style="font-size:0.9em;color:#555;">
+  <strong>Nota:</strong> Bônus de PV conforme <em>Livro do Jogador</em> — Cap. 3 (tabela de Sequência). A reserva máxima de Espiritualidade é sempre a soma dos <strong>valores</strong> (não dos modificadores) de Percepção + Determinação.
+</p>
 
 <div class="box box-rule">
   <div class="box-title">Digestão — Teste Periódico</div>
-  <p>A cada sessão, o jogador faz um teste de Digestão: <span class="dice">d20</span> + Mod. Vontade + Pontos de Atuação acumulados ≥ CD da Sequência atual. Sucesso = avança na porcentagem de digestão. 3 sucessos acumulados = poção digerida, pronto para a próxima Sequência.</p>
+  <p>A cada sessão, o jogador faz um teste de Digestão: <span class="dice">d20</span> + Mod. Determinação + Pontos de Atuação acumulados ≥ CD da Sequência atual. Sucesso = avança na porcentagem de digestão. 3 sucessos acumulados = poção digerida, pronto para a próxima Sequência.</p>
 </div>
 
 <div class="separator"></div>
@@ -229,18 +232,18 @@
 
 <table>
   <thead>
-    <tr><th>Método</th><th>HP Recuperado</th><th>Condições</th></tr>
+    <tr><th>Método</th><th>PV recuperados</th><th>Condições</th></tr>
   </thead>
   <tbody>
-    <tr><td>Descanso curto (10 min)</td><td>1d6 + Mod. Vigor</td><td>1×/dia; requer segurança</td></tr>
-    <tr><td>Descanso longo (8 horas)</td><td>Metade do HP máx</td><td>Precisa de sono; recupera toda Espiritualidade</td></tr>
-    <tr><td>Primeiros socorros (Medicina)</td><td>1d4 + Mod. Intelecto</td><td>CD 10; 1 ação; kit necessário</td></tr>
-    <tr><td>Tratamento médico profissional</td><td>2d6 + Mod. Intelecto</td><td>Requer médico e equipamento; 1 hora</td></tr>
+    <tr><td>Descanso curto (1 hora)</td><td>Metade do Mod. Vigor (mín. 1)</td><td>Recupera pontos de Espiritualidade = Mod. Determinação</td></tr>
+    <tr><td>Descanso longo (8 horas)</td><td>Mod. Vigor (mín. 1)</td><td>Recupera toda a Espiritualidade</td></tr>
+    <tr><td>Primeiros socorros (Medicina, CD 10)</td><td>Estabiliza aliado a 0 PV</td><td>1 ação; ver Cap. 7 — Combate</td></tr>
+    <tr><td>Medicina (CD 15)</td><td><span class="dice">1d6</span> PV</td><td>Kit médico; 1× por alvo / descanso longo</td></tr>
     <tr><td>Poção de cura menor</td><td>2d4 + 2</td><td>1 ação; consumível (£5)</td></tr>
     <tr><td>Poção de cura maior</td><td>4d4 + 4</td><td>1 ação; consumível (£20)</td></tr>
-    <tr><td>Cura <em>Beyonder</em> (Seq 9 Curandeiro)</td><td>2d8 + Mod. Espírito</td><td>Custo: 3 Espiritualidade</td></tr>
-    <tr><td>Cura <em>Beyonder</em> (Seq 7 Curandeiro)</td><td>4d8 + Mod. Espírito</td><td>Custo: 6 Espiritualidade; pode curar condições</td></tr>
-    <tr><td>Regeneração natural (por dia)</td><td>1 HP</td><td>Automático; dobra com cuidado médico</td></tr>
+    <tr><td>Cura <em>Beyonder</em> (Seq 9 Curandeiro)</td><td><span class="dice">2d8</span> + Mod. Carisma</td><td>Custo: 3 Espiritualidade (ver Caminho da Mãe)</td></tr>
+    <tr><td>Cura <em>Beyonder</em> (Seq 7 Curandeiro)</td><td><span class="dice">4d8</span> + Mod. Carisma</td><td>Custo: 6 Espiritualidade; pode curar condições</td></tr>
+    <tr><td>Regeneração natural (por dia)</td><td>1 PV</td><td>Automático; dobra com cuidado médico</td></tr>
   </tbody>
 </table>
 

@@ -462,7 +462,11 @@
 <div class="box box-rule">
   <div class="box-title">Fórmula de PV</div>
   <p style="text-align:center; font-size:1.2em;">
-    <strong>PV = 8 + Vigor + Bônus de Sequência</strong>
+    <strong>PV = 8 + Modificador de Vigor + Bônus de Sequência</strong>
+  </p>
+  <p class="box-note" style="font-size:0.95em;">
+    O modificador de atributo é <strong>Valor − 2</strong> (ver Capítulo 3). Esta fórmula vale para
+    <em>todos</em> os Caminhos — apenas o bônus de Sequência muda conforme o avanço.
   </p>
   <table>
     <thead>
@@ -472,13 +476,13 @@
       <tr><td>9</td><td>+0</td></tr>
       <tr><td>8</td><td>+2</td></tr>
       <tr><td>7</td><td>+4</td></tr>
-      <tr><td>6</td><td>+7</td></tr>
-      <tr><td>5</td><td>+10</td></tr>
+      <tr><td>6</td><td>+6</td></tr>
+      <tr><td>5</td><td>+8</td></tr>
     </tbody>
   </table>
   <p>
     Na criação (Sequência 9), o bônus de Sequência é 0. Um personagem com
-    Vigor 3, por exemplo, começa com <strong>8 + 3 = 11 PV</strong>.
+    Vigor 3 (modificador +1), por exemplo, começa com <strong>8 + 1 + 0 = 9 PV</strong>.
   </p>
 </div>
 
@@ -498,19 +502,14 @@
 
 <div class="box box-rule">
   <div class="box-title">Lucidez Inicial</div>
-  <table>
-    <thead>
-      <tr><th>Determinação</th><th>Lucidez Inicial</th></tr>
-    </thead>
-    <tbody>
-      <tr><td>1–2</td><td>7</td></tr>
-      <tr><td>3–5</td><td>8</td></tr>
-    </tbody>
-  </table>
+  <p style="text-align:center; font-size:1.15em;">
+    <strong>Lucidez = 5 + Modificador de Determinação</strong> (valor máximo absoluto: <strong>10</strong>)
+  </p>
   <p>
-    A Lucidez máxima é 10 e pode ser recuperada por descanso, interpretação
-    do Método de Atuação e certas perícias. Detalhes completos no
-    <strong>Capítulo 6 — Lucidez &amp; Sanidade</strong>.
+    Exemplos: Determinação 2 (mod +0) → Lucidez <strong>5</strong>; Determinação 3 (mod +1) → <strong>6</strong>;
+    Determinação 5 (mod +3) → <strong>8</strong>. O teto de 10 reflete firmeza mental excepcional.
+    Recuperação e perda detalhadas no <strong>Livro do Mestre — Loucura &amp; Lucidez</strong> e no
+    <strong>Capítulo 3</strong> (referência de ficha).
   </p>
 </div>
 
@@ -630,12 +629,12 @@
 
   <h4>Passo 6 — Pontos de Vida</h4>
   <p>
-    PV = 8 + Vigor (2) + Bônus de Seq. 9 (0) = <strong>10 PV</strong>.
+    PV = 8 + Mod. Vigor (Vigor 2 → mod +0) + Bônus de Seq. 9 (0) = <strong>8 PV</strong>.
   </p>
 
   <h4>Passo 7 — Lucidez</h4>
   <p>
-    Determinação 2 → Lucidez inicial = <strong>7</strong>.
+    Lucidez = 5 + Mod. Determinação (Determinação 2 → mod +0) = <strong>5</strong>.
   </p>
 
   <h4>Passo 8 — Equipamento</h4>

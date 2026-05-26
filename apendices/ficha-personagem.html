@@ -444,8 +444,12 @@
 
 <div class="screen-instructions no-print">
   <strong>Instruções:</strong> Use <kbd>Ctrl+P</kbd> (ou <kbd>Cmd+P</kbd>) para imprimir esta ficha.
-  Configure para A4, margens mínimas, e ative "Gráficos de fundo" para melhor resultado.
+  Configure para A4, margens mínimas, e ative &quot;Gráficos de fundo&quot; para melhor resultado.
   A ficha ocupa 2 páginas (frente e verso).
+  <strong>Fórmulas canônicas</strong> (= Capítulo 3 — Atributos &amp; Perícias): modificador de atributo/perícia é <strong>Valor − 2</strong>;
+  PV = 8 + Mod. Vigor + bônus de Sequência; Espiritualidade = soma dos <em>valores</em> de Percepção + Determinação;
+  Lucidez inicial = 5 + Mod. Determinação (teto 10); Defesa = 10 + Mod. Destreza + armadura;
+  salvaguardas: anote o <strong>Mod. médio</strong> (média dos dois Mod. de atributo, arredondamento para baixo) e use <strong>ND = 10 + Mod.</strong> quando a regra comparar com a salvaguarda do alvo.
 </div>
 
 <!-- ================================================================ -->
@@ -756,30 +760,32 @@
 
       <div class="save-row">
         <span class="save-name">Corpo</span>
-        <span class="save-formula">d20 + Mod.For + Mod.Vig</span>
+        <span class="save-formula">Mod. = ⌊(For+Vig)÷2⌋ · d20+Mod. ≥ CD · ND 10+Mod.</span>
         <span class="save-box"></span>
       </div>
 
       <div class="save-row">
         <span class="save-name">Mente</span>
-        <span class="save-formula">d20 + Mod.Int + Mod.Det</span>
+        <span class="save-formula">Mod. = ⌊(Int+Det)÷2⌋ · d20+Mod. ≥ CD · ND 10+Mod.</span>
         <span class="save-box"></span>
       </div>
 
       <div class="save-row">
         <span class="save-name">Espírito</span>
-        <span class="save-formula">d20 + Mod.Per + Mod.Esp</span>
+        <span class="save-formula">Mod. = ⌊(Per+Car)÷2⌋ · d20+Mod. ≥ CD · ND 10+Mod.</span>
         <span class="save-box"></span>
       </div>
 
       <div style="margin-top: 6pt;">
-        <div class="s-box-title" style="font-size:7pt;">Fórmulas Rápidas</div>
-        <div style="font-size:6.5pt; color:#555; line-height:1.5;">
-          <strong>HP</strong> = Vigor×3 + Força + Bônus Seq<br>
-          <strong>Espir.</strong> = (Det + Esp)×2 + Bônus Seq<br>
-          <strong>Lucidez</strong> = ⌈(Det + Esp) ÷ 2⌉ (máx 10)<br>
-          <strong>Defesa</strong> = 10 + Mod.Des + Armadura<br>
-          <strong>Inic.</strong> = Mod.Des + Mod.Per
+        <div class="s-box-title" style="font-size:7pt;">Fórmulas Rápidas <span style="font-weight:400;color:#666;">(Cap. 3 — todos os Caminhos)</span></div>
+        <div style="font-size:6.5pt; color:#555; line-height:1.55;">
+          <strong>Mod. atributo/perícia</strong> = valor − 2<br>
+          <strong>PV</strong> = 8 + Mod. Vigor + bônus de Sequência (Seq.9 +0; 8 +2; 7 +4; 6 +6; 5 +8)<br>
+          <strong>Espiritualidade máx.</strong> = valor Percepção + valor Determinação (não use Mod. aqui)<br>
+          <strong>Lucidez</strong> = 5 + Mod. Determinação (máx. 10) · atual anotada acima<br>
+          <strong>Defesa</strong> = 10 + Mod. Des + bônus de armadura<br>
+          <strong>Iniciativa</strong> = <span class="dice" style="font-family:inherit;font-size:inherit;">d20</span> + Mod. Des + Mod. Per (por combate)<br>
+          <strong>Movimento</strong> = 9 m (humano; terreno difícil dobra o custo)
         </div>
       </div>
     </div>
