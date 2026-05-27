@@ -1,0 +1,1076 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tutorial — Exemplo de sessão · Senhor dos Mistérios RPG</title>
+<link rel="stylesheet" href="../assets/css/common.css">
+<link rel="stylesheet" href="../assets/css/print.css">
+<style>
+.mermaid { margin: 1.5rem auto; max-width: 100%; overflow-x: auto; }
+article.md-body pre {
+  background: var(--parchment-d, #f5f0e6);
+  border: 1px solid var(--gold, #b8860b);
+  border-radius: 4px;
+  padding: 0.75rem 1rem;
+  overflow-x: auto;
+  font-size: 0.9em;
+  line-height: 1.45;
+}
+article.md-body pre code { background: none; padding: 0; }
+article.md-body hr { border: none; border-top: 1px solid var(--gold, #b8860b); margin: 2rem 0; opacity: 0.5; }
+article.md-body table { font-size: 0.92em; }
+article.md-body h1:first-child { margin-top: 0; }
+</style>
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+  mermaid.initialize({ startOnLoad: true, theme: 'neutral', securityLevel: 'loose' });
+</script>
+</head>
+<body>
+
+<article class="md-body">
+<h1 id="exemplo-de-sessao-o-sussurro-na-oficina">Exemplo de sessão — *O Sussurro na Oficina*</h1><blockquote>
+<p><strong>Para quem é:</strong> jogadores e mestres que nunca rodaram <em>Senhor dos Mistérios RPG</em>.<br><strong>Formato:</strong> 1 sessão (~2 h) · 3 jogadores + 1 mestre · personagens prontos (Seq. 9).<br><strong>O que você aprende:</strong> testes d20, poderes, Espiritualidade, Lucidez, Método de Atuação e ritmo de investigação.</p>
+</blockquote>
+<hr>
+<h2 id="indice">Índice</h2><ol>
+<li><a href="#resumo-da-mesa">Resumo da mesa</a></li>
+<li><a href="#fluxo-da-sess%C3%A3o-mapa">Fluxo da sessão (mapa)</a></li>
+<li><a href="#personagens-prontos">Personagens prontos</a></li>
+<li><a href="#cena-0--o-mestre-prepara">Cena 0 — O Mestre prepara</a></li>
+<li><a href="#cena-1--briefing-sem-dados">Cena 1 — Briefing (sem dados)</a></li>
+<li><a href="#cena-2--a-m%C3%A3e-e-o-sonho">Cena 2 — A mãe e o sonho</a></li>
+<li><a href="#cena-3--rastros-na-oficina">Cena 3 — Rastros na oficina</a></li>
+<li><a href="#cena-4--o-s%C3%ADmbolo-na-parede">Cena 4 — O símbolo na parede</a></li>
+<li><a href="#cena-5--confronto-com-morvan">Cena 5 — Confronto com Morvan</a></li>
+<li><a href="#cena-6--ep%C3%ADlogo-e-recompensas">Cena 6 — Epílogo e recompensas</a></li>
+<li><a href="#folha-de-cola-do-mestre">Folha de cola do Mestre</a></li>
+</ol>
+<hr>
+<h2 id="resumo-da-mesa">Resumo da mesa</h2><table>
+<thead>
+<tr>
+<th>Papel</th>
+<th>Nome real</th>
+<th>Personagem</th>
+<th>Caminho · Seq. 9</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Mestre</strong></td>
+<td>Adriano</td>
+<td>—</td>
+<td>Narra Backlund, NPCs, CDs</td>
+</tr>
+<tr>
+<td><strong>Jogador 1</strong></td>
+<td>Beatriz</td>
+<td><strong>Mara Silva</strong></td>
+<td>Trevas · <strong>Insone</strong></td>
+</tr>
+<tr>
+<td><strong>Jogador 2</strong></td>
+<td>Caio</td>
+<td><strong>Tomás Vargas</strong></td>
+<td>Torre Branca · <strong>Leitor</strong></td>
+</tr>
+<tr>
+<td><strong>Jogador 3</strong></td>
+<td>Diana</td>
+<td><strong>Lídia Corrêa</strong></td>
+<td>Eremita · <strong>Mistério</strong></td>
+</tr>
+</tbody></table>
+<p><strong>Premissa:</strong> crianças do <em>East Borough</em> acordam exaustas, murmurando o mesmo nome — <strong>Morvan</strong>. As <strong>Águias Noturnas</strong> contratam três Beyonders de Seq. 9 como reforço por uma noite.</p>
+<p><strong>Tom:</strong> investigação urbana, névoa, lampiões a gás, horror leve (nada gráfico demais para a primeira sessão).</p>
+<hr>
+<h2 id="fluxo-da-sessao-mapa">Fluxo da sessão (mapa)</h2><div class="mermaid">flowchart LR
+  A["① Briefing<br/>Nighthawks"] --> B["② Entrevista<br/>família"]
+  B --> C["③ Oficina<br/>abandonada"]
+  C --> D["④ Símbolo<br/>+ ritual"]
+  D --> E["⑤ Morvan<br/>+ eco espiritual"]
+  E --> F["⑥ Epílogo<br/>digestão / XP"]</div><pre><code>  TEMPO SUGERIDO (2 h)
+  ├─ 15 min │ Cena 1 — Briefing + apresentação dos PJs
+  ├─ 20 min │ Cena 2 — Roleplay social + 1–2 testes
+  ├─ 25 min │ Cena 3 — Investigação na oficina
+  ├─ 20 min │ Cena 4 — Ocultismo + poderes Beyonder
+  ├─ 30 min │ Cena 5 — Confronto
+  └─ 10 min │ Cena 6 — Fechamento e ensino das regras</code></pre><hr>
+<h2 id="personagens-prontos">Personagens prontos</h2><h3 id="regra-rapida-de-teste-use-em-toda-a-sessao">Regra rápida de teste (use em toda a sessão)</h3><pre><code>d20 + Mod. Atributo + Mod. Perícia  ≥  CD  →  sucesso</code></pre><table>
+<thead>
+<tr>
+<th>CD</th>
+<th>Dificuldade</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>10</td>
+<td>Fácil</td>
+</tr>
+<tr>
+<td>13</td>
+<td>Média</td>
+</tr>
+<tr>
+<td>15</td>
+<td>Difícil</td>
+</tr>
+<tr>
+<td>18</td>
+<td>Muito difícil</td>
+</tr>
+</tbody></table>
+<p><strong>Modificador</strong> = valor do atributo ou perícia <strong>− 2</strong> (escala 1–5).</p>
+<hr>
+<h3 id="mara-silva-insone-aguias-noturnas-auxiliar">Mara Silva — Insone (Águias Noturnas auxiliar)</h3><table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Conceito</strong></td>
+<td>Ex-patrulheira de rua que não dorme mais; vigia o bairro</td>
+</tr>
+<tr>
+<td><strong>Atuação (Seq. 9)</strong></td>
+<td><em>Nunca durma — vigie enquanto o mundo descansa</em></td>
+</tr>
+<tr>
+<td><strong>Posição</strong></td>
+<td><strong>Ereta</strong> (protege inocentes)</td>
+</tr>
+</tbody></table>
+<p><strong>Atributos</strong></p>
+<table>
+<thead>
+<tr>
+<th>Físico</th>
+<th></th>
+<th>Social</th>
+<th></th>
+<th>Mental</th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Força 2</td>
+<td>+0</td>
+<td>Carisma 2</td>
+<td>+0</td>
+<td>Percepção 4</td>
+<td>+2</td>
+</tr>
+<tr>
+<td>Destreza 3</td>
+<td>+1</td>
+<td>Manipulação 2</td>
+<td>+0</td>
+<td>Inteligência 2</td>
+<td>+0</td>
+</tr>
+<tr>
+<td>Vigor 3</td>
+<td>+1</td>
+<td>Aparência 2</td>
+<td>+0</td>
+<td>Determinação 4</td>
+<td>+2</td>
+</tr>
+</tbody></table>
+<p><strong>Perícias:</strong> Furtividade 3 (+1) · Investigação 2 (+0) · Armas Leves 2 (+0) · Ocultismo 1 (−1)</p>
+<table>
+<thead>
+<tr>
+<th>Derivado</th>
+<th>Valor</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>PV</strong></td>
+<td>9 (8 + Vigor + Seq 9)</td>
+</tr>
+<tr>
+<td><strong>Espiritualidade</strong></td>
+<td>8 (Percepção + Determinação)</td>
+</tr>
+<tr>
+<td><strong>Lucidez</strong></td>
+<td>7 (5 + mod. Determinação)</td>
+</tr>
+<tr>
+<td><strong>Iniciativa</strong></td>
+<td>+2 (+1 Dest + bônus Vigília Incansável)</td>
+</tr>
+</tbody></table>
+<p><strong>Poderes Seq. 9</strong></p>
+<table>
+<thead>
+<tr>
+<th>Poder</th>
+<th>Custo</th>
+<th>Efeito resumido</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Visão Noturna Aprimorada</td>
+<td>—</td>
+<td>Vê no escuro; +2 Percepção à noite</td>
+</tr>
+<tr>
+<td>Vigília Incansável</td>
+<td>—</td>
+<td>2 h meditação = descanso; +1 Iniciativa</td>
+</tr>
+<tr>
+<td>Sentido de Perigo</td>
+<td>1 Esp.</td>
+<td>Reação: +3 Defesa ou Vantagem em salvaguarda</td>
+</tr>
+</tbody></table>
+<hr>
+<h3 id="tomas-vargas-leitor-jornalista-freelancer">Tomás Vargas — Leitor (jornalista freelancer)</h3><table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Conceito</strong></td>
+<td>Repórter do <em>Backlund Observer</em> que “leu demais”</td>
+</tr>
+<tr>
+<td><strong>Atuação</strong></td>
+<td><em>Leia tudo, memorize tudo, analise tudo</em></td>
+</tr>
+<tr>
+<td><strong>Posição</strong></td>
+<td><strong>Ereta</strong> (busca a verdade para publicar)</td>
+</tr>
+</tbody></table>
+<p><strong>Atributos</strong></p>
+<table>
+<thead>
+<tr>
+<th>Físico</th>
+<th></th>
+<th>Social</th>
+<th></th>
+<th>Mental</th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Força 2</td>
+<td>+0</td>
+<td>Carisma 3</td>
+<td>+1</td>
+<td>Percepção 3</td>
+<td>+1</td>
+</tr>
+<tr>
+<td>Destreza 2</td>
+<td>+0</td>
+<td>Manipulação 3</td>
+<td>+1</td>
+<td>Inteligência 4</td>
+<td>+2</td>
+</tr>
+<tr>
+<td>Vigor 2</td>
+<td>+0</td>
+<td>Aparência 2</td>
+<td>+0</td>
+<td>Determinação 3</td>
+<td>+1</td>
+</tr>
+</tbody></table>
+<p><strong>Perícias:</strong> Investigação 4 (+2) · Ciências 2 (+0) · Empatia 2 (+0) · Furtividade 1 (−1)</p>
+<table>
+<thead>
+<tr>
+<th>Derivado</th>
+<th>Valor</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>PV</strong></td>
+<td>8</td>
+</tr>
+<tr>
+<td><strong>Espiritualidade</strong></td>
+<td>6</td>
+</tr>
+<tr>
+<td><strong>Lucidez</strong></td>
+<td>6</td>
+</tr>
+</tbody></table>
+<p><strong>Poderes Seq. 9</strong></p>
+<table>
+<thead>
+<tr>
+<th>Poder</th>
+<th>Custo</th>
+<th>Efeito resumido</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Memória Perfeita</td>
+<td>—</td>
+<td>+2 Int + Investigação / História / Ciências</td>
+</tr>
+<tr>
+<td>Leitura Rápida</td>
+<td>1 Esp.</td>
+<td>Livro inteiro em 1 min</td>
+</tr>
+<tr>
+<td>Análise Situacional</td>
+<td>1 Esp.</td>
+<td>Narrador revela 1 fato não óbvio (2×/cena)</td>
+</tr>
+</tbody></table>
+<hr>
+<h3 id="lidia-correa-misterio-ervanaria-do-bairro">Lídia Corrêa — Mistério (ervanária do bairro)</h3><table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Conceito</strong></td>
+<td>Curandeira que sente “cheiro” de magia errada</td>
+</tr>
+<tr>
+<td><strong>Atuação</strong></td>
+<td><em>Investigue o oculto; nunca aceite a primeira resposta</em></td>
+</tr>
+<tr>
+<td><strong>Posição</strong></td>
+<td><strong>Ereta</strong></td>
+</tr>
+</tbody></table>
+<p><strong>Atributos</strong></p>
+<table>
+<thead>
+<tr>
+<th>Físico</th>
+<th></th>
+<th>Social</th>
+<th></th>
+<th>Mental</th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Força 2</td>
+<td>+0</td>
+<td>Carisma 2</td>
+<td>+0</td>
+<td>Percepção 3</td>
+<td>+1</td>
+</tr>
+<tr>
+<td>Destreza 2</td>
+<td>+0</td>
+<td>Manipulação 2</td>
+<td>+0</td>
+<td>Inteligência 3</td>
+<td>+1</td>
+</tr>
+<tr>
+<td>Vigor 2</td>
+<td>+0</td>
+<td>Aparência 3</td>
+<td>+0</td>
+<td>Determinação 3</td>
+<td>+1</td>
+</tr>
+</tbody></table>
+<p><strong>Perícias:</strong> Ocultismo 3 (+1) · Ritualismo 2 (+0) · Medicina 2 (+0) · Investigação 2 (+0)</p>
+<table>
+<thead>
+<tr>
+<th>Derivado</th>
+<th>Valor</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>PV</strong></td>
+<td>8</td>
+</tr>
+<tr>
+<td><strong>Espiritualidade</strong></td>
+<td>6</td>
+</tr>
+<tr>
+<td><strong>Lucidez</strong></td>
+<td>6</td>
+</tr>
+</tbody></table>
+<p><strong>Poderes Seq. 9</strong></p>
+<table>
+<thead>
+<tr>
+<th>Poder</th>
+<th>Custo</th>
+<th>Efeito resumido</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Ver Auras Místicas</td>
+<td>1 Esp.</td>
+<td>Detecta magia/resíduo por 10 min</td>
+</tr>
+<tr>
+<td>Ritual Básico</td>
+<td>2 Esp.</td>
+<td>Proteção, purificação ou consagração (10 min)</td>
+</tr>
+<tr>
+<td>Leitura de Símbolos</td>
+<td>1 Esp.</td>
+<td>Entende selo ao tocar</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="cena-0-o-mestre-prepara">Cena 0 — O Mestre prepara</h2><p><strong>Leia em voz alta (opcional):</strong></p>
+<blockquote>
+<p><em>Backlund, 1352 da Quinta Época. A névoa industrial cola nos casacos. Vocês três não são heróis de folhetim — são ferramentas úteis que a Igreja da Deusa da Noite emprega quando o caso é pequeno demais para um Bispo e grande demais para a polícia comum.</em></p>
+</blockquote>
+<p><strong>NPC principal</strong></p>
+<table>
+<thead>
+<tr>
+<th>NPC</th>
+<th>Papel</th>
+<th>Seq.</th>
+<th>Nota</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Capitã Elise Ward</strong></td>
+<td>Águia Noturna</td>
+<td>7</td>
+<td>Firme, econômica nas palavras</td>
+</tr>
+<tr>
+<td><strong>Morvan Ketch</strong></td>
+<td>Antagonista</td>
+<td>9 Suplicante</td>
+<td>Ex-operário; ouve “vozes” no Enforcado</td>
+</tr>
+<tr>
+<td><strong>Eco de Sussurro</strong></td>
+<td>Criatura</td>
+<td>—</td>
+<td>2 PV, ligado a selo rasgado</td>
+</tr>
+</tbody></table>
+<p><strong>Mapa mental do local</strong></p>
+<pre><code>     RUA DO Tear
+          │
+    ┌─────┴─────┐
+    │  Viela 7  │──► Casa da Sra. Holt (criança: Milo)
+    └─────┬─────┘
+          │
+    ┌─────▼──────────────┐
+    │ OFICINA TEXTIL     │  ← símbolo na parede do porão
+    │ (abandonada)       │  ← Morvan no porão
+    └────────────────────┘</code></pre><hr>
+<h2 id="cena-1-briefing-sem-dados">Cena 1 — Briefing (sem dados)</h2><p><strong>Onde:</strong> posto das Águias Noturnas, <em>East Borough</em> — sala com mapa, lamparina a óleo, cheiro de chá forte.</p>
+<p><strong>Capitã Elise (Mestre):</strong></p>
+<blockquote>
+<p>“Três crianças, três noites, o mesmo nome ao acordar: <strong>Morvan</strong>. Nenhuma ferida física. Padre local fala em pesadelo comum. Eu não gosto de coincidência. Vocês entram, investigam, <strong>não</strong> fazem manchete. Se encontrarem Beyonder descontrolado — contêm ou tragam prova. Pagamento: 5 libras cada + um favor registrado.”</p>
+</blockquote>
+<h3 id="o-que-ensinar-aqui">O que ensinar aqui</h3><table>
+<thead>
+<tr>
+<th>Conceito</th>
+<th>Como explicar em 1 frase</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Papel do Mestre</strong></td>
+<td>Descreve o mundo; os jogadores decidem o que fazer.</td>
+</tr>
+<tr>
+<td><strong>Papel do jogador</strong></td>
+<td>Só controla o próprio personagem; diz intenções, não roteiro.</td>
+</tr>
+<tr>
+<td><strong>Caminho vs Sequência</strong></td>
+<td>Mara é <strong>Insone</strong> (nome da Seq. 9), não “caminho Insone”. Caminho dela: <strong>Trevas</strong>.</td>
+</tr>
+</tbody></table>
+<p><strong>Pergunta comum de iniciante</strong></p>
+<table>
+<thead>
+<tr>
+<th>Jogador pergunta</th>
+<th>Resposta do Mestre</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>“Posso usar magia agora?”</td>
+<td>“Você já é Beyonder Seq. 9. Seus poderes estão na ficha; cada um custa <strong>Espiritualidade</strong>.”</td>
+</tr>
+<tr>
+<td>“A igreja confia em nós?”</td>
+<td>“Confia o suficiente para gastar vocês. Não o suficiente para dar Seq. 8.”</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="cena-2-a-mae-e-o-sonho">Cena 2 — A mãe e o sonho</h2><p><strong>Onde:</strong> apartamento apertado da <strong>Sra. Holt</strong> — Milo (8 anos) pálido, olheiras.</p>
+<h3 id="roleplay-livre-sem-dados">Roleplay livre (sem dados)</h3><p>Jogadores podem acalmar a mãe, observar o quarto, perguntar sobre Morvan (vizinho que perdeu o emprego na fábrica).</p>
+<h3 id="teste-1-ganhar-confianca-opcional">Teste 1 — ganhar confiança (opcional)</h3><table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Quem</strong></td>
+<td>Quem liderar a conversa</td>
+</tr>
+<tr>
+<td><strong>Teste</strong></td>
+<td>Carisma + Empatia</td>
+</tr>
+<tr>
+<td><strong>CD</strong></td>
+<td>12</td>
+</tr>
+<tr>
+<td><strong>Sucesso</strong></td>
+<td>Ela revela: Morvan foi visto <strong>riscando algo</strong> na oficina há três noites</td>
+</tr>
+<tr>
+<td><strong>Falha</strong></td>
+<td>Ela só repete “é maldição da fábrica”</td>
+</tr>
+</tbody></table>
+<p><strong>Exemplo de rolagem (Beatriz / Mara):</strong></p>
+<table>
+<thead>
+<tr>
+<th>d20</th>
+<th>+ Car</th>
+<th>+ Perícia</th>
+<th>= Total</th>
+<th>CD</th>
+<th>Resultado</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>11</td>
+<td>+0</td>
+<td>+0</td>
+<td><strong>11</strong></td>
+<td>12</td>
+<td>Falha por 1 — Mara é seca demais</td>
+</tr>
+</tbody></table>
+<p><strong>Tomás tenta de novo (Caio):</strong></p>
+<table>
+<thead>
+<tr>
+<th>d20</th>
+<th>+ Car</th>
+<th>+ Empatia</th>
+<th>= Total</th>
+<th>CD</th>
+<th>Resultado</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>14</td>
+<td>+1</td>
+<td>+0</td>
+<td><strong>15</strong></td>
+<td>12</td>
+<td><strong>Sucesso</strong> — Holt desenha mapa da viela até a oficina</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p><strong>Ensino:</strong> falhar não trava a cena; muda <em>como</em> vocês aprendem (mapa vs. boatos).</p>
+</blockquote>
+<h3 id="metodo-de-atuacao-primeiro-ponto">Método de Atuação (primeiro ponto)</h3><p>Se <strong>Tomás</strong> disser que anota cada detalhe num caderno e cruza horários dos sonhos:</p>
+<table>
+<thead>
+<tr>
+<th>Ação de atuação</th>
+<th>Pontos de digestão</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Interpretou Leitor de forma clara</td>
+<td><strong>+10</strong> (Mestre marca na ficha)</td>
+</tr>
+</tbody></table>
+<pre><code>  Digestão Tomás:  [████░░░░░░] 10 / 100</code></pre><hr>
+<h2 id="cena-3-rastros-na-oficina">Cena 3 — Rastros na oficina</h2><p><strong>Onde:</strong> oficina têxtil fechada — portas trancadas, cheiro de mofo e óleo de máquina.</p>
+<h3 id="divisao-de-tarefas-mesa-cooperativa">Divisão de tarefas (mesa cooperativa)</h3><pre><code>        ┌─────────────────────────────────┐
+        │         OFICINA               │
+        │  Mara ──► patrulha externa    │
+        │  Tomás ──► registra evidências │
+        │  Lídia ──► sente resíduo mágico│
+        └─────────────────────────────────┘</code></pre><h3 id="teste-2-entrar-sem-alarde">Teste 2 — entrar sem alarde</h3><table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Mara</strong></td>
+<td>Destreza + Furtividade</td>
+</tr>
+<tr>
+<td><strong>CD</strong></td>
+<td>13</td>
+</tr>
+<tr>
+<td><strong>Sucesso</strong></td>
+<td>Abre janela lateral sem quebrar vidro</td>
+</tr>
+<tr>
+<td><strong>Falha</strong></td>
+<td>Vidro estala — <strong>Morvan</strong> ganha +2 na próxima emboscada</td>
+</tr>
+</tbody></table>
+<p><strong>Rolagem Mara:</strong></p>
+<table>
+<thead>
+<tr>
+<th>d20</th>
+<th>+ Dest</th>
+<th>+ Furt.</th>
+<th>=</th>
+<th>CD</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>16</td>
+<td>+1</td>
+<td>+1</td>
+<td><strong>18</strong></td>
+<td>13 ✓</td>
+</tr>
+</tbody></table>
+<h3 id="teste-3-encontrar-o-porao">Teste 3 — encontrar o porão</h3><table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Tomás</strong></td>
+<td>Inteligência + Investigação (+2 Memória Perfeita)</td>
+</tr>
+<tr>
+<td><strong>CD</strong></td>
+<td>14</td>
+</tr>
+<tr>
+<td><strong>Sucesso</strong></td>
+<td>Plano de chão mostra alçapão sob tear caído</td>
+</tr>
+<tr>
+<td><strong>Falha</strong></td>
+<td>Perdem 10 min; Lídia gasta 1 Esp. em <strong>Auras</strong> e sente frio vindo do chão</td>
+</tr>
+</tbody></table>
+<p><strong>Rolagem Tomás (com bônus do poder):</strong></p>
+<table>
+<thead>
+<tr>
+<th>d20</th>
+<th>+ Int</th>
+<th>+ Invest.</th>
+<th>+ poder</th>
+<th>=</th>
+<th>CD</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>8</td>
+<td>+2</td>
+<td>+2</td>
+<td>+2</td>
+<td><strong>14</strong></td>
+<td>14 ✓ (no limite)</td>
+</tr>
+</tbody></table>
+<h3 id="poder-em-cena-lidia">Poder em cena — Lídia</h3><p><strong>Ver Auras Místicas</strong> (1 Espiritualidade):</p>
+<blockquote>
+<p>O Mestre descreve: <em>uma névoa violeta-fraca sob as tábuas, “sabor” de segredo e sombra — Caminho do <strong>Enforcado</strong>, resíduo fraco.</em></p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Esp. antes</th>
+<th>Gasto</th>
+<th>Esp. depois</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>6</td>
+<td>1</td>
+<td><strong>5</strong></td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="cena-4-o-simbolo-na-parede">Cena 4 — O símbolo na parede</h2><p><strong>Onde:</strong> porão — lamparina apagada, <strong>símbolo</strong> riscado em carvão: círculo partido com olho ao centro.</p>
+<h3 id="leitura-de-simbolos-lidia">Leitura de Símbolos (Lídia)</h3><p>Gasta <strong>1 Esp.</strong> — sucesso automático para significado básico:</p>
+<blockquote>
+<p>“Selo de <strong>contenção de sonhos</strong>, mal copiado. Quem usa isso <strong>rouba</strong> descanso alheio para alimentar um eco espiritual.”</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Teste extra (opcional)</th>
+<th>Int + Ocultismo</th>
+<th>CD 15</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Sucesso</td>
+<td>Sabe que rasgar o selo liberta o eco — e enfurece o criador</td>
+<td></td>
+</tr>
+<tr>
+<td>Falha</td>
+<td>Só sentem perigo vago</td>
+<td></td>
+</tr>
+</tbody></table>
+<p><strong>Tomás — Análise Situacional</strong> (1 Esp., ação bônus):</p>
+<blockquote>
+<p>Mestre revela: <em>há pegadas frescas de botas baratas saindo por trilho de carvão — alguém esteve aqui há menos de uma hora.</em></p>
+</blockquote>
+<h3 id="mara-vigilia-atuacao">Mara — vigília (Atuação)</h3><p>Mara declara: <em>“Fico na escuridão do topo da escada; ninguém nos surpreende.”</em></p>
+<table>
+<thead>
+<tr>
+<th>Digestão Mara</th>
+<th>+8 (ação coerente com Insone, risco médio)</th>
+</tr>
+</thead>
+</table>
+<hr>
+<h2 id="cena-5-confronto-com-morvan">Cena 5 — Confronto com Morvan</h2><p><strong>Gancho:</strong> <strong>Morvan Ketch</strong> surge da sombra do tear — olhos injetados, sussurra frases do Enforcado. Um <strong>Eco de Sussurro</strong> (névoa com rosto de criança) flutua sobre o selo rasgado.</p>
+<h3 id="iniciativa">Iniciativa</h3><table>
+<thead>
+<tr>
+<th>Personagem</th>
+<th>d20 + Inic.</th>
+<th>Ordem</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Mara</td>
+<td>15 +2 = <strong>17</strong></td>
+<td>1º</td>
+</tr>
+<tr>
+<td>Eco</td>
+<td>12</td>
+<td>2º</td>
+</tr>
+<tr>
+<td>Tomás</td>
+<td>9 +0 = 9</td>
+<td>3º</td>
+</tr>
+<tr>
+<td>Morvan</td>
+<td>8 +0 = 8</td>
+<td>4º</td>
+</tr>
+<tr>
+<td>Lídia</td>
+<td>7 +0 = 7</td>
+<td>5º</td>
+</tr>
+</tbody></table>
+<h3 id="mapa-de-combate-simples">Mapa de combate (simples)</h3><pre><code>  [ESCADA]─── Mara
+       │
+  [TEAR]──── Morvan + Eco
+       │
+  [SELO]──── Lídia / Tomás</code></pre><h3 id="rodada-1-exemplo-completo">Rodada 1 — exemplo completo</h3><p><strong>Mara</strong> — ataca Morvan com revólver (Armas Leves):</p>
+<table>
+<thead>
+<tr>
+<th>d20</th>
+<th>+ Dest</th>
+<th>+ Armas</th>
+<th>=</th>
+<th>CD Defesa Morvan (13)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>13</td>
+<td>+1</td>
+<td>+0</td>
+<td><strong>14</strong></td>
+<td>✓ acerto</td>
+</tr>
+</tbody></table>
+<p><strong>Dano:</strong> 1d6 + mod. Destreza → rola <strong>4</strong> +1 = <strong>5 PV</strong> em Morvan (ele tem 8 PV).</p>
+<p><strong>Morvan</strong> — gesto desesperado; Eco ataca mente de Tomás:</p>
+<table>
+<thead>
+<tr>
+<th>Salvaguarda</th>
+<th>Determinação + Ocultismo (Tomás)</th>
+<th>CD 13</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>d20 11 +1 +0 = 12</td>
+<td></td>
+<td><strong>Falha</strong></td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>Tomás ouve o próprio nome sussurrado em voz de criança. <strong>−1 Lucidez</strong> (teste de horror leve).</p>
+</blockquote>
+<p>| Lucidez Tomás | 6 → <strong>5</strong> |</p>
+<p><strong>Lídia</strong> — <strong>Ritual Básico: proteção</strong> (2 Esp., 10 min narrados como versão “apressada” na mesa: Mestre reduz para 1 rodada em tutorial = <strong>consagração emergencial</strong> house-rule <strong>ou</strong> espera 2 rodadas; para ensino, diga: “vocês protegem Tomás na próxima rodada”).</p>
+<p><strong>Ensino:</strong> rituais demoram; em combate, posicionem-se.</p>
+<h3 id="rodada-2">Rodada 2</h3><p><strong>Eco</strong> ataca Mara — ela usa <strong>Sentido de Perigo</strong> (1 Esp., reação):</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Efeito</td>
+<td>+3 Defesa</td>
+</tr>
+<tr>
+<td>Ataque Eco vs Defesa 15+3=18</td>
+<td>d20 ataque 14 — <strong>erra</strong></td>
+</tr>
+</tbody></table>
+<p><strong>Tomás</strong> — não luta bem; usa <strong>Análise Situacional</strong>:</p>
+<blockquote>
+<p>“O Eco está preso ao selo — destruir o carvão no chão o enfraquece.”</p>
+</blockquote>
+<p><strong>Mara</strong> — arranca lamparina, joga fogo no <strong>carvão do símbolo</strong> (ação narrativa + teste Destreza CD 11 — sucesso).</p>
+<p><strong>Eco</strong> dissolve-se com um suspiro. <strong>Morvan</strong> cai de joelhos, chorando.</p>
+<h3 id="morvan-derrotado-roleplay">Morvan derrotado (roleplay)</h3><p>Morvan não é vilão de campanha inteira — está quebrado:</p>
+<blockquote>
+<p>“Eu só queria dormir… a voz disse que se eu pegasse o sono dos outros, eu descansaria…”</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Decisão dos jogadores</th>
+<th>Consequência</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Entregam às Águias Noturnas</td>
+<td>+favor com Elise; Morvan preso</td>
+</tr>
+<tr>
+<td>Curam e soltam</td>
+<td>+compaixão; Elise desaprova (−1 reputação)</td>
+</tr>
+<tr>
+<td>Matam</td>
+<td>Teste <strong>Perda de Lucidez</strong> CD 14 para quem puxou o gatilho</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="cena-6-epilogo-e-recompensas">Cena 6 — Epílogo e recompensas</h2><p><strong>De volta ao posto — Capitã Elise:</strong></p>
+<blockquote>
+<p>“Três crianças dormiram. Não é manchete. É trabalho.” — entrega <strong>5 libras</strong> cada.</p>
+</blockquote>
+<h3 id="tabela-de-aprendizado-pos-sessao">Tabela de aprendizado pós-sessão</h3><table>
+<thead>
+<tr>
+<th>Mecânica</th>
+<th>O que aconteceu na mesa</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Teste d20</strong></td>
+<td>Empatia, Furtividade, Investigação</td>
+</tr>
+<tr>
+<td><strong>Poderes</strong></td>
+<td>Auras, Análise, Sentido de Perigo, Ritual</td>
+</tr>
+<tr>
+<td><strong>Espiritualidade</strong></td>
+<td>Gastou e precisa descansar / ritual para recuperar</td>
+</tr>
+<tr>
+<td><strong>Lucidez</strong></td>
+<td>Tomás perdeu 1 por horror</td>
+</tr>
+<tr>
+<td><strong>Digestão</strong></td>
+<td>Tomás +10, Mara +8 — longe de Seq. 8</td>
+</tr>
+<tr>
+<td><strong>Cooperação</strong></td>
+<td>Cada PJ fez uma função diferente</td>
+</tr>
+</tbody></table>
+<h3 id="recuperacao-entre-sessoes">Recuperação (entre sessões)</h3><table>
+<thead>
+<tr>
+<th>Recurso</th>
+<th>Regra simplificada ensinada</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>PV</td>
+<td>1d6 + mod. Vigor por noite de repouso</td>
+</tr>
+<tr>
+<td>Espiritualidade</td>
+<td>Meditação 1 h: recupera metade (arredonda pra cima)</td>
+</tr>
+<tr>
+<td>Lucidez</td>
+<td>Não volta sozinha — precisa de cena de apoio ou terapia (ver Livro do Jogador)</td>
+</tr>
+</tbody></table>
+<h3 id="gancho-para-continuar-opcional">Gancho para continuar (opcional)</h3><blockquote>
+<p>Na gola do casaco de Morvan, Tomás encontra pedaço de papel com símbolo <strong>diferente</strong> — não Enforcado: cheira a <strong>Erro</strong> (Amon?). Capitã Elise fecha o dossiê: “Acima do nosso pagamento.”</p>
+</blockquote>
+<hr>
+<h2 id="folha-de-cola-do-mestre">Folha de cola do Mestre</h2><h3 id="cds-desta-sessao">CDs desta sessão</h3><table>
+<thead>
+<tr>
+<th>Situação</th>
+<th>CD</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Empatia com Sra. Holt</td>
+<td>12</td>
+</tr>
+<tr>
+<td>Furtividade na oficina</td>
+<td>13</td>
+</tr>
+<tr>
+<td>Investigação alçapão</td>
+<td>14</td>
+</tr>
+<tr>
+<td>Ocultismo selo avançado</td>
+<td>15</td>
+</tr>
+<tr>
+<td>Defesa de Morvan</td>
+<td>13</td>
+</tr>
+<tr>
+<td>Salvaguarda Eco (mental)</td>
+<td>13</td>
+</tr>
+</tbody></table>
+<h3 id="morvan-ketch-estatisticas-rapidas">Morvan Ketch (estatísticas rápidas)</h3><table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Seq. 9</strong></td>
+<td>Suplicante (Enforcado) — 8 PV</td>
+</tr>
+<tr>
+<td><strong>Ataque</strong></td>
+<td>Sussurro: Int+Ocultismo vs Det+Ocultismo, 1d4 dano espiritual + teste Lucidez CD 12</td>
+</tr>
+<tr>
+<td><strong>Tática</strong></td>
+<td>Esconde-se; deixa Eco atacar; foge se selo for destruído</td>
+</tr>
+</tbody></table>
+<h3 id="eco-de-sussurro">Eco de Sussurro</h3><table>
+<thead>
+<tr>
+<th>PV</th>
+<th>2</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Ataque</strong></td>
+<td>CD 13 mental, 1 Lucidez se falhar</td>
+</tr>
+<tr>
+<td><strong>Fraqueza</strong></td>
+<td>Destruir carvão do selo na parede</td>
+</tr>
+</tbody></table>
+<h3 id="checklist-primeira-sessao">Checklist “primeira sessão”</h3><ul>
+<li><input disabled="" type="checkbox"> Cada jogador rolou pelo menos <strong>um d20</strong></li>
+<li><input disabled="" type="checkbox"> Alguém gastou <strong>Espiritualidade</strong></li>
+<li><input disabled="" type="checkbox"> Alguém ganhou <strong>pontos de digestão</strong> por atuação</li>
+<li><input disabled="" type="checkbox"> Explicou diferença <strong>Caminho / Sequência</strong></li>
+<li><input disabled="" type="checkbox"> Mostrou que <strong>falha avança</strong> a história</li>
+</ul>
+<h3 id="onde-ler-as-regras-completas">Onde ler as regras completas</h3><table>
+<thead>
+<tr>
+<th>Tema</th>
+<th>Arquivo</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Testes e atributos</td>
+<td><code>livro-jogador/03-atributos.html</code></td>
+</tr>
+<tr>
+<td>Poderes Seq. 9</td>
+<td><code>livro-jogador/05-sequencias.html</code></td>
+</tr>
+<tr>
+<td>Método de Atuação</td>
+<td><code>livro-jogador/06-atuacao.html</code></td>
+</tr>
+<tr>
+<td>Campanha longa similar</td>
+<td><code>campanhas/01-sombras-backlund.html</code></td>
+</tr>
+<tr>
+<td>22 Caminhos (Mestre)</td>
+<td><code>livro-mestre/guia-22-caminhos-deuses.html</code></td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="transcricao-curta-como-soa-na-mesa">Transcrição curta (como soa na mesa)</h2><blockquote>
+<p><strong>Mestre:</strong> A névoa engole o fim da rua. O letreiro da oficina rangueja. O que vocês fazem?<br><strong>Beatriz (Mara):</strong> Circundo pelo beco e entro pela janela — estou acostumada com escuro.<br><strong>Mestre:</strong> Rola Destreza + Furtividade contra CD 13.<br><strong>Beatriz:</strong> Dezesseis mais um mais um — dezoito!<br><strong>Caio (Tomás):</strong> Enquanto isso, procuro planta da fábrica ou diário de turno.<br><strong>Diana (Lídia):</strong> Antes de descer, gasto um ponto e <strong>vejo auras</strong> no chão.<br><strong>Mestre:</strong> Perfeito. Mara, você está dentro. Tomás, Investigação. Lídia, violeta-fraca — Enforcado. E todos ouvem, lá embaixo, uma respiração que não é só uma.</p>
+</blockquote>
+<hr>
+<p><em>Senhor dos Mistérios RPG — exemplo didático. Derivado da obra de Cuttlefish That Loves Diving.</em></p>
+
+</article>
+
+
+<nav class="book-nav">
+  <a href="index.html">&larr; Livro de Campanhas</a>
+  <a href="01-sombras-backlund.html">Campanha 1 — Sombras sobre Backlund &rarr;</a>
+</nav>
+
+</body>
+</html>

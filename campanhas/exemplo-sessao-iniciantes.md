@@ -523,7 +523,7 @@ Morvan não é vilão de campanha inteira — está quebrado:
 | Poderes Seq. 9 | `livro-jogador/05-sequencias.html` |
 | Método de Atuação | `livro-jogador/06-atuacao.html` |
 | Campanha longa similar | `campanhas/01-sombras-backlund.html` |
-| 22 Caminhos (Mestre) | `livro-mestre/guia-22-caminhos-deuses.md` |
+| 22 Caminhos (Mestre) | `livro-mestre/guia-22-caminhos-deuses.html` |
 
 ---
 

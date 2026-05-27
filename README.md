@@ -5,8 +5,8 @@ Sistema de RPG de mesa fan-made baseado em **Lord of the Mysteries** (*Senhor do
 ## Conteúdo
 
 - **Livro do Jogador** — regras, 22 Caminhos, Sequências 9–5, combate, misticismo
-- **Livro do Mestre** — lore, organizações, NPCs, bestiário, artefatos selados; apêndice [`guia-22-caminhos-deuses.md`](livro-mestre/guia-22-caminhos-deuses.md) (22 Caminhos, deuses e deidades)
-- **Livro de Campanhas** — 3 campanhas prontas + [exemplo de sessão para iniciantes](campanhas/exemplo-sessao-iniciantes.md)
+- **Livro do Mestre** — lore, organizações, NPCs, bestiário, artefatos selados; apêndice [Guia dos 22 Caminhos](livro-mestre/guia-22-caminhos-deuses.html)
+- **Livro de Campanhas** — 3 campanhas prontas + [exemplo de sessão para iniciantes](campanhas/exemplo-sessao-iniciantes.html)
 - **Apêndices** — ficha de personagem, tabelas, glossário
 
 ## Site (GitHub Pages)
@@ -15,11 +15,13 @@ https://lochesystem.github.io/rpg-lotm/
 
 ## Continuidade (agentes / colaboradores)
 
-[`CONTINUIDADE-AGENTE.md`](CONTINUIDADE-AGENTE.md) — resumo do projeto, pendências e contexto para retomar o trabalho.
+[Continuidade do projeto](continuidade-agente.html) — resumo para agentes e colaboradores (fonte editável: `CONTINUIDADE-AGENTE.md`).
 
 ## Uso local
 
 Abra `index.html` no navegador ou sirva a pasta com qualquer servidor estático.
+
+Para regenerar páginas HTML a partir dos `.md` (guia, tutorial, continuidade): `npm run build:pages`
 
 ## Licença
 

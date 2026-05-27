@@ -1,0 +1,1384 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guia rápido — 22 Caminhos e Deuses · Senhor dos Mistérios RPG</title>
+<link rel="stylesheet" href="../assets/css/common.css">
+<link rel="stylesheet" href="../assets/css/print.css">
+<style>
+.mermaid { margin: 1.5rem auto; max-width: 100%; overflow-x: auto; }
+article.md-body pre {
+  background: var(--parchment-d, #f5f0e6);
+  border: 1px solid var(--gold, #b8860b);
+  border-radius: 4px;
+  padding: 0.75rem 1rem;
+  overflow-x: auto;
+  font-size: 0.9em;
+  line-height: 1.45;
+}
+article.md-body pre code { background: none; padding: 0; }
+article.md-body hr { border: none; border-top: 1px solid var(--gold, #b8860b); margin: 2rem 0; opacity: 0.5; }
+article.md-body table { font-size: 0.92em; }
+article.md-body h1:first-child { margin-top: 0; }
+</style>
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+  mermaid.initialize({ startOnLoad: true, theme: 'neutral', securityLevel: 'loose' });
+</script>
+</head>
+<body>
+
+<article class="md-body">
+<h1 id="guia-rapido-do-mestre-22-caminhos-sefirot-deuses-verdadeiros-e-deidades-exteriores">Guia rápido do Mestre — 22 Caminhos, Sefirot, Deuses Verdadeiros e Deidades Exteriores</h1><blockquote>
+<p><strong>Uso:</strong> consulta na mesa. Lore canônica de <em>Senhor dos Mistérios</em>; mecânicas detalhadas estão no Livro do Jogador (caps. 4–6) e no cap. 2 do Livro do Mestre.<br><strong>Versão:</strong> alinhada ao conteúdo HTML do repositório <code>rpg-lotm</code>.</p>
+</blockquote>
+<hr>
+<h2 id="indice">Índice</h2><ol>
+<li><a href="#como-ler-este-guia">Como ler este guia</a></li>
+<li><a href="#mapa-geral-vis%C3%A3o-em-uma-p%C3%A1gina">Mapa geral (visão em uma página)</a></li>
+<li><a href="#tabela-mestre-dos-22-caminhos">Tabela-mestre dos 22 Caminhos</a></li>
+<li><a href="#os-nove-sefirot-e-os-caminhos">Os nove Sefirot e os Caminhos</a></li>
+<li><a href="#fichas-visuais-por-caminho">Fichas visuais por Caminho</a></li>
+<li><a href="#os-sete-deuses-verdadeiros-quinta-%C3%A9poca">Os sete Deuses Verdadeiros (Quinta Época)</a></li>
+<li><a href="#deidades-exteriores-e-os-6-caminhos-estranhos">Deidades Exteriores e os 6 Caminhos “estranhos”</a></li>
+<li><a href="#caminhos-sem-igreja-ortodoxa">Caminhos sem igreja ortodoxa</a></li>
+<li><a href="#escada-de-sequ%C3%AAncias-refer%C3%AAncia-visual">Escada de Sequências (referência visual)</a></li>
+<li><a href="#notas-de-mesa-para-o-mestre">Notas de mesa para o Mestre</a></li>
+</ol>
+<hr>
+<h2 id="como-ler-este-guia">Como ler este guia</h2><table>
+<thead>
+<tr>
+<th>Símbolo / coluna</th>
+<th>Significado</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Seq 9 → 0</strong></td>
+<td>Sequência inicial do jogador (9) até divindade do Caminho (0)</td>
+</tr>
+<tr>
+<td><strong>Sefirah</strong></td>
+<td>Fragmento cósmico que “ancora” o Caminho</td>
+</tr>
+<tr>
+<td><strong>Deus Verdadeiro</strong></td>
+<td>Entidade adorada pelas <strong>7 Igrejas Ortodoxas</strong> na Quinta Época (ano ~1350)</td>
+</tr>
+<tr>
+<td><strong>Origem</strong></td>
+<td><strong>Criador</strong> = dos 16 Caminhos padrão; <strong>Exterior</strong> = dos 6 Caminhos nascidos das três primeiras Deidades Exteriores</td>
+</tr>
+<tr>
+<td><strong>Igreja</strong></td>
+<td>Quem monopoliza fórmulas e Beyonders na superfície (quando aplicável)</td>
+</tr>
+</tbody></table>
+<p><strong>Regra de ouro:</strong> <em>Caminho</em> ≠ <em>Sequência</em>. Ex.: <strong>Tolo</strong> é o Caminho; <strong>Vidente</strong> é só o nome da Sequência 9. Tolo e Porta <strong>compartilham</strong> a mesma Seq. 9 (Vidente).</p>
+<hr>
+<h2 id="mapa-geral-visao-em-uma-pagina">Mapa geral (visão em uma página)</h2><div class="mermaid">flowchart TB
+  subgraph CRIADOR["16 Caminhos — Criador Original"]
+    S1["① Castelo Sefirah<br/>Tolo · Erro · Porta"]
+    S2["② Mar do Caos<br/>Visionário · Sol · Tirano · Torre Branca · Enforcado"]
+    S3["③ Estrela Tenebrosa<br/>Trevas · Morte · Gigante do Crepúsculo"]
+    S5["⑤ Cidade dos Milagres<br/>Eremita · Párago"]
+    S6["⑥ Chave de Luz<br/>Roda da Fortuna"]
+    S8["⑧ Nação da Desordem<br/>Abismo · Acorrentado"]
+  end
+
+  subgraph EXTERIOR["6 Caminhos — Deidades Exteriores primárias"]
+    S4["④ Calamidade da Destruição<br/>Demonesa · Sacerdote Vermelho<br/><i>Árvore-Mãe do Desejo</i>"]
+    S7["⑦ Ninho Primordial<br/>Mãe · Lua<br/><i>Mãe Deusa da Depravação</i>"]
+    S9["⑨ Ilusão Fantasma<br/>Imperador Negro · Justiceiro<br/><i>Filho do Caos</i>"]
+  end
+
+  subgraph DEUSES["7 Deuses Verdadeiros — Igrejas Ortodoxas"]
+    D1["Deusa da Noite Eterna"]
+    D2["Senhor das Tempestades"]
+    D3["Sol Eterno Ardente"]
+    D4["Deus do Conhecimento ⚠"]
+    D5["Mãe Terra"]
+    D6["Deus da Guerra"]
+    D7["Deus do Vapor ⚙"]
+  end
+
+  S3 --> D1
+  S2 --> D2
+  S2 --> D3
+  S2 --> D4
+  S7 --> D5
+  S4 --> D6
+  S5 --> D7</div><p><strong>Quarto Pilar (troca de Características):</strong> Caminhos da <strong>Estrela Tenebrosa</strong> (Trevas, Morte, Gigante do Crepúsculo) podem trocar ingredientes entre si — único grupo com essa regra.</p>
+<hr>
+<h2 id="tabela-mestre-dos-22-caminhos">Tabela-mestre dos 22 Caminhos</h2><table>
+<thead>
+<tr>
+<th>#</th>
+<th>Caminho (PT)</th>
+<th>Seq. 9</th>
+<th>Sefirah</th>
+<th>Seq. 0</th>
+<th>Origem</th>
+<th>Deus Verdadeiro / Igreja</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td><strong>Tolo</strong></td>
+<td>Vidente</td>
+<td>Castelo Sefirah</td>
+<td>Senhor dos Mistérios</td>
+<td>Criador</td>
+<td>— (Clube do Tarô, sociedades secretas)</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>Erro</strong></td>
+<td>Saqueador</td>
+<td>Castelo Sefirah</td>
+<td>Senhor dos Mistérios</td>
+<td>Criador</td>
+<td>—</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>Porta</strong></td>
+<td>Vidente</td>
+<td>Castelo Sefirah</td>
+<td>Senhor dos Mistérios</td>
+<td>Criador</td>
+<td>—</td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>Visionário</strong></td>
+<td>Espectador</td>
+<td>Mar do Caos</td>
+<td>Deus Todo-Poderoso</td>
+<td>Criador</td>
+<td>Deus do Conhecimento (⚠ Adam)</td>
+</tr>
+<tr>
+<td>5</td>
+<td><strong>Sol</strong></td>
+<td>Cantor</td>
+<td>Mar do Caos</td>
+<td>Deus Todo-Poderoso</td>
+<td>Criador</td>
+<td>Sol Eterno Ardente</td>
+</tr>
+<tr>
+<td>6</td>
+<td><strong>Tirano</strong></td>
+<td>Marinheiro</td>
+<td>Mar do Caos</td>
+<td>Deus Todo-Poderoso</td>
+<td>Criador</td>
+<td>Senhor das Tempestades</td>
+</tr>
+<tr>
+<td>7</td>
+<td><strong>Torre Branca</strong></td>
+<td>Leitor</td>
+<td>Mar do Caos</td>
+<td>Deus Todo-Poderoso</td>
+<td>Criador</td>
+<td>Deus do Conhecimento (fachada)</td>
+</tr>
+<tr>
+<td>8</td>
+<td><strong>Enforcado</strong></td>
+<td>Suplicante</td>
+<td>Mar do Caos</td>
+<td>Deus Todo-Poderoso</td>
+<td>Criador</td>
+<td>Aurora (Mão Adversa), cultos</td>
+</tr>
+<tr>
+<td>9</td>
+<td><strong>Trevas</strong></td>
+<td>Insone</td>
+<td>Estrela Tenebrosa</td>
+<td>Escuridão Eterna</td>
+<td>Criador</td>
+<td>Deusa da Noite Eterna</td>
+</tr>
+<tr>
+<td>10</td>
+<td><strong>Morte</strong></td>
+<td>Coletor de Cadáveres</td>
+<td>Estrela Tenebrosa</td>
+<td>Escuridão Eterna</td>
+<td>Criador</td>
+<td>Deusa da Noite Eterna</td>
+</tr>
+<tr>
+<td>11</td>
+<td><strong>Gigante do Crepúsculo</strong></td>
+<td>Guerreiro</td>
+<td>Estrela Tenebrosa</td>
+<td>Escuridão Eterna</td>
+<td>Criador</td>
+<td>Deusa da Noite (parcial)</td>
+</tr>
+<tr>
+<td>12</td>
+<td><strong>Demonesa</strong></td>
+<td>Assassina</td>
+<td>Calamidade da Destruição</td>
+<td>Calamidade da Destruição</td>
+<td><strong>Exterior</strong></td>
+<td>— (herética; cultos)</td>
+</tr>
+<tr>
+<td>13</td>
+<td><strong>Sacerdote Vermelho</strong></td>
+<td>Caçador</td>
+<td>Calamidade da Destruição</td>
+<td>Calamidade da Destruição</td>
+<td><strong>Exterior</strong></td>
+<td>Deus da Guerra</td>
+</tr>
+<tr>
+<td>14</td>
+<td><strong>Eremita</strong></td>
+<td>Mistério</td>
+<td>Cidade dos Milagres</td>
+<td>Demônio do Conhecimento</td>
+<td>Criador</td>
+<td>Hermandade da Noite, alquimistas</td>
+</tr>
+<tr>
+<td>15</td>
+<td><strong>Párago</strong></td>
+<td>Engenheiro</td>
+<td>Cidade dos Milagres</td>
+<td>Demônio do Conhecimento</td>
+<td>Criador</td>
+<td>Deus do Vapor e Maquinaria</td>
+</tr>
+<tr>
+<td>16</td>
+<td><strong>Roda da Fortuna</strong></td>
+<td>Adivinha da Sorte</td>
+<td>Chave de Luz</td>
+<td>Chave de Luz</td>
+<td>Criador</td>
+<td>— (raro, sem igreja)</td>
+</tr>
+<tr>
+<td>17</td>
+<td><strong>Mãe</strong></td>
+<td>Curandeira</td>
+<td>Ninho Primordial</td>
+<td>Deusa da Origem</td>
+<td><strong>Exterior</strong></td>
+<td>Mãe Terra</td>
+</tr>
+<tr>
+<td>18</td>
+<td><strong>Lua</strong></td>
+<td>Alquimista</td>
+<td>Ninho Primordial</td>
+<td>Deusa da Origem</td>
+<td><strong>Exterior</strong></td>
+<td>Mãe Terra</td>
+</tr>
+<tr>
+<td>19</td>
+<td><strong>Abismo</strong></td>
+<td>Lutador de Rua</td>
+<td>Nação da Desordem</td>
+<td>Pai dos Demônios</td>
+<td>Criador</td>
+<td>— (cultistas, criminosos)</td>
+</tr>
+<tr>
+<td>20</td>
+<td><strong>Acorrentado</strong></td>
+<td>Criminoso</td>
+<td>Nação da Desordem</td>
+<td>Pai dos Demônios</td>
+<td>Criador</td>
+<td>—</td>
+</tr>
+<tr>
+<td>21</td>
+<td><strong>Imperador Negro</strong></td>
+<td>Advogado</td>
+<td>Ilusão Fantasma</td>
+<td>A Anarquia</td>
+<td><strong>Exterior</strong></td>
+<td>— (histórico; Ordem Twiight)</td>
+</tr>
+<tr>
+<td>22</td>
+<td><strong>Justiceiro</strong></td>
+<td>Vigia</td>
+<td>Ilusão Fantasma</td>
+<td>A Anarquia</td>
+<td><strong>Exterior</strong></td>
+<td>— (sem igreja oficial)</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="os-nove-sefirot-e-os-caminhos">Os nove Sefirot e os Caminhos</h2><table>
+<thead>
+<tr>
+<th>#</th>
+<th>Sefirah</th>
+<th>Título na Seq. 0</th>
+<th>Nº caminhos</th>
+<th>Caminhos</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td><strong>Castelo Sefirah</strong></td>
+<td>Senhor dos Mistérios</td>
+<td>3</td>
+<td>Tolo, Erro, Porta</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>Mar do Caos</strong></td>
+<td>Deus Todo-Poderoso</td>
+<td>5</td>
+<td>Visionário, Sol, Tirano, Torre Branca, Enforcado</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>Estrela Tenebrosa</strong></td>
+<td>Escuridão Eterna</td>
+<td>3</td>
+<td>Trevas, Morte, Gigante do Crepúsculo</td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>Calamidade da Destruição</strong></td>
+<td><em>(sem título único)</em></td>
+<td>2</td>
+<td>Demonesa, Sacerdote Vermelho</td>
+</tr>
+<tr>
+<td>5</td>
+<td><strong>Cidade dos Milagres</strong></td>
+<td>Demônio do Conhecimento</td>
+<td>2</td>
+<td>Eremita, Párago</td>
+</tr>
+<tr>
+<td>6</td>
+<td><strong>Chave de Luz</strong></td>
+<td>Chave de Luz</td>
+<td>1</td>
+<td>Roda da Fortuna</td>
+</tr>
+<tr>
+<td>7</td>
+<td><strong>Ninho Primordial</strong></td>
+<td>Deusa da Origem</td>
+<td>2</td>
+<td>Mãe, Lua</td>
+</tr>
+<tr>
+<td>8</td>
+<td><strong>Nação da Desordem</strong></td>
+<td>Pai dos Demônios</td>
+<td>2</td>
+<td>Abismo, Acorrentado</td>
+</tr>
+<tr>
+<td>9</td>
+<td><strong>Ilusão Fantasma</strong></td>
+<td>A Anarquia</td>
+<td>2</td>
+<td>Imperador Negro, Justiceiro</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="fichas-visuais-por-caminho">Fichas visuais por Caminho</h2><p>Cada ficha resume <strong>tema</strong>, <strong>progressão</strong>, <strong>quem adora/controla</strong> e <strong>gancho de mesa</strong>. Sequências completas: <code>livro-jogador/04-pathways.html</code>.</p>
+<hr>
+<h3 id="sefirah-1-castelo-sefirah-senhor-dos-misterios">Sefirah 1 — Castelo Sefirah · *Senhor dos Mistérios*</h3><pre><code>Seq:  9────8────7────6────5────4────3────2────1────0
+      │    │    │    │    │    │    │    │    │    └── Senhor dos Mistérios</code></pre><h4 id="1-caminho-do-tolo">1 · Caminho do Tolo</h4><table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Seq. 9</strong></td>
+<td>Vidente</td>
+</tr>
+<tr>
+<td><strong>Tema</strong></td>
+<td>Engano, disfarces, marionetes, destino</td>
+</tr>
+<tr>
+<td><strong>Visual</strong></td>
+<td>Articulações flexíveis; fios invisíveis nos dedos (Seq 4+)</td>
+</tr>
+<tr>
+<td><strong>Compatíveis</strong></td>
+<td>Erro, Porta</td>
+</tr>
+<tr>
+<td><strong>Quem manda</strong></td>
+<td>Nenhuma igreja. Clube do Tarô, Klein/Mundo das Maravilhas</td>
+</tr>
+<tr>
+<td><strong>Mesa</strong></td>
+<td>Infiltração, identidade falsa, “há sempre um palhaço por trás”</td>
+</tr>
+</tbody></table>
+<h4 id="2-caminho-do-erro">2 · Caminho do Erro</h4><table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Seq. 9</strong></td>
+<td>Saqueador</td>
+</tr>
+<tr>
+<td><strong>Escada (obra)</strong></td>
+<td>Saqueador → Golpista → Criptologista → Prometeu → Ladrão de Sonhos → Parasita → Mentor do Engano → Cavalo de Troia do Destino → <em>(Verme do Tempo na lore)</em> → O Erro</td>
+</tr>
+<tr>
+<td><strong>Tema</strong></td>
+<td>Roubo (objetos → poderes → pensamentos → vida → destino → tempo), engano, parasitismo</td>
+</tr>
+<tr>
+<td><strong>Visual</strong></td>
+<td>Mãos ágeis; fragmentos de Vermes do Tempo (Seq 4+); relógios e numerais romanos na forma mítica</td>
+</tr>
+<tr>
+<td><strong>Compatíveis</strong></td>
+<td>Tolo, Porta (troca só a partir da Seq 3)</td>
+</tr>
+<tr>
+<td><strong>Quem manda</strong></td>
+<td>Nenhuma igreja. <strong>Amon</strong> — Verme do Tempo / Parasita lendário</td>
+</tr>
+<tr>
+<td><strong>Mesa</strong></td>
+<td>NPC que copia poderes dos PJs; gemidos idênticos; “bug” nas regras da cena</td>
+</tr>
+</tbody></table>
+<h4 id="3-caminho-da-porta">3 · Caminho da Porta</h4><table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Seq. 9</strong></td>
+<td>Vidente <em>(igual ao Tolo)</em></td>
+</tr>
+<tr>
+<td><strong>Tema</strong></td>
+<td>Portais, viagem dimensional, espaço</td>
+</tr>
+<tr>
+<td><strong>Visual</strong></td>
+<td>Micro-portais sob stress; corpo “dobra” o espaço (Seq 4+)</td>
+</tr>
+<tr>
+<td><strong>Compatíveis</strong></td>
+<td>Tolo, Erro</td>
+</tr>
+<tr>
+<td><strong>Quem manda</strong></td>
+<td>Nenhuma igreja</td>
+</tr>
+<tr>
+<td><strong>Mesa</strong></td>
+<td>Fuga, resgate, dungeon com saídas que mudam de lugar</td>
+</tr>
+</tbody></table>
+<hr>
+<h3 id="sefirah-2-mar-do-caos-deus-todo-poderoso">Sefirah 2 — Mar do Caos · *Deus Todo-Poderoso*</h3><pre><code>5 caminhos ──► maior bloco “divino” do Continente Norte</code></pre><h4 id="4-caminho-do-visionario">4 · Caminho do Visionário</h4><table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Seq. 9</strong></td>
+<td>Espectador</td>
+</tr>
+<tr>
+<td><strong>Tema</strong></td>
+<td>Mente, sonhos, manipulação psíquica</td>
+</tr>
+<tr>
+<td><strong>Igreja</strong></td>
+<td><strong>Deus do Conhecimento</strong> — mas o “deus” real é <strong>Adam</strong> (Seq 0 Visionário)</td>
+</tr>
+<tr>
+<td><strong>Mesa</strong></td>
+<td>Flashbacks falsos; NPC que “sempre esteve ali”; Escola de Psicologia</td>
+</tr>
+</tbody></table>
+<h4 id="5-caminho-do-sol">5 · Caminho do Sol</h4><table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Seq. 9</strong></td>
+<td>Cantor</td>
+</tr>
+<tr>
+<td><strong>Tema</strong></td>
+<td>Luz sagrada, cura, contratos, anti-mortos-vivos</td>
+</tr>
+<tr>
+<td><strong>Igreja</strong></td>
+<td><strong>Sol Eterno Ardente</strong> (Intis) — Inquisição caça heréticos</td>
+</tr>
+<tr>
+<td><strong>Mesa</strong></td>
+<td>Purificação vs. moral cinza; zealots; antigo Deus do Sol (morto)</td>
+</tr>
+</tbody></table>
+<h4 id="6-caminho-do-tirano">6 · Caminho do Tirano</h4><table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Seq. 9</strong></td>
+<td>Marinheiro</td>
+</tr>
+<tr>
+<td><strong>Tema</strong></td>
+<td>Mares, tempestades, relâmpagos, comando</td>
+</tr>
+<tr>
+<td><strong>Igreja</strong></td>
+<td><strong>Senhor das Tempestades</strong> — elfo que usurpou o deus anterior</td>
+</tr>
+<tr>
+<td><strong>Mesa</strong></td>
+<td>Punidores navais; patriarcado; tempestade como julgamento</td>
+</tr>
+</tbody></table>
+<h4 id="7-caminho-da-torre-branca">7 · Caminho da Torre Branca</h4><table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Seq. 9</strong></td>
+<td>Leitor</td>
+</tr>
+<tr>
+<td><strong>Tema</strong></td>
+<td>Lógica, memória, dedução, previsão</td>
+</tr>
+<tr>
+<td><strong>Igreja</strong></td>
+<td><strong>Deus do Conhecimento</strong> (aparência pública do cargo Seq 0)</td>
+</tr>
+<tr>
+<td><strong>Mesa</strong></td>
+<td>Mistério investigativo; símbolos nos olhos ao pensar</td>
+</tr>
+</tbody></table>
+<h4 id="8-caminho-do-enforcado">8 · Caminho do Enforcado</h4><table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Seq. 9</strong></td>
+<td>Suplicante</td>
+</tr>
+<tr>
+<td><strong>Tema</strong></td>
+<td>Segredos, sombras, maldições, pastores de almas</td>
+</tr>
+<tr>
+<td><strong>Igreja</strong></td>
+<td>Nenhuma ortodoxa — <strong>Ordem da Aurora / Mão Adversa</strong></td>
+</tr>
+<tr>
+<td><strong>Mesa</strong></td>
+<td>Sussurros de entidades; culto “benéfico” que não é; Seq 5 Pastor</td>
+</tr>
+</tbody></table>
+<hr>
+<h3 id="sefirah-3-estrela-tenebrosa-escuridao-eterna-quarto-pilar">Sefirah 3 — Estrela Tenebrosa · *Escuridão Eterna* · Quarto Pilar</h3><pre><code>Trevas ◄──► Morte ◄──► Gigante     (troca de Características entre os 3)</code></pre><h4 id="9-caminho-das-trevas">9 · Caminho das Trevas</h4><table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Seq. 9</strong></td>
+<td>Insone</td>
+</tr>
+<tr>
+<td><strong>Tema</strong></td>
+<td>Noite viva, pesadelos, furtividade</td>
+</tr>
+<tr>
+<td><strong>Igreja</strong></td>
+<td><strong>Deusa da Noite Eterna</strong> — Águias Noturnas (Loen)</td>
+</tr>
+<tr>
+<td><strong>Deus Verdadeiro</strong></td>
+<td><strong>Deusa da Noite Eterna</strong> (Seq 0 Trevas) — a mais “benévola” do panteão</td>
+</tr>
+<tr>
+<td><strong>Mesa</strong></td>
+<td>Equipe discreta de investigação; sonhos como pista</td>
+</tr>
+</tbody></table>
+<h4 id="10-caminho-da-morte">10 · Caminho da Morte</h4><table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Seq. 9</strong></td>
+<td>Coletor de Cadáveres</td>
+</tr>
+<tr>
+<td><strong>Tema</strong></td>
+<td>Mortos-vivos, espíritos, portão da morte</td>
+</tr>
+<tr>
+<td><strong>Igreja</strong></td>
+<td>Deusa da Noite Eterna</td>
+</tr>
+<tr>
+<td><strong>Mesa</strong></td>
+<td>Necromancia controlada; frio na pele; Coveiro = Seq 8</td>
+</tr>
+</tbody></table>
+<h4 id="11-caminho-do-gigante-do-crepusculo">11 · Caminho do Gigante do Crepúsculo</h4><table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Seq. 9</strong></td>
+<td>Guerreiro</td>
+</tr>
+<tr>
+<td><strong>Tema</strong></td>
+<td>Força marcial, tamanho gigante, proteção de aliados</td>
+</tr>
+<tr>
+<td><strong>Igreja</strong></td>
+<td>Parcialmente Deusa da Noite</td>
+</tr>
+<tr>
+<td><strong>Mesa</strong></td>
+<td>Tanque; luz crepuscular; Rei dos Gigantes (era antiga)</td>
+</tr>
+</tbody></table>
+<hr>
+<h3 id="sefirah-4-calamidade-da-destruicao-origem-exterior">Sefirah 4 — Calamidade da Destruição · *origem Exterior*</h3><pre><code>Demonesa ◄──► Sacerdote Vermelho     (Árvore-Mãe do Desejo — 2 caminhos)</code></pre><h4 id="12-caminho-da-demonesa">12 · Caminho da Demonesa</h4><table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Seq. 9</strong></td>
+<td>Assassina</td>
+</tr>
+<tr>
+<td><strong>Tema</strong></td>
+<td>Veneno, sedução, peste; <strong>Seq 8+ exige forma feminina</strong></td>
+</tr>
+<tr>
+<td><strong>Origem</strong></td>
+<td>Deidade Exterior — <strong>Árvore-Mãe do Desejo</strong></td>
+</tr>
+<tr>
+<td><strong>Mesa</strong></td>
+<td>Assassina social; pragas; corrupção por desejo</td>
+</tr>
+</tbody></table>
+<h4 id="13-caminho-do-sacerdote-vermelho">13 · Caminho do Sacerdote Vermelho</h4><table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Seq. 9</strong></td>
+<td>Caçador</td>
+</tr>
+<tr>
+<td><strong>Tema</strong></td>
+<td>Fogo, caça, guerra, conspiração</td>
+</tr>
+<tr>
+<td><strong>Igreja</strong></td>
+<td><strong>Deus da Guerra</strong> (Feysac) — violência como devoção</td>
+</tr>
+<tr>
+<td><strong>Deus Verdadeiro</strong></td>
+<td><strong>Deus da Guerra</strong> (Seq 0 Sacerdote Vermelho)</td>
+</tr>
+<tr>
+<td><strong>Origem</strong></td>
+<td>Árvore-Mãe do Desejo</td>
+</tr>
+<tr>
+<td><strong>Mesa</strong></td>
+<td>Alta taxa de perda de controle; cruzados; piratas de sangue</td>
+</tr>
+</tbody></table>
+<hr>
+<h3 id="sefirah-5-cidade-dos-milagres-demonio-do-conhecimento">Sefirah 5 — Cidade dos Milagres · *Demônio do Conhecimento*</h3><h4 id="14-caminho-do-eremita">14 · Caminho do Eremita</h4><table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Seq. 9</strong></td>
+<td>Mistério</td>
+</tr>
+<tr>
+<td><strong>Tema</strong></td>
+<td>Rituais, astrologia, invocação</td>
+</tr>
+<tr>
+<td><strong>Quem manda</strong></td>
+<td>Hermandade da Noite, alquimistas heréticos</td>
+</tr>
+<tr>
+<td><strong>Mesa</strong></td>
+<td>Rituais longos; marcas rúnicas nas mãos</td>
+</tr>
+</tbody></table>
+<h4 id="15-caminho-do-parago">15 · Caminho do Párago</h4><table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Seq. 9</strong></td>
+<td>Engenheiro</td>
+</tr>
+<tr>
+<td><strong>Tema</strong></td>
+<td>Invenção, autômatos, corpo-mechanismo</td>
+</tr>
+<tr>
+<td><strong>Igreja</strong></td>
+<td><strong>Deus do Vapor e Maquinaria</strong></td>
+</tr>
+<tr>
+<td><strong>Deus Verdadeiro</strong></td>
+<td><strong>Deus artificial</strong> (Seq 0 Párago + Savant) — revolução industrial</td>
+</tr>
+<tr>
+<td><strong>Mesa</strong></td>
+<td>Artefatos steam; “deus fabricado” abala teologia</td>
+</tr>
+</tbody></table>
+<hr>
+<h3 id="sefirah-6-chave-de-luz">Sefirah 6 — Chave de Luz</h3><h4 id="16-caminho-da-roda-da-fortuna">16 · Caminho da Roda da Fortuna</h4><table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Seq. 9</strong></td>
+<td>Adivinha da Sorte</td>
+</tr>
+<tr>
+<td><strong>Tema</strong></td>
+<td>Sorte, azar, probabilidade — <strong>sem Caminho compatível</strong></td>
+</tr>
+<tr>
+<td><strong>Quem manda</strong></td>
+<td>Ninguém; raríssimo em campanhas</td>
+</tr>
+<tr>
+<td><strong>Mesa</strong></td>
+<td>Caos controlado; eventos aleatórios intensificam perto do PJ</td>
+</tr>
+</tbody></table>
+<hr>
+<h3 id="sefirah-7-ninho-primordial-origem-exterior">Sefirah 7 — Ninho Primordial · *origem Exterior*</h3><pre><code>Mãe ◄──► Lua     (Mãe Deusa da Depravação — 2 caminhos)</code></pre><h4 id="17-caminho-da-mae">17 · Caminho da Mãe</h4><table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Seq. 9</strong></td>
+<td>Curandeira</td>
+</tr>
+<tr>
+<td><strong>Tema</strong></td>
+<td>Natureza, vida, pragas, quimeras</td>
+</tr>
+<tr>
+<td><strong>Igreja</strong></td>
+<td><strong>Mãe Terra</strong></td>
+</tr>
+<tr>
+<td><strong>Deus Verdadeiro</strong></td>
+<td><strong>Mãe Terra</strong> (Seq 0 Mãe) — nutre e ceifa</td>
+</tr>
+<tr>
+<td><strong>Origem</strong></td>
+<td><strong>Mãe Deusa da Depravação</strong></td>
+</tr>
+<tr>
+<td><strong>Mesa</strong></td>
+<td>Curandeira rural; flores brotando ao redor</td>
+</tr>
+</tbody></table>
+<h4 id="18-caminho-da-lua">18 · Caminho da Lua</h4><table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Seq. 9</strong></td>
+<td>Alquimista</td>
+</tr>
+<tr>
+<td><strong>Tema</strong></td>
+<td>Alquimia → <strong>vampirismo a partir de Seq 7</strong></td>
+</tr>
+<tr>
+<td><strong>Igreja</strong></td>
+<td>Mãe Terra (Guardiãs de Bosque)</td>
+</tr>
+<tr>
+<td><strong>Origem</strong></td>
+<td>Mãe Deusa da Depravação</td>
+</tr>
+<tr>
+<td><strong>Mesa</strong></td>
+<td>Dualidade cura/sede de sangue; Lilith (era antiga)</td>
+</tr>
+</tbody></table>
+<hr>
+<h3 id="sefirah-8-nacao-da-desordem-pai-dos-demonios">Sefirah 8 — Nação da Desordem · *Pai dos Demônios*</h3><h4 id="19-caminho-do-abismo">19 · Caminho do Abismo</h4><table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Seq. 9</strong></td>
+<td>Lutador de Rua</td>
+</tr>
+<tr>
+<td><strong>Tema</strong></td>
+<td>Força bruta, desejos, forma demoníaca</td>
+</tr>
+<tr>
+<td><strong>Compatíveis</strong></td>
+<td>Acorrentado</td>
+</tr>
+<tr>
+<td><strong>Mesa</strong></td>
+<td>Corrupção por tentação; tanque monstruoso</td>
+</tr>
+</tbody></table>
+<h4 id="20-caminho-do-acorrentado">20 · Caminho do Acorrentado</h4><table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Seq. 9</strong></td>
+<td>Criminoso</td>
+</tr>
+<tr>
+<td><strong>Tema</strong></td>
+<td>Lobisomem, fantasmas, maldições, objetos inanimados</td>
+</tr>
+<tr>
+<td><strong>Compatíveis</strong></td>
+<td>Abismo</td>
+</tr>
+<tr>
+<td><strong>Mesa</strong></td>
+<td>Gangues; marcas de corrente nos pulsos</td>
+</tr>
+</tbody></table>
+<hr>
+<h3 id="sefirah-9-ilusao-fantasma-origem-exterior">Sefirah 9 — Ilusão Fantasma · *origem Exterior*</h3><pre><code>Imperador Negro ◄──► Justiceiro     (Filho do Caos — 2 caminhos)</code></pre><h4 id="21-caminho-do-imperador-negro">21 · Caminho do Imperador Negro</h4><table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Seq. 9</strong></td>
+<td>Advogado</td>
+</tr>
+<tr>
+<td><strong>Tema</strong></td>
+<td>Corrupção da ordem, caos social, brechas na lei</td>
+</tr>
+<tr>
+<td><strong>Origem</strong></td>
+<td><strong>Filho do Caos</strong> (selado na Lâmpada dos Desejos)</td>
+</tr>
+<tr>
+<td><strong>História</strong></td>
+<td><strong>Salomão</strong> — unificou Beyonders; caiu traído</td>
+</tr>
+<tr>
+<td><strong>Mesa</strong></td>
+<td>Advogado que “ganha” qualquer argumento; desordem política</td>
+</tr>
+</tbody></table>
+<h4 id="22-caminho-do-justiceiro">22 · Caminho do Justiceiro</h4><table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Seq. 9</strong></td>
+<td>Vigia</td>
+</tr>
+<tr>
+<td><strong>Tema</strong></td>
+<td>Lei absoluta, detecção de mentira, negação de poderes</td>
+</tr>
+<tr>
+<td><strong>Origem</strong></td>
+<td>Filho do Caos</td>
+</tr>
+<tr>
+<td><strong>Mesa</strong></td>
+<td>Inquisidor que impõe regras mágicas na cena; oposto do Imperador Negro</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="os-sete-deuses-verdadeiros-quinta-epoca">Os sete Deuses Verdadeiros (Quinta Época)</h2><p>Os fiéis comuns conhecem <strong>sete deuses</strong> e <strong>sete igrejas ortodoxas</strong>. Beyonders de alto nível sabem que cada deus ocupa (ou ocupou) o ápice de um <strong>Caminho</strong> — Sequência 0.</p>
+<h3 id="mapa-deus-caminho-igreja">Mapa Deus → Caminho → Igreja</h3><div class="mermaid">flowchart LR
+  subgraph IGREJAS["Igrejas Ortodoxas"]
+    I1["Noite Eterna"]
+    I2["Tempestades"]
+    I3["Sol Ardente"]
+    I4["Conhecimento"]
+    I5["Mãe Terra"]
+    I6["Guerra"]
+    I7["Vapor"]
+  end
+
+  subgraph DEUSES["Deuses Verdadeiros Seq 0"]
+    G1["Deusa da Noite Eterna"]
+    G2["Senhor das Tempestades"]
+    G3["Sol Eterno Ardente"]
+    G4["Deus do Conhecimento"]
+    G5["Mãe Terra"]
+    G6["Deus da Guerra"]
+    G7["Deus do Vapor"]
+  end
+
+  subgraph CAMINHOS["Caminhos principais"]
+    P9["Trevas"]
+    P6["Tirano"]
+    P5["Sol"]
+    P7["Torre Branca / Visionário"]
+    P17["Mãe / Lua"]
+    P13["Sacerdote Vermelho"]
+    P15["Párago"]
+  end
+
+  G1 --> P9 --> I1
+  G2 --> P6 --> I2
+  G3 --> P5 --> I3
+  G4 --> P7 --> I4
+  G5 --> P17 --> I5
+  G6 --> P13 --> I6
+  G7 --> P15 --> I7</div><h3 id="ficha-de-cada-deus-verdadeiro">Ficha de cada Deus Verdadeiro</h3><table>
+<thead>
+<tr>
+<th>Deus (PT)</th>
+<th>Caminho Seq. 0</th>
+<th>Verdade para o Mestre</th>
+<th>Igreja / região</th>
+<th>Caminhos monopolizados</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Deusa da Noite Eterna</strong></td>
+<td>Trevas</td>
+<td>Deusa Antiga; entre as mais antigas ainda no poder; “benévola” em escala divina</td>
+<td>Loen — <strong>Águias Noturnas</strong></td>
+<td>Trevas, Morte, parcial Gigante</td>
+</tr>
+<tr>
+<td><strong>Senhor das Tempestades</strong></td>
+<td>Tirano</td>
+<td><strong>Elfo</strong> que roubou o trono na 4ª Época; temperamental</td>
+<td>Loen naval — <strong>Punidores</strong></td>
+<td>Tirano</td>
+</tr>
+<tr>
+<td><strong>Sol Eterno Ardente</strong></td>
+<td>Sol</td>
+<td>Anjo do <strong>Antigo Deus do Sol</strong> (morto); zeloso, traumatizado</td>
+<td>Intis — <strong>Inquisição</strong></td>
+<td>Sol</td>
+</tr>
+<tr>
+<td><strong>Deus do Conhecimento</strong></td>
+<td>Torre Branca <em>(fachada)</em></td>
+<td><strong>Adam</strong> (Visionário) parasita o cargo; manipula percepção</td>
+<td>Intis — rede de informantes</td>
+<td>Visionário, Torre Branca</td>
+</tr>
+<tr>
+<td><strong>Mãe Terra</strong></td>
+<td>Mãe</td>
+<td>Protetora, mas ambígua (vida e morte); poder em declínio</td>
+<td>Rural, curandeiros</td>
+<td>Mãe, Lua</td>
+</tr>
+<tr>
+<td><strong>Deus da Guerra</strong></td>
+<td>Sacerdote Vermelho</td>
+<td>Violência como culto; alto risco de loucura</td>
+<td>Feysac — exército sagrado</td>
+<td>Sacerdote Vermelho</td>
+</tr>
+<tr>
+<td><strong>Deus do Vapor</strong></td>
+<td>Párago <em>(artificial)</em></td>
+<td><strong>Criado</strong> na era industrial; “deus fabricado”</td>
+<td>Loen industrial</td>
+<td>Párago (+ Erudito Científico)</td>
+</tr>
+</tbody></table>
+<h3 id="entidades-que-nao-sao-deuses-verdadeiros-ortodoxos-mas-importam">Entidades que **não** são Deuses Verdadeiros ortodoxos (mas importam)</h3><table>
+<thead>
+<tr>
+<th>Nome</th>
+<th>Caminho</th>
+<th>Nota</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Antigo Deus do Sol</strong></td>
+<td>Sol</td>
+<td>Morto na 3ª Época; gerou 2ª Laje da Blasfêmia</td>
+</tr>
+<tr>
+<td><strong>Amon</strong></td>
+<td>Erro</td>
+<td>Verme do Tempo / Parasita; ladrão de destino, tempo e identidade</td>
+</tr>
+<tr>
+<td><strong>Adam</strong></td>
+<td>Visionário</td>
+<td>Controla a Igreja do Conhecimento por trás</td>
+</tr>
+<tr>
+<td><strong>Salomão</strong></td>
+<td>Imperador Negro</td>
+<td>Imperador da 4ª Época; Ordens do Crepúsculo</td>
+</tr>
+<tr>
+<td><strong>Klein / O Tolo</strong></td>
+<td>Tolo</td>
+<td>Protagonista da obra; Clube do Tarô</td>
+</tr>
+<tr>
+<td><strong>Lilith</strong></td>
+<td>Lua</td>
+<td>Deusa Antiga da Lua</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="deidades-exteriores-e-os-6-caminhos-estranhos">Deidades Exteriores e os 6 Caminhos “estranhos”</h2><h3 id="as-tres-primarias-nasceram-do-estilhacamento">As três primárias (nasceram do estilhaçamento)</h3><table>
+<thead>
+<tr>
+<th>Deidade Exterior</th>
+<th>2 Caminhos ligados</th>
+<th>Sefirah</th>
+<th>Tom na mesa</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Mãe Deusa da Depravação</strong></td>
+<td><strong>Mãe</strong>, <strong>Lua</strong></td>
+<td>Ninho Primordial</td>
+<td>Corrupção, fertilidade distorcida, pecado</td>
+</tr>
+<tr>
+<td><strong>Árvore-Mãe do Desejo</strong></td>
+<td><strong>Demonesa</strong>, <strong>Sacerdote Vermelho</strong></td>
+<td>Calamidade da Destruição</td>
+<td>Desejos satisfeitos com preço oculto</td>
+</tr>
+<tr>
+<td><strong>Filho do Caos</strong> / Névoa Incerta</td>
+<td><strong>Imperador Negro</strong>, <strong>Justiceiro</strong></td>
+<td>Ilusão Fantasma</td>
+<td>Anarquia; selado na <strong>Lâmpada dos Desejos</strong></td>
+</tr>
+</tbody></table>
+<blockquote>
+<p><strong>16 Caminhos</strong> = Criador Original. <strong>6 Caminhos</strong> = ressonância diferente, mais ligados ao Apocalipse e à barreira enfraquecida.</p>
+</blockquote>
+<h3 id="outras-deidades-exteriores-manifestacoes">Outras Deidades Exteriores (manifestações)</h3><table>
+<thead>
+<tr>
+<th>Deidade</th>
+<th>Domínio</th>
+<th>Como aparece na campanha</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Fome Primordial</td>
+<td>Consumo, vazio</td>
+<td>Áreas “devoradas”, buracos na memória</td>
+</tr>
+<tr>
+<td>Dominador da Supernova</td>
+<td>Radiância letal</td>
+<td>Luz crescente até explosão</td>
+</tr>
+<tr>
+<td>Delírios Inextinguíveis</td>
+<td>Loucura contagiosa</td>
+<td>Ondas de insanidade regional</td>
+</tr>
+<tr>
+<td>Monarca da Decadência</td>
+<td>Entropia</td>
+<td>Envelhecimento acelerado, ruínas súbitas</td>
+</tr>
+<tr>
+<td>Supervisor de Altas Dimensões</td>
+<td>Observação</td>
+<td>Geometria impossível, paranoia</td>
+</tr>
+<tr>
+<td>Deusa do Destino</td>
+<td>Destino</td>
+<td>Profecias auto-realizáveis</td>
+</tr>
+</tbody></table>
+<h3 id="diagrama-onde-esta-cada-tipo-de-poder">Diagrama: onde está cada “tipo” de poder</h3><pre><code>                    ┌─────────────────────────────┐
+                    │   CRIADOR ORIGINAL (morto)   │
+                    │   vontade residual = loucura │
+                    └──────────────┬──────────────┘
+                                   │
+              ┌────────────────────┼────────────────────┐
+              ▼                    ▼                    ▼
+        ┌───────────┐        ┌───────────┐        ┌───────────┐
+        │ 9 SEFIROT │        │ 16 CAMINHOS│        │ 6 CAMINHOS │
+        │ âncoras   │        │ &quot;padrão&quot;   │        │ EXTERIORES │
+        └─────┬─────┘        └───────────┘        └──────┬─────┘
+              │                                          │
+              ▼                                          ▼
+        ┌───────────┐                            ┌───────────────┐
+        │ 7 DEUSES  │                            │ 3 DEIDADES    │
+        │ VERDADEIROS│◄── igrejas ortodoxas ────│ EXTERIORES    │
+        │ (Seq 0)   │                            │ primárias     │
+        └───────────┘                            └───────────────┘
+              │
+              ▼
+        ┌───────────┐
+        │ Apocalipse │◄── barreira enfraquece
+        └───────────┘</code></pre><hr>
+<h2 id="caminhos-sem-igreja-ortodoxa">Caminhos sem igreja ortodoxa</h2><p>Úteis quando o PJ pergunta “quem me caça?” ou “onde arrumo poção?”.</p>
+<table>
+<thead>
+<tr>
+<th>Caminho</th>
+<th>Quem costuma ter fórmulas / poder</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Tolo, Erro, Porta</td>
+<td>Clube do Tarô; sociedades secretas; fragmentos de Roselle</td>
+</tr>
+<tr>
+<td>Enforcado</td>
+<td>Ordem da Aurora, cultos, Mão Adversa</td>
+</tr>
+<tr>
+<td>Demonesa</td>
+<td>Cultos heréticos, organizações criminosas</td>
+</tr>
+<tr>
+<td>Eremita</td>
+<td>Hermandade da Noite, círculos alquímicos</td>
+</tr>
+<tr>
+<td>Roda da Fortuna</td>
+<td>Quase ninguém — lenda ou carta perdida</td>
+</tr>
+<tr>
+<td>Abismo, Acorrentado</td>
+<td>Submundo, prisões, cultos demoníacos</td>
+</tr>
+<tr>
+<td>Imperador Negro</td>
+<td>Ordens do Crepúsculo, remanescentes de Salomão</td>
+</tr>
+<tr>
+<td>Justiceiro</td>
+<td>Raro; caçadores de Beyonders sem vínculo eclesiástico</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="escada-de-sequencias-referencia-visual">Escada de Sequências (referência visual)</h2><p>Todas os Caminhos seguem a mesma escada numérica (nomes mudam por Caminho):</p>
+<pre><code>     ┌──────────────────────────────────────────────────────────────┐
+     │  SEQ 0  │  Divindade do Caminho / título da Sefirah         │
+     │  SEQ 1  │  Nome do Caminho (ex.: O Tolo, O Sol)             │
+     │  SEQ 2  │  Anjo / entidade de alto escalão                   │
+     │  SEQ 3  │  …                                                 │
+     │  SEQ 4  │  Bispo / Arcebispo em organizações eclesiásticas   │
+     │  SEQ 5  │  …                                                 │
+     │  SEQ 6  │  Capitão de equipe (Águias Noturnas, etc.)         │
+     │  SEQ 7  │  …                                                 │
+     │  SEQ 8  │  …                                                 │
+     │  SEQ 9  │  INÍCIO DE JOGADOR — primeira poção                 │
+     └──────────────────────────────────────────────────────────────┘
+
+     Perda de controle ↑ conforme sobe (Características querem reunificar-se)</code></pre><p><strong>Nomes Seq 9 dos 22</strong> (cola rápida):</p>
+<p><code>Vidente</code> · <code>Saqueador</code> · <code>Aprendiz</code> · <code>Espectador</code> · <code>Cantor</code> · <code>Marinheiro</code> · <code>Leitor</code> · <code>Suplicante</code> · <code>Insone</code> · <code>Coletor de Cadáveres</code> · <code>Guerreiro</code> · <code>Assassina</code> · <code>Caçador</code> · <code>Mistério</code> · <code>Engenheiro</code> · <code>Adivinha da Sorte</code> · <code>Curandeira</code> · <code>Alquimista</code> · <code>Lutador de Rua</code> · <code>Criminoso</code> · <code>Advogado</code> · <code>Vigia</code></p>
+<hr>
+<h2 id="notas-de-mesa-para-o-mestre">Notas de mesa para o Mestre</h2><h3 id="revelar-informacao-por-nivel-de-conhecimento">Revelar informação por nível de conhecimento</h3><table>
+<thead>
+<tr>
+<th>Nível do PJ / NPC</th>
+<th>O que pode saber</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Civil comum</td>
+<td>Sete deuses, igreja local, “monstros” vagos</td>
+</tr>
+<tr>
+<td>Beyonder Seq 9–7</td>
+<td>Nome do próprio Caminho e Sequência; rumores de outras</td>
+</tr>
+<tr>
+<td>Beyonder Seq 6–4</td>
+<td>Sefirot, compatibilidade, outras igrejas, Deuses Antigos</td>
+</tr>
+<tr>
+<td>Seq 3+ / Mestre plot</td>
+<td>Adam, Apocalipse, Deidades Exteriores, Lajes da Blasfêmia</td>
+</tr>
+</tbody></table>
+<h3 id="perguntas-frequentes-na-mesa">Perguntas frequentes na mesa</h3><table>
+<thead>
+<tr>
+<th>Pergunta</th>
+<th>Resposta curta</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Quantos Caminhos existem?</td>
+<td><strong>22</strong> padrão (Laje da Blasfêmia / Cartas de Roselle)</td>
+</tr>
+<tr>
+<td>Tolo e Porta são iguais?</td>
+<td><strong>Não.</strong> Mesma Seq. 9 (Vidente), Caminhos e poderes divergem depois</td>
+</tr>
+<tr>
+<td>Qual deus é “o vilão”?</td>
+<td>Não há um só; Adam, Amon, Deidades Exteriores e a vontade do Criador competem</td>
+</tr>
+<tr>
+<td>Por que a igreja caça meu PJ?</td>
+<td>Se ele usa Caminho monopolizado sem licença (ex.: Sol em Intis)</td>
+</tr>
+<tr>
+<td>O que é Seq 0?</td>
+<td>Topo do Caminho; título divino da Sefirah ou do Caminho</td>
+</tr>
+</tbody></table>
+<h3 id="links-no-repositorio">Links no repositório</h3><table>
+<thead>
+<tr>
+<th>Conteúdo</th>
+<th>Arquivo</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Panorama dos 22 Caminhos</td>
+<td><code>livro-jogador/04-pathways.html</code></td>
+</tr>
+<tr>
+<td>Poderes Seq 9–5</td>
+<td><code>livro-jogador/05-sequencias.html</code></td>
+</tr>
+<tr>
+<td>Lore profunda, deuses, eras</td>
+<td><code>livro-mestre/02-mundo.html</code></td>
+</tr>
+<tr>
+<td>Igrejas e organizações</td>
+<td><code>livro-mestre/03-organizacoes.html</code></td>
+</tr>
+<tr>
+<td>Tabela de criação (Seq 9)</td>
+<td><code>livro-jogador/02-criacao.html</code></td>
+</tr>
+</tbody></table>
+<hr>
+<p><em>Senhor dos Mistérios RPG — material fan, derivado da obra de Cuttlefish That Loves Diving.</em></p>
+
+</article>
+
+
+<nav class="book-nav">
+  <a href="index.html">&larr; Livro do Mestre</a>
+  <a href="01-guia-mestre.html">Capítulo 1 — Guia do Mestre</a>
+  <a href="02-mundo.html">Cap. 2 — Lore &rarr;</a>
+</nav>
+
+</body>
+</html>

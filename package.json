@@ -1,0 +1,24 @@
+{
+  "name": "rpg-lotm",
+  "version": "1.0.0",
+  "description": "Sistema de RPG de mesa fan-made baseado em **Lord of the Mysteries** (*Senhor dos Mistérios*), com regras híbridas inspiradas em Vampiro: A Máscara e D&D (d20).",
+  "main": "index.js",
+  "scripts": {
+    "build:pages": "node scripts/md-to-html.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lochesystem/rpg-lotm.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/lochesystem/rpg-lotm/issues"
+  },
+  "homepage": "https://github.com/lochesystem/rpg-lotm#readme",
+  "devDependencies": {
+    "marked": "^18.0.4"
+  }
+}

@@ -29,11 +29,13 @@ Criar e manter o **Senhor dos Mistérios RPG** (`rpg-lotm`), sistema fan híbrid
 rpg-lotm/
 ├── index.html
 ├── README.md
-├── CONTINUIDADE-AGENTE.md          ← este arquivo
+├── CONTINUIDADE-AGENTE.md          ← fonte (agentes); web: continuidade-agente.html
+├── continuidade-agente.html
+├── scripts/md-to-html.mjs        ← gera HTML a partir dos .md
 ├── assets/css/ (common.css, print.css)
 ├── livro-jogador/     01-introducao … 10-mundo.html
 ├── livro-mestre/      01-guia-mestre … 09-aventuras.html
-├── campanhas/         01–03 campanhas + exemplos .md
+├── campanhas/         01–03 campanhas + exemplo-sessao-iniciantes.html
 └── apendices/         ficha-personagem.html, glossário, tabelas
 ```
 
@@ -53,13 +55,14 @@ rpg-lotm/
 | 2 | `02-mundo.html` | Sefirot, eras, True Gods, Outer Deities |
 | 3 | `03-organizacoes.html` | 7 igrejas ortodoxas |
 
-### Apêndices e guias Markdown
+### Apêndices e guias
 
-| Arquivo | Uso |
-|---------|-----|
-| `livro-mestre/guia-22-caminhos-deuses.md` | Guia rápido Mestre: 22 Caminhos, deuses, deidades |
-| `campanhas/exemplo-sessao-iniciantes.md` | Tutorial: 1 sessão jogada (3 PJs + Mestre) |
-| `apendices/ficha-personagem.html` | Ficha interativa |
+| Arquivo (web) | Fonte `.md` | Uso |
+|---------------|-------------|-----|
+| `livro-mestre/guia-22-caminhos-deuses.html` | `.md` homônimo | Guia rápido Mestre: 22 Caminhos, deuses, deidades |
+| `campanhas/exemplo-sessao-iniciantes.html` | `.md` homônimo | Tutorial: 1 sessão jogada (3 PJs + Mestre) |
+| `continuidade-agente.html` | `CONTINUIDADE-AGENTE.md` | Handoff para agentes |
+| `apendices/ficha-personagem.html` | — | Ficha interativa |
 
 ---
 
@@ -90,7 +93,7 @@ rpg-lotm/
 
 ### 2. Guia do Mestre — 22 Caminhos e deuses
 
-**Arquivo:** `livro-mestre/guia-22-caminhos-deuses.md`
+**Arquivo:** `livro-mestre/guia-22-caminhos-deuses.html` (fonte: `.md`)
 
 **Conteúdo:**
 
@@ -110,7 +113,7 @@ rpg-lotm/
 
 ### 3. Exemplo de sessão para iniciantes
 
-**Arquivo:** `campanhas/exemplo-sessao-iniciantes.md`
+**Arquivo:** `campanhas/exemplo-sessao-iniciantes.html` (fonte: `.md`)
 
 | Item | Detalhe |
 |------|---------|
@@ -153,19 +156,11 @@ rpg-lotm/
 
 ## Pendências para o próximo agente
 
-1. **`git status`** em `rpg-lotm` — commit/push se ainda não feito:
-   - `livro-mestre/guia-22-caminhos-deuses.md`
-   - `livro-mestre/index.html`
-   - `campanhas/exemplo-sessao-iniciantes.md`
-   - `campanhas/index.html`
-   - `README.md`
-   - `CONTINUIDADE-AGENTE.md`
+1. **Corrigir Edmund Harker** em `livro-jogador/02-criacao.html` (Tolo + Sequência Vidente).
 
-2. **Corrigir Edmund Harker** em `livro-jogador/02-criacao.html` (Tolo + Sequência Vidente).
+2. **Sincronizar `rpg-lotm-jogadores`** apenas se o usuário pedir (guia do Mestre não vai no repo de jogadores).
 
-3. **Sincronizar `rpg-lotm-jogadores`** apenas se o usuário pedir (guia do Mestre não vai no repo de jogadores).
-
-4. **HTML/PDF** dos `.md` — só se o usuário pedir.
+3. **Após editar `.md`**, rodar `npm run build:pages` e commitar os `.html` gerados.
 
 ---
 

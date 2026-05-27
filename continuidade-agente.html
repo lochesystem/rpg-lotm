@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Continuidade do projeto · Senhor dos Mistérios RPG</title>
+<link rel="stylesheet" href="assets/css/common.css">
+<link rel="stylesheet" href="assets/css/print.css">
+<style>
+.mermaid { margin: 1.5rem auto; max-width: 100%; overflow-x: auto; }
+article.md-body pre {
+  background: var(--parchment-d, #f5f0e6);
+  border: 1px solid var(--gold, #b8860b);
+  border-radius: 4px;
+  padding: 0.75rem 1rem;
+  overflow-x: auto;
+  font-size: 0.9em;
+  line-height: 1.45;
+}
+article.md-body pre code { background: none; padding: 0; }
+article.md-body hr { border: none; border-top: 1px solid var(--gold, #b8860b); margin: 2rem 0; opacity: 0.5; }
+article.md-body table { font-size: 0.92em; }
+article.md-body h1:first-child { margin-top: 0; }
+</style>
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+  mermaid.initialize({ startOnLoad: true, theme: 'neutral', securityLevel: 'loose' });
+</script>
+</head>
+<body>
+
+<article class="md-body">
+<h1 id="resumo-para-continuidade-conversa-pacto-sombrio-rpg-lotm">Resumo para continuidade — conversa `pacto-sombrio` / `rpg-lotm`</h1><blockquote>
+<p>Documento de handoff para retomar o trabalho em outro agente ou sessão.<br>Última atualização: maio de 2026.</p>
+</blockquote>
+<hr>
+<h2 id="objetivo-geral-do-projeto">Objetivo geral do projeto</h2><p>Criar e manter o <strong>Senhor dos Mistérios RPG</strong> (<code>rpg-lotm</code>), sistema fan híbrido <strong>VtM (atributos 1–5, Lucidez) + D&amp;D (d20)</strong> em PT-BR, baseado em <em>Lord of the Mysteries</em>. Terminologia: <strong>“Caminhos”</strong> (não “Vias”).</p>
+<hr>
+<h2 id="repositorios-e-urls">Repositórios e URLs</h2><table>
+<thead>
+<tr>
+<th>Repo</th>
+<th>Pasta local</th>
+<th>GitHub Pages</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Completo (Jogador + Mestre + Campanhas)</td>
+<td><code>c:\Users\adria\OneDrive\Documentos\Cursor\pacto-sombrio\rpg-lotm\</code></td>
+<td><a href="https://lochesystem.github.io/rpg-lotm/">https://lochesystem.github.io/rpg-lotm/</a></td>
+</tr>
+<tr>
+<td>Só jogadores</td>
+<td><code>c:\Users\adria\OneDrive\Documentos\Cursor\pacto-sombrio\rpg-lotm-jogadores\</code></td>
+<td><a href="https://lochesystem.github.io/rpg-lotm-jogadores/">https://lochesystem.github.io/rpg-lotm-jogadores/</a></td>
+</tr>
+</tbody></table>
+<ul>
+<li>Conta GitHub: <strong>lochesystem</strong></li>
+<li>Workspace pai: <code>pacto-sombrio</code> (projeto separado <code>pacto-sombrio/index.html</code> — outro jogo, não confundir)</li>
+</ul>
+<hr>
+<h2 id="estrutura-principal-rpg-lotm">Estrutura principal `rpg-lotm`</h2><pre><code>rpg-lotm/
+├── index.html
+├── README.md
+├── CONTINUIDADE-AGENTE.md          ← fonte (agentes); web: continuidade-agente.html
+├── continuidade-agente.html
+├── scripts/md-to-html.mjs        ← gera HTML a partir dos .md
+├── assets/css/ (common.css, print.css)
+├── livro-jogador/     01-introducao … 10-mundo.html
+├── livro-mestre/      01-guia-mestre … 09-aventuras.html
+├── campanhas/         01–03 campanhas + exemplo-sessao-iniciantes.html
+└── apendices/         ficha-personagem.html, glossário, tabelas</code></pre><h3 id="livro-do-jogador-arquivos-reais-sumarios-foram-corrigidos">Livro do Jogador — arquivos reais (sumários foram corrigidos)</h3><table>
+<thead>
+<tr>
+<th>Cap</th>
+<th>Arquivo</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1–2</td>
+<td><code>01-introducao.html</code>, <code>02-criacao.html</code></td>
+</tr>
+<tr>
+<td>3</td>
+<td><code>03-atributos.html</code></td>
+</tr>
+<tr>
+<td>4–5</td>
+<td><code>04-pathways.html</code>, <code>05-sequencias.html</code></td>
+</tr>
+<tr>
+<td>6–10</td>
+<td><code>06-atuacao.html</code>, <code>07-combate.html</code>, <code>08-equipamento.html</code>, <code>09-misticismo.html</code>, <code>10-mundo.html</code></td>
+</tr>
+</tbody></table>
+<h3 id="livro-do-mestre">Livro do Mestre</h3><table>
+<thead>
+<tr>
+<th>Cap</th>
+<th>Arquivo</th>
+<th>Conteúdo principal</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>2</td>
+<td><code>02-mundo.html</code></td>
+<td>Sefirot, eras, True Gods, Outer Deities</td>
+</tr>
+<tr>
+<td>3</td>
+<td><code>03-organizacoes.html</code></td>
+<td>7 igrejas ortodoxas</td>
+</tr>
+</tbody></table>
+<h3 id="apendices-e-guias">Apêndices e guias</h3><table>
+<thead>
+<tr>
+<th>Arquivo (web)</th>
+<th>Fonte <code>.md</code></th>
+<th>Uso</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>livro-mestre/guia-22-caminhos-deuses.html</code></td>
+<td><code>.md</code> homônimo</td>
+<td>Guia rápido Mestre: 22 Caminhos, deuses, deidades</td>
+</tr>
+<tr>
+<td><code>campanhas/exemplo-sessao-iniciantes.html</code></td>
+<td><code>.md</code> homônimo</td>
+<td>Tutorial: 1 sessão jogada (3 PJs + Mestre)</td>
+</tr>
+<tr>
+<td><code>continuidade-agente.html</code></td>
+<td><code>CONTINUIDADE-AGENTE.md</code></td>
+<td>Handoff para agentes</td>
+</tr>
+<tr>
+<td><code>apendices/ficha-personagem.html</code></td>
+<td>—</td>
+<td>Ficha interativa</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="trabalho-realizado">Trabalho realizado</h2><h3 id="1-correcao-tabela-22-caminhos-cap-2-criacao">1. Correção tabela 22 Caminhos — Cap. 2 criação</h3><p><strong>Problema:</strong> Em <code>livro-jogador/02-criacao.html</code>, a coluna “Caminho” trazia nomes de <strong>Sequência</strong> (ex.: Vidente, Palhaço, Coveiro).</p>
+<p><strong>Correção:</strong></p>
+<ul>
+<li>Coluna <strong>Caminho</strong> = nome do pathway (Tolo, Erro, Trevas…)</li>
+<li>Coluna <strong>Seq. 9</strong> = nome da sequência 9 (Vidente, Aprendiz, Insone…)</li>
+<li><strong>Tolo</strong> e <strong>Porta</strong> compartilham Seq. 9 <strong>Vidente</strong></li>
+<li>Typo “Cado” → “Cada”</li>
+<li>Rodapé aponta Cap. <strong>5</strong> (poderes) e <strong>6</strong> (Método de Atuação)</li>
+</ul>
+<p><strong>Commits (já pushed):</strong></p>
+<table>
+<thead>
+<tr>
+<th>Repo</th>
+<th>Hash</th>
+<th>Mensagem</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>rpg-lotm</code></td>
+<td><code>7c69dca</code></td>
+<td>Corrigir tabela dos 22 Caminhos e Seq 9 no cap 2 de criacao</td>
+</tr>
+<tr>
+<td><code>rpg-lotm-jogadores</code></td>
+<td><code>67d30e6</code></td>
+<td>idem</td>
+</tr>
+</tbody></table>
+<p><strong>Pendência menor:</strong> Exemplo <strong>Edmund Harker</strong> no cap. 2 ainda diz “Caminho do Vidente” — canonicamente seria <strong>Caminho do Tolo</strong> + Sequência <strong>Vidente</strong> (não alterado).</p>
+<hr>
+<h3 id="2-guia-do-mestre-22-caminhos-e-deuses">2. Guia do Mestre — 22 Caminhos e deuses</h3><p><strong>Arquivo:</strong> <code>livro-mestre/guia-22-caminhos-deuses.html</code> (fonte: <code>.md</code>)</p>
+<p><strong>Conteúdo:</strong></p>
+<ul>
+<li>Mapas Mermaid e tabelas</li>
+<li>Tabela-mestre dos 22 caminhos (Seq. 9, Sefirah, Seq. 0, igreja)</li>
+<li>9 Sefirot e fichas por caminho</li>
+<li>7 Deuses Verdadeiros (segredos: Adam/Visionário, elfo Tempestades, deus artificial Vapor)</li>
+<li>6 caminhos de origem Exterior:<ul>
+<li><strong>Mãe Deusa da Depravação</strong> → Mãe, Lua</li>
+<li><strong>Árvore-Mãe do Desejo</strong> → Demonesa, Sacerdote Vermelho</li>
+<li><strong>Filho do Caos</strong> → Imperador Negro, Justiceiro</li>
+</ul>
+</li>
+<li>Caminhos sem igreja, escada Seq 9→0, notas de mesa</li>
+</ul>
+<p><strong>Links:</strong> <code>livro-mestre/index.html</code>, <code>README.md</code></p>
+<hr>
+<h3 id="3-exemplo-de-sessao-para-iniciantes">3. Exemplo de sessão para iniciantes</h3><p><strong>Arquivo:</strong> <code>campanhas/exemplo-sessao-iniciantes.html</code> (fonte: <code>.md</code>)</p>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Detalhe</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Duração</td>
+<td>~2 h</td>
+</tr>
+<tr>
+<td>Mesa</td>
+<td>3 jogadores + 1 mestre</td>
+</tr>
+<tr>
+<td>Aventura</td>
+<td>“O Sussurro na Oficina” — Backlund, East Borough</td>
+</tr>
+<tr>
+<td>PJs Seq. 9</td>
+<td>Mara (Trevas/Insone), Tomás (Torre Branca/Leitor), Lídia (Eremita/Mistério)</td>
+</tr>
+<tr>
+<td>Ensina</td>
+<td>d20, poderes, Espiritualidade, Lucidez, digestão, combate</td>
+</tr>
+</tbody></table>
+<p><strong>Links:</strong> <code>campanhas/index.html</code>, <code>README.md</code></p>
+<hr>
+<h2 id="regras-chave-fonte-de-verdade-mecanica">Regras-chave (fonte de verdade mecânica)</h2><table>
+<thead>
+<tr>
+<th>Conceito</th>
+<th>Regra</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Teste</td>
+<td><code>d20 + mod. Atributo + mod. Perícia ≥ CD</code></td>
+</tr>
+<tr>
+<td>Modificador</td>
+<td>valor − 2 (atributos/perícias 1–5; perícia 0 = −2)</td>
+</tr>
+<tr>
+<td>PV</td>
+<td><code>8 + mod. Vigor + bônus Sequência</code> (Seq 9 = 0)</td>
+</tr>
+<tr>
+<td>Espiritualidade</td>
+<td><strong>soma dos valores</strong> de Percepção + Determinação</td>
+</tr>
+<tr>
+<td>Lucidez</td>
+<td><code>5 + mod. Determinação</code> (máx. 10)</td>
+</tr>
+<tr>
+<td>Caminho vs Sequência</td>
+<td>Caminho = pathway (ex. Tolo); Sequência = nome do cargo (ex. Vidente na Seq 9)</td>
+</tr>
+<tr>
+<td>Método de Atuação</td>
+<td>100 pts digestão/sequência; roleplay 5–15 pts por ação relevante</td>
+</tr>
+<tr>
+<td>Nomes dos 22</td>
+<td><code>livro-jogador/05-sequencias.html</code> + <code>04-pathways.html</code></td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="commits-git-relevantes">Commits Git relevantes</h2><table>
+<thead>
+<tr>
+<th>Hash</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>040d57d</code></td>
+<td>Links sumário Livro do Jogador</td>
+</tr>
+<tr>
+<td><code>7adc906</code></td>
+<td>Links sumário Livro do Mestre</td>
+</tr>
+<tr>
+<td><code>7c69dca</code></td>
+<td>Tabela 22 Caminhos cap. 2 (<code>rpg-lotm</code>)</td>
+</tr>
+<tr>
+<td><code>67d30e6</code></td>
+<td>Tabela 22 Caminhos cap. 2 (<code>rpg-lotm-jogadores</code>)</td>
+</tr>
+<tr>
+<td><code>bdbdb1a</code></td>
+<td>Subtítulo ficha “RPG” (repo jogadores)</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="pendencias-para-o-proximo-agente">Pendências para o próximo agente</h2><ol>
+<li><p><strong>Corrigir Edmund Harker</strong> em <code>livro-jogador/02-criacao.html</code> (Tolo + Sequência Vidente).</p>
+</li>
+<li><p><strong>Sincronizar <code>rpg-lotm-jogadores</code></strong> apenas se o usuário pedir (guia do Mestre não vai no repo de jogadores).</p>
+</li>
+<li><p><strong>Após editar <code>.md</code></strong>, rodar <code>npm run build:pages</code> e commitar os <code>.html</code> gerados.</p>
+</li>
+</ol>
+<hr>
+<h2 id="regras-do-usuario-importantes">Regras do usuário (importantes)</h2><ul>
+<li><strong>Não commitar</strong> sem pedido explícito.</li>
+<li><strong>Não push</strong> sem pedido explícito.</li>
+<li>Minimizar escopo; seguir convenções existentes do projeto.</li>
+<li>Terminologia: <strong>Caminhos</strong>, PT-BR com inglês em <code>&lt;span class=&quot;en&quot;&gt;</code> nos HTML.</li>
+</ul>
+<hr>
+<h2 id="transcript-da-conversa">Transcript da conversa</h2><pre><code>C:\Users\adria\.cursor\projects\c-Users-adria-OneDrive-Documentos-Cursor-pacto-sombrio\agent-transcripts\0ac7b485-5bc3-439d-b260-b48b3e0d4393\0ac7b485-5bc3-439d-b260-b48b3e0d4393.jsonl</code></pre><hr>
+<h2 id="prompt-sugerido-para-retomar">Prompt sugerido para retomar</h2><pre><code>Continuar o projeto rpg-lotm em c:\Users\adria\OneDrive\Documentos\Cursor\pacto-sombrio\rpg-lotm.
+Leia CONTINUIDADE-AGENTE.md. Verificar git status e commit/push pendente dos .md novos
+se o usuário pedir. Corrigir exemplo &quot;Caminho do Vidente&quot; no cap. 2 para Tolo + Sequência Vidente.</code></pre><hr>
+<p><em>Senhor dos Mistérios RPG — material fan, derivado da obra de Cuttlefish That Loves Diving.</em></p>
+
+</article>
+
+
+<nav class="book-nav">
+  <a href="index.html">&larr; Início</a>
+  <a href="livro-mestre/index.html">Livro do Mestre</a>
+  <a href="campanhas/index.html">Campanhas</a>
+</nav>
+
+</body>
+</html>
