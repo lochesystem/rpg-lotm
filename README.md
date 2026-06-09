@@ -7,7 +7,7 @@ Sistema de RPG de mesa fan-made baseado em **Lord of the Mysteries** (*Senhor do
 - **Livro do Jogador** — regras, 22 Caminhos, Sequências 9–5, combate, misticismo
 - **Livro do Mestre** — lore, organizações, NPCs, bestiário, artefatos selados; apêndice [Guia dos 22 Caminhos](livro-mestre/guia-22-caminhos-deuses.html)
 - **Livro de Campanhas** — 3 campanhas prontas + [exemplo de sessão para iniciantes](campanhas/exemplo-sessao-iniciantes.html)
-- **Apêndices** — ficha de personagem, tabelas, glossário
+- **Apêndices** — [guia de criação de ficha](apendices/guia-criacao-ficha.html), ficha de personagem, [exemplo Leitor Seq. 9](apendices/ficha-exemplo-leitor-seq9.html), tabelas, glossário
 
 ## Site (GitHub Pages)
 

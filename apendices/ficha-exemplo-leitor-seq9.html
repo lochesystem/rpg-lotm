@@ -130,8 +130,7 @@
   background: transparent;
 }
 
-.dot-filled,
-.skill-dot-filled {
+.dot.dot-filled {
   background: #1a1a1a;
 }
 
@@ -157,39 +156,83 @@
 }
 
 /* --- Skill list ---------- */
+.skill-cols {
+  gap: 3pt;
+}
+
+.skill-cols > div {
+  min-width: 0;
+  overflow: hidden;
+}
+
 .skill-row {
   display: flex;
   align-items: center;
-  padding: 1.5pt 2pt;
+  padding: 1.5pt 0;
   border-bottom: 1px dotted #ddd;
+  min-width: 0;
+  gap: 1pt;
 }
 
 .skill-name {
-  font-size: 7.5pt;
-  flex: 1;
-  min-width: 70pt;
+  font-size: 6.5pt;
+  flex: 1 1 0;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  line-height: 1.2;
 }
 
 .skill-dots {
   display: flex;
-  gap: 1.5pt;
-  margin-right: 4pt;
+  flex-shrink: 0;
+  gap: 1pt;
+  margin-right: 1pt;
 }
 
 .skill-dot {
-  width: 7pt;
-  height: 7pt;
+  width: 6pt;
+  height: 6pt;
   border-radius: 50%;
   border: 1px solid #1a1a1a;
   background: transparent;
+  flex-shrink: 0;
+}
+
+/* must follow .skill-dot — otherwise filled state is overridden */
+.skill-dot.skill-dot-filled {
+  background: #1a1a1a;
+}
+
+.skill-val {
+  width: 10pt;
+  height: 11pt;
+  border: 1px solid #999;
+  text-align: center;
+  font-size: 6pt;
+  font-weight: 600;
+  color: #444;
+  flex-shrink: 0;
+}
+
+.skill-val-zero {
+  color: #888;
+  font-style: italic;
 }
 
 .skill-mod {
-  width: 18pt;
-  height: 12pt;
+  width: 15pt;
+  height: 11pt;
   border: 1px solid #1a1a1a;
   text-align: center;
-  font-size: 7pt;
+  font-size: 6.5pt;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.skill-mod-neg {
+  color: #6b2020;
 }
 
 /* --- Derived stats ------- */
@@ -256,36 +299,88 @@
 }
 
 /* --- Power block --------- */
+.power-cols {
+  gap: 4pt;
+}
+
+.power-cols > .power-block {
+  min-width: 0;
+}
+
 .power-block {
   border: 1px solid #aaa;
-  padding: 3pt 4pt;
-  margin-bottom: 4pt;
-  min-height: 46pt;
+  padding: 3pt;
+  margin-bottom: 0;
+  min-height: 44pt;
+  overflow: hidden;
 }
 
-.power-header {
-  display: flex;
-  gap: 4pt;
-  align-items: baseline;
-  margin-bottom: 2pt;
+.power-title-row {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto minmax(22pt, 0.45fr);
+  gap: 2pt 3pt;
+  align-items: end;
   border-bottom: 1px dotted #ccc;
-  padding-bottom: 1pt;
+  padding-bottom: 2pt;
+  margin-bottom: 2pt;
 }
 
-.power-field {
+.power-meta-row {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 3pt;
+  border-bottom: 1px dotted #ddd;
+  padding-bottom: 2pt;
+  margin-bottom: 2pt;
+}
+
+.power-meta {
+  min-width: 0;
+}
+
+.power-lbl {
+  display: block;
+  font-size: 5.5pt;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #666;
+  line-height: 1.2;
+}
+
+.power-name,
+.power-cost,
+.power-meta-val,
+.power-fill {
+  display: block;
   font-size: 6.5pt;
-  color: #555;
+  line-height: 1.25;
+  min-height: 10pt;
+  border-bottom: 1px solid #bbb;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
-.power-field-line {
-  border-bottom: 1px solid #bbb;
-  min-width: 40pt;
-  flex: 1;
+.power-name {
+  font-weight: 600;
+}
+
+.power-cost {
+  text-align: center;
+  font-size: 6pt;
+}
+
+.power-meta-val {
+  font-weight: 600;
+  font-size: 6pt;
 }
 
 .power-effect {
-  min-height: 22pt;
-  border-bottom: 1px dotted #ddd;
+  font-size: 6.5pt;
+  line-height: 1.3;
+  min-height: 18pt;
 }
 
 /* --- Weapon slot --------- */
@@ -415,10 +510,10 @@
 
   .sheet-title { color: #333; }
   .s-box { border-color: #000; }
-  .attr-mod, .stat-box, .save-box, .skill-mod { border-color: #000; }
+  .attr-mod, .stat-box, .save-box, .skill-val, .skill-mod { border-color: #000; }
   .dot, .skill-dot { border-color: #000; }
-  .dot-filled,
-  .skill-dot-filled,
+  .dot.dot-filled,
+  .skill-dot.skill-dot-filled,
   .digest-cell-filled {
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
@@ -467,7 +562,7 @@
 
 <div class="screen-instructions no-print">
   <strong>Ficha de exemplo</strong> &mdash; <em>Helena M. Ashworth</em>, Caminho da Torre Branca, Seq.&nbsp;9 Leitor (regras alinhadas ao Cap.&nbsp;3).
-  Para ficha em branco, abra <a href="ficha-personagem.html">ficha-personagem.html</a>.<br>
+  Para criar a sua, use o <a href="guia-criacao-ficha.html">Guia de Criação de Ficha</a> e a <a href="ficha-personagem.html">ficha em branco</a>.<br>
   <strong>Instruções:</strong> Use <kbd>Ctrl+P</kbd> (ou <kbd>Cmd+P</kbd>) para imprimir esta ficha.
   Configure para A4, margens mínimas, e ative &quot;Gráficos de fundo&quot; para melhor resultado.
   A ficha ocupa 2 páginas (frente e verso).
@@ -598,8 +693,8 @@
 
   <!-- ---- SKILLS ---- -->
   <div class="s-box">
-    <div class="s-box-title">Per&iacute;cias <span style="font-weight:400;color:#888;font-size:7pt;"> (grupos 13 / 9 / 5 &middot; Acad.&ecirc;mico: +1 Inv. e +1 Ocult. ap&oacute;s a distribui&ccedil;&atilde;o)</span></div>
-    <div class="grid-3">
+    <div class="s-box-title">Per&iacute;cias <span style="font-weight:400;color:#888;font-size:7pt;"> (&#9679; = valor 0&ndash;5 &middot; vazio = 0 &middot; Mod = Valor &minus; 2 &middot; grupos 13/9/5)</span></div>
+    <div class="grid-3 skill-cols">
 
       <!-- Combat Skills -->
       <div>
@@ -607,21 +702,25 @@
         <div class="skill-row">
           <span class="skill-name">Luta <span style="font-size:6pt;color:#888;">Melee</span></span>
           <span class="skill-dots"><span class="skill-dot skill-dot-filled"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span></span>
-          <span class="skill-mod">-1</span>
+          <span class="skill-val">1</span>
+          <span class="skill-mod skill-mod-neg">&minus;1</span>
         </div>
         <div class="skill-row">
           <span class="skill-name">Armas de Fogo <span style="font-size:6pt;color:#888;">Firearms</span></span>
           <span class="skill-dots"><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span></span>
-          <span class="skill-mod">-2</span>
+          <span class="skill-val skill-val-zero">0</span>
+          <span class="skill-mod skill-mod-neg">&minus;2</span>
         </div>
         <div class="skill-row">
           <span class="skill-name">Esquiva <span style="font-size:6pt;color:#888;">Dodge</span></span>
           <span class="skill-dots"><span class="skill-dot skill-dot-filled"></span><span class="skill-dot skill-dot-filled"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span></span>
+          <span class="skill-val">2</span>
           <span class="skill-mod">0</span>
         </div>
         <div class="skill-row">
           <span class="skill-name">Atletismo <span style="font-size:6pt;color:#888;">Athletics</span></span>
           <span class="skill-dots"><span class="skill-dot skill-dot-filled"></span><span class="skill-dot skill-dot-filled"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span></span>
+          <span class="skill-val">2</span>
           <span class="skill-mod">0</span>
         </div>
       </div>
@@ -632,36 +731,43 @@
         <div class="skill-row">
           <span class="skill-name">Persuas&atilde;o <span style="font-size:6pt;color:#888;">Persuasion</span></span>
           <span class="skill-dots"><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span></span>
-          <span class="skill-mod">-2</span>
+          <span class="skill-val skill-val-zero">0</span>
+          <span class="skill-mod skill-mod-neg">&minus;2</span>
         </div>
         <div class="skill-row">
-          <span class="skill-name">Intimida&ccedil;&atilde;o <span style="font-size:6pt;color:#888;">Intimidation</span></span>
+          <span class="skill-name">Intimid. <span style="font-size:5.5pt;color:#888;">Intim.</span></span>
           <span class="skill-dots"><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span></span>
-          <span class="skill-mod">-2</span>
+          <span class="skill-val skill-val-zero">0</span>
+          <span class="skill-mod skill-mod-neg">&minus;2</span>
         </div>
         <div class="skill-row">
           <span class="skill-name">Etiqueta <span style="font-size:6pt;color:#888;">Etiquette</span></span>
           <span class="skill-dots"><span class="skill-dot skill-dot-filled"></span><span class="skill-dot skill-dot-filled"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span></span>
+          <span class="skill-val">2</span>
           <span class="skill-mod">0</span>
         </div>
         <div class="skill-row">
-          <span class="skill-name">Dissimula&ccedil;&atilde;o <span style="font-size:6pt;color:#888;">Subterfuge</span></span>
+          <span class="skill-name">Dissimul. <span style="font-size:5.5pt;color:#888;">Subt.</span></span>
           <span class="skill-dots"><span class="skill-dot skill-dot-filled"></span><span class="skill-dot skill-dot-filled"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span></span>
+          <span class="skill-val">2</span>
           <span class="skill-mod">0</span>
         </div>
         <div class="skill-row">
           <span class="skill-name">Lideran&ccedil;a <span style="font-size:6pt;color:#888;">Leadership</span></span>
           <span class="skill-dots"><span class="skill-dot skill-dot-filled"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span></span>
-          <span class="skill-mod">-1</span>
+          <span class="skill-val">1</span>
+          <span class="skill-mod skill-mod-neg">&minus;1</span>
         </div>
         <div class="skill-row">
           <span class="skill-name">Empatia <span style="font-size:6pt;color:#888;">Empathy</span></span>
           <span class="skill-dots"><span class="skill-dot skill-dot-filled"></span><span class="skill-dot skill-dot-filled"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span></span>
+          <span class="skill-val">2</span>
           <span class="skill-mod">0</span>
         </div>
         <div class="skill-row">
           <span class="skill-name">Manha <span style="font-size:6pt;color:#888;">Streetwise</span></span>
           <span class="skill-dots"><span class="skill-dot skill-dot-filled"></span><span class="skill-dot skill-dot-filled"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span></span>
+          <span class="skill-val">2</span>
           <span class="skill-mod">0</span>
         </div>
       </div>
@@ -670,49 +776,58 @@
       <div>
         <div class="attr-category">Conhecimento</div>
         <div class="skill-row">
-          <span class="skill-name">Investiga&ccedil;&atilde;o <span style="font-size:6pt;color:#888;">Investigation</span></span>
+          <span class="skill-name">Investig. <span style="font-size:5.5pt;color:#888;">Invest.</span></span>
           <span class="skill-dots"><span class="skill-dot skill-dot-filled"></span><span class="skill-dot skill-dot-filled"></span><span class="skill-dot skill-dot-filled"></span><span class="skill-dot skill-dot-filled"></span><span class="skill-dot"></span></span>
+          <span class="skill-val">4</span>
           <span class="skill-mod">+2</span>
         </div>
         <div class="skill-row">
           <span class="skill-name">Ocultismo <span style="font-size:6pt;color:#888;">Occultism</span></span>
           <span class="skill-dots"><span class="skill-dot skill-dot-filled"></span><span class="skill-dot skill-dot-filled"></span><span class="skill-dot skill-dot-filled"></span><span class="skill-dot skill-dot-filled"></span><span class="skill-dot"></span></span>
+          <span class="skill-val">4</span>
           <span class="skill-mod">+2</span>
         </div>
         <div class="skill-row">
-          <span class="skill-name">Perc. Espiritual <span style="font-size:6pt;color:#888;">Spiritual Perc.</span></span>
+          <span class="skill-name">Perc.Esp. <span style="font-size:5.5pt;color:#888;">Spirit.</span></span>
           <span class="skill-dots"><span class="skill-dot skill-dot-filled"></span><span class="skill-dot skill-dot-filled"></span><span class="skill-dot skill-dot-filled"></span><span class="skill-dot"></span><span class="skill-dot"></span></span>
+          <span class="skill-val">3</span>
           <span class="skill-mod">+1</span>
         </div>
         <div class="skill-row">
           <span class="skill-name">Medicina <span style="font-size:6pt;color:#888;">Medicine</span></span>
           <span class="skill-dots"><span class="skill-dot skill-dot-filled"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span></span>
-          <span class="skill-mod">-1</span>
+          <span class="skill-val">1</span>
+          <span class="skill-mod skill-mod-neg">&minus;1</span>
         </div>
         <div class="skill-row">
           <span class="skill-name">Ci&ecirc;ncias <span style="font-size:6pt;color:#888;">Sciences</span></span>
           <span class="skill-dots"><span class="skill-dot skill-dot-filled"></span><span class="skill-dot skill-dot-filled"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span></span>
+          <span class="skill-val">2</span>
           <span class="skill-mod">0</span>
         </div>
         <div class="skill-row">
           <span class="skill-name">Hist&oacute;ria <span style="font-size:6pt;color:#888;">History</span></span>
           <span class="skill-dots"><span class="skill-dot skill-dot-filled"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span></span>
-          <span class="skill-mod">&minus;1</span>
+          <span class="skill-val">1</span>
+          <span class="skill-mod skill-mod-neg">&minus;1</span>
         </div>
         <div class="skill-row">
-          <span class="skill-name">Adivinha&ccedil;&atilde;o <span style="font-size:6pt;color:#888;">Divination</span></span>
+          <span class="skill-name">Adivinh. <span style="font-size:5.5pt;color:#888;">Divin.</span></span>
           <span class="skill-dots"><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span></span>
-          <span class="skill-mod">-2</span>
+          <span class="skill-val skill-val-zero">0</span>
+          <span class="skill-mod skill-mod-neg">&minus;2</span>
         </div>
         <div class="skill-row">
           <span class="skill-name">Ritualismo <span style="font-size:6pt;color:#888;">Ritualism</span></span>
           <span class="skill-dots"><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span></span>
-          <span class="skill-mod">-2</span>
+          <span class="skill-val skill-val-zero">0</span>
+          <span class="skill-mod skill-mod-neg">&minus;2</span>
         </div>
         <div class="skill-row">
-          <span class="skill-name">Sobreviv&ecirc;ncia <span style="font-size:6pt;color:#888;">Survival</span></span>
+          <span class="skill-name">Sobreviv. <span style="font-size:5.5pt;color:#888;">Surv.</span></span>
           <span class="skill-dots"><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span></span>
-          <span class="skill-mod">-2</span>
+          <span class="skill-val skill-val-zero">0</span>
+          <span class="skill-mod skill-mod-neg">&minus;2</span>
         </div>
       </div>
 
@@ -842,73 +957,90 @@
   <div class="s-box">
     <div class="s-box-title">Poderes <em>Beyonder</em> <span style="font-weight:400;color:#888;font-size:7pt;"> Seq. 9 &mdash; Leitor</span></div>
 
-    <div class="grid-2">
+    <div class="grid-2 power-cols">
       <div class="power-block">
-        <div class="power-header">
-          <span class="power-field">Nome:</span> <span class="power-field-line">Mem&oacute;ria Perfeita</span>
-          <span class="power-field" style="margin-left:4pt;">Custo:</span> <span class="power-field-line" style="max-width:30pt;">Passivo</span>
+        <div class="power-title-row">
+          <span class="power-lbl">Nome</span>
+          <span class="power-name">Mem&oacute;ria Perfeita</span>
+          <span class="power-lbl">Custo</span>
+          <span class="power-cost">Passivo</span>
         </div>
-        <div class="power-header">
-          <span class="power-field">A&ccedil;&atilde;o:</span> <span class="power-field-line" style="max-width:40pt;">&mdash;</span>
-          <span class="power-field" style="margin-left:4pt;">Alcance:</span> <span class="power-field-line" style="max-width:30pt;">&mdash;</span>
-          <span class="power-field" style="margin-left:4pt;">Dura&ccedil;&atilde;o:</span> <span class="power-field-line">&mdash;</span>
+        <div class="power-meta-row">
+          <div class="power-meta"><span class="power-lbl">A&ccedil;&atilde;o</span><span class="power-meta-val">&mdash;</span></div>
+          <div class="power-meta"><span class="power-lbl">Alcance</span><span class="power-meta-val">&mdash;</span></div>
+          <div class="power-meta"><span class="power-lbl">Dura&ccedil;&atilde;o</span><span class="power-meta-val">&mdash;</span></div>
         </div>
-        <div class="power-effect" style="font-size:7pt;line-height:1.35">Recorda tudo que viu/leu/ouviu. +2 em testes de Int + Investiga&ccedil;&atilde;o, Hist&oacute;ria e Ci&ecirc;ncias. 1 p&aacute;gina em 3 s.</div>
-      </div>      <div class="power-block">
-        <div class="power-header">
-          <span class="power-field">Nome:</span> <span class="power-field-line">Leitura R&aacute;pida</span>
-          <span class="power-field" style="margin-left:4pt;">Custo:</span> <span class="power-field-line" style="max-width:30pt;">1 Esp.</span>
+        <div class="power-effect">Recorda tudo que viu/leu/ouviu. +2 em Int + Inv., Hist. e Ci&ecirc;ncias. 1 p&aacute;g. em 3 s.</div>
+      </div>
+      <div class="power-block">
+        <div class="power-title-row">
+          <span class="power-lbl">Nome</span>
+          <span class="power-name">Leitura R&aacute;pida</span>
+          <span class="power-lbl">Custo</span>
+          <span class="power-cost">1 Esp.</span>
         </div>
-        <div class="power-header">
-          <span class="power-field">A&ccedil;&atilde;o:</span> <span class="power-field-line" style="max-width:40pt;">A&ccedil;&atilde;o principal</span>
-          <span class="power-field" style="margin-left:4pt;">Alcance:</span> <span class="power-field-line" style="max-width:30pt;">Toque</span>
-          <span class="power-field" style="margin-left:4pt;">Dura&ccedil;&atilde;o:</span> <span class="power-field-line">Instant&acirc;neo</span>
+        <div class="power-meta-row">
+          <div class="power-meta"><span class="power-lbl">A&ccedil;&atilde;o</span><span class="power-meta-val">Principal</span></div>
+          <div class="power-meta"><span class="power-lbl">Alcance</span><span class="power-meta-val">Toque</span></div>
+          <div class="power-meta"><span class="power-lbl">Dura&ccedil;&atilde;o</span><span class="power-meta-val">Inst.</span></div>
         </div>
-        <div class="power-effect" style="font-size:7pt;line-height:1.35">Livro at&eacute; 500 p&aacute;g. em 1 min. Cifra: Int + Inv. vs CD. Idiomas: ess&ecirc;ncia geral.</div>
-      </div>      <div class="power-block">
-        <div class="power-header">
-          <span class="power-field">Nome:</span> <span class="power-field-line">An&aacute;lise Situacional</span>
-          <span class="power-field" style="margin-left:4pt;">Custo:</span> <span class="power-field-line" style="max-width:30pt;">1 Esp.</span>
+        <div class="power-effect">Livro at&eacute; 500 p&aacute;g. em 1 min. Cifra: Int + Inv. vs CD. Idiomas: ess&ecirc;ncia geral.</div>
+      </div>
+      <div class="power-block">
+        <div class="power-title-row">
+          <span class="power-lbl">Nome</span>
+          <span class="power-name">An&aacute;lise Situacional</span>
+          <span class="power-lbl">Custo</span>
+          <span class="power-cost">1 Esp.</span>
         </div>
-        <div class="power-header">
-          <span class="power-field">A&ccedil;&atilde;o:</span> <span class="power-field-line" style="max-width:40pt;">A&ccedil;&atilde;o b&ocirc;nus</span>
-          <span class="power-field" style="margin-left:4pt;">Alcance:</span> <span class="power-field-line" style="max-width:30pt;">9 m</span>
-          <span class="power-field" style="margin-left:4pt;">Dura&ccedil;&atilde;o:</span> <span class="power-field-line">Instant&acirc;neo</span>
+        <div class="power-meta-row">
+          <div class="power-meta"><span class="power-lbl">A&ccedil;&atilde;o</span><span class="power-meta-val">B&ocirc;nus</span></div>
+          <div class="power-meta"><span class="power-lbl">Alcance</span><span class="power-meta-val">9 m</span></div>
+          <div class="power-meta"><span class="power-lbl">Dura&ccedil;&atilde;o</span><span class="power-meta-val">Inst.</span></div>
         </div>
-        <div class="power-effect" style="font-size:7pt;line-height:1.35">Cena de crime ou combate: Narrador revela 1 fato n&atilde;o &oacute;bvio. M&aacute;x. 2 usos/cena.</div>
-      </div>      <div class="power-block">
-        <div class="power-header">
-          <span class="power-field">Nome:</span> <span class="power-field-line">&mdash;</span>
-          <span class="power-field" style="margin-left:4pt;">Custo:</span> <span class="power-field-line" style="max-width:30pt;">&mdash;</span>
+        <div class="power-effect">Cena de crime ou combate: Narrador revela 1 fato n&atilde;o &oacute;bvio. M&aacute;x. 2 usos/cena.</div>
+      </div>
+      <div class="power-block">
+        <div class="power-title-row">
+          <span class="power-lbl">Nome</span>
+          <span class="power-name power-fill"></span>
+          <span class="power-lbl">Custo</span>
+          <span class="power-cost power-fill"></span>
         </div>
-        <div class="power-header">
-          <span class="power-field">A&ccedil;&atilde;o:</span> <span class="power-field-line" style="max-width:40pt;">&mdash;</span>
-          <span class="power-field" style="margin-left:4pt;">Alcance:</span> <span class="power-field-line" style="max-width:30pt;">&mdash;</span>
-          <span class="power-field" style="margin-left:4pt;">Dura&ccedil;&atilde;o:</span> <span class="power-field-line">&mdash;</span>
+        <div class="power-meta-row">
+          <div class="power-meta"><span class="power-lbl">A&ccedil;&atilde;o</span><span class="power-meta-val power-fill"></span></div>
+          <div class="power-meta"><span class="power-lbl">Alcance</span><span class="power-meta-val power-fill"></span></div>
+          <div class="power-meta"><span class="power-lbl">Dura&ccedil;&atilde;o</span><span class="power-meta-val power-fill"></span></div>
         </div>
-        <div class="power-effect">&nbsp;</div>
-      </div>      <div class="power-block">
-        <div class="power-header">
-          <span class="power-field">Nome:</span> <span class="power-field-line">&mdash;</span>
-          <span class="power-field" style="margin-left:4pt;">Custo:</span> <span class="power-field-line" style="max-width:30pt;">&mdash;</span>
+        <div class="power-effect"></div>
+      </div>
+      <div class="power-block">
+        <div class="power-title-row">
+          <span class="power-lbl">Nome</span>
+          <span class="power-name power-fill"></span>
+          <span class="power-lbl">Custo</span>
+          <span class="power-cost power-fill"></span>
         </div>
-        <div class="power-header">
-          <span class="power-field">A&ccedil;&atilde;o:</span> <span class="power-field-line" style="max-width:40pt;">&mdash;</span>
-          <span class="power-field" style="margin-left:4pt;">Alcance:</span> <span class="power-field-line" style="max-width:30pt;">&mdash;</span>
-          <span class="power-field" style="margin-left:4pt;">Dura&ccedil;&atilde;o:</span> <span class="power-field-line">&mdash;</span>
+        <div class="power-meta-row">
+          <div class="power-meta"><span class="power-lbl">A&ccedil;&atilde;o</span><span class="power-meta-val power-fill"></span></div>
+          <div class="power-meta"><span class="power-lbl">Alcance</span><span class="power-meta-val power-fill"></span></div>
+          <div class="power-meta"><span class="power-lbl">Dura&ccedil;&atilde;o</span><span class="power-meta-val power-fill"></span></div>
         </div>
-        <div class="power-effect">&nbsp;</div>
-      </div>      <div class="power-block">
-        <div class="power-header">
-          <span class="power-field">Nome:</span> <span class="power-field-line">&mdash;</span>
-          <span class="power-field" style="margin-left:4pt;">Custo:</span> <span class="power-field-line" style="max-width:30pt;">&mdash;</span>
+        <div class="power-effect"></div>
+      </div>
+      <div class="power-block">
+        <div class="power-title-row">
+          <span class="power-lbl">Nome</span>
+          <span class="power-name power-fill"></span>
+          <span class="power-lbl">Custo</span>
+          <span class="power-cost power-fill"></span>
         </div>
-        <div class="power-header">
-          <span class="power-field">A&ccedil;&atilde;o:</span> <span class="power-field-line" style="max-width:40pt;">&mdash;</span>
-          <span class="power-field" style="margin-left:4pt;">Alcance:</span> <span class="power-field-line" style="max-width:30pt;">&mdash;</span>
-          <span class="power-field" style="margin-left:4pt;">Dura&ccedil;&atilde;o:</span> <span class="power-field-line">&mdash;</span>
+        <div class="power-meta-row">
+          <div class="power-meta"><span class="power-lbl">A&ccedil;&atilde;o</span><span class="power-meta-val power-fill"></span></div>
+          <div class="power-meta"><span class="power-lbl">Alcance</span><span class="power-meta-val power-fill"></span></div>
+          <div class="power-meta"><span class="power-lbl">Dura&ccedil;&atilde;o</span><span class="power-meta-val power-fill"></span></div>
         </div>
-        <div class="power-effect">&nbsp;</div>
+        <div class="power-effect"></div>
       </div>
     </div>
   </div>
@@ -1038,9 +1170,11 @@
 </div><!-- end page 2 -->
 
 <nav class="book-nav no-print">
-  <a href="ficha-personagem.html">&larr; Ficha em branco</a>
+  <a href="../index.html">&larr; Início</a>
+  <a href="guia-criacao-ficha.html">Guia de criação</a>
+  <a href="ficha-personagem.html">Ficha em branco</a>
   <a href="glossario.html">Glossário</a>
-  <a href="tabelas-referencia.html">Tabelas</a>
+  <a href="../livro-jogador/index.html">Livro do Jogador</a>
 </nav>
 
 </body>

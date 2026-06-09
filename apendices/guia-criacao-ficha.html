@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Apêndice — Guia de Criação de Ficha · Senhor dos Mistérios RPG</title>
+<link rel="stylesheet" href="../assets/css/common.css">
+<link rel="stylesheet" href="../assets/css/print.css">
+<style>
+.guide-toc {
+  background: var(--parchment-d);
+  border: 1px solid var(--gold);
+  border-radius: 4px;
+  padding: 1em 1.4em;
+  margin: 1.5em 0;
+}
+.guide-toc ol { margin: 0.4em 0 0 1.4em; }
+.guide-toc li { margin-bottom: 0.35em; }
+.guide-toc a { color: var(--spirit); text-decoration: none; }
+.guide-toc a:hover { color: var(--gold-dark); }
+.step-num {
+  display: inline-block;
+  font-family: "Segoe UI", sans-serif;
+  font-weight: 700;
+  font-size: 0.75em;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--gold-dark);
+  background: rgba(201, 168, 76, 0.15);
+  padding: 0.15em 0.5em;
+  border-radius: 3px;
+  margin-bottom: 0.4em;
+}
+.formula {
+  text-align: center;
+  font-size: 1.15em;
+  font-family: "Segoe UI", sans-serif;
+  margin: 0.6em 0;
+}
+.checklist { list-style: none; margin-left: 0; padding: 0; }
+.checklist li {
+  padding: 0.35em 0 0.35em 1.6em;
+  position: relative;
+  border-bottom: 1px dotted var(--parchment-d);
+}
+.checklist li::before {
+  content: "\2610";
+  position: absolute;
+  left: 0;
+  color: var(--spirit);
+}
+.ref-card {
+  font-family: "Consolas", "Courier New", monospace;
+  font-size: 0.88em;
+  background: #1e2430;
+  color: #e8e4d8;
+  padding: 1em 1.2em;
+  border-radius: 4px;
+  line-height: 1.65;
+  margin: 1em 0;
+  page-break-inside: avoid;
+}
+.ref-card strong { color: var(--gold-light); }
+@media print {
+  .guide-toc a { color: var(--ink); text-decoration: none; }
+  .ref-card { background: #f0f0f0; color: var(--ink); border: 1px solid #ccc; }
+  .ref-card strong { color: var(--ink); }
+}
+</style>
+</head>
+<body>
+
+<h1>Guia de Criação de Ficha</h1>
+
+<p class="text-center text-small" style="text-align:center;">
+  Passo a passo didático &middot; Fórmulas do <a href="../livro-jogador/03-atributos.html">Capítulo 3</a> &middot;
+  <a href="ficha-personagem.html">Ficha em branco</a> &middot;
+  <a href="ficha-exemplo-leitor-seq9.html">Exemplo Leitor Seq.&nbsp;9</a>
+</p>
+
+<blockquote>
+  Este guia acompanha a <strong>ficha imprimível oficial</strong> e o <strong>Capítulo 3</strong>
+  como referência canônica de perícias e cálculos. O Capítulo 2 traz a narrativa de criação;
+  quando houver diferença de nomes de perícias, siga a ficha.
+  <span class="cite">— Apêndice para jogadores</span>
+</blockquote>
+
+<nav class="guide-toc" aria-label="Índice do guia">
+  <div class="box-title" style="margin-bottom:0.3em;">Índice</div>
+  <ol>
+    <li><a href="#materiais">Materiais e visão geral</a></li>
+    <li><a href="#passo0">Passo 0 — Abrir a ficha</a></li>
+    <li><a href="#passo1">Passo 1 — Conceito</a></li>
+    <li><a href="#passo2">Passo 2 — Antecedente</a></li>
+    <li><a href="#passo3">Passo 3 — Atributos (7 / 5 / 3)</a></li>
+    <li><a href="#passo4">Passo 4 — Perícias (13 / 9 / 5)</a></li>
+    <li><a href="#passo5">Passo 5 — Caminho e Sequência 9</a></li>
+    <li><a href="#passo6">Passo 6 — Estatísticas derivadas</a></li>
+    <li><a href="#passo7">Passo 7 — Método de Atuação</a></li>
+    <li><a href="#passo8">Passo 8 — Equipamento</a></li>
+    <li><a href="#passo9">Passo 9 — Poderes Beyonder</a></li>
+    <li><a href="#passo10">Passo 10 — Detalhes narrativos</a></li>
+    <li><a href="#exemplo-completo">Exemplo completo — Violeta Castilho</a></li>
+    <li><a href="#checklist">Checklist final</a></li>
+    <li><a href="#referencia">Referência rápida</a></li>
+  </ol>
+</nav>
+
+<div class="separator"></div>
+
+<!-- ================================================================ -->
+<h2 id="materiais">Materiais e visão geral</h2>
+
+<table>
+  <thead>
+    <tr><th>Item</th><th>Onde encontrar</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Ficha em branco</strong> (A4, 2 páginas)</td>
+      <td><a href="ficha-personagem.html">ficha-personagem.html</a> — imprima com <kbd>Ctrl+P</kbd></td>
+    </tr>
+    <tr>
+      <td><strong>Exemplo preenchido</strong></td>
+      <td><a href="ficha-exemplo-leitor-seq9.html">Helena Ashworth</a> — Leitor, Torre Branca, Seq.&nbsp;9</td>
+    </tr>
+    <tr>
+      <td><strong>Regras de criação</strong></td>
+      <td><a href="../livro-jogador/02-criacao.html">Capítulo 2</a></td>
+    </tr>
+    <tr>
+      <td><strong>Fórmulas e testes</strong></td>
+      <td><a href="../livro-jogador/03-atributos.html">Capítulo 3</a></td>
+    </tr>
+    <tr>
+      <td><strong>22 Caminhos</strong></td>
+      <td><a href="../livro-jogador/04-pathways.html">Capítulo 4</a></td>
+    </tr>
+    <tr>
+      <td><strong>Poderes Seq. 9–5</strong></td>
+      <td><a href="../livro-jogador/05-sequencias.html">Capítulo 5</a></td>
+    </tr>
+    <tr>
+      <td><strong>Método de Atuação</strong></td>
+      <td><a href="../livro-jogador/06-atuacao.html">Capítulo 6</a></td>
+    </tr>
+    <tr>
+      <td><strong>Dados</strong></td>
+      <td><span class="dice">d20</span> (principal), <span class="dice">d12</span>, <span class="dice">d10</span>, <span class="dice">d8</span>, <span class="dice">d6</span>, <span class="dice">d4</span></td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="box box-rule">
+  <div class="box-title">Ordem dos passos</div>
+  <ol>
+    <li>Conceito &rarr; Antecedente &rarr; Atributos &rarr; Perícias &rarr; Caminho</li>
+    <li>Calcular PV, Espiritualidade, Lucidez, Defesa, Iniciativa, Movimento e Salvaguardas</li>
+    <li>Método de Atuação, equipamento, poderes e detalhes narrativos</li>
+  </ol>
+</div>
+
+<div class="box box-rule">
+  <div class="box-title">Regra de ouro — Modificador</div>
+  <p class="formula"><strong>Modificador = Valor − 2</strong></p>
+  <table>
+    <thead>
+      <tr><th>Valor</th><th>Mod.</th><th>Nível (atributo)</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>0 <span class="text-small">(só perícia)</span></td><td>−2</td><td>Não treinado</td></tr>
+      <tr><td>1</td><td>−1</td><td>Fraco</td></tr>
+      <tr><td>2</td><td>+0</td><td>Mediano</td></tr>
+      <tr><td>3</td><td>+1</td><td>Bom</td></tr>
+      <tr><td>4</td><td>+2</td><td>Excepcional <span class="text-small">(teto na criação)</span></td></tr>
+      <tr><td>5</td><td>+3</td><td>Lendário <span class="text-small">(só em jogo)</span></td></tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="separator"></div>
+
+<!-- ================================================================ -->
+<h2 id="passo0">Passo 0 — Abra e imprima a ficha</h2>
+
+<ol>
+  <li>Abra <a href="ficha-personagem.html">ficha-personagem.html</a>.</li>
+  <li><kbd>Ctrl+P</kbd> (ou <kbd>Cmd+P</kbd>) &rarr; formato <strong>A4</strong>, margens mínimas, <strong>gráficos de fundo</strong> ativados.</li>
+  <li>Preencha a <strong>página 1</strong> (identidade, atributos, perícias, derivados) e a <strong>página 2</strong> (poderes, equipamento, notas).</li>
+</ol>
+
+<div class="separator"></div>
+
+<!-- ================================================================ -->
+<h2 id="passo1">Passo 1 — Conceito</h2>
+
+<p class="step-num">Sem números — só narrativa</p>
+
+<p>
+  O <strong>conceito</strong> é uma frase que define quem o personagem era antes de virar Beyonder
+  (ou no instante em que isso acontece). Não tem efeito mecânico, mas guia todas as escolhas seguintes.
+</p>
+
+<p><strong>Onde anotar:</strong> cabeçalho da ficha &rarr; campo <em>Conceito</em>.</p>
+
+<table>
+  <thead>
+    <tr><th>Tipo</th><th>Exemplo de conceito</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Investigador</td><td>Detetive da Yard que só aceita casos que a polícia oficial ignora</td></tr>
+    <tr><td>Acadêmica</td><td>Catalogadora de arquivos obcecada por padrões e minúcias</td></tr>
+    <tr><td>Marinheiro</td><td>Contrabandista que viu coisas impossíveis nos Cinco Mares</td></tr>
+    <tr><td>Nobre</td><td>Aristocrata menor com dívidas e segredos de linhagem</td></tr>
+    <tr><td>Criminoso</td><td>Ladrão do East Borough que roubou a poção errada</td></tr>
+    <tr><td>Clérigo</td><td>Padre de paróquia que começou a ouvir sussurros em suas preces</td></tr>
+  </tbody>
+</table>
+
+<div class="separator"></div>
+
+<!-- ================================================================ -->
+<h2 id="passo2">Passo 2 — Antecedente</h2>
+
+<p class="step-num">Bônus + equipamento + gancho narrativo</p>
+
+<p><strong>Onde anotar:</strong> campo <em>Antecedente</em>. Os bônus de perícia entram no <strong>Passo 4</strong>, <em>depois</em> da distribuição.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Antecedente</th>
+      <th>Bônus (Cap. 2)</th>
+      <th>Dinheiro</th>
+      <th>Equipamento extra</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Membro de Igreja</td>
+      <td>+1 Teologia, +1 Etiqueta</td>
+      <td>10 £ + voucher</td>
+      <td>Símbolo sagrado, carta eclesiástica</td>
+    </tr>
+    <tr>
+      <td>Beyonder Irregular</td>
+      <td>+1 Furtividade, +1 Manha</td>
+      <td>3 £</td>
+      <td>Ingrediente menor, contato no submundo</td>
+    </tr>
+    <tr>
+      <td>Aristocrata</td>
+      <td>+1 Etiqueta, +1 Política</td>
+      <td>50 £ + carta de crédito</td>
+      <td>Roupas finas, convite para clube</td>
+    </tr>
+    <tr>
+      <td>Cidadão Comum</td>
+      <td>+1 Ofícios, +1 Percepção de Rua</td>
+      <td>5 £</td>
+      <td>Ferramentas de trabalho, economias</td>
+    </tr>
+    <tr>
+      <td>Marinheiro / Pirata</td>
+      <td>+1 Navegação, +1 Atletismo</td>
+      <td>8 £</td>
+      <td>Faca de marinheiro, bússola, rum (3 garrafas)</td>
+    </tr>
+    <tr>
+      <td>Acadêmico</td>
+      <td>+1 Ocultismo, +1 Investigação</td>
+      <td>12 £</td>
+      <td>Caderno de pesquisa, acesso biblioteca, lupa</td>
+    </tr>
+    <tr>
+      <td>Criminoso</td>
+      <td>+1 Furtividade, +1 Intimidação</td>
+      <td>7 £ + bens roubados</td>
+      <td>Kit de arrombamento, arma oculta, identidade falsa</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Todos recebem também:</strong> roupas da estação, item sentimental, bolsa, fósforos e vela.</p>
+
+<div class="box box-warning">
+  <div class="box-title">Bônus do Cap. 2 na ficha oficial</div>
+  <p>A ficha usa a lista de perícias do <strong>Capítulo 3</strong>. Alguns bônus do Cap. 2 não têm linha própria — use esta equivalência na mesa:</p>
+  <table>
+    <thead>
+      <tr><th>Bônus do antecedente</th><th>Na ficha (sugestão)</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Teologia</td><td>+1 em <strong>História</strong> ou <strong>Ocultismo</strong></td></tr>
+      <tr><td>Política</td><td>+1 em <strong>Persuasão</strong> ou especialidade anotada</td></tr>
+      <tr><td>Ofícios (escolha um)</td><td>+1 na perícia relacionada (Ciências, Medicina, Investigação…)</td></tr>
+      <tr><td>Percepção de Rua</td><td>+1 em <strong>Manha</strong></td></tr>
+      <tr><td>Furtividade</td><td>Não é perícia na ficha — teste <strong>Destreza + Atletismo</strong> (<a href="glossario.html#f">glossário</a>)</td></tr>
+      <tr><td>Navegação</td><td>+1 em <strong>Sobrevivência</strong> ou especialidade anotada</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="separator"></div>
+
+<!-- ================================================================ -->
+<h2 id="passo3">Passo 3 — Atributos (modelo 7 / 5 / 3)</h2>
+
+<p class="step-num">9 atributos &middot; 15 pontos livres</p>
+
+<ol>
+  <li>Cada atributo <strong>começa em 1</strong> (mínimo humano).</li>
+  <li>Escolha a <strong>categoria primária</strong> (Físicos, Sociais ou Mentais) e distribua <strong>7 pontos</strong> entre seus 3 atributos.</li>
+  <li><strong>Secundária:</strong> 5 pontos. <strong>Terciária:</strong> 3 pontos.</li>
+  <li>Anote o <strong>valor</strong> (bolinhas) e o <strong>Mod.</strong> (Valor − 2) em cada linha da ficha.</li>
+</ol>
+
+<div class="box box-rule">
+  <div class="box-title">Regras</div>
+  <ul>
+    <li>Nenhum atributo abaixo de <strong>1</strong>.</li>
+    <li>Nenhum atributo acima de <strong>4</strong> na criação (5 só com progressão em jogo).</li>
+    <li>Pontos gastos por categoria = soma de <strong>(valor final − 1)</strong> de cada atributo da categoria.</li>
+  </ul>
+</div>
+
+<table>
+  <thead>
+    <tr><th>Físicos</th><th>Sociais</th><th>Mentais</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Força (STR)</td>
+      <td>Carisma (CHA)</td>
+      <td>Percepção (PER)</td>
+    </tr>
+    <tr>
+      <td>Destreza (DEX)</td>
+      <td>Manipulação (MAN)</td>
+      <td>Inteligência (INT)</td>
+    </tr>
+    <tr>
+      <td>Vigor (VIG)</td>
+      <td>Aparência (APP)</td>
+      <td>Determinação (RES)</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="box box-example">
+  <div class="box-title">Exemplo A — Helena Ashworth (acadêmica cerebral)</div>
+  <p>Primário <strong>Mental</strong> (7), Secundário <strong>Social</strong> (5), Terciário <strong>Físico</strong> (3).</p>
+  <table>
+    <thead>
+      <tr><th>Categoria</th><th>Distribuição</th><th>Verificação</th><th>Mods.</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Mental (7)</td>
+        <td>PER 3, INT 4, RES 3</td>
+        <td>(3−1)+(4−1)+(3−1) = 2+3+2 = 7 ✓</td>
+        <td>+1, +2, +1</td>
+      </tr>
+      <tr>
+        <td>Social (5)</td>
+        <td>CHA 2, MAN 3, APP 3</td>
+        <td>1+2+2 = 5 ✓</td>
+        <td>+0, +1, +1</td>
+      </tr>
+      <tr>
+        <td>Físico (3)</td>
+        <td>STR 1, DEX 3, VIG 2</td>
+        <td>0+2+1 = 3 ✓</td>
+        <td>−1, +1, +0</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="box box-example">
+  <div class="box-title">Exemplo B — Edmund Harker (detetive equilibrado)</div>
+  <table>
+    <thead>
+      <tr><th>Categoria</th><th>Distribuição</th><th>Mods.</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Mental (7)</td><td>PER 4, INT 3, RES 2</td><td>+2, +1, +0</td></tr>
+      <tr><td>Social (5)</td><td>CHA 2, MAN 3, APP 2</td><td>+0, +1, +0</td></tr>
+      <tr><td>Físico (3)</td><td>STR 2, DEX 2, VIG 2</td><td>+0, +0, +0</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="box box-example">
+  <div class="box-title">Exemplo C — Marinheiro robusto</div>
+  <p>Físico (7): STR 3, DEX 3, VIG 4 &middot; Social (5): CHA 2, MAN 2, APP 3 &middot; Mental (3): todos em 2.</p>
+</div>
+
+<div class="separator"></div>
+
+<!-- ================================================================ -->
+<h2 id="passo4">Passo 4 — Perícias (modelo 13 / 9 / 5)</h2>
+
+<p class="step-num">20 perícias na ficha &middot; máximo 3 na criação &middot; &#9679; = valor (0&ndash;5)</p>
+
+<p class="text-small">
+  Na ficha, as <strong>bolinhas</strong> marcam o <em>valor</em> da perícia (0 = nenhuma preenchida).
+  A caixa <strong>V</strong> repete o número; a caixa <strong>Mod.</strong> é o modificador de teste (Valor &minus; 2).
+  Valor 0 implica Mod. &minus;2 &mdash; não é campo em branco.
+</p>
+
+<ol>
+  <li>Grupo <strong>primário</strong>: 13 pontos. <strong>Secundário</strong>: 9. <strong>Terciário</strong>: 5.</li>
+  <li>Perícias começam em <strong>0</strong> (mod −2).</li>
+  <li>Máximo <strong>3</strong> na criação.</li>
+  <li>Aplique os <strong>+1 do antecedente depois</strong> (podem levar uma perícia a <strong>4</strong>).</li>
+</ol>
+
+<h3>Lista da ficha (Cap. 3)</h3>
+
+<div class="two-col">
+<table>
+  <thead><tr><th>Combate</th><th></th></tr></thead>
+  <tbody>
+    <tr><td>Luta</td><td>Força ou Destreza</td></tr>
+    <tr><td>Armas de Fogo</td><td>Destreza</td></tr>
+    <tr><td>Esquiva</td><td>Destreza</td></tr>
+    <tr><td>Atletismo</td><td>Força ou Destreza</td></tr>
+  </tbody>
+</table>
+<table>
+  <thead><tr><th>Social</th><th></th></tr></thead>
+  <tbody>
+    <tr><td>Persuasão</td><td>Carisma</td></tr>
+    <tr><td>Intimidação</td><td>Carisma ou Força</td></tr>
+    <tr><td>Etiqueta</td><td>Carisma ou Aparência</td></tr>
+    <tr><td>Dissimulação</td><td>Manipulação</td></tr>
+    <tr><td>Liderança</td><td>Carisma</td></tr>
+    <tr><td>Empatia</td><td>Percepção</td></tr>
+    <tr><td>Manha</td><td>Manipulação ou Carisma</td></tr>
+  </tbody>
+</table>
+</div>
+
+<table>
+  <thead><tr><th>Conhecimento</th><th>Atributo usual</th><th>Nota</th></tr></thead>
+  <tbody>
+    <tr><td>Investigação</td><td>Inteligência ou Percepção</td><td></td></tr>
+    <tr><td>Ocultismo</td><td>Inteligência</td><td></td></tr>
+    <tr><td>Percepção Espiritual</td><td>Percepção</td><td>Essencial para Beyonders</td></tr>
+    <tr><td>Medicina</td><td>Inteligência</td><td></td></tr>
+    <tr><td>Ciências</td><td>Inteligência</td><td></td></tr>
+    <tr><td>História</td><td>Inteligência</td><td></td></tr>
+    <tr><td>Adivinhação</td><td>Percepção</td><td>Exige ≥ 1 ponto para tentar</td></tr>
+    <tr><td>Ritualismo</td><td>Inteligência</td><td>Exige ≥ 1 ponto para tentar</td></tr>
+    <tr><td>Sobrevivência</td><td>Percepção ou Inteligência</td><td></td></tr>
+  </tbody>
+</table>
+
+<div class="box box-rule">
+  <div class="box-title">Teste em jogo</div>
+  <p class="formula"><span class="dice">d20</span> + Mod. Atributo + Mod. Perícia ≥ <strong>CD</strong></p>
+</div>
+
+<div class="box box-example">
+  <div class="box-title">Exemplo — Helena (Acadêmico aplicado depois)</div>
+  <table>
+    <thead>
+      <tr><th>Grupo</th><th>Antes do antecedente</th><th>Depois (+1 Inv, +1 Ocult)</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Conhecimento (13)</td>
+        <td>Inv 3, Ocult 3, Perc.Esp. 3, Med 1, Ciê 2, Hist 1</td>
+        <td>Inv <strong>4</strong>, Ocult <strong>4</strong></td>
+      </tr>
+      <tr>
+        <td>Social (9)</td>
+        <td>Etiq 2, Diss 2, Lid 1, Emp 2, Manh 2</td>
+        <td>—</td>
+      </tr>
+      <tr>
+        <td>Combate (5)</td>
+        <td>Luta 1, Esquiva 2, Atl 2</td>
+        <td>—</td>
+      </tr>
+    </tbody>
+  </table>
+  <p class="text-small mt-1">
+    Decifrar documento: INT +2 + Investigação +2 + Memória Perfeita +2 (poder Leitor) = <strong>d20 + 6</strong>.
+  </p>
+</div>
+
+<div class="separator"></div>
+
+<!-- ================================================================ -->
+<h2 id="passo5">Passo 5 — Caminho e Sequência 9</h2>
+
+<p class="step-num">22 Caminhos &middot; você começa na Seq. 9</p>
+
+<p>
+  Escolha um Caminho e anote o <strong>nome da Sequência 9</strong> na ficha. Esse nome define o
+  <strong>Método de Atuação</strong> inicial. Deixe a barra de <strong>Digestão em 0%</strong> (10 casas vazias).
+</p>
+
+<div class="two-col">
+<table>
+  <thead><tr><th>#</th><th>Caminho</th><th>Seq. 9</th></tr></thead>
+  <tbody>
+    <tr><td>1</td><td>Tolo</td><td>Vidente</td></tr>
+    <tr><td>2</td><td>Erro</td><td>Saqueador</td></tr>
+    <tr><td>3</td><td>Porta</td><td>Aprendiz</td></tr>
+    <tr><td>4</td><td>Visionário</td><td>Espectador</td></tr>
+    <tr><td>5</td><td>Sol</td><td>Cantor</td></tr>
+    <tr><td>6</td><td>Tirano</td><td>Marinheiro</td></tr>
+    <tr><td>7</td><td>Torre Branca</td><td>Leitor</td></tr>
+    <tr><td>8</td><td>Enforcado</td><td>Suplicante</td></tr>
+    <tr><td>9</td><td>Trevas</td><td>Insone</td></tr>
+    <tr><td>10</td><td>Morte</td><td>Coletor de Cadáveres</td></tr>
+    <tr><td>11</td><td>Gigante do Crepúsculo</td><td>Guerreiro</td></tr>
+  </tbody>
+</table>
+<table>
+  <thead><tr><th>#</th><th>Caminho</th><th>Seq. 9</th></tr></thead>
+  <tbody>
+    <tr><td>12</td><td>Demonesa</td><td>Assassina</td></tr>
+    <tr><td>13</td><td>Sacerdote Vermelho</td><td>Caçador</td></tr>
+    <tr><td>14</td><td>Eremita</td><td>Mistério</td></tr>
+    <tr><td>15</td><td>Párago</td><td>Engenheiro</td></tr>
+    <tr><td>16</td><td>Roda da Fortuna</td><td>Adivinha da Sorte</td></tr>
+    <tr><td>17</td><td>Mãe</td><td>Curandeira</td></tr>
+    <tr><td>18</td><td>Lua</td><td>Alquimista</td></tr>
+    <tr><td>19</td><td>Abismo</td><td>Lutador de Rua</td></tr>
+    <tr><td>20</td><td>Acorrentado</td><td>Criminoso</td></tr>
+    <tr><td>21</td><td>Imperador Negro</td><td>Advogado</td></tr>
+    <tr><td>22</td><td>Justiceiro</td><td>Vigia</td></tr>
+  </tbody>
+</table>
+</div>
+
+<div class="separator"></div>
+
+<!-- ================================================================ -->
+<h2 id="passo6">Passo 6 — Estatísticas derivadas</h2>
+
+<p class="step-num">Calcule nesta ordem e preencha a ficha</p>
+
+<!-- PV -->
+<h3>6.1 Pontos de Vida (HP)</h3>
+
+<div class="box box-rule">
+  <p class="formula"><strong>PV = 8 + Mod. Vigor + Bônus de Sequência</strong></p>
+  <table>
+    <thead><tr><th>Sequência</th><th>Bônus PV</th><th>Exemplo (VIG mod +1)</th></tr></thead>
+    <tbody>
+      <tr><td>9</td><td>+0</td><td>8 + 1 + 0 = <strong>9 PV</strong></td></tr>
+      <tr><td>8</td><td>+2</td><td>8 + 1 + 2 = <strong>11 PV</strong></td></tr>
+      <tr><td>7</td><td>+4</td><td>8 + 1 + 4 = <strong>13 PV</strong></td></tr>
+      <tr><td>6</td><td>+6</td><td>8 + 1 + 6 = <strong>15 PV</strong></td></tr>
+      <tr><td>5</td><td>+8</td><td>8 + 1 + 8 = <strong>17 PV</strong></td></tr>
+    </tbody>
+  </table>
+</div>
+
+<table>
+  <thead><tr><th>Personagem</th><th>Vigor</th><th>Mod.</th><th>Seq.</th><th>PV</th></tr></thead>
+  <tbody>
+    <tr><td>Helena</td><td>2</td><td>+0</td><td>9</td><td><strong>8</strong></td></tr>
+    <tr><td>Edmund</td><td>2</td><td>+0</td><td>9</td><td><strong>8</strong></td></tr>
+    <tr><td>Marinheiro</td><td>4</td><td>+2</td><td>9</td><td><strong>10</strong></td></tr>
+  </tbody>
+</table>
+
+<!-- Espiritualidade -->
+<h3>6.2 Espiritualidade</h3>
+
+<div class="box box-rule">
+  <p class="formula"><strong>Espiritualidade = Percepção + Determinação</strong></p>
+  <p class="text-small text-center" style="text-align:center;">Use os <em>valores</em> dos atributos, <strong>não</strong> os modificadores.</p>
+</div>
+
+<table>
+  <thead><tr><th>Personagem</th><th>PER</th><th>RES</th><th>Esp.</th></tr></thead>
+  <tbody>
+    <tr><td>Helena</td><td>3</td><td>3</td><td><strong>6</strong></td></tr>
+    <tr><td>Edmund</td><td>4</td><td>2</td><td><strong>6</strong></td></tr>
+    <tr><td>Máximo típico (criação)</td><td>4</td><td>4</td><td><strong>8</strong></td></tr>
+  </tbody>
+</table>
+
+<!-- Lucidez -->
+<h3>6.3 Lucidez</h3>
+
+<div class="box box-rule">
+  <p class="formula"><strong>Lucidez = 5 + Mod. Determinação</strong> (teto absoluto: <strong>10</strong>)</p>
+</div>
+
+<table>
+  <thead><tr><th>Determinação</th><th>Mod.</th><th>Lucidez inicial</th></tr></thead>
+  <tbody>
+    <tr><td>1</td><td>−1</td><td>4</td></tr>
+    <tr><td>2</td><td>+0</td><td><strong>5</strong></td></tr>
+    <tr><td>3</td><td>+1</td><td><strong>6</strong></td></tr>
+    <tr><td>4</td><td>+2</td><td><strong>7</strong></td></tr>
+    <tr><td>5</td><td>+3</td><td><strong>8</strong></td></tr>
+  </tbody>
+</table>
+<p>Anote na ficha: <strong>atual / teto recuperável</strong> (ex.: Helena <strong>6 / 10</strong>).</p>
+
+<!-- Defesa -->
+<h3>6.4 Defesa</h3>
+
+<div class="box box-rule">
+  <p class="formula"><strong>Defesa = 10 + Mod. Destreza + Bônus de Armadura</strong></p>
+</div>
+
+<table>
+  <thead><tr><th>Destreza</th><th>Mod.</th><th>Sem armadura</th><th>Colete +1</th></tr></thead>
+  <tbody>
+    <tr><td>2</td><td>+0</td><td>10</td><td>11</td></tr>
+    <tr><td>3</td><td>+1</td><td>11</td><td>12</td></tr>
+    <tr><td>4</td><td>+2</td><td>12</td><td>13</td></tr>
+  </tbody>
+</table>
+
+<!-- Iniciativa -->
+<h3>6.5 Iniciativa</h3>
+
+<div class="box box-rule">
+  <p class="formula"><strong>Iniciativa = <span class="dice">d20</span> + Mod. Destreza + Mod. Percepção</strong></p>
+  <p class="text-small">Na ficha, anote só o <strong>bônus fixo</strong> (+X); o d20 entra em cada combate.</p>
+</div>
+
+<!-- Movimento -->
+<h3>6.6 Movimento</h3>
+
+<div class="box box-rule">
+  <p class="formula"><strong>Movimento = 9 m</strong> por turno (padrão humano)</p>
+  <p class="text-small">Terreno difícil dobra o custo. Não depende de atributos na criação.</p>
+</div>
+
+<!-- Salvaguardas -->
+<h3>6.7 Salvaguardas</h3>
+
+<p>Modificador = <strong>média arredondada para baixo</strong> dos dois Mod. de atributo:</p>
+
+<table>
+  <thead>
+    <tr><th>Salvaguarda</th><th>Atributos</th><th>Fórmula do Mod.</th><th>Resiste a…</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Corpo</strong></td>
+      <td>Força + Vigor</td>
+      <td>⌊(Mod.STR + Mod.VIG) ÷ 2⌋</td>
+      <td>Venenos, doenças, dano físico massivo</td>
+    </tr>
+    <tr>
+      <td><strong>Mente</strong></td>
+      <td>Inteligência + Determinação</td>
+      <td>⌊(Mod.INT + Mod.RES) ÷ 2⌋</td>
+      <td>Controle mental, ilusões, confusão</td>
+    </tr>
+    <tr>
+      <td><strong>Espírito</strong></td>
+      <td>Percepção + Carisma</td>
+      <td>⌊(Mod.PER + Mod.CHA) ÷ 2⌋</td>
+      <td>Medo sobrenatural, possessão, corrupção</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="box box-rule">
+  <div class="box-title">ND passiva (salvaguarda do alvo)</div>
+  <p class="formula"><strong>ND = 10 + Mod. da salvaguarda</strong></p>
+  <p>Teste: <span class="dice">d20</span> + Mod. da salvaguarda ≥ CD (quando a regra pedir salvaguarda ativa).</p>
+</div>
+
+<div class="box box-example">
+  <div class="box-title">Cálculo completo — Helena Ashworth</div>
+  <table>
+    <thead>
+      <tr><th>Campo</th><th>Cálculo</th><th>Resultado</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>HP</td><td>8 + 0 + 0</td><td><strong>8/8</strong></td></tr>
+      <tr><td>Espiritualidade</td><td>3 + 3</td><td><strong>6/6</strong></td></tr>
+      <tr><td>Lucidez</td><td>5 + 1</td><td><strong>6/10</strong></td></tr>
+      <tr><td>Defesa</td><td>10 + 1</td><td><strong>11</strong></td></tr>
+      <tr><td>Iniciativa</td><td>+1 DEX + +1 PER</td><td><strong>+2</strong></td></tr>
+      <tr><td>Movimento</td><td>—</td><td><strong>9 m</strong></td></tr>
+      <tr><td>Salv. Corpo</td><td>⌊(−1 + 0) / 2⌋</td><td>Mod. <strong>−1</strong>, ND <strong>9</strong></td></tr>
+      <tr><td>Salv. Mente</td><td>⌊(2 + 1) / 2⌋</td><td>Mod. <strong>+1</strong>, ND <strong>11</strong></td></tr>
+      <tr><td>Salv. Espírito</td><td>⌊(1 + 0) / 2⌋</td><td>Mod. <strong>0</strong>, ND <strong>10</strong></td></tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="separator"></div>
+
+<!-- ================================================================ -->
+<h2 id="passo7">Passo 7 — Método de Atuação</h2>
+
+<p><strong>Onde:</strong> bloco <em>Método de Atuação</em> (fim da página 1 da ficha).</p>
+
+<ol>
+  <li>Copie o <strong>princípio de atuação</strong> da sua Sequência 9 no <a href="../livro-jogador/05-sequencias.html">Capítulo 5</a>.</li>
+  <li>Deixe <strong>Pontos de Atuação em 0/10</strong>.</li>
+  <li>Lembre: <strong>10 pontos = +2 no Teste de Digestão</strong> (<a href="../livro-jogador/06-atuacao.html">Cap. 6</a>).</li>
+</ol>
+
+<table>
+  <thead><tr><th>Sequência 9</th><th>Princípio de atuação (resumo)</th></tr></thead>
+  <tbody>
+    <tr><td>Leitor (Torre Branca)</td><td><em>Lê tudo, memoriza tudo, analisa tudo. Nenhum detalhe é insignificante.</em></td></tr>
+    <tr><td>Vidente (Tolo)</td><td><em>Observe em silêncio, busque respostas ocultas, nunca revele seus segredos.</em></td></tr>
+    <tr><td>Espectador (Visionário)</td><td>Consulte o Cap. 5 para o texto completo do seu Caminho.</td></tr>
+  </tbody>
+</table>
+
+<div class="separator"></div>
+
+<!-- ================================================================ -->
+<h2 id="passo8">Passo 8 — Equipamento</h2>
+
+<p><strong>Onde:</strong> página 2 da ficha — Armas, Armadura, Itens Gerais, Dinheiro.</p>
+
+<ol>
+  <li>Itens do <strong>antecedente</strong> (tabela do Passo 2).</li>
+  <li>Itens <strong>básicos</strong>: roupas, item sentimental, bolsa, fósforos, vela.</li>
+  <li><strong>Dinheiro</strong> conforme o antecedente.</li>
+  <li>Armas (se houver): nome, dano, alcance, propriedades.</li>
+  <li>Armadura: bônus de Defesa (some ao cálculo do Passo 6.4).</li>
+</ol>
+
+<div class="separator"></div>
+
+<!-- ================================================================ -->
+<h2 id="passo9">Passo 9 — Poderes Beyonder</h2>
+
+<p>
+  Abra o <a href="../livro-jogador/05-sequencias.html">Capítulo 5</a>, localize seu Caminho e copie
+  cada poder da <strong>Sequência 9</strong> nos blocos da página 2.
+</p>
+
+<div class="stat-block">
+  <h4>Exemplo — Leitor Seq. 9 (Torre Branca)</h4>
+  <div class="power">
+    <p><span class="power-name">Memória Perfeita</span> <span class="power-cost">· Passivo</span></p>
+    <p>+2 em testes de Inteligência + Investigação, História e Ciências. Memoriza 1 página em 3 segundos.</p>
+  </div>
+  <div class="power">
+    <p><span class="power-name">Leitura Rápida</span> <span class="power-cost">· 1 Espiritualidade · Ação principal · Toque</span></p>
+    <p>Livro até 500 páginas em 1 minuto. Cifras exigem teste de Inteligência + Investigação.</p>
+  </div>
+  <div class="power">
+    <p><span class="power-name">Análise Situacional</span> <span class="power-cost">· 1 Espiritualidade · Ação bônus · 9 m</span></p>
+    <p>Narrador revela 1 fato não óbvio. Máximo 2 usos por cena.</p>
+  </div>
+</div>
+
+<div class="separator"></div>
+
+<!-- ================================================================ -->
+<h2 id="passo10">Passo 10 — Detalhes narrativos</h2>
+
+<table>
+  <thead><tr><th>Campo (página 2)</th><th>O que escrever</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Conexões</strong> (3 slots)</td><td>NPC + relação (aliado, rival, familiar)</td></tr>
+    <tr><td><strong>História</strong></td><td>3–4 linhas de background</td></tr>
+    <tr><td><strong>Notas</strong></td><td>Ganchos, lembretes de poderes, segredos</td></tr>
+    <tr><td><strong>Artefatos</strong></td><td>Vazio na criação — preencher em jogo</td></tr>
+  </tbody>
+</table>
+
+<p>Também defina (cabeçalho ou notas):</p>
+<ul>
+  <li><strong>Nome completo</strong> — estilo vitoriano/europeu (ex.: Edmund Harker, Violeta Castilho)</li>
+  <li><strong>Idade</strong> — tipicamente 18 a 40 anos</li>
+  <li><strong>Aparência, personalidade, motivação</strong></li>
+  <li><strong>Segredo</strong> — todo personagem deveria ter pelo menos um</li>
+</ul>
+
+<div class="separator"></div>
+
+<!-- ================================================================ -->
+<h2 id="exemplo-completo">Exemplo completo — Violeta Castilho</h2>
+
+<div class="box box-example">
+  <div class="box-title">Criação em uma página</div>
+  <table>
+    <thead><tr><th>Passo</th><th>Escolha / Cálculo</th></tr></thead>
+    <tbody>
+      <tr><td>Conceito</td><td>Aristocrata menor que provou poção numa festa que foi longe demais</td></tr>
+      <tr><td>Antecedente</td><td>Aristocrata (+1 Etiqueta, +1 Persuasão)</td></tr>
+      <tr>
+        <td>Atributos</td>
+        <td>Social 7: CHA4 MAN3 APP4 · Mental 5: PER3 INT3 RES2 · Físico 3: STR1 DEX2 VIG2</td>
+      </tr>
+      <tr>
+        <td>Perícias</td>
+        <td>Social 13: Etiq3 Pers3 Diss3 Emp2 Lid2 · Conhec. 9: Inv2 Ocult2 Hist2 Ciê2 PercEsp1 · Combate 5: Esquiva2 Atl2 Luta1</td>
+      </tr>
+      <tr><td>Caminho</td><td>Visionário — Espectador (Seq. 9)</td></tr>
+      <tr><td>HP</td><td>8 + 0 + 0 = <strong>8</strong></td></tr>
+      <tr><td>Espiritualidade</td><td>3 + 2 = <strong>5</strong></td></tr>
+      <tr><td>Lucidez</td><td>5 + 0 = <strong>5</strong></td></tr>
+      <tr><td>Defesa</td><td>10 + 0 = <strong>10</strong></td></tr>
+      <tr><td>Iniciativa</td><td>+0 + +1 = <strong>+1</strong></td></tr>
+      <tr><td>Salvaguardas</td><td>Corpo −1 (ND 9) · Mente 0 (ND 10) · Espírito +1 (ND 11)</td></tr>
+      <tr><td>Dinheiro</td><td>50 £ + carta de crédito</td></tr>
+      <tr><td>Segredo</td><td>A poção não foi acidente — alguém da família a colocou de propósito</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="separator"></div>
+
+<!-- ================================================================ -->
+<h2 id="checklist">Checklist final</h2>
+
+<ul class="checklist">
+  <li>Conceito, Antecedente, Caminho e Seq. 9 preenchidos no cabeçalho</li>
+  <li>9 atributos com valor <strong>e</strong> modificador (Valor − 2)</li>
+  <li>Perícias somam 13 + 9 + 5; bônus de antecedente aplicados <strong>depois</strong></li>
+  <li>HP, Espiritualidade, Lucidez, Defesa, Iniciativa e Movimento calculados</li>
+  <li>Três salvaguardas com Mod. <strong>e</strong> ND (10 + Mod.)</li>
+  <li>Método de Atuação + Digestão 0% + Pontos de Atuação 0/10</li>
+  <li>Poderes da Seq. 9 copiados na página 2</li>
+  <li>Equipamento, dinheiro, conexões e segredo anotados</li>
+  <li>Ficha impressa ou salva em PDF</li>
+</ul>
+
+<div class="separator"></div>
+
+<!-- ================================================================ -->
+<h2 id="referencia">Referência rápida</h2>
+
+<div class="ref-card">
+<strong>Mod.</strong> = Valor − 2<br>
+<strong>Teste</strong> = d20 + Mod.Atributo + Mod.Perícia ≥ CD<br>
+<br>
+<strong>PV</strong> = 8 + Mod.Vigor + Bônus Seq. (9→+0; 8→+2; 7→+4; 6→+6; 5→+8)<br>
+<strong>Esp.</strong> = PER + RES &nbsp;(valores, não mods!)<br>
+<strong>Lucidez</strong> = 5 + Mod.Determinação &nbsp;(máx. 10)<br>
+<strong>Defesa</strong> = 10 + Mod.Des + armadura<br>
+<strong>Inic.</strong> = d20 + Mod.Des + Mod.Per<br>
+<strong>Mov.</strong> = 9 m<br>
+<br>
+<strong>Salv. Corpo</strong> = ⌊(Mod.STR + Mod.VIG) / 2⌋<br>
+<strong>Salv. Mente</strong> = ⌊(Mod.INT + Mod.RES) / 2⌋<br>
+<strong>Salv. Espírito</strong> = ⌊(Mod.PER + Mod.CHA) / 2⌋<br>
+<strong>ND passiva</strong> = 10 + Mod. da salvaguarda
+</div>
+
+<div class="box box-warning">
+  <div class="box-title">Atenção — versões das regras</div>
+  <ul>
+    <li>O <strong>Capítulo 2</strong> lista perícias antigas (Briga, Lábia, Teologia…) que não aparecem na ficha — use sempre a lista do <strong>Capítulo 3</strong>.</li>
+    <li>A fórmula canônica de PV é <strong>8 + Mod. Vigor + Bônus de Sequência</strong> (ignore entradas antigas no glossário).</li>
+    <li>Para ver todos os números na prática, compare com a <a href="ficha-exemplo-leitor-seq9.html">ficha-exemplo do Leitor</a>.</li>
+  </ul>
+</div>
+
+<nav class="book-nav">
+  <a href="../index.html">&larr; Início</a>
+  <a href="ficha-personagem.html">Ficha em branco &rarr;</a>
+</nav>
+
+</body>
+</html>
