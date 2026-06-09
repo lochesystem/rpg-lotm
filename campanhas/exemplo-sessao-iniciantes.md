@@ -477,6 +477,8 @@ Morvan não é vilão de campanha inteira — está quebrado:
 
 > Na gola do casaco de Morvan, Tomás encontra pedaço de papel com símbolo **diferente** — não Enforcado: cheira a **Erro** (Amon?). Capitã Elise fecha o dossiê: “Acima do nosso pagamento.”
 
+**Continuar o arco:** esta sessão é a **Sessão 1** da mini-campanha [Patrulha Noturna](00-patrulha-noturna.html) (Sessões 2–4: mercado de pulgas, sala do espelho, epílogo).
+
 ---
 
 ## Folha de cola do Mestre

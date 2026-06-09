@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mini-campanha — Patrulha Noturna · Senhor dos Mistérios RPG</title>
+<link rel="stylesheet" href="../assets/css/common.css">
+<link rel="stylesheet" href="../assets/css/print.css">
+<style>
+.mermaid { margin: 1.5rem auto; max-width: 100%; overflow-x: auto; }
+article.md-body pre {
+  background: var(--parchment-d, #f5f0e6);
+  border: 1px solid var(--gold, #b8860b);
+  border-radius: 4px;
+  padding: 0.75rem 1rem;
+  overflow-x: auto;
+  font-size: 0.9em;
+  line-height: 1.45;
+}
+article.md-body pre code { background: none; padding: 0; }
+article.md-body hr { border: none; border-top: 1px solid var(--gold, #b8860b); margin: 2rem 0; opacity: 0.5; }
+article.md-body table { font-size: 0.92em; }
+article.md-body h1:first-child { margin-top: 0; }
+</style>
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+  mermaid.initialize({ startOnLoad: true, theme: 'neutral', securityLevel: 'loose' });
+</script>
+</head>
+<body>
+
+<article class="md-body">
+<h1 id="mini-campanha-patrulha-noturna">Mini-campanha — *Patrulha Noturna*</h1><blockquote>
+<p><strong>Para quem é:</strong> mesa iniciante (Mestre e jogadores de primeira viagem).<br><strong>Formato:</strong> 3–4 sessões (~2 h cada) · <strong>2 ou 3 jogadores</strong> + 1 mestre · Seq. 9 o tempo todo.<br><strong>O que você aprende:</strong> arco fechado, investigação, combate curto, digestão e fechamento de caso.</p>
+</blockquote>
+<hr>
+<h2 id="indice">Índice</h2><ol>
+<li><a href="#vis%C3%A3o-geral">Visão geral</a></li>
+<li><a href="#trilha-de-jogo">Trilha de jogo</a></li>
+<li><a href="#mesa-de-2-ou-3-jogadores">Mesa de 2 ou 3 jogadores</a></li>
+<li><a href="#sess%C3%A3o-0--antes-da-primeira-noite-opcional">Sessão 0 — Antes da primeira noite (opcional)</a></li>
+<li><a href="#sess%C3%A3o-1--o-sussurro-na-oficina">Sessão 1 — O Sussurro na Oficina</a></li>
+<li><a href="#sess%C3%A3o-2--o-papel-rasgado">Sessão 2 — O Papel Rasgado</a></li>
+<li><a href="#sess%C3%A3o-3--a-sala-do-espelho">Sessão 3 — A Sala do Espelho</a></li>
+<li><a href="#sess%C3%A3o-4--ep%C3%ADlogo-e-fechamento">Sessão 4 — Epílogo e fechamento</a></li>
+<li><a href="#folha-de-cola-do-mestre">Folha de cola do Mestre</a></li>
+<li><a href="#ap%C3%AAndice-npc-aliado-mesa-de-2">Apêndice: NPC aliado (mesa de 2)</a></li>
+</ol>
+<hr>
+<h2 id="visao-geral">Visão geral</h2><table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Detalhe</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Cenário</strong></td>
+<td>Backlund, <em>East Borough</em>, 1352 — névoa, lampiões a gás, Águias Noturnas</td>
+</tr>
+<tr>
+<td><strong>Tom</strong></td>
+<td>Investigação urbana, horror leve, vitórias pequenas</td>
+</tr>
+<tr>
+<td><strong>Vilão</strong></td>
+<td>Pascal “Errata” Wren — intermediário local (Caminho do <strong>Erro</strong>, Seq. 9 <strong>Saqueador</strong>)</td>
+</tr>
+<tr>
+<td><strong>Não é</strong></td>
+<td>Aurora Order, Outer Deity, intriga na alta sociedade — isso fica para a Campanha 1</td>
+</tr>
+<tr>
+<td><strong>Duração total</strong></td>
+<td>Sessão 1 (tutorial) + 2–3 sessões novas = <strong>3–4 noites</strong></td>
+</tr>
+</tbody></table>
+<p><strong>Premissa do arco:</strong> depois de resolver o caso Morvan, os personagens encontram um símbolo do <strong>Erro</strong> — não do Enforcado. A Capitã Elise pede para rastrear quem vendeu selos corrompidos no bairro. Três noites depois, a célula de Pascal cai; o bairro volta a dormir.</p>
+<div class="mermaid">flowchart LR
+  S0["Sessão 0<br/>opcional"] --> S1["Sessão 1<br/>Sussurro na Oficina"]
+  S1 --> S2["Sessão 2<br/>Papel Rasgado"]
+  S2 --> S3["Sessão 3<br/>Sala do Espelho"]
+  S3 --> S4["Sessão 4<br/>Epílogo"]
+  S4 -.-> C1["Campanha 1<br/>opcional"]</div><hr>
+<h2 id="trilha-de-jogo">Trilha de jogo</h2><table>
+<thead>
+<tr>
+<th>Ordem</th>
+<th>Arquivo</th>
+<th>Conteúdo</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0 (opcional)</td>
+<td>Este documento — <a href="#sess%C3%A3o-0--antes-da-primeira-noite-opcional">Sessão 0</a></td>
+<td>Apresentação do sistema ou criação de ficha</td>
+</tr>
+<tr>
+<td>1</td>
+<td><a href="exemplo-sessao-iniciantes.html">exemplo-sessao-iniciantes.html</a></td>
+<td>Tutorial completo com rolagens — <strong>use como Sessão 1</strong></td>
+</tr>
+<tr>
+<td>2–4</td>
+<td>Este documento</td>
+<td>Continuação do gancho (símbolo do Erro)</td>
+</tr>
+</tbody></table>
+<p><strong>Personagens:</strong> use os <strong>pregens do tutorial</strong> (Mara, Tomás, Lídia) ou fichas criadas com o <a href="../apendices/guia-criacao-ficha.html">Guia de Criação de Ficha</a>. Todos começam e terminam em <strong>Seq. 9</strong>.</p>
+<hr>
+<h2 id="mesa-de-2-ou-3-jogadores">Mesa de 2 ou 3 jogadores</h2><h3 id="com-3-jogadores">Com 3 jogadores</h3><p>Use os três pregens do tutorial sem alteração. Cada um cobre um papel:</p>
+<table>
+<thead>
+<tr>
+<th>PJ</th>
+<th>Função na mesa</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Mara</strong> (Insone)</td>
+<td>Vigília, combate, furtividade</td>
+</tr>
+<tr>
+<td><strong>Tomás</strong> (Leitor)</td>
+<td>Investigação, análise, social</td>
+</tr>
+<tr>
+<td><strong>Lídia</strong> (Mistério)</td>
+<td>Ocultismo, rituais, percepção espiritual</td>
+</tr>
+</tbody></table>
+<h3 id="com-2-jogadores">Com 2 jogadores</h3><table>
+<thead>
+<tr>
+<th>Opção</th>
+<th>Dupla sugerida</th>
+<th>O que falta</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>A</strong></td>
+<td>Mara + Tomás</td>
+<td>Ocultismo → NPC <strong>Finn</strong> cobre</td>
+</tr>
+<tr>
+<td><strong>B</strong></td>
+<td>Tomás + Lídia</td>
+<td>Combate → Finn cobre</td>
+</tr>
+<tr>
+<td><strong>C</strong></td>
+<td>Mara + Lídia</td>
+<td>Investigação social → Finn ou pistas automáticas</td>
+</tr>
+</tbody></table>
+<p><strong>Regra de ouro (2 PJ):</strong> inclua <strong>Finn Aldridge</strong> (Apêndice) como NPC aliado jogado pelo Mestre — ele acompanha as cenas, não brilha sozinho.</p>
+<h3 id="escala-geral-2-jogadores">Escala geral (2 jogadores)</h3><table>
+<thead>
+<tr>
+<th>Situação</th>
+<th>Ajuste</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Combate</td>
+<td>−1 inimigo fraco por cena; boss perde <strong>25% PV</strong></td>
+</tr>
+<tr>
+<td>Investigação</td>
+<td>Se falharem por <strong>5+</strong> no teste, Finn ou ambiente entrega pista menor</td>
+</tr>
+<tr>
+<td>Social</td>
+<td>Greta (Sessão 2) aceita suborno mais cedo (5 £ em vez de 10 £)</td>
+</tr>
+<tr>
+<td>Lucidez</td>
+<td>CDs de horror −1 para a mesa</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="sessao-0-antes-da-primeira-noite-opcional">Sessão 0 — Antes da primeira noite (opcional)</h2><p><strong>Duração:</strong> 30–45 min · <strong>sem combate</strong></p>
+<h3 id="objetivo">Objetivo</h3><p>Apresentar o sistema ou criar personagem antes do tutorial.</p>
+<h3 id="roteiro-rapido">Roteiro rápido</h3><ol>
+<li><strong>5 min</strong> — O que é RPG de mesa; papel do Mestre vs jogador.</li>
+<li><strong>10 min</strong> — Mostrar a ficha em branco; explicar atributos 1–5 e <code>Mod. = Valor − 2</code>.</li>
+<li><strong>15 min</strong> — Criação guiada (use o <a href="../apendices/guia-criacao-ficha.html">Guia de Criação de Ficha</a>) <strong>ou</strong> distribuir pregens do tutorial.</li>
+<li><strong>5 min</strong> — Ler em voz alta o parágrafo de abertura da <a href="exemplo-sessao-iniciantes.html#cena-0--o-mestre-prepara">Cena 0 do tutorial</a>.</li>
+</ol>
+<h3 id="leia-em-voz-alta">Leia em voz alta</h3><blockquote>
+<p><em>Vocês não são heróis de folhetim. São Beyonders de Seq. 9 que a Igreja emprega quando o caso é pequeno demais para um Bispo e grande demais para a polícia. Esta noite, Backlund respira névoa — e alguém no East Borough não está dormindo.</em></p>
+</blockquote>
+<h3 id="checklist-sessao-0">Checklist Sessão 0</h3><ul>
+<li><input disabled="" type="checkbox"> Cada jogador tem ficha (criada ou pregen)</li>
+<li><input disabled="" type="checkbox"> Explicou teste <code>d20 + Mod. Atributo + Mod. Perícia ≥ CD</code></li>
+<li><input disabled="" type="checkbox"> Explicou Caminho vs Sequência</li>
+<li><input disabled="" type="checkbox"> Marcou PV, Espiritualidade e Lucidez na ficha</li>
+</ul>
+<hr>
+<h2 id="sessao-1-o-sussurro-na-oficina">Sessão 1 — O Sussurro na Oficina</h2><p><strong>Não repita este conteúdo aqui</strong> — rode o tutorial completo:</p>
+<p>👉 <strong><a href="exemplo-sessao-iniciantes.html">exemplo-sessao-iniciantes.html</a></strong> (~2 h)</p>
+<h3 id="o-que-precisa-acontecer-na-mesa">O que precisa acontecer na mesa</h3><table>
+<thead>
+<tr>
+<th>Evento</th>
+<th>Por quê</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Morvan preso ou solto (decisão dos jogadores)</td>
+<td>Define tom da mesa (rígida vs compassiva)</td>
+</tr>
+<tr>
+<td>Tomás encontra <strong>papel rasgado</strong> com símbolo do <strong>Erro</strong></td>
+<td>Gancho da Sessão 2</td>
+</tr>
+<tr>
+<td>Capitã Elise fecha dossiê Morvan</td>
+<td>Transição para novo caso</td>
+</tr>
+</tbody></table>
+<h3 id="se-nao-rodou-o-tutorial">Se não rodou o tutorial</h3><p>Use o resumo: três crianças sonham “Morvan”; oficina abandonada; selo do Enforcado; Morvan (Suplicante) e Eco de Sussurro derrotados. No epílogo, Tomás acha papel com símbolo que <strong>não</strong> é Enforcado — cheira a <strong>Erro</strong>.</p>
+<h3 id="entre-sessoes-recuperacao">Entre sessões (recuperação)</h3><table>
+<thead>
+<tr>
+<th>Recurso</th>
+<th>Regra simplificada</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>PV</td>
+<td>1d6 + mod. Vigor por noite de repouso</td>
+</tr>
+<tr>
+<td>Espiritualidade</td>
+<td>1 h de meditação: recupera metade (arredonda pra cima)</td>
+</tr>
+<tr>
+<td>Lucidez</td>
+<td>Só volta com apoio narrativo (ver Livro do Jogador)</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="sessao-2-o-papel-rasgado">Sessão 2 — O Papel Rasgado</h2><p><strong>Duração:</strong> ~2 h · <strong>Seq. 9</strong> · East Borough</p>
+<h3 id="resumo">Resumo</h3><p>A Capitã Elise não pode escalar o caso Morvan — mas o símbolo no papel é <strong>proibido</strong>. Ela paga 8 libras cada para rastrear quem vendeu “instruções de selo” no mercado de pulgas do <em>Dockside</em>. A trilha leva a <strong>Greta Mallows</strong>, banca de livros usados e mapas rabiscados.</p>
+<pre><code>  TEMPO SUGERIDO (2 h)
+  ├─ 15 min │ Cena 1 — Briefing no posto
+  ├─ 25 min │ Cena 2 — Mercado de pulgas
+  ├─ 25 min │ Cena 3 — A banca da Greta
+  ├─ 30 min │ Cena 4 — Emboscada no beco
+  └─ 15 min │ Cena 5 — Retorno e pista final</code></pre><hr>
+<h3 id="cena-1-briefing-no-posto">Cena 1 — Briefing no posto</h3><p><strong>Onde:</strong> quartel das Águias Noturnas — mesma sala do tutorial.</p>
+<p><strong>Leia em voz alta:</strong></p>
+<blockquote>
+<p><em>A lamparina fumega. Capitã Elise empurra o papel que Tomás guardou — um triângulo partido com linha torta, como um mapa que alguém copiou de memória errada. “Isso não é Enforcado. É <strong>Erro</strong>. Alguém vendeu receita falsa no Dockside. Três dias. Sem manchete. Sem invadir casa de nobre.”</em></p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>NPC</th>
+<th>Nota</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Capitã Elise Ward</strong></td>
+<td>Seq. 7; mesma do tutorial; firme, econômica</td>
+</tr>
+<tr>
+<td><strong>Finn</strong> (se 2 PJ)</td>
+<td>Recruta nervoso; fala pouco, obedece ordens</td>
+</tr>
+</tbody></table>
+<p><strong>Pagamento prometido:</strong> 8 £ cada + favor registrado (igual ou maior que Morvan, se a mesa foi exemplar).</p>
+<p><strong>O que ensinar:</strong> consequência da Sessão 1 — se soltaram Morvan, Elise menciona desconfiança; se prenderam, elogio seco.</p>
+<hr>
+<h3 id="cena-2-mercado-de-pulgas">Cena 2 — Mercado de pulgas</h3><p><strong>Onde:</strong> <em>Dockside Flea</em> — barracas, peixe seco, relógios quebrados, cartomante barulhenta.</p>
+<p><strong>Leia em voz alta:</strong></p>
+<blockquote>
+<p>*O cheiro é sal, couro velho e chá barato. Um menino vende fósforos e observa bolsos. Entre barracas de ferragens, uma tenda de lona cinza: <strong>“Greta — Mapas &amp; Curiosidades”</strong>.*</p>
+</blockquote>
+<h4 id="teste-1-ouvir-boatos-opcional">Teste 1 — ouvir boatos (opcional)</h4><table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Teste</strong></td>
+<td>Percepção + Manha (ou Carisma + Empatia)</td>
+</tr>
+<tr>
+<td><strong>CD</strong></td>
+<td>12</td>
+</tr>
+<tr>
+<td><strong>Sucesso</strong></td>
+<td>Ouvem: “A mulher dos mapas vendeu folha para homem de avental manchado de tinta — nome <strong>Pascal</strong>.”</td>
+</tr>
+<tr>
+<td><strong>Falha</strong></td>
+<td>Só sabem que a banca existe; Greta está atrás da lona</td>
+</tr>
+</tbody></table>
+<p><strong>Se travarem:</strong> um mendigo aponta a tenda em troca de 1 xícara de chá (qualquer PJ pode oferecer).</p>
+<h4 id="metodo-de-atuacao">Método de Atuação</h4><table>
+<thead>
+<tr>
+<th>Ação coerente</th>
+<th>Pontos</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Tomás anota cada barraca e horário</td>
+<td>+8</td>
+</tr>
+<tr>
+<td>Mara vigia entradas do mercado</td>
+<td>+8</td>
+</tr>
+<tr>
+<td>Lídia sente resíduo antes de entrar na tenda (1 Esp.)</td>
+<td>+10</td>
+</tr>
+</tbody></table>
+<hr>
+<h3 id="cena-3-a-banca-da-greta">Cena 3 — A banca da Greta</h3><p><strong>NPC: Greta Mallows</strong> — comerciante de meia-idade, olhos rápidos, não é Beyonder.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Motivação</strong></td>
+<td>Medo de Pascal; quer dinheiro</td>
+</tr>
+<tr>
+<td><strong>Sabe</strong></td>
+<td>Pascal compra folhas rasgadas de livro antigo; mora perto da <strong>Rua do Tear</strong> (mesma região da oficina)</td>
+</tr>
+<tr>
+<td><strong>Não sabe</strong></td>
+<td>Que Pascal é Beyonder</td>
+</tr>
+</tbody></table>
+<h4 id="abordagem-social">Abordagem social</h4><p>Jogadores podem persuadir, intimidar ou subornar.</p>
+<table>
+<thead>
+<tr>
+<th>Abordagem</th>
+<th>Teste</th>
+<th>CD</th>
+<th>Sucesso</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Persuasão</td>
+<td>Carisma + Persuasão</td>
+<td>13</td>
+<td>Ela entrega endereço: <strong>casa 14, Viela do Tear</strong></td>
+</tr>
+<tr>
+<td>Intimidação</td>
+<td>Carisma + Intimidação</td>
+<td>14</td>
+<td>Entrega endereço; depois denuncia à polícia (−1 favor futuro)</td>
+</tr>
+<tr>
+<td>Suborno</td>
+<td>—</td>
+<td>10 £</td>
+<td>Entrega endereço sem teste</td>
+</tr>
+<tr>
+<td>Investigação</td>
+<td>Int + Investigação</td>
+<td>14</td>
+<td>Acham recibo com “P. Wren” e viela rabiscada</td>
+</tr>
+</tbody></table>
+<p><strong>Leia em voz alta (sucesso social):</strong></p>
+<blockquote>
+<p><em>Greta baixa a voz: “Ele não comprou livro — comprou <strong>página</strong>. Dizia que consertava mapas. Pagou em prata. Não quero ver o rosto dele de novo.” Ela escreve: <strong>Viela do Tear, nº 14</strong>.</em></p>
+</blockquote>
+<h4 id="se-travarem">Se travarem</h4><p>Finn (ou Elise por mensageiro) menciona que patrulha viu luz estranha na Viela 14 ontem à noite.</p>
+<hr>
+<h3 id="cena-4-emboscada-no-beco">Cena 4 — Emboscada no beco</h3><p><strong>Gancho:</strong> ao saírem do mercado (ou ao se aproximarem da Viela 14), dois <strong>capangas mundanos</strong> de Pascal tentam recuperar o papel ou intimidar.</p>
+<table>
+<thead>
+<tr>
+<th>Inimigo</th>
+<th>PV</th>
+<th>Defesa</th>
+<th>Ataque</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Capanga A</td>
+<td>6</td>
+<td>10</td>
+<td>Faca: d20+1, 1d4+1</td>
+</tr>
+<tr>
+<td>Capanga B</td>
+<td>6</td>
+<td>10</td>
+<td>Faca: d20+1, 1d4+1</td>
+</tr>
+</tbody></table>
+<p><strong>Mesa de 2 PJ:</strong> apenas <strong>1 capanga</strong>; o segundo foge se o primeiro cair.</p>
+<p><strong>Tática:</strong> correm se um cair ou se alguém exibir poder Beyonder visível (aura, ritual).</p>
+<h4 id="pista-no-capanga-investigacao-cd-12">Pista no capanga (Investigação CD 12)</h4><p>Bilhete: <em>“Leve o papel de volta. — P.”</em></p>
+<h3 id="cena-5-retorno-e-pista-final">Cena 5 — Retorno e pista final</h3><p>De volta ao posto (ou direto à Viela 14 se a mesa for agressiva):</p>
+<p><strong>Elise:</strong></p>
+<blockquote>
+<p><em>“Viela 14. Não invadam até amanhã ao anoitecer — quero vocês descansados. Se Pascal for Beyonder do Erro, ele <strong>quer</strong> que copiem errado. Amanhã fechamos.”</em></p>
+</blockquote>
+<p><strong>Gancho Sessão 3:</strong> à noite, Lídia ou Tomás pode ter visão leve (opcional): espelho rachado refletindo três rostos que não são os de vocês. Teste Percepção Espiritual CD 11 — sucesso confirma <strong>ritual incompleto</strong> na casa 14.</p>
+<h3 id="checklist-sessao-2">Checklist Sessão 2</h3><ul>
+<li><input disabled="" type="checkbox"> Cada PJ rolou pelo menos um teste social ou investigação</li>
+<li><input disabled="" type="checkbox"> Houve combate curto ou ameaça física</li>
+<li><input disabled="" type="checkbox"> Endereço da Viela 14 obtido</li>
+<li><input disabled="" type="checkbox"> Pontos de digestão marcados por atuação</li>
+</ul>
+<hr>
+<h2 id="sessao-3-a-sala-do-espelho">Sessão 3 — A Sala do Espelho</h2><p><strong>Duração:</strong> ~2 h · <strong>Seq. 9</strong> · Viela do Tear, nº 14</p>
+<h3 id="resumo">Resumo</h3><p>Casa estreita de dois andares. No andar de cima, <strong>Pascal “Errata” Wren</strong> mantém um <strong>espelho rachado</strong> como foco de ritual: copia selos de outros Caminhos <strong>de propósito errado</strong>, vende as folhas e alimenta um <strong>Eco de Distorção</strong>. Os jogadores invadem ao anoitecer (com ou sem ordem de Elise — se invadirem cedo, Elise desaprova mas não aborta).</p>
+<pre><code>  TEMPO SUGERIDO (2 h)
+  ├─ 15 min │ Cena 1 — Entrada na casa
+  ├─ 25 min │ Cena 2 — Sala do espelho (puzzle)
+  ├─ 35 min │ Cena 3 — Confronto com Pascal
+  └─ 15 min │ Cena 4 — Rescaldo imediato</code></pre><hr>
+<h3 id="cena-1-entrada-na-casa">Cena 1 — Entrada na casa</h3><p><strong>Leia em voz alta:</strong></p>
+<blockquote>
+<p><em>A casa 14 range como dente solto. Cheiro de tinta e poeira de giz. No corredor, mapas rasgados cobrem pregos tortos — cada um com linha <strong>quase</strong> certa, mas nunca fechando o círculo.</em></p>
+</blockquote>
+<h4 id="teste-entrar-em-silencio">Teste — entrar em silêncio</h4><table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Teste</strong></td>
+<td>Destreza + Furtividade (quem liderar)</td>
+</tr>
+<tr>
+<td><strong>CD</strong></td>
+<td>13</td>
+</tr>
+<tr>
+<td><strong>Sucesso</strong></td>
+<td>Surpresa parcial no confronto (+ vantagem na 1ª rodada)</td>
+</tr>
+<tr>
+<td><strong>Falha</strong></td>
+<td>Pascal ouve; Eco flutua no corredor</td>
+</tr>
+</tbody></table>
+<p><strong>Lídia — Ver Auras (1 Esp.):</strong> resíduo <strong>amarelo-acinzentado</strong>, seco — Caminho do <strong>Erro</strong>.</p>
+<p><strong>Se travarem:</strong> barulho de vidro quebrando no andar de cima (Pascal quebra frasco por nervosismo) — pista audível.</p>
+<hr>
+<h3 id="cena-2-sala-do-espelho-puzzle">Cena 2 — Sala do espelho (puzzle)</h3><p><strong>Onde:</strong> andar superior — uma cadeira, mesa com tinta, <strong>espelho rachado</strong> em moldura negra, três velas apagadas.</p>
+<h4 id="o-puzzle-sem-combate-ainda">O puzzle (sem combate ainda)</h4><p>O espelho mostra <strong>três reflexos errados</strong> (rostos de vítimas do bairro, incluindo criança do caso Morvan). Para desarmar o ritual incompleto:</p>
+<table>
+<thead>
+<tr>
+<th>Passo</th>
+<th>Ação</th>
+<th>Teste</th>
+<th>CD</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>Identificar que o espelho é foco</td>
+<td>Int + Ocultismo ou Percepção Espiritual</td>
+<td>12</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Cobrir espelho com pano <strong>ou</strong> apagar runas na moldura</td>
+<td>Destreza + Ritualismo ou Int + Ocultismo</td>
+<td>13</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Recitar inversão simples (Lídia ou Tomás lê frase na parede)</td>
+<td>Determinação + Ocultismo</td>
+<td>12</td>
+</tr>
+</tbody></table>
+<p><strong>Frase na parede (leia se alguém investigar):</strong></p>
+<blockquote>
+<p><em>“O que foi copiado errado deve ser nomeado certo.”</em></p>
+</blockquote>
+<p><strong>Nome certo:</strong> jogador deve dizer o <strong>Caminho verdadeiro</strong> do selo corrompido — <strong>Enforcado</strong> (do caso Morvan). Acertar sem teste se já jogaram Sessão 1.</p>
+<table>
+<thead>
+<tr>
+<th>Resultado</th>
+<th>Efeito</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>3 passos OK</td>
+<td>Eco de Distorção perde metade dos PV; Pascal perde 1 ação na 1ª rodada</td>
+</tr>
+<tr>
+<td>2 passos OK</td>
+<td>Eco com PV normal</td>
+</tr>
+<tr>
+<td>Falha geral</td>
+<td>Eco ataca durante o puzzle (1d4 Lucidez CD 12 para quem olhar espelho)</td>
+</tr>
+</tbody></table>
+<p><strong>Tomás — Análise Situacional (1 Esp.):</strong> “Pascal precisa do espelho — quebrá-lo enfurece-o mas encerra o ritual.”</p>
+<hr>
+<h3 id="cena-3-confronto-com-pascal">Cena 3 — Confronto com Pascal</h3><p><strong>Pascal “Errata” Wren</strong> surge da escada — avental de tinta, sorriso cansado.</p>
+<p><strong>Leia em voz alta:</strong></p>
+<blockquote>
+<p><em>“Vocês copiaram o endereço certo.” Ele toca o espelho. “Eu só vendo <strong>erros</strong>. O mundo já está errado — eu facilito.”</em></p>
+</blockquote>
+<h4 id="estatisticas-pascal-wren">Estatísticas — Pascal Wren</h4><table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Caminho</strong></td>
+<td>Erro · <strong>Saqueador</strong> (Seq. 9)</td>
+</tr>
+<tr>
+<td><strong>PV</strong></td>
+<td>12 (9 com 2 PJ)</td>
+</tr>
+<tr>
+<td><strong>Defesa</strong></td>
+<td>11</td>
+</tr>
+<tr>
+<td><strong>Iniciativa</strong></td>
+<td>+1</td>
+</tr>
+<tr>
+<td><strong>Espiritualidade</strong></td>
+<td>5</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>Ataque</th>
+<th>Detalhe</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Faca de gravura</strong></td>
+<td>d20+1, 1d4+1 dano</td>
+</tr>
+<tr>
+<td><strong>Selo Errado</strong> (1 Esp., 1×/cena)</td>
+<td>Alvo faz Salvaguarda Mente CD 13 ou −1 em todos os testes por 1 rodada</td>
+</tr>
+</tbody></table>
+<p><strong>Poder passivo — Copista Falho:</strong> quando Pascal acerta ataque, pode “deslocar” 1 ponto de dano para o espelho (ritual absorve; se espelho já coberto, sem efeito).</p>
+<h4 id="eco-de-distorcao">Eco de Distorção</h4><table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>PV</strong></td>
+<td>4 (3 com 2 PJ)</td>
+</tr>
+<tr>
+<td><strong>Defesa</strong></td>
+<td>12</td>
+</tr>
+<tr>
+<td><strong>Ataque</strong></td>
+<td>Toque distorcido: Salvaguarda Espírito CD 12 ou −1 Lucidez</td>
+</tr>
+<tr>
+<td><strong>Fraqueza</strong></td>
+<td>Espelho coberto ou runas apagadas — Eco perde 2 PV/rodada</td>
+</tr>
+</tbody></table>
+<h4 id="mapa-simples">Mapa simples</h4><pre><code>  [ESCADA]
+      │
+  [MESA + VELAS]──── Pascal
+      │
+  [ESPELHO]──── Eco</code></pre><h4 id="taticas-de-pascal">Táticas de Pascal</h4><ol>
+<li>Fica perto do espelho; usa Selo Errado no investigador.</li>
+<li>Se espelho for coberto, tenta fugir pela janela (Atletismo CD 13 para escapar).</li>
+<li>Não luta até a morte se espelho quebrado — rendição possível.</li>
+</ol>
+<h4 id="rendicao-roleplay">Rendição (roleplay)</h4><blockquote>
+<p><em>“Tudo que vendi… já estava rasgado. Eu só organizei o caos.”</em></p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Decisão</th>
+<th>Consequência</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Entregam às Águias</td>
+<td>+favor Elise; Pascal preso</td>
+</tr>
+<tr>
+<td>Quebram espelho e o soltam</td>
+<td>Ele foge do bairro; caso fechado, −2 favor</td>
+</tr>
+<tr>
+<td>Matam</td>
+<td>Teste Perda de Lucidez CD 13 para quem matou</td>
+</tr>
+</tbody></table>
+<p><strong>Mesa de 2 PJ:</strong> Finn ajuda em combate (1 ataque por rodada, d20+0, 1d4) — não precisa fichar além disso.</p>
+<hr>
+<h3 id="cena-4-rescaldo-imediato">Cena 4 — Rescaldo imediato</h3><ul>
+<li>Espelho coberto ou quebrado → crianças do bairro dormem melhor (notícia na Sessão 4).</li>
+<li>Papelada de Pascal: lista de três compradores — só um nome legível: <strong>“Oficina — M.”</strong> (Morvan, retroativo; fecha o arco).</li>
+<li>Loot: 15 £ divididos, frasco de tinta ritual (componente menor), mapa do Dockside.</li>
+</ul>
+<h3 id="checklist-sessao-3">Checklist Sessão 3</h3><ul>
+<li><input disabled="" type="checkbox"> Puzzle do espelho resolvido (total ou parcial)</li>
+<li><input disabled="" type="checkbox"> Alguém gastou Espiritualidade</li>
+<li><input disabled="" type="checkbox"> Combate ou rendição concluídos</li>
+<li><input disabled="" type="checkbox"> Decisão moral sobre Pascal tomada</li>
+</ul>
+<hr>
+<h2 id="sessao-4-epilogo-e-fechamento">Sessão 4 — Epílogo e fechamento</h2><p><strong>Duração:</strong> 45–60 min · pode ser curta · <strong>sem combate obrigatório</strong></p>
+<h3 id="cena-1-de-volta-as-aguias-noturnas">Cena 1 — De volta às Águias Noturnas</h3><p><strong>Leia em voz alta:</strong></p>
+<blockquote>
+<p><em>O corredor do posto cheira a chá forte de novo. Pela janela, o East Borough parece igual — mas Milo (a criança do caso Morvan) dorme com o rosto relaxado pela primeira vez em semanas.</em></p>
+</blockquote>
+<p><strong>Capitã Elise:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Resultado da mesa</th>
+<th>Fala de Elise</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Pascal preso + espelho destruído</td>
+<td>“Trabalho limpo. Não é manchete — é <strong>silêncio</strong>. Isso paga as contas.”</td>
+</tr>
+<tr>
+<td>Pascal fugiu</td>
+<td>“O bairro respira. O homem não. Anotado.”</td>
+</tr>
+<tr>
+<td>Morvan + Pascal ambos presos</td>
+<td>“Dois casos pequenos. Um arranhão no mapa maior. Descansem.”</td>
+</tr>
+</tbody></table>
+<p><strong>Pagamento final:</strong> 8 £ cada (Sessão 2) + 7 £ cada (Sessão 3) = <strong>15 £ total</strong> no arco (além dos 5 £ do tutorial).</p>
+<h3 id="digestao-e-progressao">Digestão e progressão</h3><table>
+<thead>
+<tr>
+<th>Marco</th>
+<th>Pontos sugeridos (total do arco)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Atuação coerente em cada sessão</td>
+<td>8–12 por sessão</td>
+</tr>
+<tr>
+<td>Fechar caso sem manchete</td>
+<td>+10 grupo</td>
+</tr>
+<tr>
+<td>Decisão moral discutida em mesa</td>
+<td>+5</td>
+</tr>
+</tbody></table>
+<p>Ninguém sobe para Seq. 8 neste arco — é normal. Mostre a barra 20–40% preenchida.</p>
+<h3 id="recuperacao-final">Recuperação final</h3><p>Uma semana narrativa de descanso: PV e Espiritualidade cheios; Lucidez recupera 1 ponto se a mesa teve cena de apoio entre si.</p>
+<h3 id="ganchos-opcionais-pos-arco">Ganchos opcionais (pós-arco)</h3><table>
+<thead>
+<tr>
+<th>Gancho</th>
+<th>Para onde</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Elise menciona “caso #217” — corpos com alma dilacerada</td>
+<td><a href="01-sombras-backlund.html">Campanha 1 — Sombras sobre Backlund</a></td>
+</tr>
+<tr>
+<td>Greta desaparece do mercado</td>
+<td>Mistério lateral; ignore se a mesa não quiser</td>
+</tr>
+<tr>
+<td>Símbolo do Erro aparece em jornal classificado</td>
+<td>Tomás ganha contato no <em>Observer</em></td>
+</tr>
+</tbody></table>
+<p><strong>Leia em voz alta (fechamento):</strong></p>
+<blockquote>
+<p><em>A névoa engole o fim da rua. Vocês ainda são Seq. 9 — ferramentas úteis, não lendas. Mas três noites seguidas, o East Borough dormiu. E isso, nesta cidade, já é vitória.</em></p>
+</blockquote>
+<h3 id="checklist-sessao-4">Checklist Sessão 4</h3><ul>
+<li><input disabled="" type="checkbox"> Recompensas e consequências narradas</li>
+<li><input disabled="" type="checkbox"> Digestão atualizada</li>
+<li><input disabled="" type="checkbox"> Perguntou se a mesa quer continuar</li>
+<li><input disabled="" type="checkbox"> Celebrou o que cada PJ fez bem</li>
+</ul>
+<hr>
+<h2 id="folha-de-cola-do-mestre">Folha de cola do Mestre</h2><h3 id="cds-desta-mini-campanha">CDs desta mini-campanha</h3><table>
+<thead>
+<tr>
+<th>Situação</th>
+<th>CD</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Boatos no mercado</td>
+<td>12</td>
+</tr>
+<tr>
+<td>Persuadir Greta</td>
+<td>13</td>
+</tr>
+<tr>
+<td>Intimidar Greta</td>
+<td>14</td>
+</tr>
+<tr>
+<td>Investigação recibo</td>
+<td>14</td>
+</tr>
+<tr>
+<td>Furtividade casa 14</td>
+<td>13</td>
+</tr>
+<tr>
+<td>Puzzle espelho (cada passo)</td>
+<td>12–13</td>
+</tr>
+<tr>
+<td>Salvaguardas Pascal / Eco</td>
+<td>12–13</td>
+</tr>
+<tr>
+<td>Fuga Pascal (janela)</td>
+<td>13</td>
+</tr>
+</tbody></table>
+<h3 id="npcs-principais">NPCs principais</h3><table>
+<thead>
+<tr>
+<th>NPC</th>
+<th>Papel</th>
+<th>Nota</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Capitã Elise Ward</td>
+<td>Patrona</td>
+<td>Seq. 7; mesma do tutorial</td>
+</tr>
+<tr>
+<td>Greta Mallows</td>
+<td>Informante</td>
+<td>Mundana; medo de Pascal</td>
+</tr>
+<tr>
+<td>Pascal Wren</td>
+<td>Antagonista</td>
+<td>Erro · Saqueador · Seq. 9</td>
+</tr>
+<tr>
+<td>Eco de Distorção</td>
+<td>Criatura</td>
+<td>Ligado ao espelho</td>
+</tr>
+<tr>
+<td>Finn Aldridge</td>
+<td>Aliado (2 PJ)</td>
+<td>Ver Apêndice</td>
+</tr>
+</tbody></table>
+<h3 id="regras-de-ouro-para-mestre-iniciante">Regras de ouro para Mestre iniciante</h3><ol>
+<li><strong>Falha avança</strong> — sempre dê pista menor ou custo narrativo, nunca parede.</li>
+<li><strong>Um combate por sessão</strong> basta neste arco.</li>
+<li><strong>Leia em voz alta</strong> os blocos cinza; improvise o resto.</li>
+<li><strong>Não explique lore cósmico</strong> — Pascal é criminoso local, não profeta.</li>
+<li><strong>Celebre</strong> quando jogadores cooperam (Mara vigia, Tomás analisa, Lídia sente).</li>
+</ol>
+<h3 id="onde-ler-regras-completas">Onde ler regras completas</h3><table>
+<thead>
+<tr>
+<th>Tema</th>
+<th>Arquivo</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Criação de ficha</td>
+<td><code>apendices/guia-criacao-ficha.html</code></td>
+</tr>
+<tr>
+<td>Tutorial (Sessão 1)</td>
+<td><code>campanhas/exemplo-sessao-iniciantes.html</code></td>
+</tr>
+<tr>
+<td>Testes e atributos</td>
+<td><code>livro-jogador/03-atributos.html</code></td>
+</tr>
+<tr>
+<td>Poderes Seq. 9</td>
+<td><code>livro-jogador/05-sequencias.html</code></td>
+</tr>
+<tr>
+<td>Método de Atuação</td>
+<td><code>livro-jogador/06-atuacao.html</code></td>
+</tr>
+<tr>
+<td>Campanha longa (depois)</td>
+<td><code>campanhas/01-sombras-backlund.html</code></td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="apendice-npc-aliado-mesa-de-2">Apêndice: NPC aliado (mesa de 2)</h2><p>Use <strong>Finn Aldridge</strong> quando só houver dois jogadores. O Mestre controla Finn — ele <strong>apoia</strong>, não resolve cenas sozinho.</p>
+<h3 id="finn-aldridge-aprendiz-porta-seq-9">Finn Aldridge — Aprendiz (Porta · Seq. 9)</h3><table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Conceito</strong></td>
+<td>Recruta das Águias Noturnas; carrega lanterna e bandagens</td>
+</tr>
+<tr>
+<td><strong>Atuação</strong></td>
+<td><em>Abra caminhos — literalmente e figurativamente</em></td>
+</tr>
+<tr>
+<td><strong>Posição</strong></td>
+<td><strong>Ereta</strong></td>
+</tr>
+</tbody></table>
+<p><strong>Atributos</strong></p>
+<table>
+<thead>
+<tr>
+<th>Físico</th>
+<th></th>
+<th>Social</th>
+<th></th>
+<th>Mental</th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Força 2</td>
+<td>+0</td>
+<td>Carisma 2</td>
+<td>+0</td>
+<td>Percepção 2</td>
+<td>+0</td>
+</tr>
+<tr>
+<td>Destreza 2</td>
+<td>+0</td>
+<td>Manipulação 2</td>
+<td>+0</td>
+<td>Inteligência 2</td>
+<td>+0</td>
+</tr>
+<tr>
+<td>Vigor 3</td>
+<td>+1</td>
+<td>Aparência 2</td>
+<td>+0</td>
+<td>Determinação 3</td>
+<td>+1</td>
+</tr>
+</tbody></table>
+<p><strong>Perícias:</strong> Medicina 2 (+0) · Atletismo 2 (+0) · Luta 1 (−1) · Ocultismo 1 (−1)</p>
+<table>
+<thead>
+<tr>
+<th>Derivado</th>
+<th>Valor</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>PV</strong></td>
+<td>9</td>
+</tr>
+<tr>
+<td><strong>Espiritualidade</strong></td>
+<td>5</td>
+</tr>
+<tr>
+<td><strong>Lucidez</strong></td>
+<td>6</td>
+</tr>
+<tr>
+<td><strong>Defesa</strong></td>
+<td>10</td>
+</tr>
+</tbody></table>
+<p><strong>Poderes Seq. 9 (Porta)</strong></p>
+<table>
+<thead>
+<tr>
+<th>Poder</th>
+<th>Custo</th>
+<th>Uso na mesa</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Chave Universal</td>
+<td>1 Esp.</td>
+<td>Abre fechadura simples (oficina, casa 14) — 1×/cena</td>
+</tr>
+<tr>
+<td>Barreira Menor</td>
+<td>1 Esp.</td>
+<td>+1 Defesa aliado adjacente por 1 rodada</td>
+</tr>
+<tr>
+<td>Sentido de Limiar</td>
+<td>—</td>
+<td>Sente “portas” ocultas; +1 Investigação em alçapões</td>
+</tr>
+</tbody></table>
+<p><strong>Em combate:</strong> 1 ataque simples por rodada (d20+0, 1d4). Priorize <strong>Barreira Menor</strong> no PJ mais exposto.</p>
+<p><strong>Em investigação:</strong> Chave Universal evita travar a mesa sem ladrão na dupla.</p>
+<hr>
+<p><em>Senhor dos Mistérios RPG — mini-campanha didática. Derivado da obra de Cuttlefish That Loves Diving.</em></p>
+
+</article>
+
+
+<nav class="book-nav">
+  <a href="index.html">&larr; Livro de Campanhas</a>
+  <a href="exemplo-sessao-iniciantes.html">Tutorial — Sessão 1</a>
+  <a href="01-sombras-backlund.html">Campanha 1 &rarr;</a>
+</nav>
+
+</body>
+</html>

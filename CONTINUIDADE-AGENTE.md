@@ -35,7 +35,7 @@ rpg-lotm/
 ├── assets/css/ (common.css, print.css)
 ├── livro-jogador/     01-introducao … 10-mundo.html
 ├── livro-mestre/      01-guia-mestre … 09-aventuras.html
-├── campanhas/         01–03 campanhas + exemplo-sessao-iniciantes.html
+├── campanhas/         00-patrulha-noturna + exemplo-sessao-iniciantes + 01–03 campanhas
 └── apendices/         ficha-personagem.html, glossário, tabelas
 ```
 
@@ -60,7 +60,8 @@ rpg-lotm/
 | Arquivo (web) | Fonte `.md` | Uso |
 |---------------|-------------|-----|
 | `livro-mestre/guia-22-caminhos-deuses.html` | `.md` homônimo | Guia rápido Mestre: 22 Caminhos, deuses, deidades |
-| `campanhas/exemplo-sessao-iniciantes.html` | `.md` homônimo | Tutorial: 1 sessão jogada (3 PJs + Mestre) |
+| `campanhas/00-patrulha-noturna.html` | `.md` homônimo | Mini-campanha iniciante (2–3 PJs, 3–4 sessões, Seq. 9) |
+| `campanhas/exemplo-sessao-iniciantes.html` | `.md` homônimo | Tutorial: Sessão 1 do arco Patrulha Noturna |
 | `continuidade-agente.html` | `CONTINUIDADE-AGENTE.md` | Handoff para agentes |
 | `apendices/ficha-personagem.html` | — | Ficha interativa |
 
@@ -111,19 +112,21 @@ rpg-lotm/
 
 ---
 
-### 3. Exemplo de sessão para iniciantes
+### 3. Mini-campanha Patrulha Noturna (iniciantes)
 
-**Arquivo:** `campanhas/exemplo-sessao-iniciantes.html` (fonte: `.md`)
+**Arquivo:** `campanhas/00-patrulha-noturna.html` (fonte: `.md`)
 
 | Item | Detalhe |
 |------|---------|
-| Duração | ~2 h |
-| Mesa | 3 jogadores + 1 mestre |
-| Aventura | “O Sussurro na Oficina” — Backlund, East Borough |
-| PJs Seq. 9 | Mara (Trevas/Insone), Tomás (Torre Branca/Leitor), Lídia (Eremita/Mistério) |
-| Ensina | d20, poderes, Espiritualidade, Lucidez, digestão, combate |
+| Duração | 3–4 sessões (~2 h cada) |
+| Mesa | **2 ou 3** jogadores + 1 mestre |
+| Arco | Sessão 1 = tutorial; Sessões 2–4 = mercado, espelho, epílogo |
+| Vilão | Pascal Wren (Erro · Saqueador · Seq. 9) — célula local |
+| Escala 2 PJ | NPC aliado Finn Aldridge (Porta · Aprendiz) |
 
-**Links:** `campanhas/index.html`, `README.md`
+**Sessão 1:** `campanhas/exemplo-sessao-iniciantes.html` — “O Sussurro na Oficina”.
+
+**Links:** `campanhas/index.html`, `README.md`, gancho no final do tutorial `.md`
 
 ---
 

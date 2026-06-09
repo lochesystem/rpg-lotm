@@ -24,6 +24,19 @@ const pages = [
 </nav>`
   },
   {
+    md: 'campanhas/00-patrulha-noturna.md',
+    html: 'campanhas/00-patrulha-noturna.html',
+    title: 'Mini-campanha — Patrulha Noturna · Senhor dos Mistérios RPG',
+    css: '../assets/css/common.css',
+    printCss: '../assets/css/print.css',
+    nav: `
+<nav class="book-nav">
+  <a href="index.html">&larr; Livro de Campanhas</a>
+  <a href="exemplo-sessao-iniciantes.html">Tutorial — Sessão 1</a>
+  <a href="01-sombras-backlund.html">Campanha 1 &rarr;</a>
+</nav>`
+  },
+  {
     md: 'campanhas/exemplo-sessao-iniciantes.md',
     html: 'campanhas/exemplo-sessao-iniciantes.html',
     title: 'Tutorial — Exemplo de sessão · Senhor dos Mistérios RPG',
@@ -32,7 +45,7 @@ const pages = [
     nav: `
 <nav class="book-nav">
   <a href="index.html">&larr; Livro de Campanhas</a>
-  <a href="01-sombras-backlund.html">Campanha 1 — Sombras sobre Backlund &rarr;</a>
+  <a href="00-patrulha-noturna.html">Mini-campanha Patrulha Noturna &rarr;</a>
 </nav>`
   },
   {
