@@ -52,7 +52,14 @@ flowchart LR
 | 1 | [exemplo-sessao-iniciantes.html](exemplo-sessao-iniciantes.html) | Tutorial completo com rolagens — **use como Sessão 1** |
 | 2–4 | Este documento | Continuação do gancho (símbolo do Erro) |
 
-**Personagens:** use os **pregens do tutorial** (Mara, Tomás, Lídia) ou fichas criadas com o [Guia de Criação de Ficha](../apendices/guia-criacao-ficha.html). Todos começam e terminam em **Seq. 9**.
+**Personagens:** imprima as **[fichas prontas](pregens/index.html)** (Mara, Tomás, Lídia e Finn para mesa de 2) ou crie com o [Guia de Criação de Ficha](../apendices/guia-criacao-ficha.html). Todos começam e terminam em **Seq. 9**.
+
+| Ficha | Caminho · Seq. 9 | Papel |
+|-------|------------------|-------|
+| [Mara Silva](pregens/mara-silva.html) | Trevas · Insone | Combate, vigília |
+| [Tomás Vargas](pregens/tomas-vargas.html) | Torre Branca · Leitor | Investigação |
+| [Lídia Corrêa](pregens/lidia-correa.html) | Eremita · Mistério | Ocultismo |
+| [Finn Aldridge](pregens/finn-aldridge.html) | Porta · Aprendiz | NPC aliado (2 PJ) |
 
 ---
 

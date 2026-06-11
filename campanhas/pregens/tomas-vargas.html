@@ -1,0 +1,1081 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pregen — Tomás Vargas (Leitor) · Senhor dos Mistérios RPG</title>
+<link rel="stylesheet" href="../../assets/css/common.css">
+<link rel="stylesheet" href="../../assets/css/print.css">
+<style>
+/* ================================================================
+   CHARACTER SHEET — Screen & Print Styles
+   ================================================================ */
+
+.sheet {
+  max-width: 210mm;
+  margin: 0 auto;
+  font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  font-size: 9pt;
+  line-height: 1.3;
+  color: #1a1a1a;
+}
+
+.sheet * { box-sizing: border-box; }
+
+/* --- Page title bar ---- */
+.sheet-title {
+  text-align: center;
+  font-size: 16pt;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold-dark);
+  border-bottom: 3px double var(--gold);
+  padding-bottom: 4pt;
+  margin: 0 0 6pt 0;
+}
+
+.sheet-subtitle {
+  text-align: center;
+  font-size: 8pt;
+  color: var(--fog);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin: 0 0 8pt 0;
+}
+
+/* --- Section boxes ----- */
+.s-box {
+  border: 1.5px solid #1a1a1a;
+  padding: 4pt 6pt;
+  margin-bottom: 5pt;
+  page-break-inside: avoid;
+}
+
+.s-box-title {
+  font-size: 8pt;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--gold-dark);
+  border-bottom: 1px solid var(--gold);
+  padding-bottom: 2pt;
+  margin-bottom: 4pt;
+}
+
+/* --- Field lines -------- */
+.field {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 3pt;
+}
+
+.field-label {
+  font-size: 7.5pt;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #444;
+  white-space: nowrap;
+  min-width: 60pt;
+}
+
+.field-line {
+  flex: 1;
+  border-bottom: 1px solid #999;
+  min-height: 12pt;
+  margin-left: 4pt;
+}
+
+/* --- Grid layouts ------- */
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 5pt; }
+.grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 5pt; }
+.grid-4 { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 4pt; }
+
+/* --- Attribute grid ------ */
+.attr-category {
+  text-align: center;
+  font-size: 7pt;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--spirit);
+  padding: 2pt 0;
+}
+
+.attr-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2pt 4pt;
+  border-bottom: 1px dotted #ccc;
+}
+
+.attr-name {
+  font-size: 8pt;
+  font-weight: 600;
+  flex: 1;
+}
+
+.attr-dots {
+  display: flex;
+  gap: 2pt;
+  margin: 0 6pt;
+}
+
+.dot {
+  width: 9pt;
+  height: 9pt;
+  border-radius: 50%;
+  border: 1.2px solid #1a1a1a;
+  background: transparent;
+}
+
+.dot.dot-filled {
+  background: #1a1a1a;
+}
+
+.digest-cell-filled {
+  background: #bdbdbd;
+}
+
+.field-line-fill {
+  flex: 1;
+  margin-left: 4pt;
+  border-bottom: 1px solid #999;
+  min-height: 12pt;
+  font-size: 8pt;
+}
+
+.attr-mod {
+  width: 22pt;
+  height: 14pt;
+  border: 1px solid #1a1a1a;
+  text-align: center;
+  font-size: 8pt;
+  font-weight: 700;
+}
+
+/* --- Skill list ---------- */
+.skill-cols {
+  gap: 3pt;
+}
+
+.skill-cols > div {
+  min-width: 0;
+  overflow: hidden;
+}
+
+.skill-row {
+  display: flex;
+  align-items: center;
+  padding: 1.5pt 0;
+  border-bottom: 1px dotted #ddd;
+  min-width: 0;
+  gap: 1pt;
+}
+
+.skill-name {
+  font-size: 6.5pt;
+  flex: 1 1 0;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  line-height: 1.2;
+}
+
+.skill-dots {
+  display: flex;
+  flex-shrink: 0;
+  gap: 1pt;
+  margin-right: 1pt;
+}
+
+.skill-dot {
+  width: 6pt;
+  height: 6pt;
+  border-radius: 50%;
+  border: 1px solid #1a1a1a;
+  background: transparent;
+  flex-shrink: 0;
+}
+
+/* must follow .skill-dot — otherwise filled state is overridden */
+.skill-dot.skill-dot-filled {
+  background: #1a1a1a;
+}
+
+.skill-val {
+  width: 10pt;
+  height: 11pt;
+  border: 1px solid #999;
+  text-align: center;
+  font-size: 6pt;
+  font-weight: 600;
+  color: #444;
+  flex-shrink: 0;
+}
+
+.skill-val-zero {
+  color: #888;
+  font-style: italic;
+}
+
+.skill-mod {
+  width: 15pt;
+  height: 11pt;
+  border: 1px solid #1a1a1a;
+  text-align: center;
+  font-size: 6.5pt;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.skill-mod-neg {
+  color: #6b2020;
+}
+
+/* --- Derived stats ------- */
+.stat-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2pt 4pt;
+  border-bottom: 1px dotted #ccc;
+}
+
+.stat-label-box {
+  font-size: 8pt;
+  font-weight: 600;
+}
+
+.stat-boxes {
+  display: flex;
+  gap: 2pt;
+  align-items: center;
+}
+
+.stat-box {
+  width: 28pt;
+  height: 16pt;
+  border: 1.2px solid #1a1a1a;
+  text-align: center;
+  font-size: 8pt;
+}
+
+.stat-slash {
+  font-size: 10pt;
+  font-weight: 700;
+  padding: 0 1pt;
+}
+
+/* --- Save row ------------ */
+.save-row {
+  display: flex;
+  align-items: center;
+  gap: 6pt;
+  padding: 2pt 4pt;
+  border-bottom: 1px dotted #ccc;
+}
+
+.save-name {
+  font-size: 8pt;
+  font-weight: 600;
+  min-width: 50pt;
+}
+
+.save-formula {
+  font-size: 6.5pt;
+  color: #777;
+  flex: 1;
+}
+
+.save-box {
+  width: 22pt;
+  height: 14pt;
+  border: 1.2px solid #1a1a1a;
+  text-align: center;
+  font-size: 8pt;
+}
+
+/* --- Power block --------- */
+.power-cols {
+  gap: 4pt;
+}
+
+.power-cols > .power-block {
+  min-width: 0;
+}
+
+.power-block {
+  border: 1px solid #aaa;
+  padding: 3pt;
+  margin-bottom: 0;
+  min-height: 44pt;
+  overflow: hidden;
+}
+
+.power-title-row {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto minmax(22pt, 0.45fr);
+  gap: 2pt 3pt;
+  align-items: end;
+  border-bottom: 1px dotted #ccc;
+  padding-bottom: 2pt;
+  margin-bottom: 2pt;
+}
+
+.power-meta-row {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 3pt;
+  border-bottom: 1px dotted #ddd;
+  padding-bottom: 2pt;
+  margin-bottom: 2pt;
+}
+
+.power-meta {
+  min-width: 0;
+}
+
+.power-lbl {
+  display: block;
+  font-size: 5.5pt;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #666;
+  line-height: 1.2;
+}
+
+.power-name,
+.power-cost,
+.power-meta-val,
+.power-fill {
+  display: block;
+  font-size: 6.5pt;
+  line-height: 1.25;
+  min-height: 10pt;
+  border-bottom: 1px solid #bbb;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.power-name {
+  font-weight: 600;
+}
+
+.power-cost {
+  text-align: center;
+  font-size: 6pt;
+}
+
+.power-meta-val {
+  font-weight: 600;
+  font-size: 6pt;
+}
+
+.power-effect {
+  font-size: 6.5pt;
+  line-height: 1.3;
+  min-height: 18pt;
+}
+
+/* --- Weapon slot --------- */
+.weapon-slot {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 2fr;
+  gap: 3pt;
+  padding: 2pt 0;
+  border-bottom: 1px dotted #ccc;
+  font-size: 7.5pt;
+}
+
+.weapon-slot .ws-label {
+  font-size: 6.5pt;
+  color: #777;
+  display: block;
+}
+
+.weapon-slot .ws-line {
+  border-bottom: 1px solid #bbb;
+  min-height: 12pt;
+}
+
+/* --- Item list ----------- */
+.item-lines {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 8pt;
+}
+
+.item-line {
+  border-bottom: 1px dotted #ccc;
+  min-height: 14pt;
+  padding: 1pt 0;
+  font-size: 7.5pt;
+}
+
+/* --- Artifact block ------ */
+.artifact-block {
+  border: 1.5px solid var(--blood);
+  padding: 3pt 5pt;
+  margin-bottom: 4pt;
+  min-height: 38pt;
+}
+
+.artifact-header {
+  font-size: 7pt;
+  font-weight: 700;
+  color: var(--blood);
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--blood);
+  padding-bottom: 1pt;
+  margin-bottom: 2pt;
+}
+
+/* --- Connection slot ----- */
+.conn-slot {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3pt;
+  padding: 2pt 0;
+  border-bottom: 1px dotted #ccc;
+}
+
+/* --- Notes area ---------- */
+.notes-area {
+  min-height: 60pt;
+  border: 1px dashed #aaa;
+  padding: 3pt;
+  margin-top: 3pt;
+}
+
+.notes-lines .n-line {
+  border-bottom: 1px dotted #ccc;
+  min-height: 13pt;
+}
+
+/* --- Page break ---------- */
+.sheet-page-break {
+  page-break-before: always;
+  margin-top: 0;
+}
+
+/* --- Digestion bar ------- */
+.digest-bar {
+  display: flex;
+  gap: 1pt;
+  align-items: center;
+}
+
+.digest-cell {
+  width: 8pt;
+  height: 10pt;
+  border: 1px solid #1a1a1a;
+}
+
+.digest-pct {
+  font-size: 7pt;
+  color: #777;
+  margin-left: 3pt;
+}
+
+/* ================================================================
+   PRINT OVERRIDES
+   ================================================================ */
+@media print {
+  body {
+    max-width: none;
+    padding: 0;
+    margin: 0;
+    background: white;
+  }
+
+  @page {
+    size: A4;
+    margin: 8mm 10mm 8mm 10mm;
+  }
+
+  @page :first { margin-top: 8mm; }
+
+  .sheet {
+    max-width: none;
+    width: 100%;
+  }
+
+  .no-print { display: none !important; }
+
+  .sheet-title { color: #333; }
+  .s-box { border-color: #000; }
+  .attr-mod, .stat-box, .save-box, .skill-val, .skill-mod { border-color: #000; }
+  .dot, .skill-dot { border-color: #000; }
+  .dot.dot-filled,
+  .skill-dot.skill-dot-filled,
+  .digest-cell-filled {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .s-box, .power-block, .artifact-block {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .sheet-page-break { page-break-before: always; }
+}
+
+/* ================================================================
+   SCREEN HELPER
+   ================================================================ */
+@media screen {
+  .sheet {
+    background: white;
+    padding: 15mm;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+    margin: 20px auto;
+  }
+
+  .sheet-page-break {
+    border-top: 2px dashed var(--fog);
+    padding-top: 15mm;
+    margin-top: 20px;
+  }
+
+  .screen-instructions {
+    max-width: 210mm;
+    margin: 20px auto 10px;
+    padding: 12px 16px;
+    background: #eef3f9;
+    border: 1px solid var(--spirit);
+    border-radius: 4px;
+    font-size: 0.9em;
+    color: var(--ink-light);
+    font-family: "Segoe UI", sans-serif;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="screen-instructions no-print">
+  <strong>Pregen &mdash; Patrulha Noturna</strong> &middot; <em>Tom&aacute;s Vargas</em>, Caminho da Torre Branca, Seq.&nbsp;9 Leitor.
+  Mini-campanha: <a href="../00-patrulha-noturna.html">Patrulha Noturna</a> &middot;
+  Tutorial (Sess&atilde;o 1): <a href="../exemplo-sessao-iniciantes.html">O Sussurro na Oficina</a>.<br>
+  <strong>Instru&ccedil;&otilde;es:</strong> <kbd>Ctrl+P</kbd> / <kbd>Cmd+P</kbd> &rarr; A4, margens m&iacute;nimas, gr&aacute;ficos de fundo ativados. Ficha em 2 p&aacute;ginas.
+</div>
+
+<div class="sheet" id="page1">
+  <div class="sheet-title">Senhor dos Mist&eacute;rios &mdash; Ficha de Personagem</div>
+  <div class="sheet-subtitle">PREGEN &middot; Caminho da Torre Branca &middot; Seq. 9 &mdash; Leitor</div>
+
+  <div class="s-box">
+    <div class="grid-3">
+      <div class="field">
+        <span class="field-label">Personagem</span>
+        <span class="field-line-fill"><strong>Tom&aacute;s Vargas</strong> &middot; 34 anos</span>
+      </div>
+      <div class="field">
+        <span class="field-label">Jogador</span>
+        <span class="field-line-fill">Jogador 2 (sugest&atilde;o)</span>
+      </div>
+      <div class="field">
+        <span class="field-label">Campanha</span>
+        <span class="field-line-fill">Patrulha Noturna &mdash; East Borough</span>
+      </div>
+    </div>
+    <div class="grid-4">
+      <div class="field">
+        <span class="field-label">Conceito</span>
+        <span class="field-line-fill">Rep&oacute;rter do <em>Backlund Observer</em> que &quot;leu demais&quot;</span>
+      </div>
+      <div class="field">
+        <span class="field-label">Antecedente</span>
+        <span class="field-line-fill">Acad&ecirc;mico (+1 Investiga&ccedil;&atilde;o, +1 Ocultismo aplicados)</span>
+      </div>
+      <div class="field">
+        <span class="field-label">Caminho</span>
+        <span class="field-line-fill">Torre Branca (<em>White Tower</em>)</span>
+      </div>
+      <div class="field">
+        <span class="field-label">Seq.</span>
+        <span class="field-line-fill"><strong>9</strong> &mdash; Leitor (<em>Reader</em>)</span>
+      </div>
+    </div>
+    <div class="field" style="max-width: 50%;">
+      <span class="field-label">Digest&atilde;o</span>
+      <span class="digest-bar"><span class="digest-cell"></span><span class="digest-cell"></span><span class="digest-cell"></span><span class="digest-cell"></span><span class="digest-cell"></span><span class="digest-cell"></span><span class="digest-cell"></span><span class="digest-cell"></span><span class="digest-cell"></span><span class="digest-cell"></span><span class="digest-pct">( 0 % )</span></span>
+    </div>
+  </div>
+
+  <div class="s-box">
+    <div class="s-box-title">Atributos <span style="font-weight:400;color:#888;font-size:7pt;"> (prim&aacute;rio Mental 7 / Social 5 / F&iacute;sico 3)</span></div>
+    <div class="grid-3">
+      <div>
+        <div class="attr-category">F&iacute;sicos</div>
+        <div class="attr-row">
+          <span class="attr-name">For&ccedil;a <span style="font-size:6pt;color:#888;">STR</span></span>
+          <span class="attr-dots"><span class="dot dot-filled"></span><span class="dot dot-filled"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></span>
+          <span class="attr-mod">0</span>
+        </div>
+        <div class="attr-row">
+          <span class="attr-name">Destreza <span style="font-size:6pt;color:#888;">DEX</span></span>
+          <span class="attr-dots"><span class="dot dot-filled"></span><span class="dot dot-filled"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></span>
+          <span class="attr-mod">0</span>
+        </div>
+        <div class="attr-row">
+          <span class="attr-name">Vigor <span style="font-size:6pt;color:#888;">STA</span></span>
+          <span class="attr-dots"><span class="dot dot-filled"></span><span class="dot dot-filled"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></span>
+          <span class="attr-mod">0</span>
+        </div>
+      </div>
+
+      <div>
+        <div class="attr-category">Sociais</div>
+        <div class="attr-row">
+          <span class="attr-name">Carisma <span style="font-size:6pt;color:#888;">CHA</span></span>
+          <span class="attr-dots"><span class="dot dot-filled"></span><span class="dot dot-filled"></span><span class="dot dot-filled"></span><span class="dot"></span><span class="dot"></span></span>
+          <span class="attr-mod">+1</span>
+        </div>
+        <div class="attr-row">
+          <span class="attr-name">Manipula&ccedil;&atilde;o <span style="font-size:6pt;color:#888;">MAN</span></span>
+          <span class="attr-dots"><span class="dot dot-filled"></span><span class="dot dot-filled"></span><span class="dot dot-filled"></span><span class="dot"></span><span class="dot"></span></span>
+          <span class="attr-mod">+1</span>
+        </div>
+        <div class="attr-row">
+          <span class="attr-name">Apar&ecirc;ncia <span style="font-size:6pt;color:#888;">APP</span></span>
+          <span class="attr-dots"><span class="dot dot-filled"></span><span class="dot dot-filled"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></span>
+          <span class="attr-mod">0</span>
+        </div>
+      </div>
+
+      <div>
+        <div class="attr-category">Mentais</div>
+        <div class="attr-row">
+          <span class="attr-name">Percep&ccedil;&atilde;o <span style="font-size:6pt;color:#888;">PER</span></span>
+          <span class="attr-dots"><span class="dot dot-filled"></span><span class="dot dot-filled"></span><span class="dot dot-filled"></span><span class="dot"></span><span class="dot"></span></span>
+          <span class="attr-mod">+1</span>
+        </div>
+        <div class="attr-row">
+          <span class="attr-name">Intelig&ecirc;ncia <span style="font-size:6pt;color:#888;">INT</span></span>
+          <span class="attr-dots"><span class="dot dot-filled"></span><span class="dot dot-filled"></span><span class="dot dot-filled"></span><span class="dot dot-filled"></span><span class="dot"></span></span>
+          <span class="attr-mod">+2</span>
+        </div>
+        <div class="attr-row">
+          <span class="attr-name">Determina&ccedil;&atilde;o <span style="font-size:6pt;color:#888;">RES</span></span>
+          <span class="attr-dots"><span class="dot dot-filled"></span><span class="dot dot-filled"></span><span class="dot dot-filled"></span><span class="dot"></span><span class="dot"></span></span>
+          <span class="attr-mod">+1</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="s-box">
+    <div class="s-box-title">Per&iacute;cias <span style="font-weight:400;color:#888;font-size:7pt;"> (&#9679; = valor 0&ndash;5 &middot; Mod = Valor &minus; 2 &middot; grupos 13/9/5)</span></div>
+    <div class="grid-3 skill-cols">
+      <div>
+        <div class="attr-category">Combate</div>
+        <div class="skill-row">
+          <span class="skill-name">Luta <span style="font-size:5.5pt;color:#888;">Melee</span></span>
+          <span class="skill-dots"><span class="skill-dot skill-dot-filled"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span></span>
+          <span class="skill-val">1</span>
+          <span class="skill-mod skill-mod-neg">-1</span>
+        </div>
+        <div class="skill-row">
+          <span class="skill-name">Armas de Fogo <span style="font-size:5.5pt;color:#888;">Firearms</span></span>
+          <span class="skill-dots"><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span></span>
+          <span class="skill-val skill-val-zero">0</span>
+          <span class="skill-mod skill-mod-neg">-2</span>
+        </div>
+        <div class="skill-row">
+          <span class="skill-name">Esquiva <span style="font-size:5.5pt;color:#888;">Dodge</span></span>
+          <span class="skill-dots"><span class="skill-dot skill-dot-filled"></span><span class="skill-dot skill-dot-filled"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span></span>
+          <span class="skill-val">2</span>
+          <span class="skill-mod">0</span>
+        </div>
+        <div class="skill-row">
+          <span class="skill-name">Atletismo <span style="font-size:5.5pt;color:#888;">Athletics</span></span>
+          <span class="skill-dots"><span class="skill-dot skill-dot-filled"></span><span class="skill-dot skill-dot-filled"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span></span>
+          <span class="skill-val">2</span>
+          <span class="skill-mod">0</span>
+        </div>
+      </div>
+
+      <div>
+        <div class="attr-category">Social</div>
+        <div class="skill-row">
+          <span class="skill-name">Persuas&atilde;o <span style="font-size:5.5pt;color:#888;">Persuasion</span></span>
+          <span class="skill-dots"><span class="skill-dot skill-dot-filled"></span><span class="skill-dot skill-dot-filled"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span></span>
+          <span class="skill-val">2</span>
+          <span class="skill-mod">0</span>
+        </div>
+        <div class="skill-row">
+          <span class="skill-name">Intimid. <span style="font-size:5.5pt;color:#888;">Intim.</span></span>
+          <span class="skill-dots"><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span></span>
+          <span class="skill-val skill-val-zero">0</span>
+          <span class="skill-mod skill-mod-neg">-2</span>
+        </div>
+        <div class="skill-row">
+          <span class="skill-name">Etiqueta <span style="font-size:5.5pt;color:#888;">Etiquette</span></span>
+          <span class="skill-dots"><span class="skill-dot skill-dot-filled"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span></span>
+          <span class="skill-val">1</span>
+          <span class="skill-mod skill-mod-neg">-1</span>
+        </div>
+        <div class="skill-row">
+          <span class="skill-name">Dissimul. <span style="font-size:5.5pt;color:#888;">Subt.</span></span>
+          <span class="skill-dots"><span class="skill-dot skill-dot-filled"></span><span class="skill-dot skill-dot-filled"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span></span>
+          <span class="skill-val">2</span>
+          <span class="skill-mod">0</span>
+        </div>
+        <div class="skill-row">
+          <span class="skill-name">Lideran&ccedil;a <span style="font-size:5.5pt;color:#888;">Leadership</span></span>
+          <span class="skill-dots"><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span></span>
+          <span class="skill-val skill-val-zero">0</span>
+          <span class="skill-mod skill-mod-neg">-2</span>
+        </div>
+        <div class="skill-row">
+          <span class="skill-name">Empatia <span style="font-size:5.5pt;color:#888;">Empathy</span></span>
+          <span class="skill-dots"><span class="skill-dot skill-dot-filled"></span><span class="skill-dot skill-dot-filled"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span></span>
+          <span class="skill-val">2</span>
+          <span class="skill-mod">0</span>
+        </div>
+        <div class="skill-row">
+          <span class="skill-name">Manha <span style="font-size:5.5pt;color:#888;">Streetwise</span></span>
+          <span class="skill-dots"><span class="skill-dot skill-dot-filled"></span><span class="skill-dot skill-dot-filled"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span></span>
+          <span class="skill-val">2</span>
+          <span class="skill-mod">0</span>
+        </div>
+      </div>
+
+      <div>
+        <div class="attr-category">Conhecimento</div>
+        <div class="skill-row">
+          <span class="skill-name">Investig. <span style="font-size:5.5pt;color:#888;">Invest.</span></span>
+          <span class="skill-dots"><span class="skill-dot skill-dot-filled"></span><span class="skill-dot skill-dot-filled"></span><span class="skill-dot skill-dot-filled"></span><span class="skill-dot skill-dot-filled"></span><span class="skill-dot"></span></span>
+          <span class="skill-val">4</span>
+          <span class="skill-mod">+2</span>
+        </div>
+        <div class="skill-row">
+          <span class="skill-name">Ocultismo <span style="font-size:5.5pt;color:#888;">Occultism</span></span>
+          <span class="skill-dots"><span class="skill-dot skill-dot-filled"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span></span>
+          <span class="skill-val">1</span>
+          <span class="skill-mod skill-mod-neg">-1</span>
+        </div>
+        <div class="skill-row">
+          <span class="skill-name">Perc.Esp. <span style="font-size:5.5pt;color:#888;">Spirit.</span></span>
+          <span class="skill-dots"><span class="skill-dot skill-dot-filled"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span></span>
+          <span class="skill-val">1</span>
+          <span class="skill-mod skill-mod-neg">-1</span>
+        </div>
+        <div class="skill-row">
+          <span class="skill-name">Medicina <span style="font-size:5.5pt;color:#888;">Medicine</span></span>
+          <span class="skill-dots"><span class="skill-dot skill-dot-filled"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span></span>
+          <span class="skill-val">1</span>
+          <span class="skill-mod skill-mod-neg">-1</span>
+        </div>
+        <div class="skill-row">
+          <span class="skill-name">Ci&ecirc;ncias <span style="font-size:5.5pt;color:#888;">Sciences</span></span>
+          <span class="skill-dots"><span class="skill-dot skill-dot-filled"></span><span class="skill-dot skill-dot-filled"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span></span>
+          <span class="skill-val">2</span>
+          <span class="skill-mod">0</span>
+        </div>
+        <div class="skill-row">
+          <span class="skill-name">Hist&oacute;ria <span style="font-size:5.5pt;color:#888;">History</span></span>
+          <span class="skill-dots"><span class="skill-dot skill-dot-filled"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span></span>
+          <span class="skill-val">1</span>
+          <span class="skill-mod skill-mod-neg">-1</span>
+        </div>
+        <div class="skill-row">
+          <span class="skill-name">Adivinh. <span style="font-size:5.5pt;color:#888;">Divin.</span></span>
+          <span class="skill-dots"><span class="skill-dot skill-dot-filled"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span></span>
+          <span class="skill-val">1</span>
+          <span class="skill-mod skill-mod-neg">-1</span>
+        </div>
+        <div class="skill-row">
+          <span class="skill-name">Ritualismo <span style="font-size:5.5pt;color:#888;">Ritualism</span></span>
+          <span class="skill-dots"><span class="skill-dot skill-dot-filled"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span></span>
+          <span class="skill-val">1</span>
+          <span class="skill-mod skill-mod-neg">-1</span>
+        </div>
+        <div class="skill-row">
+          <span class="skill-name">Sobreviv. <span style="font-size:5.5pt;color:#888;">Surv.</span></span>
+          <span class="skill-dots"><span class="skill-dot skill-dot-filled"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span></span>
+          <span class="skill-val">1</span>
+          <span class="skill-mod skill-mod-neg">-1</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="grid-2">
+    <div class="s-box">
+      <div class="s-box-title">Estat&iacute;sticas Derivadas</div>
+      <div class="stat-row">
+        <span class="stat-label-box">HP</span>
+        <span class="stat-boxes"><span class="stat-box">8</span><span class="stat-slash">/</span><span class="stat-box">8</span></span>
+      </div>
+      <div class="stat-row">
+        <span class="stat-label-box">Espiritualidade</span>
+        <span class="stat-boxes"><span class="stat-box">6</span><span class="stat-slash">/</span><span class="stat-box">6</span></span>
+      </div>
+      <div class="stat-row">
+        <span class="stat-label-box">Lucidez</span>
+        <span class="stat-boxes"><span class="stat-box">6</span><span class="stat-slash">/</span><span class="stat-box">10</span></span>
+      </div>
+      <div class="stat-row">
+        <span class="stat-label-box">Defesa</span>
+        <span class="stat-boxes"><span class="stat-box">10</span></span>
+      </div>
+      <div class="stat-row">
+        <span class="stat-label-box">Iniciativa</span>
+        <span class="stat-boxes"><span class="stat-box" title="d20 +0 Des +1 Per"><small>+1</small></span></span>
+      </div>
+      <div class="stat-row">
+        <span class="stat-label-box">Movimento</span>
+        <span class="stat-boxes"><span class="stat-box">9</span><span style="font-size:7pt;color:#888;margin-left:2pt;">m</span></span>
+      </div>
+    </div>
+    <div class="s-box">
+      <div class="s-box-title">Salvaguardas <span style="font-weight:400;color:#888;font-size:7pt;"> (Mod. m&eacute;dio &middot; ND = 10+Mod.)</span></div>
+      <div class="save-row">
+        <span class="save-name">Corpo</span>
+        <span class="save-formula">Mod. = &lfloor;(For+Vig)&divide;2&rfloor; &middot; ND <strong>10</strong></span>
+        <span class="save-box">0</span>
+      </div>
+      <div class="save-row">
+        <span class="save-name">Mente</span>
+        <span class="save-formula">Mod. = &lfloor;(Int+Det)&divide;2&rfloor; &middot; ND <strong>11</strong></span>
+        <span class="save-box">+1</span>
+      </div>
+      <div class="save-row">
+        <span class="save-name">Esp&iacute;rito</span>
+        <span class="save-formula">Mod. = &lfloor;(Per+Car)&divide;2&rfloor; &middot; ND <strong>11</strong></span>
+        <span class="save-box">+1</span>
+      </div>
+      <div style="margin-top: 6pt;">
+        <div class="s-box-title" style="font-size:7pt;">F&oacute;rmulas R&aacute;pidas</div>
+        <div style="font-size:6.5pt; color:#555; line-height:1.55;"><strong>PV</strong> = 8+0+0 = 8 &middot; <strong>Esp.</strong> = 3+3 = 6<br><strong>Mem&oacute;ria Perfeita:</strong> +2 em Int + Inv./Hist./Ci&ecirc;ncias</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="s-box">
+    <div class="s-box-title">M&eacute;todo de Atua&ccedil;&atilde;o</div>
+    <div class="field">
+      <span class="field-label">Princ&iacute;pio</span>
+      <span class="field-line-fill"><em>Leia tudo, memorize tudo, analise tudo.</em></span>
+    </div>
+    <div class="field">
+      <span class="field-label">Posi&ccedil;&atilde;o</span>
+      <span class="field-line-fill">Ereta (busca a verdade para publicar)</span>
+    </div>
+    <div style="display:flex;align-items:center;gap:8pt;margin-top:3pt;">
+      <span style="font-size:7.5pt;font-weight:600;">Pontos de Atua&ccedil;&atilde;o:</span>
+      <span class="digest-bar"><span class="digest-cell"></span><span class="digest-cell"></span><span class="digest-cell"></span><span class="digest-cell"></span><span class="digest-cell"></span><span class="digest-cell"></span><span class="digest-cell"></span><span class="digest-cell"></span><span class="digest-cell"></span><span class="digest-cell"></span></span>
+      <span style="font-size:6.5pt;color:#888;">/ 10 = +2 Digest&atilde;o</span>
+    </div>
+  </div>
+</div>
+
+<div class="sheet sheet-page-break" id="page2">
+  <div class="sheet-title" style="font-size:12pt;margin-bottom:5pt;">Tom&aacute;s Vargas &mdash; Poderes, Equipamento &amp; Notas</div>
+
+  <div class="s-box">
+    <div class="s-box-title">Poderes <em>Beyonder</em> <span style="font-weight:400;color:#888;font-size:7pt;"> Seq. 9 &mdash; Leitor</span></div>
+    <div class="grid-2 power-cols">
+      <div class="power-block">
+        <div class="power-title-row">
+          <span class="power-lbl">Nome</span>
+          <span class="power-name">Mem&oacute;ria Perfeita</span>
+          <span class="power-lbl">Custo</span>
+          <span class="power-cost">Passivo</span>
+        </div>
+        <div class="power-meta-row">
+          <div class="power-meta"><span class="power-lbl">A&ccedil;&atilde;o</span><span class="power-meta-val">&mdash;</span></div>
+          <div class="power-meta"><span class="power-lbl">Alcance</span><span class="power-meta-val">&mdash;</span></div>
+          <div class="power-meta"><span class="power-lbl">Dura&ccedil;&atilde;o</span><span class="power-meta-val">&mdash;</span></div>
+        </div>
+        <div class="power-effect">+2 em Int + Inv., Hist. e Ci&ecirc;ncias. 1 p&aacute;g. em 3 s.</div>
+      </div>
+      <div class="power-block">
+        <div class="power-title-row">
+          <span class="power-lbl">Nome</span>
+          <span class="power-name">Leitura R&aacute;pida</span>
+          <span class="power-lbl">Custo</span>
+          <span class="power-cost">1 Esp.</span>
+        </div>
+        <div class="power-meta-row">
+          <div class="power-meta"><span class="power-lbl">A&ccedil;&atilde;o</span><span class="power-meta-val">Principal</span></div>
+          <div class="power-meta"><span class="power-lbl">Alcance</span><span class="power-meta-val">Toque</span></div>
+          <div class="power-meta"><span class="power-lbl">Dura&ccedil;&atilde;o</span><span class="power-meta-val">Inst.</span></div>
+        </div>
+        <div class="power-effect">Livro at&eacute; 500 p&aacute;g. em 1 min.</div>
+      </div>
+      <div class="power-block">
+        <div class="power-title-row">
+          <span class="power-lbl">Nome</span>
+          <span class="power-name">An&aacute;lise Situacional</span>
+          <span class="power-lbl">Custo</span>
+          <span class="power-cost">1 Esp.</span>
+        </div>
+        <div class="power-meta-row">
+          <div class="power-meta"><span class="power-lbl">A&ccedil;&atilde;o</span><span class="power-meta-val">B&ocirc;nus</span></div>
+          <div class="power-meta"><span class="power-lbl">Alcance</span><span class="power-meta-val">9 m</span></div>
+          <div class="power-meta"><span class="power-lbl">Dura&ccedil;&atilde;o</span><span class="power-meta-val">Inst.</span></div>
+        </div>
+        <div class="power-effect">Narrador revela 1 fato n&atilde;o &oacute;bvio. M&aacute;x. 2&times;/cena.</div>
+      </div>
+      <div class="power-block">
+        <div class="power-title-row">
+          <span class="power-lbl">Nome</span>
+          <span class="power-name power-fill"></span>
+          <span class="power-lbl">Custo</span>
+          <span class="power-cost power-fill"></span>
+        </div>
+        <div class="power-meta-row">
+          <div class="power-meta"><span class="power-lbl">A&ccedil;&atilde;o</span><span class="power-meta-val power-fill"></span></div>
+          <div class="power-meta"><span class="power-lbl">Alcance</span><span class="power-meta-val power-fill"></span></div>
+          <div class="power-meta"><span class="power-lbl">Dura&ccedil;&atilde;o</span><span class="power-meta-val power-fill"></span></div>
+        </div>
+        <div class="power-effect"></div>
+      </div>
+      <div class="power-block">
+        <div class="power-title-row">
+          <span class="power-lbl">Nome</span>
+          <span class="power-name power-fill"></span>
+          <span class="power-lbl">Custo</span>
+          <span class="power-cost power-fill"></span>
+        </div>
+        <div class="power-meta-row">
+          <div class="power-meta"><span class="power-lbl">A&ccedil;&atilde;o</span><span class="power-meta-val power-fill"></span></div>
+          <div class="power-meta"><span class="power-lbl">Alcance</span><span class="power-meta-val power-fill"></span></div>
+          <div class="power-meta"><span class="power-lbl">Dura&ccedil;&atilde;o</span><span class="power-meta-val power-fill"></span></div>
+        </div>
+        <div class="power-effect"></div>
+      </div>
+      <div class="power-block">
+        <div class="power-title-row">
+          <span class="power-lbl">Nome</span>
+          <span class="power-name power-fill"></span>
+          <span class="power-lbl">Custo</span>
+          <span class="power-cost power-fill"></span>
+        </div>
+        <div class="power-meta-row">
+          <div class="power-meta"><span class="power-lbl">A&ccedil;&atilde;o</span><span class="power-meta-val power-fill"></span></div>
+          <div class="power-meta"><span class="power-lbl">Alcance</span><span class="power-meta-val power-fill"></span></div>
+          <div class="power-meta"><span class="power-lbl">Dura&ccedil;&atilde;o</span><span class="power-meta-val power-fill"></span></div>
+        </div>
+        <div class="power-effect"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="grid-2">
+    <div class="s-box">
+      <div class="s-box-title">Armas</div>
+      <div class="weapon-slot">
+        <div><span class="ws-label">Arma</span><span class="ws-line">Bengala pesada</span></div>
+        <div><span class="ws-label">Dano</span><span class="ws-line">1d6 cont.</span></div>
+        <div><span class="ws-label">Alcance</span><span class="ws-line">Toque</span></div>
+        <div><span class="ws-label">Propriedades</span><span class="ws-line">improvisada</span></div>
+      </div>
+      <div class="weapon-slot">
+        <div><span class="ws-label">Arma</span><span class="ws-line">&mdash;</span></div>
+        <div><span class="ws-label">Dano</span><span class="ws-line">&mdash;</span></div>
+        <div><span class="ws-label">Alcance</span><span class="ws-line">&mdash;</span></div>
+        <div><span class="ws-label">Propriedades</span><span class="ws-line">&mdash;</span></div>
+      </div>
+      <div class="weapon-slot">
+        <div><span class="ws-label">Arma</span><span class="ws-line">&mdash;</span></div>
+        <div><span class="ws-label">Dano</span><span class="ws-line">&mdash;</span></div>
+        <div><span class="ws-label">Alcance</span><span class="ws-line">&mdash;</span></div>
+        <div><span class="ws-label">Propriedades</span><span class="ws-line">&mdash;</span></div>
+      </div>
+      <div style="margin-top:4pt;">
+        <div class="field">
+          <span class="field-label" style="min-width:50pt;">Armadura</span>
+          <span class="field-line-fill">Sobretudo escuro</span>
+        </div>
+        <div class="field">
+          <span class="field-label" style="min-width:50pt;">Def. B&ocirc;nus</span>
+          <span class="field-line-fill">+0 (Def. 10)</span>
+        </div>
+      </div>
+    </div>
+    <div class="s-box">
+      <div class="s-box-title">Itens Gerais</div>
+      <div class="item-lines">
+        <div class="item-line">Credencial do <em>Backlund Observer</em></div>
+        <div class="item-line">Caderno de campo + 3 l&aacute;pis</div>
+        <div class="item-line">Caneta-tinteiro e tinta</div>
+        <div class="item-line">Lupa de bolso</div>
+        <div class="item-line">Lanterna compacta</div>
+        <div class="item-line">Mapa do Dockside e East Borough</div>
+        <div class="item-line">Bolsa, f&oacute;sforos e vela</div>
+        <div class="item-line">C&oacute;pia de artigo censurado (gancho)</div>
+      </div>
+      <div class="field" style="margin-top:4pt;">
+        <span class="field-label" style="min-width:50pt;">Dinheiro</span>
+        <span class="field-line-fill">12 &pound; (Acad&ecirc;mico) + honor&aacute;rios da mesa</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="s-box">
+    <div class="s-box-title">Conex&otilde;es</div>
+    <div class="grid-3">
+      <div>
+        <div class="conn-slot">
+          <div class="field"><span class="field-label" style="min-width:30pt;font-size:6.5pt;">Nome</span><span class="field-line-fill">Editor Cheswick</span></div>
+          <div class="field"><span class="field-label" style="min-width:30pt;font-size:6.5pt;">Rela&ccedil;&atilde;o</span><span class="field-line-fill"><em>Observer</em> &mdash; quer manchetes, n&atilde;o ocultismo</span></div>
+        </div>
+        <div style="font-size:7pt;min-height:14pt;border-bottom:1px dotted #ccc;"></div>
+      </div>
+      <div>
+        <div class="conn-slot">
+          <div class="field"><span class="field-label" style="min-width:30pt;font-size:6.5pt;">Nome</span><span class="field-line-fill">Capit&atilde; Elise Ward</span></div>
+          <div class="field"><span class="field-label" style="min-width:30pt;font-size:6.5pt;">Rela&ccedil;&atilde;o</span><span class="field-line-fill">Contratante &mdash; troca informa&ccedil;&atilde;o por discri&ccedil;&atilde;o</span></div>
+        </div>
+        <div style="font-size:7pt;min-height:14pt;border-bottom:1px dotted #ccc;"></div>
+      </div>
+      <div>
+        <div class="conn-slot">
+          <div class="field"><span class="field-label" style="min-width:30pt;font-size:6.5pt;">Nome</span><span class="field-line-fill">Dra. Helena Ashworth</span></div>
+          <div class="field"><span class="field-label" style="min-width:30pt;font-size:6.5pt;">Rela&ccedil;&atilde;o</span><span class="field-line-fill">Colega acad&ecirc;mica &mdash; envia recortes estranhos</span></div>
+        </div>
+        <div style="font-size:7pt;min-height:14pt;border-bottom:1px dotted #ccc;"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="grid-2">
+    <div class="s-box">
+      <div class="s-box-title">Hist&oacute;ria</div>
+      <div class="notes-lines" style="font-size:7.5pt;line-height:1.4">
+        <div class="n-line">Tom&aacute;s cobria corrup&ccedil;&atilde;o municipal at&eacute; encontrar um dossi&ecirc; com s&iacute;mbolos que n&atilde;o deveriam existir em tipografia comum. A po&ccedil;&atilde;o foi &quot;amostra de laborat&oacute;rio&quot; &mdash; mentira que ele registrou tarde demais.</div>
+        <div class="n-line">Como Leitor, trata cada depoimento como texto: omiss&otilde;es, repeti&ccedil;&otilde;es e ordem das frases pesam tanto quanto confiss&otilde;es.</div>
+        <div class="n-line">Segredo: guarda rascunho de mat&eacute;ria que provaria cultos na Yard &mdash; nunca publicou.</div>
+      </div>
+    </div>
+    <div class="s-box">
+      <div class="s-box-title">Notas de mesa</div>
+      <div class="notes-lines" style="font-size:7.5pt;line-height:1.4">
+        <div class="n-line"><strong>Papel na mesa:</strong> investiga&ccedil;&atilde;o, social, an&aacute;lise.</div>
+        <div class="n-line"><strong>Mem&oacute;ria Perfeita:</strong> n&atilde;o esque&ccedil;a o +2.</div>
+        <div class="n-line"><strong>An&aacute;lise Situacional:</strong> 1 Esp., b&ocirc;nus, 2&times;/cena.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<nav class="book-nav no-print">
+  <a href="index.html">&larr; Pregens</a>
+  <a href="../00-patrulha-noturna.html">Patrulha Noturna</a>
+  <a href="../exemplo-sessao-iniciantes.html">Tutorial Sess&atilde;o 1</a>
+  <a href="../../apendices/ficha-personagem.html">Ficha em branco</a>
+</nav>
+
+</body>
+</html>

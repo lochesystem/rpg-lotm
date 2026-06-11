@@ -126,6 +126,8 @@ rpg-lotm/
 
 **Sessão 1:** `campanhas/exemplo-sessao-iniciantes.html` — “O Sussurro na Oficina”.
 
+**Pregens:** `campanhas/pregens/` — fichas A4 (Mara, Tomás, Lídia, Finn). Gerar: `npm run build:pregens`.
+
 **Links:** `campanhas/index.html`, `README.md`, gancho no final do tutorial `.md`
 
 ---

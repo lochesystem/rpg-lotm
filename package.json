@@ -4,7 +4,8 @@
   "description": "Sistema de RPG de mesa fan-made baseado em **Lord of the Mysteries** (*Senhor dos Mistérios*), com regras híbridas inspiradas em Vampiro: A Máscara e D&D (d20).",
   "main": "index.js",
   "scripts": {
-    "build:pages": "node scripts/md-to-html.mjs"
+    "build:pages": "node scripts/md-to-html.mjs",
+    "build:pregens": "node scripts/build-pregen-fichas.mjs"
   },
   "repository": {
     "type": "git",

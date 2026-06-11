@@ -62,6 +62,8 @@ flowchart LR
 
 ## Personagens prontos
 
+**Fichas imprimíveis (A4):** [pregens/index.html](pregens/index.html) — Mara, Tomás, Lídia (+ Finn para mesa de 2).
+
 ### Regra rápida de teste (use em toda a sessão)
 
 ```
