@@ -186,9 +186,9 @@ d20 + Mod. Atributo + Mod. Perícia  ≥  CD  →  sucesso
 
 ## Cena 0 — O Mestre prepara
 
-**Leia em voz alta (opcional):**
+**Leia em voz alta (opcional) — antes dos jogadores escolherem personagem:**
 
-> *Backlund, 1352 da Quinta Época. A névoa industrial cola nos casacos. Vocês três não são heróis de folhetim — são ferramentas úteis que a Igreja da Deusa da Noite emprega quando o caso é pequeno demais para um Bispo e grande demais para a polícia comum.*
+> *Backlund, 1352 da Quinta Época. A névoa industrial cola nos casacos e entra pelas janelas mal vedadas. Vocês três não são heróis de folhetim — são Beyonders de Seq. 9 que a Igreja da Deusa da Noite emprega quando o caso é pequeno demais para um Bispo e grande demais para a polícia comum. Esta noite, alguém no East Borough não está dormindo — e três crianças pagam o preço.*
 
 **NPC principal**
 
@@ -217,11 +217,46 @@ d20 + Mod. Atributo + Mod. Perícia  ≥  CD  →  sucesso
 
 ## Cena 1 — Briefing (sem dados)
 
-**Onde:** posto das Águias Noturnas, *East Borough* — sala com mapa, lamparina a óleo, cheiro de chá forte.
+**Onde:** posto das Águias Noturnas, *East Borough* — uma sala estreita no andar de cima de uma capela discreta. Mapa do bairro preso na parede com três alfinetes vermelhos; lamparina a óleo; chá forte que já esfriou.
 
-**Capitã Elise (Mestre):**
+### Contexto (leia antes de interpretar Elise)
 
-> “Três crianças, três noites, o mesmo nome ao acordar: **Morvan**. Nenhuma ferida física. Padre local fala em pesadelo comum. Eu não gosto de coincidência. Vocês entram, investigam, **não** fazem manchete. Se encontrarem Beyonder descontrolado — contêm ou tragam prova. Pagamento: 5 libras cada + um favor registrado.”
+É quase meia-noite. Os jogadores foram chamados com pouco aviso — Mara já conhece o posto, Tomás veio por contato no jornal, Lídia porque a igreja sabe que ela “sente” coisas erradas. **Capitã Elise Ward** não está sentada: está de pé diante do mapa, olheiras de quem também não dorme direito, uniforme escuro da Deusa da Noite sem ornamento. Ela não faz discurso de boas-vindas; trata os três como ferramentas que já deveriam saber por que estão ali.
+
+Deixe os jogadores se apresentarem em uma frase cada (opcional). Então Elise fala.
+
+### Capitã Elise — o que dizer
+
+> Elise vira-se do mapa. A voz é baixa — há paredes finas e vizinhos curiosos.
+>
+> “Desculpem o horário. Não dá para esperar o sol quando quem sofre é criança.”
+>
+> Ela aponta os três alfinetes, todos na **Viela do Tear**.
+>
+> “Três meninos. Três noites seguidas. Acordam exaustos, como se tivessem carregado tijolo o dia inteiro — e murmuram o mesmo nome antes de desmaiar de novo: **Morvan**. Nenhuma marca no corpo. Nenhuma febre que a clínica do bairro saiba nomear.”
+>
+> Ela cruza os braços.
+>
+> “O padre Brenner insiste que é pesadelo comum, fábrica fechada, ar ruim… eu já ouvi essa história antes. Não gosto quando ela se repete.”
+>
+> Pausa. Olha cada um nos olhos.
+>
+> “Preciso de gente que entre no bairro, ouça, olhe, **sem** transformar isso em manchete do *Observer*, Tomás.” — se olhar para ele — “Sem sermão na praça, sem polícia batendo porta errada. Discrição.”
+>
+> “Se encontrarem Beyonder descontrolado — e estou dizendo *se* —, contenham ou tragam prova. Não se façam de herói; façam o trabalho.”
+>
+> Ela empurra três envelopes pequenos sobre a mesa.
+>
+> “Cinco libras cada quando voltarem. E um favor registrado no livro da Igreja — isso, aqui, vale mais que libra.”
+
+**Informação essencial (não precisa sair toda de uma vez):**
+
+| Fato | Detalhe |
+|------|---------|
+| Vítimas | Três crianças, East Borough / Viela do Tear |
+| Sintoma | Exaustão + nome **Morvan** ao acordar |
+| Ordem | Investigar em segredo |
+| Pagamento | 5 £ cada + favor registrado |
 
 ### O que ensinar aqui
 
@@ -233,20 +268,38 @@ d20 + Mod. Atributo + Mod. Perícia  ≥  CD  →  sucesso
 
 **Pergunta comum de iniciante**
 
-| Jogador pergunta | Resposta do Mestre |
-|------------------|-------------------|
-| “Posso usar magia agora?” | “Você já é Beyonder Seq. 9. Seus poderes estão na ficha; cada um custa **Espiritualidade**.” |
-| “A igreja confia em nós?” | “Confia o suficiente para gastar vocês. Não o suficiente para dar Seq. 8.” |
+| Jogador pergunta | Elise (ou Mestre) responde |
+|------------------|---------------------------|
+| “Posso usar magia agora?” | “Você já provou a poção. Seu Caminho está na ficha — cada truque custa **Espiritualidade**. Não é teatro; é o que você *é* agora.” |
+| “A igreja confia em nós?” | Elise quase sorri, sem humor. “Confia o bastante para mandar vocês primeiro. Não o bastante para dar poção de Seq. 8. Façam este caso e conversamos de novo.” |
 
 ---
 
 ## Cena 2 — A mãe e o sonho
 
-**Onde:** apartamento apertado da **Sra. Holt** — Milo (8 anos) pálido, olheiras.
+**Onde:** apartamento apertado da **Sra. Holt**, terceiro andar sem elevador — cheiro de sopa requentada e sabão barato. **Milo** (8 anos) dorme no quarto ao fundo, pálido, olheiras fundas; uma vela queimada na janela contra “mau-olhado”.
 
-### Roleplay livre (sem dados)
+### Contexto (antes de falar com a mãe)
 
-Jogadores podem acalmar a mãe, observar o quarto, perguntar sobre Morvan (vizinho que perdeu o emprego na fábrica).
+A Viela do Tear é estreita; vizinhos fingem não olhar quando três estranhos batem na porta. **Clara Holt** abre com o cadeado ainda na corrente — mãe solteira, mãos rachadas de lavadeira, olhos vermelhos de quem também não dorme. Ela não sabe o que são Águias Noturnas; vê casacos escuros e hesita.
+
+Se os jogadores mencionarem a igreja, a clínica ou “ajuda para o menino”, ela deixa entrar. Não precisa de teste para começar a conversa — só para **ganhar confiança** e ouvir o que sabe de Morvan.
+
+### Sra. Holt — abertura (roleplay livre)
+
+> Clara encosta a porta, mas não tranca de novo.
+>
+> “Se vierem cobrar aluguel, digo já: não tenho.”
+>
+> Se acalmar, a voz quebra:
+>
+> “Milo era alegre. Corria na rua. Agora acorda gritando um nome que eu **nunca** ouvi na minha casa — **Morvan**. Depois desaba, como se tivesse trabalhado doze horas na fábrica. Três noites. Três.”
+>
+> Ela aponta o corredor.
+>
+> “O padre disse pesadelo. Eu digo que pesadelo não deixa a criança **sem** sonhar e **com** medo de fechar os olhos.”
+
+Jogadores podem acalmar a mãe, observar o quarto de Milo, perguntar sobre Morvan (vizinho que perdeu o emprego quando a oficina fechou).
 
 ### Teste 1 — ganhar confiança (opcional)
 
@@ -255,8 +308,8 @@ Jogadores podem acalmar a mãe, observar o quarto, perguntar sobre Morvan (vizin
 | **Quem** | Quem liderar a conversa |
 | **Teste** | Carisma + Empatia |
 | **CD** | 12 |
-| **Sucesso** | Ela revela: Morvan foi visto **riscando algo** na oficina há três noites |
-| **Falha** | Ela só repete “é maldição da fábrica” |
+| **Sucesso** | Ela respira fundo e conta: viu Morvan **riscando algo** na oficina abandonada três noites atrás — “como quem copia palavra de livro que não sabe ler”. Desenha um mapa tremido da viela até o portão da fábrica. |
+| **Falha** | Encolhe os ombros, olhos úmidos: “É maldição da fábrica. Fecharam, ficou o demônio.” Não desenha mapa — mas, se perguntarem onde fica a oficina, aponta: “Lá embaixo, dobrando a esquina.” |
 
 **Exemplo de rolagem (Beatriz / Mara):**
 
@@ -288,7 +341,11 @@ Se **Tomás** disser que anota cada detalhe num caderno e cruza horários dos so
 
 ## Cena 3 — Rastros na oficina
 
-**Onde:** oficina têxtil fechada — portas trancadas, cheiro de mofo e óleo de máquina.
+**Onde:** oficina têxtil fechada — portão enferrujado, letreiro *Harker & Filhos* descascando, cheiro de mofo, óleo de máquina e chuva seca no telhado.
+
+### Contexto (chegada)
+
+A rua está quase vazia; só um gato e o estalo distante de um lampião a gás. A fábrica parece abandonada de verdade — mas Mara, se vigia um minuto, nota **luz de vela** fugindo no vão do porão, ou passos abafados. Algo ainda usa este lugar.
 
 ### Divisão de tarefas (mesa cooperativa)
 
@@ -335,7 +392,9 @@ Se **Tomás** disser que anota cada detalhe num caderno e cruza horários dos so
 
 **Ver Auras Místicas** (1 Espiritualidade):
 
-> O Mestre descreve: *uma névoa violeta-fraca sob as tábuas, “sabor” de segredo e sombra — Caminho do **Enforcado**, resíduo fraco.*
+**Contexto:** Lídia fecha os olhos um instante; o porão parece mais frio que o resto do prédio.
+
+> “Há algo **embaixo**”, ela murmura, quase para si. “Fino como fio de costura… cor de ameixa podre. **Enforcado** — mas mal feito, como receita copiada de cabeça.”
 
 | Esp. antes | Gasto | Esp. depois |
 |------------|-------|-------------|
@@ -345,13 +404,23 @@ Se **Tomás** disser que anota cada detalhe num caderno e cruza horários dos so
 
 ## Cena 4 — O símbolo na parede
 
-**Onde:** porão — lamparina apagada, **símbolo** riscado em carvão: círculo partido com olho ao centro.
+**Onde:** porão — ar parado, lamparina apagada no chão, **símbolo** riscado em carvão na parede de tijolo: círculo partido com olho ao centro. Cheiro de suor velho e cera queimada.
+
+### Contexto (descida)
+
+O alçapão range. Degraus de madeira podre. Lídia sente o resíduo mais forte aqui; Tomás, se acende luz, vê **pegadas** de botas baratas no carvão espalhado. Mara, no topo da escada, ouve respiração que não é só uma — ou imagina, neste lugar.
 
 ### Leitura de Símbolos (Lídia)
 
-Gasta **1 Esp.** — sucesso automático para significado básico:
+Gasta **1 Esp.** — ao tocar o carvão, os dedos formigam.
 
-> “Selo de **contenção de sonhos**, mal copiado. Quem usa isso **rouba** descanso alheio para alimentar um eco espiritual.”
+> Lídia recua meio passo, pálida, mas firme:
+>
+> “É selo de **contenção de sonhos**. Mal copiado — a linha que deveria fechar o círculo está **quebrada** de propósito.”
+>
+> Olha para os outros.
+>
+> “Quem usa isso não adormece… **rouba** o descanso dos outros para alimentar um eco. Parasita espiritual.”
 
 | Teste extra (opcional) | Int + Ocultismo | CD 15 |
 |------------------------|-----------------|-------|
@@ -360,7 +429,9 @@ Gasta **1 Esp.** — sucesso automático para significado básico:
 
 **Tomás — Análise Situacional** (1 Esp., ação bônus):
 
-> Mestre revela: *há pegadas frescas de botas baratas saindo por trilho de carvão — alguém esteve aqui há menos de uma hora.*
+**Contexto:** Tomás observa o chão, o tear caído, o selo — peças de um quebra-cabeça.
+
+> “Alguém esteve aqui **há menos de uma hora**.” Ele aponta o trilho de carvão até a escada. “Botas baratas. Homem. Foi apressado — deixou o selo **rasgado** no meio, como quem não aguentava mais esperar.”
 
 ### Mara — vigília (Atuação)
 
@@ -373,7 +444,19 @@ Mara declara: *“Fico na escuridão do topo da escada; ninguém nos surpreende.
 
 ## Cena 5 — Confronto com Morvan
 
-**Gancho:** **Morvan Ketch** surge da sombra do tear — olhos injetados, sussurra frases do Enforcado. Um **Eco de Sussurro** (névoa com rosto de criança) flutua sobre o selo rasgado.
+### Contexto (antes do combate)
+
+O tear inclinado projeta sombra longa. Por um segundo, nada se move. Então **Morvan Ketch** se desprende da escuridão — homem magro, avental de operário manchado, olhos injetados, barba por fazer. Ele **sussurra** frases entrecortadas, como oração apressada. Sobre o selo rasgado, uma névoa toma forma: rosto de criança, boca aberta demais — o **Eco de Sussurro**.
+
+Morvan levanta as mãos; não parece guerreiro, parece **exausto**.
+
+> “Não… não precisava vir tantos… eu só…”
+>
+> A voz falha. O Eco sussurra por ele, mais alto:
+>
+> “*Dormir…*”
+
+**Gancho mecânico:** Morvan + Eco entram em cena. Iniciativa abaixo.
 
 ### Iniciativa
 
@@ -415,9 +498,11 @@ Mara declara: *“Fico na escuridão do topo da escada; ninguém nos surpreende.
 
 | Lucidez Tomás | 6 → **5** |
 
-**Lídia** — **Ritual Básico: proteção** (2 Esp., 10 min narrados como versão “apressada” na mesa: Mestre reduz para 1 rodada em tutorial = **consagração emergencial** house-rule **ou** espera 2 rodadas; para ensino, diga: “vocês protegem Tomás na próxima rodada”).
+**Lídia** — **Ritual Básico: proteção** (2 Esp., 10 min narrados como versão “apressada” na mesa: Mestre reduz para 1 rodada em tutorial = **consagração emergencial** house-rule **ou** espera 2 rodadas).
 
-**Ensino:** rituais demoram; em combate, posicionem-se.
+> Lídia murmura uma prece curta, não a que Brenner ensinaria — uma que a avó curandeira usava. O ar ao redor de Tomás fica **menos pesado** por um instante.
+
+**Ensino:** rituais demoram; em combate, posicionem-se ou peçam ao Mestre uma versão apressada (como acima).
 
 ### Rodada 2
 
@@ -430,7 +515,7 @@ Mara declara: *“Fico na escuridão do topo da escada; ninguém nos surpreende.
 
 **Tomás** — não luta bem; usa **Análise Situacional**:
 
-> “O Eco está preso ao selo — destruir o carvão no chão o enfraquece.”
+> “O Eco não está **livre** — está preso ao carvão no chão! Queimem o símbolo, ou arranquem a lamparina para o fogo!”
 
 **Mara** — arranca lamparina, joga fogo no **carvão do símbolo** (ação narrativa + teste Destreza CD 11 — sucesso).
 
@@ -438,9 +523,19 @@ Mara declara: *“Fico na escuridão do topo da escada; ninguém nos surpreende.
 
 ### Morvan derrotado (roleplay)
 
-Morvan não é vilão de campanha inteira — está quebrado:
+Morvan não é vilão de campanha inteira — está quebrado, ajoelhado entre o tear e o carvão fumegante. O Eco sumiu; só resta cheiro de carvão queimado e choro.
 
-> “Eu só queria dormir… a voz disse que se eu pegasse o sono dos outros, eu descansaria…”
+> Ele treme, mãos no rosto.
+>
+> “Eu só queria **dormir**… uma noite… só uma…”
+>
+> Engole seco.
+>
+> “A voz disse… se eu pegasse o sono dos outros, sobraria um pouco para mim. Eu não queria machucar **criança**… eu não queria…”
+>
+> Olha para vocês, perdido.
+>
+> “Vocês também ouvem coisas, não ouvem? Quando fica quieto demais…”
 
 | Decisão dos jogadores | Consequência |
 |-----------------------|--------------|
@@ -452,9 +547,25 @@ Morvan não é vilão de campanha inteira — está quebrado:
 
 ## Cena 6 — Epílogo e recompensas
 
-**De volta ao posto — Capitã Elise:**
+**Onde:** de volta ao posto das Águias Noturnas — mesma sala, mas agora são quase três da manhã; chá **novo**, mapa com um alfinete a menos.
 
-> “Três crianças dormiram. Não é manchete. É trabalho.” — entrega **5 libras** cada.
+### Contexto (retorno)
+
+Os jogadores chegam com Morvan preso, curado ou pior — conforme a mesa decidiu. Elise não pergunta “como foi?” de imediato; observa **rosto, roupa, mãos** (sangue? carvão? olheiras?). Só então fala.
+
+### Capitã Elise — fechamento
+
+> Elise assente uma vez, seco, mas não hostil.
+>
+> “Milo Holt dormiu duas horas seguidas. A mãe mandou recado pelo menino da padaria.”
+>
+> Pausa.
+>
+> “Não vai sair no jornal. Não vai virar sermão. Três crianças dormindo — isso não é manchete. É **trabalho**.”
+>
+> Ela coloca as moedas na mesa — cinco libras para cada.
+>
+> “Guardem o favor. Um dia eu ligo, e vocês vão preferir que fosse só dinheiro.”
 
 ### Tabela de aprendizado pós-sessão
 
@@ -477,7 +588,17 @@ Morvan não é vilão de campanha inteira — está quebrado:
 
 ### Gancho para continuar (opcional)
 
-> Na gola do casaco de Morvan, Tomás encontra pedaço de papel com símbolo **diferente** — não Enforcado: cheira a **Erro** (Amon?). Capitã Elise fecha o dossiê: “Acima do nosso pagamento.”
+**Contexto:** Tomás revista o casaco de Morvan antes de entregarem o prisioneiro — ou depois, se o deixaram ir. Entre forro e tecido, um pedaço de papel rasgado.
+
+> Tomás desdobra o papel. O símbolo **não** é o Enforcado: linhas tortas, triângulo partido, cheiro de tinta barata. Lídia franze o nariz: “**Erro**. Caminho do Erro.”
+>
+> Elise olha por cima do ombro, longe demais para ser curiosidade casual.
+>
+> “Guarde isso. **Não** investigue sozinho.”
+>
+> Ela fecha o dossiê com um estalo.
+>
+> “Este pedaço está acima do que pagamos esta noite. Outro dia. Outra mesa.”
 
 **Continuar o arco:** esta sessão é a **Sessão 1** da mini-campanha [Patrulha Noturna](00-patrulha-noturna.html) (Sessões 2–4: mercado de pulgas, sala do espelho, epílogo).
 
@@ -533,13 +654,13 @@ Morvan não é vilão de campanha inteira — está quebrado:
 
 ## Transcrição curta (como soa na mesa)
 
-> **Mestre:** A névoa engole o fim da rua. O letreiro da oficina rangueja. O que vocês fazem?  
+> **Mestre:** A névoa engole o fim da rua. Elise terminou o briefing; vocês descem a Viela do Tear. O letreiro da oficina rangueja. O que vocês fazem?  
 > **Beatriz (Mara):** Circundo pelo beco e entro pela janela — estou acostumada com escuro.  
 > **Mestre:** Rola Destreza + Furtividade contra CD 13.  
 > **Beatriz:** Dezesseis mais um mais um — dezoito!  
 > **Caio (Tomás):** Enquanto isso, procuro planta da fábrica ou diário de turno.  
 > **Diana (Lídia):** Antes de descer, gasto um ponto e **vejo auras** no chão.  
-> **Mestre:** Perfeito. Mara, você está dentro. Tomás, Investigação. Lídia, violeta-fraca — Enforcado. E todos ouvem, lá embaixo, uma respiração que não é só uma.
+> **Mestre:** Perfeito. Mara, você está dentro. Tomás, Investigação. Lídia sente algo embaixo — Enforcado, mal feito. E todos ouvem, lá embaixo, uma respiração que não é só uma.
 
 ---
 
